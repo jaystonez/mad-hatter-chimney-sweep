@@ -471,7 +471,7 @@ export default function ChimneyCleaningPage() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" variant="secondary">
               <Phone className="mr-2 h-5 w-5" />
-              Call Now: (206) 274-6409
+              Call Now: (555) 555-5555
             </Button>
             <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
               Request Quote

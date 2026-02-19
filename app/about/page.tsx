@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Award, Users, MapPin, Phone, Mail, CheckCircle2 } from "lucide-react"
 
 export const metadata = {
-  title: "About The Mad Hatter Chimney Sweep | Real Local Business Since 2014",
+  title: "About The Mad Hatter Chimney Sweep | Real Local Business Since [YEAR]",
   description: "Meet the real team behind The Mad Hatter Chimney Sweep. Licensed, insured, and locally owned - not a lead generation scam.",
 }
 
@@ -19,8 +19,8 @@ export default function AboutPage() {
               A Real Local Business, Not a Lead Generation Scam
             </h1>
             <p className="text-xl text-white/90 leading-relaxed mb-8">
-              We're The Mad Hatter Chimney Sweep - an actual, verifiable, locally-owned business
-              serving Seattle for over a decade. Not a UPS box. Not a hijacked address. Not a call center
+              We're The Mad Hatter Chimney Sweep - an actual, verifiable, locally-owned business 
+              serving Seattle for over a decade. Not a UPS box. Not a hijacked address. Not a call center 
               operating under 50 different fake names.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
@@ -40,15 +40,15 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Our Verifiable Credentials</h2>
-
+            
             <div className="grid md:grid-cols-2 gap-6 mb-12">
               <Card className="border-2 border-green-200 bg-green-50">
                 <CardContent className="pt-6">
                   <Shield className="w-12 h-12 text-green-600 mb-4" />
                   <h3 className="text-xl font-bold mb-2 text-green-900">WA State L&I Licensed</h3>
                   <p className="text-green-800 mb-4">
-                    Fully bonded and insured<br/>
-                    Professional credentials verified
+                    License #: <strong>[YOUR LICENSE NUMBER]</strong><br/>
+                    Fully bonded and insured
                   </p>
                   <Button asChild variant="outline" size="sm" className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white bg-transparent">
                     <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener noreferrer">
@@ -63,12 +63,12 @@ export default function AboutPage() {
                   <MapPin className="w-12 h-12 text-blue-600 mb-4" />
                   <h3 className="text-xl font-bold mb-2 text-blue-900">Real Shop Location</h3>
                   <p className="text-blue-800 mb-4">
-                    <strong>Seattle, WA</strong><br/>
-                    Physical location with actual staff<br/>
+                    <strong>[YOUR ACTUAL ADDRESS]</strong><br/>
+                    Seattle, WA [ZIP]<br/>
                     Not a mailbox. Visit us.
                   </p>
                   <Button asChild variant="outline" size="sm" className="border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white bg-transparent">
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="[GOOGLE MAPS LINK]" target="_blank" rel="noopener noreferrer">
                       View on Google Maps →
                     </a>
                   </Button>
@@ -81,7 +81,8 @@ export default function AboutPage() {
                   <h3 className="text-xl font-bold mb-2 text-purple-900">Certified & Trained</h3>
                   <p className="text-purple-800">
                     CSIA Certified Chimney Sweep<br/>
-                    Over 10 years experience<br/>
+                    [Additional certifications]<br/>
+                    Over [X] years experience<br/>
                     Ongoing professional training
                   </p>
                 </CardContent>
@@ -92,8 +93,8 @@ export default function AboutPage() {
                   <Users className="w-12 h-12 text-orange-600 mb-4" />
                   <h3 className="text-xl font-bold mb-2 text-orange-900">Local & Family Owned</h3>
                   <p className="text-orange-800">
-                    Seattle resident since 2014<br/>
-                    Professional team on staff<br/>
+                    Seattle resident since [YEAR]<br/>
+                    [Number] employees on staff<br/>
                     Active in the local community<br/>
                     No subcontractors on commission
                   </p>
@@ -105,12 +106,12 @@ export default function AboutPage() {
               <CardContent className="pt-6">
                 <h3 className="text-xl font-bold mb-4">Why Verification Matters</h3>
                 <p className="mb-4">
-                  The Seattle area has been infiltrated by fraudulent "chimney services" that operate without
-                  licenses, use fake addresses (including UPS boxes and hijacked preschool locations),
+                  The Seattle area has been infiltrated by fraudulent "chimney services" that operate without 
+                  licenses, use fake addresses (including UPS boxes and hijacked preschool locations), 
                   and employ bait-and-switch pricing tactics.
                 </p>
                 <p className="mb-4">
-                  <strong>We encourage you to verify every credential listed above.</strong> A legitimate contractor
+                  <strong>We encourage you to verify every credential listed above.</strong> A legitimate contractor 
                   will never be offended by due diligence - in fact, we insist on it.
                 </p>
                 <Button asChild>
@@ -127,37 +128,36 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Our Story</h2>
-
+            
             <div className="prose max-w-none">
-              <div className="w-full rounded-lg mb-8 overflow-hidden shadow-lg bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 h-96 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <p className="text-2xl font-bold mb-2">The Mad Hatter Team</p>
-                  <p className="text-slate-300">In front of our actual shop with company truck and signage</p>
-                </div>
-              </div>
+              <img 
+                src="https://placehold.co/1200x600?text=Mad+Hatter+team+photo+in+front+of+actual+shop+with+company+truck+and+signage" 
+                alt="The Mad Hatter Chimney Sweep team photo in front of actual shop with company truck and signage" 
+                className="w-full rounded-lg mb-8"
+              />
 
               <p className="text-lg leading-relaxed mb-6">
-                The Mad Hatter Chimney Sweep was founded in 2014 by our founder, a Seattle native
-                who saw the need for honest, professional chimney services in the area. Unlike the
-                corporate franchises and lead-generation scams that have flooded the market, we built
+                The Mad Hatter Chimney Sweep was founded in [YEAR] by [OWNER NAME], a Seattle native 
+                who saw the need for honest, professional chimney services in the area. Unlike the 
+                corporate franchises and lead-generation scams that have flooded the market, we built 
                 our reputation the old-fashioned way: one satisfied customer at a time.
               </p>
 
               <p className="text-lg leading-relaxed mb-6">
-                Our founder started in the trade working for established local companies.
-                After seeing too many homeowners getting ripped off by bait-and-switch pricing and
-                unqualified technicians, they decided to open a company that would do things differently.
+                [OWNER NAME] started in the trade working for [previous experience/how you got started]. 
+                After seeing too many homeowners getting ripped off by bait-and-switch pricing and 
+                unqualified technicians, [he/she] decided to open a company that would do things differently.
               </p>
 
               <h3 className="text-2xl font-bold mb-4 mt-8">Our Values</h3>
-
+              
               <div className="grid md:grid-cols-2 gap-6 my-8 not-prose">
                 <Card>
                   <CardContent className="pt-6">
                     <CheckCircle2 className="w-8 h-8 text-green-600 mb-3" />
                     <h4 className="font-bold text-lg mb-2">Transparent Pricing</h4>
                     <p className="text-muted-foreground">
-                      No bait-and-switch. We give you a written estimate before we start.
+                      No bait-and-switch. We give you a written estimate before we start. 
                       If we find additional issues, we discuss them with you first.
                     </p>
                   </CardContent>
@@ -168,7 +168,7 @@ export default function AboutPage() {
                     <CheckCircle2 className="w-8 h-8 text-green-600 mb-3" />
                     <h4 className="font-bold text-lg mb-2">Real Local Presence</h4>
                     <p className="text-muted-foreground">
-                      We have an actual shop you can visit. Our trucks are branded.
+                      We have an actual shop you can visit. Our trucks are branded. 
                       Our technicians are W-2 employees, not subcontractors on commission.
                     </p>
                   </CardContent>
@@ -179,7 +179,7 @@ export default function AboutPage() {
                     <CheckCircle2 className="w-8 h-8 text-green-600 mb-3" />
                     <h4 className="font-bold text-lg mb-2">Licensed & Accountable</h4>
                     <p className="text-muted-foreground">
-                      We maintain all required licenses and insurance. If something goes wrong,
+                      We maintain all required licenses and insurance. If something goes wrong, 
                       we're here to make it right - not hiding behind a shell company.
                     </p>
                   </CardContent>
@@ -190,7 +190,7 @@ export default function AboutPage() {
                     <CheckCircle2 className="w-8 h-8 text-green-600 mb-3" />
                     <h4 className="font-bold text-lg mb-2">Community Focused</h4>
                     <p className="text-muted-foreground">
-                      We live here. Our kids go to school here. Your neighbors are our neighbors.
+                      We live here. Our kids go to school here. Your neighbors are our neighbors. 
                       Our reputation matters because this is our home too.
                     </p>
                   </CardContent>
@@ -206,43 +206,49 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
-
+            
             <div className="grid md:grid-cols-3 gap-8">
               <Card>
                 <CardContent className="pt-6 text-center">
-                  <div className="w-32 h-32 rounded-full mx-auto mb-4 bg-gradient-to-br from-slate-300 to-slate-400 flex items-center justify-center">
-                    <span className="text-4xl">👨‍💼</span>
-                  </div>
-                  <h3 className="font-bold text-xl mb-1">Owner</h3>
-                  <p className="text-primary font-medium mb-2">Master Sweep</p>
+                  <img 
+                    src="https://placehold.co/300x300?text=Professional+headshot+of+owner+in+work+uniform+smiling" 
+                    alt="Professional headshot of owner in work uniform smiling" 
+                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                  />
+                  <h3 className="font-bold text-xl mb-1">[Owner Name]</h3>
+                  <p className="text-primary font-medium mb-2">Owner & Master Sweep</p>
                   <p className="text-sm text-muted-foreground">
-                    CSIA Certified, 10+ years experience
+                    CSIA Certified, [X] years experience
                   </p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardContent className="pt-6 text-center">
-                  <div className="w-32 h-32 rounded-full mx-auto mb-4 bg-gradient-to-br from-slate-300 to-slate-400 flex items-center justify-center">
-                    <span className="text-4xl">👨‍🔧</span>
-                  </div>
-                  <h3 className="font-bold text-xl mb-1">Lead Technician</h3>
-                  <p className="text-primary font-medium mb-2">Professional Expert</p>
+                  <img 
+                    src="https://placehold.co/300x300?text=Professional+headshot+of+lead+technician+in+work+uniform" 
+                    alt="Professional headshot of lead technician in work uniform" 
+                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                  />
+                  <h3 className="font-bold text-xl mb-1">[Team Member Name]</h3>
+                  <p className="text-primary font-medium mb-2">Lead Technician</p>
                   <p className="text-sm text-muted-foreground">
-                    Certified, multiple years experience
+                    [Certification], [X] years experience
                   </p>
                 </CardContent>
               </Card>
 
               <Card>
                 <CardContent className="pt-6 text-center">
-                  <div className="w-32 h-32 rounded-full mx-auto mb-4 bg-gradient-to-br from-slate-300 to-slate-400 flex items-center justify-center">
-                    <span className="text-4xl">👩‍💼</span>
-                  </div>
-                  <h3 className="font-bold text-xl mb-1">Office Manager</h3>
-                  <p className="text-primary font-medium mb-2">Customer Service</p>
+                  <img 
+                    src="https://placehold.co/300x300?text=Professional+headshot+of+office+manager+smiling" 
+                    alt="Professional headshot of office manager smiling" 
+                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                  />
+                  <h3 className="font-bold text-xl mb-1">[Team Member Name]</h3>
+                  <p className="text-primary font-medium mb-2">Office Manager</p>
                   <p className="text-sm text-muted-foreground">
-                    Scheduling & Support
+                    Scheduling & Customer Service
                   </p>
                 </CardContent>
               </Card>
@@ -250,7 +256,7 @@ export default function AboutPage() {
 
             <div className="mt-12 text-center">
               <p className="text-lg mb-6">
-                When you call The Mad Hatter, you get <strong>real people</strong> who work for <strong>one company</strong> -
+                When you call The Mad Hatter, you get <strong>real people</strong> who work for <strong>one company</strong> - 
                 not a call center answering for 50 different fake businesses.
               </p>
             </div>
@@ -264,14 +270,14 @@ export default function AboutPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Work with a Real Local Business?</h2>
             <p className="text-xl text-white/90 mb-8">
-              No bait-and-switch. No fake addresses. No high-pressure tactics.
+              No bait-and-switch. No fake addresses. No high-pressure tactics. 
               Just honest, professional chimney service from people you can trust.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center gap-3">
                 <Phone className="w-6 h-6" />
-                <a href="tel:2062746409" className="text-2xl font-bold hover:text-primary transition-colors">
-                  (206) 274-6409
+                <a href="tel:5555555555" className="text-2xl font-bold hover:text-primary transition-colors">
+                  (555) 555-5555
                 </a>
               </div>
               <span className="hidden sm:inline text-white/50">|</span>

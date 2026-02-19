@@ -34,7 +34,7 @@ export default function WhyChooseUs() {
               Why Choose The Mad Hatter Chimney Sweep?
             </h2>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed text-pretty">
-              With over 10 years of experience serving our community, we've built our reputation on trust, quality, and exceptional service. When you choose us, you're choosing peace of mind.
+              Since 1979, we've served over 2,500 satisfied customers throughout Greater Seattle. We've built our reputation on trust, quality, and exceptional service. When you choose us, you're choosing peace of mind backed by 45+ years of expertise.
             </p>
 
             <div className="space-y-6">
@@ -54,15 +54,12 @@ export default function WhyChooseUs() {
 
           {/* Right Content - Stats & Image */}
           <div className="space-y-8">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[6/5] bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 flex items-center justify-center p-8">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Award className="w-10 h-10 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">CSIA Certified</h3>
-                <p className="text-slate-300">Professional Chimney Sweeps</p>
-                <p className="text-sm text-slate-400 mt-4">Fully Licensed &amp; Insured in Washington State</p>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="https://placehold.co/600x500?text=Experienced+chimney+sweep+professional+inspecting+fireplace+with+safety+equipment+and+tools"
+                alt="Experienced chimney sweep professional inspecting fireplace with safety equipment and tools"
+                className="w-full h-auto object-cover"
+              />
             </div>
 
             {/* Stats Grid */}
@@ -72,8 +69,8 @@ export default function WhyChooseUs() {
                 <p className="text-sm text-slate-300">Happy Customers</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
-                <p className="text-3xl md:text-4xl font-bold text-primary mb-2">10+</p>
-                <p className="text-sm text-slate-300">Years Experience</p>
+                <p className="text-3xl md:text-4xl font-bold text-primary mb-2">45+</p>
+                <p className="text-sm text-slate-300">Years Since 1979</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
                 <p className="text-3xl md:text-4xl font-bold text-primary mb-2">100%</p>

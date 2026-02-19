@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Flame } from "lucide-react"
+import { Facebook, Twitter, Instagram } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -12,7 +12,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <Flame className="w-5 h-5 text-white" />
+                <span className="text-white font-bold text-xl">MH</span>
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-tight">The Mad Hatter</span>
@@ -20,7 +20,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-slate-400 mb-4 leading-relaxed">
-              Professional chimney services with over 10 years of experience. Your safety and satisfaction are our top priorities.
+              Professional chimney services since 1979. Over 2,500 satisfied customers throughout Greater Seattle. Your safety and satisfaction are our top priorities.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">

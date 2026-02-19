@@ -324,7 +324,7 @@ export default function VerifyContractorPage() {
                   <CardTitle className="text-white">Direct Owner Contact</CardTitle>
                 </CardHeader>
                 <CardContent className="text-slate-300">
-                  <p className="mb-2"><strong className="text-white">Phone:</strong> (206) 274-6409</p>
+                  <p className="mb-2"><strong className="text-white">Phone:</strong> (555) 555-5555</p>
                   <p className="text-sm">One phone number, one business. When you call, you get us - not a call center managing 50 fake companies.</p>
                 </CardContent>
               </Card>

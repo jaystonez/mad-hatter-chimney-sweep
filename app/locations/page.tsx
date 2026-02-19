@@ -125,7 +125,7 @@ export default function LocationsPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
-                  <a href="tel:2062746409">Call (206) 274-6409</a>
+                  <a href="tel:5555555555">Call (555) 555-5555</a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <Link href="/#contact">Request Service Online</Link>

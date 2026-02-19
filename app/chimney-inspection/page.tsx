@@ -501,7 +501,7 @@ export default function ChimneyInspectionPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (206) 274-6409
+                  Call (555) 555-5555
                 </Button>
                 <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-slate-900">
                   Request Inspection

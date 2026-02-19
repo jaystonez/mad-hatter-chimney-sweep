@@ -184,8 +184,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const service = services[slug as keyof typeof services]
+  const resolvedParams = await params
+  const service = services[resolvedParams.slug as keyof typeof services]
   
   if (!service) {
     return {
@@ -200,8 +200,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const service = services[slug as keyof typeof services]
+  const resolvedParams = await params
+  const service = services[resolvedParams.slug as keyof typeof services]
 
   if (!service) {
     notFound()
@@ -308,9 +308,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                       className="bg-transparent border-white text-white hover:bg-white hover:text-primary"
                       asChild
                     >
-                      <a href="tel:2062746409">
+                      <a href="tel:5555555555">
                         <Phone className="w-4 h-4 mr-2" />
-                        Call (206) 274-6409
+                        Call (555) 555-5555
                       </a>
                     </Button>
                   </div>

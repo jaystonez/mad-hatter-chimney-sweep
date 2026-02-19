@@ -24,9 +24,9 @@ export default function ChimneyCapInstallationPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <a href="tel:2062746409">
+                <a href="tel:5555555555">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (206) 274-6409
+                  Call (555) 555-5555
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild className="bg-transparent text-white border-white hover:bg-white hover:text-slate-900">
@@ -415,9 +415,9 @@ export default function ChimneyCapInstallationPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <a href="tel:2062746409">
+              <a href="tel:5555555555">
                 <Phone className="mr-2 h-5 w-5" />
-                Call (206) 274-6409
+                Call (555) 555-5555
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild className="bg-transparent text-white border-white hover:bg-white hover:text-primary">

@@ -40,7 +40,7 @@ const locations = {
       "Sammamish Valley", "Bear Creek", "Idylwood", "North Redmond"
     ],
     zipCodes: ["98052", "98053", "98073"],
-    localContent: "Serving Redmond families with reliable chimney services since 2014. From Education Hill to Sammamish Valley, we keep Redmond chimneys clean, safe, and functioning properly year-round."
+    localContent: "Serving Redmond families with reliable chimney services since 1979. From Education Hill to Sammamish Valley, we keep Redmond chimneys clean, safe, and functioning properly year-round."
   },
   "kirkland": {
     name: "Kirkland",
@@ -133,8 +133,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const location = locations[slug as keyof typeof locations]
+  const resolvedParams = await params
+  const location = locations[resolvedParams.slug as keyof typeof locations]
   
   if (!location) {
     return {
@@ -149,8 +149,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const location = locations[slug as keyof typeof locations]
+  const resolvedParams = await params
+  const location = locations[resolvedParams.slug as keyof typeof locations]
 
   if (!location) {
     notFound()
@@ -175,9 +175,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:2062746409">
+                  <a href="tel:5555555555">
                     <Phone className="w-4 h-4 mr-2" />
-                    (206) 274-6409
+                    (555) 555-5555
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
@@ -280,9 +280,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                       variant="secondary" 
                       asChild
                     >
-                      <a href="tel:2062746409">
+                      <a href="tel:5555555555">
                         <Phone className="w-4 h-4 mr-2" />
-                        Call (206) 274-6409
+                        Call (555) 555-5555
                       </a>
                     </Button>
                     <Button 

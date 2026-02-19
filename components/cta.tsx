@@ -78,7 +78,7 @@ export default function CTA() {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="(206) 555-0100"
+                    placeholder="(555) 555-5555"
                   />
                 </div>
               </div>
@@ -115,8 +115,8 @@ export default function CTA() {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground mb-1">Phone</p>
-                      <a href="tel:+12062746409" className="text-primary hover:underline">
-                        (206) 274-6409
+                      <a href="tel:+15555555555" className="text-primary hover:underline">
+                        (555) 555-5555
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">
                         Call us for immediate assistance
@@ -150,7 +150,7 @@ export default function CTA() {
                     <div>
                       <p className="font-semibold text-foreground mb-1">Service Area</p>
                       <p className="text-muted-foreground">
-                        Serving all of King County and surrounding areas
+                        Serving all of [Your County] and surrounding areas
                       </p>
                     </div>
                   </CardContent>
