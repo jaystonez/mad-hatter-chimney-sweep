@@ -1,140 +1,124 @@
 "use client"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
-import { 
-  Search, 
-  AlertTriangle, 
-  CheckCircle2, 
-  XCircle,
+import {
+  Search,
+  AlertTriangle,
+  CheckCircle2,
   MapPin,
   ImageIcon as ImageIconIcon,
   Calendar,
   Star,
   Building,
   Shield,
-  ExternalLink
+  ExternalLink,
+  Code,
+  Clock
 } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import { scanURL, isLiveMode, type SRRPScanResult } from "@/lib/srrp-api"
 
-interface RedFlag {
-  id: string
-  name: string
-  severity: 'low' | 'medium' | 'high'
-  detected: boolean
-  description: string
-  icon: any
+const REFLEX_META: Record<string, { label: string; icon: any; severity: 'high' | 'medium' | 'low'; description: string }> = {
+  obfuscated_javascript: {
+    label: "JavaScript Obfuscation",
+    icon: Code,
+    severity: "high",
+    description: "Site code is heavily scrambled — a common technique used by lead-gen networks to hide tracking and redirect chains from security tools."
+  },
+  schema_cloaking: {
+    label: "Schema / Review Cloaking",
+    icon: Shield,
+    severity: "high",
+    description: "Structured data shown to search engines differs from what real users see. May include fake review counts or inflated ratings."
+  },
+  review_date_spoofing: {
+    label: "Review Date Manipulation",
+    icon: Star,
+    severity: "medium",
+    description: "Review timestamps show suspicious patterns consistent with backdating or bulk-posting fake reviews."
+  },
+  hidden_dom_seo: {
+    label: "Hidden DOM SEO Content",
+    icon: Building,
+    severity: "medium",
+    description: "Invisible keyword-stuffed text is present in the page code but hidden from human visitors — a banned search manipulation tactic."
+  },
+  filename_spoofing: {
+    label: "Image Filename Spoofing",
+    icon: ImageIconIcon,
+    severity: "medium",
+    description: "Image filenames use location keywords unrelated to the actual photo content, designed to manipulate image search rankings."
+  },
+  image_reuse: {
+    label: "Stolen / Reused Photos",
+    icon: ImageIconIcon,
+    severity: "medium",
+    description: "Photos appear to be reused across multiple unrelated business listings, suggesting stolen project photos."
+  },
+  cloaked_location: {
+    label: "Location Pin Fraud",
+    icon: MapPin,
+    severity: "high",
+    description: "Address appears to match a residential home, UPS Store, virtual office, or an unrelated business such as a school or daycare."
+  },
+  business_hours: {
+    label: "Business Hours Verification",
+    icon: Clock,
+    severity: "low",
+    description: "No verifiable business hours found on the site or associated profiles."
+  },
 }
 
 export default function VerifyBusinessPage() {
   const [url, setUrl] = useState("")
   const [loading, setLoading] = useState(false)
-  const [results, setResults] = useState<RedFlag[] | null>(null)
-  const [overallScore, setOverallScore] = useState<number | null>(null)
+  const [result, setResult] = useState<SRRPScanResult | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const liveMode = isLiveMode()
 
   const handleScan = async () => {
     if (!url) return
-    
     setLoading(true)
-    
-    // Simulate scanning delay
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    // Mock results - in production this would call your backend API
-    const mockResults: RedFlag[] = [
-      {
-        id: 'address',
-        name: 'Physical Address Verification',
-        severity: 'high',
-        detected: Math.random() > 0.5,
-        description: 'Business address may not match actual location. Verify with public records.',
-        icon: MapPin
-      },
-      {
-        id: 'images',
-        name: 'Stock Photo Detection',
-        severity: 'medium',
-        detected: Math.random() > 0.5,
-        description: 'Site uses generic stock photos instead of real work photos.',
-        icon: ImageIconIcon
-      },
-      {
-        id: 'age',
-        name: 'Business Age Claims',
-        severity: 'medium',
-        detected: Math.random() > 0.5,
-        description: 'Business age claims do not match registration records.',
-        icon: Calendar
-      },
-      {
-        id: 'reviews',
-        name: 'Review Pattern Analysis',
-        severity: 'low',
-        detected: Math.random() > 0.5,
-        description: 'Review timestamps show suspicious clustering patterns.',
-        icon: Star
-      },
-      {
-        id: 'license',
-        name: 'License Verification',
-        severity: 'high',
-        detected: Math.random() > 0.5,
-        description: 'Unable to verify state contractor license. Check with L&I.',
-        icon: Shield
-      },
-      {
-        id: 'structure',
-        name: 'Website Template Analysis',
-        severity: 'low',
-        detected: Math.random() > 0.5,
-        description: 'Site uses generic template common to lead-generation networks.',
-        icon: Building
-      }
-    ]
-    
-    setResults(mockResults)
-    
-    // Calculate score
-    const flagsDetected = mockResults.filter(r => r.detected)
-    const highCount = flagsDetected.filter(r => r.severity === 'high').length
-    const mediumCount = flagsDetected.filter(r => r.severity === 'medium').length
-    const lowCount = flagsDetected.filter(r => r.severity === 'low').length
-    
-    const score = Math.max(0, 100 - (highCount * 30) - (mediumCount * 15) - (lowCount * 5))
-    setOverallScore(score)
-    
-    setLoading(false)
+    setError(null)
+    setResult(null)
+    try {
+      const data = await scanURL(url)
+      setResult(data)
+    } catch (e) {
+      setError("Scan failed. Please check the URL and try again.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   const getScoreColor = (score: number) => {
-    if (score >= 70) return 'text-green-600'
-    if (score >= 40) return 'text-yellow-600'
-    return 'text-red-600'
+    if (score <= 30) return "text-green-600"
+    if (score <= 60) return "text-yellow-600"
+    return "text-red-600"
   }
 
-  const getScoreLabel = (score: number) => {
-    if (score >= 70) return 'Low Risk'
-    if (score >= 40) return 'Medium Risk'
-    return 'High Risk'
+  const getThreatBadgeVariant = (level: string): "default" | "secondary" | "destructive" => {
+    if (level === "Clean" || level === "Low") return "default"
+    if (level === "Medium") return "secondary"
+    return "destructive"
   }
 
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      
       <main className="flex-1">
-        {/* Hero Section */}
+        {/* Hero */}
         <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
-                Free Public Service
+                Free Public Service{!liveMode && " — Demo Mode"}
               </Badge>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
                 Verify Any Home Services Business
@@ -142,13 +126,11 @@ export default function VerifyBusinessPage() {
               <p className="text-xl text-muted-foreground mb-8 text-balance">
                 Protect yourself from fraud. Check for common red flags before hiring a contractor.
               </p>
-              
-              {/* Scan Form */}
               <Card className="shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-left">Enter Business Website</CardTitle>
                   <CardDescription className="text-left">
-                    We will check for common fraud indicators and verification issues
+                    We check for fraud indicators including obfuscated code, fake reviews, location fraud, and stolen photos.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -158,10 +140,11 @@ export default function VerifyBusinessPage() {
                       placeholder="https://example-business.com"
                       value={url}
                       onChange={(e) => setUrl(e.target.value)}
+                      onKeyDown={(e) => e.key === "Enter" && handleScan()}
                       className="flex-1"
                       disabled={loading}
                     />
-                    <Button 
+                    <Button
                       onClick={handleScan}
                       disabled={!url || loading}
                       size="lg"
@@ -170,60 +153,57 @@ export default function VerifyBusinessPage() {
                       {loading ? (
                         <>Scanning...</>
                       ) : (
-                        <>
-                          <Search className="mr-2 h-4 w-4" />
-                          Check Now
-                        </>
+                        <><Search className="mr-2 h-4 w-4" />Check Now</>
                       )}
                     </Button>
                   </div>
+                  {error && (
+                    <Alert className="mt-4 border-red-200 bg-red-50">
+                      <AlertTriangle className="h-4 w-4 text-red-600" />
+                      <AlertDescription className="text-red-900">{error}</AlertDescription>
+                    </Alert>
+                  )}
                 </CardContent>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Results Section */}
-        {results && overallScore !== null && (
+        {/* Results */}
+        {result && (
           <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 {/* Overall Score */}
                 <Card className="mb-8 border-2">
                   <CardContent className="pt-6">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between flex-wrap gap-4">
                       <div>
-                        <h3 className="text-sm font-medium text-muted-foreground mb-1">
-                          Trust Score
-                        </h3>
+                        <h3 className="text-sm font-medium text-muted-foreground mb-1">Threat Score</h3>
                         <div className="flex items-center gap-3">
-                          <span className={`text-5xl font-bold ${getScoreColor(overallScore)}`}>
-                            {overallScore}
+                          <span className={`text-5xl font-bold ${getScoreColor(result.score)}`}>
+                            {result.score}
                           </span>
                           <div>
-                            <Badge 
-                              variant={overallScore >= 70 ? "default" : overallScore >= 40 ? "secondary" : "destructive"}
-                            >
-                              {getScoreLabel(overallScore)}
+                            <Badge variant={getThreatBadgeVariant(result.threat_level)}>
+                              {result.threat_level} Risk
                             </Badge>
                             <p className="text-xs text-muted-foreground mt-1">
-                              {results.filter(r => r.detected).length} red flags detected
+                              {result.patterns_found} pattern{result.patterns_found !== 1 ? "s" : ""} detected
                             </p>
                           </div>
                         </div>
+                        <p className="text-xs text-muted-foreground mt-2">Lower score = cleaner site</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-sm text-muted-foreground mb-2">
-                          Always verify with official sources
-                        </p>
+                        <p className="text-sm text-muted-foreground mb-2">Always verify with official sources</p>
                         <Button variant="outline" size="sm" asChild>
-                          <a 
+                          <a
                             href="https://lni.wa.gov/licensing-permits/contractors/verify-contractor-registration"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            Check WA L&I License
-                            <ExternalLink className="ml-2 h-3 w-3" />
+                            Check WA L&I License <ExternalLink className="ml-2 h-3 w-3" />
                           </a>
                         </Button>
                       </div>
@@ -231,43 +211,45 @@ export default function VerifyBusinessPage() {
                   </CardContent>
                 </Card>
 
-                {/* Individual Red Flags */}
+                {/* Per-Rule Results */}
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold mb-4">Detailed Analysis</h2>
-                  
-                  {results.map((flag) => {
-                    const Icon = flag.icon
+                  {Object.entries(result.reflex_results).map(([key, val]) => {
+                    const meta = REFLEX_META[key]
+                    if (!meta) return null
+                    const Icon = meta.icon
+                    const flagged = val.score > 30
                     return (
-                      <Card 
-                        key={flag.id}
-                        className={flag.detected ? 'border-l-4 border-l-yellow-500' : ''}
+                      <Card
+                        key={key}
+                        className={flagged ? "border-l-4 border-l-yellow-500" : ""}
                       >
                         <CardContent className="pt-6">
                           <div className="flex items-start gap-4">
                             <div className={`p-3 rounded-lg ${
-                              flag.detected 
-                                ? 'bg-yellow-100 text-yellow-700' 
-                                : 'bg-green-100 text-green-700'
+                              flagged ? "bg-yellow-100 text-yellow-700" : "bg-green-100 text-green-700"
                             }`}>
                               <Icon className="h-6 w-6" />
                             </div>
                             <div className="flex-1">
-                              <div className="flex items-center justify-between mb-2">
-                                <h3 className="font-semibold text-lg">{flag.name}</h3>
-                                {flag.detected ? (
+                              <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+                                <h3 className="font-semibold text-lg">{meta.label}</h3>
+                                {flagged ? (
                                   <Badge variant="secondary" className="bg-yellow-100 text-yellow-800">
-                                    <AlertTriangle className="h-3 w-3 mr-1" />
-                                    Red Flag
+                                    <AlertTriangle className="h-3 w-3 mr-1" /> Red Flag ({val.score})
                                   </Badge>
                                 ) : (
                                   <Badge variant="secondary" className="bg-green-100 text-green-800">
-                                    <CheckCircle2 className="h-3 w-3 mr-1" />
-                                    Passed
+                                    <CheckCircle2 className="h-3 w-3 mr-1" /> Clean
                                   </Badge>
                                 )}
                               </div>
-                              <p className="text-muted-foreground">
-                                {flag.description}
+                              <p className="text-muted-foreground text-sm">{meta.description}</p>
+                              {val.details && (
+                                <p className="text-xs text-muted-foreground mt-1 italic">{val.details}</p>
+                              )}
+                              <p className="text-xs text-muted-foreground mt-1">
+                                Status: <span className="font-medium">{val.status}</span>
                               </p>
                             </div>
                           </div>
@@ -277,12 +259,12 @@ export default function VerifyBusinessPage() {
                   })}
                 </div>
 
-                {/* Educational Alert */}
+                {/* Educational alert */}
                 <Alert className="mt-8 border-blue-200 bg-blue-50">
                   <AlertTriangle className="h-4 w-4 text-blue-600" />
                   <AlertDescription className="text-blue-900">
-                    <strong>Important:</strong> This tool checks for common red flags but is not a substitute for proper verification. 
-                    Always verify contractor licenses with the Washington State Department of Labor & Industries, check references, 
+                    <strong>Important:</strong> This tool checks for common technical red flags but is not a substitute for proper verification.
+                    Always verify contractor licenses with the Washington State Department of Labor &amp; Industries, check references,
                     and get multiple quotes before hiring.
                   </AlertDescription>
                 </Alert>
@@ -292,12 +274,10 @@ export default function VerifyBusinessPage() {
                   <CardContent className="pt-6 text-center">
                     <h3 className="text-xl font-bold mb-2">Looking for a Verified Contractor?</h3>
                     <p className="text-muted-foreground mb-4">
-                      We are fully licensed, insured, and have served the Seattle area for over a decade.
+                      Mad Hatter Chimney Sweep is fully licensed, insured, and has served the Seattle area since 1979.
                     </p>
                     <Button size="lg" asChild>
-                      <Link href="/#contact">
-                        Get a Free Quote
-                      </Link>
+                      <Link href="/#contact">Get a Free Quote</Link>
                     </Button>
                   </CardContent>
                 </Card>
@@ -306,54 +286,23 @@ export default function VerifyBusinessPage() {
           </section>
         )}
 
-        {/* How It Works Section */}
-        {!results && (
+        {/* What We Check — shown before any scan */}
+        {!result && (
           <section className="py-16 bg-slate-50">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-12">What We Check</h2>
                 <div className="grid md:grid-cols-2 gap-6">
-                  {[
-                    {
-                      icon: MapPin,
-                      title: "Address Verification",
-                      description: "We check if the business address matches public records and is not a UPS store or virtual office."
-                    },
-                    {
-                      icon: Shield,
-                      title: "License Status",
-                      description: "We verify if the business appears to hold required contractor licenses with Washington State L&I."
-                    },
-                    {
-                      icon: ImageIconIcon,
-                      title: "Photo Authenticity",
-                      description: "We detect if the site uses stock photos vs. real project photos from actual work."
-                    },
-                    {
-                      icon: Star,
-                      title: "Review Patterns",
-                      description: "We analyze review timestamps and patterns for signs of manipulation or fake reviews."
-                    },
-                    {
-                      icon: Calendar,
-                      title: "Business Age Claims",
-                      description: "We cross-reference business age claims with actual registration dates."
-                    },
-                    {
-                      icon: Building,
-                      title: "Website Analysis",
-                      description: "We identify generic templates commonly used by lead-generation networks."
-                    }
-                  ].map((item, idx) => (
-                    <Card key={idx}>
+                  {Object.entries(REFLEX_META).map(([key, meta]) => (
+                    <Card key={key}>
                       <CardContent className="pt-6">
                         <div className="flex items-start gap-4">
                           <div className="p-3 rounded-lg bg-primary/10">
-                            <item.icon className="h-6 w-6 text-primary" />
+                            <meta.icon className="h-6 w-6 text-primary" />
                           </div>
                           <div>
-                            <h3 className="font-semibold mb-2">{item.title}</h3>
-                            <p className="text-sm text-muted-foreground">{item.description}</p>
+                            <h3 className="font-semibold mb-2">{meta.label}</h3>
+                            <p className="text-sm text-muted-foreground">{meta.description}</p>
                           </div>
                         </div>
                       </CardContent>
@@ -365,7 +314,6 @@ export default function VerifyBusinessPage() {
           </section>
         )}
       </main>
-
       <Footer />
     </div>
   )
