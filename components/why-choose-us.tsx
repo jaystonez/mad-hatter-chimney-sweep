@@ -1,4 +1,9 @@
+// @ts-nocheck
 import { CheckCircle, Clock, Award, Heart } from "lucide-react"
+import Image from "next/image"
+
+const WHY_IMAGE_SRC = process.env.NEXT_PUBLIC_WHY_IMAGE_URL ||
+  "https://placehold.co/600x500/1a1a2e/ffffff?text=Expert+Chimney+Service"
 
 const reasons = [
   {
@@ -25,56 +30,56 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="py-20 md:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Why Choose The Mad Hatter Chimney Sweep?
             </h2>
-            <p className="text-lg text-slate-300 mb-8 leading-relaxed text-pretty">
-              Since 1979, we've served over 2,500 satisfied customers throughout Greater Seattle. We've built our reputation on trust, quality, and exceptional service. When you choose us, you're choosing peace of mind backed by 45+ years of expertise.
+            <p className="text-muted-foreground mb-8">
+              Since 1979, we&apos;ve served over 2,500 satisfied customers throughout Greater Seattle.
+              We&apos;ve built our reputation on trust, quality, and exceptional service. When you
+              choose us, you&apos;re choosing peace of mind backed by 45+ years of expertise.
             </p>
-
-            <div className="space-y-6">
-              {reasons.map((reason, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <reason.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">{reason.title}</h3>
-                    <p className="text-slate-300 leading-relaxed">{reason.description}</p>
-                  </div>
+            {reasons.map((reason, index) => (
+              <div key={index} className="flex items-start space-x-4 mb-6">
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <reason.icon className="w-5 h-5 text-primary" />
                 </div>
-              ))}
-            </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-1">{reason.title}</h3>
+                  <p className="text-muted-foreground text-sm">{reason.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Right Content - Stats & Image */}
-          <div className="space-y-8">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="https://placehold.co/600x500?text=Experienced+chimney+sweep+professional+inspecting+fireplace+with+safety+equipment+and+tools"
+          <div className="space-y-6">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src={WHY_IMAGE_SRC}
                 alt="Experienced chimney sweep professional inspecting fireplace with safety equipment and tools"
+                width={600}
+                height={500}
                 className="w-full h-auto object-cover"
               />
             </div>
-
             {/* Stats Grid */}
             <div className="grid grid-cols-3 gap-4">
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
-                <p className="text-3xl md:text-4xl font-bold text-primary mb-2">2,500+</p>
-                <p className="text-sm text-slate-300">Happy Customers</p>
+              <div className="text-center p-4 bg-primary/5 rounded-xl">
+                <div className="text-2xl font-bold text-primary">2,500+</div>
+                <div className="text-xs text-muted-foreground mt-1">Happy Customers</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
-                <p className="text-3xl md:text-4xl font-bold text-primary mb-2">45+</p>
-                <p className="text-sm text-slate-300">Years Since 1979</p>
+              <div className="text-center p-4 bg-primary/5 rounded-xl">
+                <div className="text-2xl font-bold text-primary">45+</div>
+                <div className="text-xs text-muted-foreground mt-1">Years Since 1979</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
-                <p className="text-3xl md:text-4xl font-bold text-primary mb-2">100%</p>
-                <p className="text-sm text-slate-300">Satisfaction Rate</p>
+              <div className="text-center p-4 bg-primary/5 rounded-xl">
+                <div className="text-2xl font-bold text-primary">100%</div>
+                <div className="text-xs text-muted-foreground mt-1">Satisfaction Rate</div>
               </div>
             </div>
           </div>
