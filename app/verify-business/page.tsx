@@ -5,13 +5,20 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
-import { Search, AlertTriangle, CheckCircle2, MapPin, Calendar, Star, Building, Shield, ExternalLink, Code, Clock } from "lucide-react"
+import { Search, AlertTriangle, CheckCircle2, MapPin, Calendar, Star, Building, Shield, ExternalLink, Code, Clock, LucideIcon } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import { scanURL, isLiveMode } from "@/lib/srrp-api"
+import { scanURL, isLiveMode, SRRPScanResult } from "@/lib/srrp-api"
 
-const REFLEX_META = {
+interface ReflexMeta {
+  label: string
+  icon: LucideIcon
+  severity: string
+  description: string
+}
+
+const REFLEX_META: Record<string, ReflexMeta> = {
   obfuscated_javascript: {
     label: "JavaScript Obfuscation",
     icon: Code,
@@ -65,8 +72,8 @@ const REFLEX_META = {
 export default function VerifyBusinessPage() {
   const [url, setUrl] = useState("")
   const [loading, setLoading] = useState(false)
-  const [result, setResult] = useState(null)
-  const [error, setError] = useState(null)
+  const [result, setResult] = useState<SRRPScanResult | null>(null)
+  const [error, setError] = useState<string | null>(null)
   const liveMode = isLiveMode()
 
   const handleScan = async () => {
@@ -84,13 +91,13 @@ export default function VerifyBusinessPage() {
     }
   }
 
-  const getScoreColor = (score) => {
+  const getScoreColor = (score: number): string => {
     if (score <= 30) return "text-green-600"
     if (score <= 60) return "text-yellow-600"
     return "text-red-600"
   }
 
-  const getThreatBadgeVariant = (level) => {
+  const getThreatBadgeVariant = (level: string): "default" | "secondary" | "destructive" => {
     if (level === "Clean" || level === "Low") return "default"
     if (level === "Medium") return "secondary"
     return "destructive"
