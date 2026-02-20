@@ -68,9 +68,9 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+15555555555" className="flex items-center space-x-2 text-primary font-semibold">
+            <a href="tel:+12062746409555" className="flex items-center space-x-2 text-primary font-semibold">
               <Phone className="w-5 h-5" />
-              <span>(555) 555-5555</span>
+              <span>(206) 274-6409</span>
             </a>
             <Button size="lg" className="bg-primary hover:bg-primary/90">
               Schedule Service
@@ -104,9 +104,9 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <a href="tel:+15555555555" className="flex items-center space-x-2 text-primary font-semibold">
+              <a href="tel:+12062746409555" className="flex items-center space-x-2 text-primary font-semibold">
                 <Phone className="w-5 h-5" />
-                <span>(555) 555-5555</span>
+                <span>(206) 274-6409</span>
               </a>
               <Button size="lg" className="bg-primary hover:bg-primary/90 w-full">
                 Schedule Service
