@@ -74,7 +74,7 @@ export default function VerifyBusinessPage() {
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<SRRPScanResult | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const liveMode = isLiveMode()
+  const [liveMode] = useState(() => isLiveMode())
 
   const handleScan = async () => {
     if (!url) return
@@ -85,6 +85,7 @@ export default function VerifyBusinessPage() {
       const data = await scanURL(url)
       setResult(data)
     } catch (e) {
+      console.error('Scan error:', e)
       setError("Scan failed. Please check the URL and try again.")
     } finally {
       setLoading(false)
@@ -172,15 +173,15 @@ export default function VerifyBusinessPage() {
                       <div>
                         <h3 className="text-sm font-medium text-muted-foreground mb-1">Threat Score</h3>
                         <div className="flex items-center gap-3">
-                          <span className={`text-5xl font-bold ${getScoreColor(result.score)}`}>
-                            {result.score}
+                          <span className={`text-5xl font-bold ${getScoreColor(result.score ?? 0)}`}>
+                            {result.score ?? 0}
                           </span>
                           <div>
-                            <Badge variant={getThreatBadgeVariant(result.threat_level)}>
-                              {result.threat_level} Risk
+                            <Badge variant={getThreatBadgeVariant(result.threat_level ?? 'Clean')}>
+                              {result.threat_level ?? 'Clean'} Risk
                             </Badge>
                             <p className="text-xs text-muted-foreground mt-1">
-                              {result.patterns_found} pattern{result.patterns_found !== 1 ? "s" : ""} detected
+                              {result.patterns_found ?? 0} pattern{(result.patterns_found ?? 0) !== 1 ? "s" : ""} detected
                             </p>
                           </div>
                         </div>
@@ -204,11 +205,13 @@ export default function VerifyBusinessPage() {
 
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold mb-4">Detailed Analysis</h2>
-                  {Object.entries(result.reflex_results).map(([key, val]) => {
+                  {Object.entries(result.reflex_results ?? {}).map(([key, val]) => {
                     const meta = REFLEX_META[key]
                     if (!meta) return null
+                    if (!val) return null
                     const Icon = meta.icon
-                    const flagged = val.score > 30
+                    const score = val.score ?? 0
+                    const flagged = score > 30
                     return (
                       <Card
                         key={key}
@@ -224,7 +227,7 @@ export default function VerifyBusinessPage() {
                                 <h3 className="font-semibold text-lg">{meta.label}</h3>
                                 {flagged ? (
                                   <Badge variant="secondary" className="bg-yellow-100 text-yellow-800">
-                                    <AlertTriangle className="h-3 w-3 mr-1" /> Red Flag ({val.score})
+                                    <AlertTriangle className="h-3 w-3 mr-1" /> Red Flag ({score})
                                   </Badge>
                                 ) : (
                                   <Badge variant="secondary" className="bg-green-100 text-green-800">
@@ -237,7 +240,7 @@ export default function VerifyBusinessPage() {
                                 <p className="text-xs text-muted-foreground mt-1 italic">{val.details}</p>
                               )}
                               <p className="text-xs text-muted-foreground mt-1">
-                                Status: <span className="font-medium">{val.status}</span>
+                                Status: <span className="font-medium">{val.status ?? 'Unknown'}</span>
                               </p>
                             </div>
                           </div>
