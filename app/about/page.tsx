@@ -130,9 +130,9 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-center mb-12">Our Story</h2>
             
             <div className="prose max-w-none">
-              <img 
-                src="https://placehold.co/1200x600?text=Mad+Hatter+team+photo+in+front+of+actual+shop+with+company+truck+and+signage" 
-                alt="The Mad Hatter Chimney Sweep team photo in front of actual shop with company truck and signage" 
+              <img
+                src="/images/family-dinner.jpg"
+                alt="The Mad Hatter Chimney Sweep team photo in front of actual shop with company truck and signage"
                 className="w-full rounded-lg mb-8"
               />
 

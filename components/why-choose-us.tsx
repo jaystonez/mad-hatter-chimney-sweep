@@ -3,7 +3,7 @@ import { CheckCircle, Clock, Award, Heart } from "lucide-react"
 import Image from "next/image"
 
 const WHY_IMAGE_SRC = process.env.NEXT_PUBLIC_WHY_IMAGE_URL ||
-  "https://placehold.co/600x500/1a1a2e/ffffff?text=Expert+Chimney+Service"
+  "/images/herringbone-victorian.jpg"
 
 const reasons = [
   {
@@ -62,8 +62,8 @@ export default function WhyChooseUs() {
               <Image
                 src={WHY_IMAGE_SRC}
                 alt="Experienced chimney sweep professional inspecting fireplace with safety equipment and tools"
-                width={600}
-                height={500}
+                width={1200}
+                height={1600}
                 className="w-full h-auto object-cover"
               />
             </div>

@@ -4,7 +4,7 @@ import { Phone, Calendar, Shield } from "lucide-react"
 import Image from "next/image"
 
 const HERO_IMAGE_SRC = process.env.NEXT_PUBLIC_HERO_IMAGE_URL ||
-  "https://placehold.co/600x700/1a1a2e/ffffff?text=Professional+Chimney+Services"
+  "/images/hero-fireplace.jpg"
 
 export default function Hero() {
   return (
@@ -67,8 +67,8 @@ export default function Hero() {
                 src={HERO_IMAGE_SRC}
                 alt="Professional chimney after expert repair and cap installation - Mad Hatter Chimney Sweep Seattle"
                 className="w-full h-auto object-cover"
-                width={600}
-                height={700}
+                width={1920}
+                height={2560}
               />
             </div>
 
