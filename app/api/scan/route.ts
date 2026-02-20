@@ -44,35 +44,38 @@ function getDemoResults(url: string) {
 }
 
 export async function POST(req: NextRequest) {
+  // Parse body first so we have the URL available in catch block
+  let rawUrl = ''
+  let normalized = ''
   try {
     const body = await req.json()
-    let url = (body?.url || '').trim()
-    if (!url) {
-      return NextResponse.json(getDemoResults(''), { status: 200 })
-    }
-    if (!url.startsWith('http://') && !url.startsWith('https://')) {
-      url = 'https://' + url
-    }
-    let normalized = url
-    try { normalized = new URL(url).href } catch {
-      return NextResponse.json(getDemoResults(url), { status: 200 })
-    }
+    rawUrl = (body?.url || '').trim()
+  } catch {
+    return NextResponse.json(getDemoResults(''), { status: 200 })
+  }
 
-    if (!WP_ENDPOINT) {
-      return NextResponse.json(getDemoResults(normalized), { status: 200 })
-    }
+  if (!rawUrl) return NextResponse.json(getDemoResults(''), { status: 200 })
 
+  let s = rawUrl
+  if (!s.startsWith('http://') && !s.startsWith('https://')) s = 'https://' + s
+  try { normalized = new URL(s).href } catch {
+    return NextResponse.json(getDemoResults(rawUrl), { status: 200 })
+  }
+
+  if (!WP_ENDPOINT) {
+    return NextResponse.json(getDemoResults(normalized), { status: 200 })
+  }
+
+  try {
     const wpRes = await fetch(`${WP_ENDPOINT}/wp-json/srrp/v1/scan`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ url: normalized }),
       signal: AbortSignal.timeout(15000),
     })
-
     if (!wpRes.ok) throw new Error(`WP HTTP ${wpRes.status}`)
     const data = await wpRes.json()
 
-    // Enrich: if live API returns empty reflex_results or zero score, merge demo data
     const hasReflex = data?.reflex_results && Object.keys(data.reflex_results).length > 0
     const hasScore = data?.score > 0
     if (!hasReflex || !hasScore) {
@@ -86,13 +89,11 @@ export async function POST(req: NextRequest) {
         demo_mode: false,
       }, { status: 200 })
     }
-
     return NextResponse.json({ ...data, demo_mode: false }, { status: 200 })
   } catch (err) {
     console.error('[scan proxy] error:', err)
-    // Fallback to demo on any error
-    const body = await req.json().catch(() => ({}))
-    return NextResponse.json(getDemoResults(body?.url || ''), { status: 200 })
+    // Fallback to demo - normalized is available from outer scope
+    return NextResponse.json(getDemoResults(normalized), { status: 200 })
   }
 }
 
