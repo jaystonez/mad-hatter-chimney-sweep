@@ -20,58 +20,22 @@ export interface SRRPScanResult {
   timestamp: string
 }
 
-export async function scanURL(url: string): Promise<SRRPScanResult> {
-  // Validate URL before anything else
-  const normalizedUrl = normalizeURL(url)
-  if (!normalizedUrl) {
-    return getErrorResult(url, 'Invalid URL format. Please include https://')
-  }
-
-  // If no endpoint configured, return demo mode
-  if (!SRRP_ENDPOINT) {
-    return getDemoResults(normalizedUrl)
-  }
-
-  try {
-    const response = await fetch(`${SRRP_ENDPOINT}/wp-json/srrp/v1/scan`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ url: normalizedUrl }),
-    })
-
-    if (!response.ok) {
-      throw new Error(`Scan request failed: ${response.status}`)
-    }
-
-    const data = await response.json()
-    return data
-  } catch (error) {
-    console.error('[SRRP] scan error:', error)
-    // Fallback to demo mode on error
-    return getDemoResults(normalizedUrl)
-  }
-}
-
-// Normalize and validate URL — returns null if unparseable
+// Safe URL normalizer - no regex, no throws
 function normalizeURL(input: string): string | null {
   if (!input || typeof input !== 'string') return null
-  let trimmed = input.trim()
-  if (!trimmed) return null
-  // Auto-add https:// if missing protocol
-  if (!/^https?:\/\//i.test(trimmed)) {
-    trimmed = 'https://' + trimmed
+  let s = input.trim()
+  if (!s) return null
+  if (!s.startsWith('http://') && !s.startsWith('https://')) {
+    s = 'https://' + s
   }
   try {
-    const parsed = new URL(trimmed)
-    return parsed.href
+    return new URL(s).href
   } catch {
     return null
   }
 }
 
-// Return a safe error result without crashing
+// Safe fallback when URL is unparseable
 function getErrorResult(url: string, message: string): SRRPScanResult {
   return {
     success: false,
@@ -93,34 +57,45 @@ function getErrorResult(url: string, message: string): SRRPScanResult {
   }
 }
 
-// Demo mode - shows example results when backend not connected
+// Demo results - runs when WordPress endpoint not configured
 function getDemoResults(url: string): SRRPScanResult {
-  let domain = ''
+  let domain = url
   try {
     domain = new URL(url).hostname
   } catch {
-    domain = url
+    // keep domain = url as fallback
   }
 
-  // Domains with 'safe-chimney' or 'pristine' get flagged as demo fraud
-  const isDemoFraud = domain.includes('safe-chimney') || domain.includes('pristine')
+  const isFraud = domain.includes('safe-chimney') || domain.includes('pristine')
+
+  if (isFraud) {
+    return {
+      success: true,
+      url,
+      score: 65,
+      threat_level: 'High',
+      patterns_found: 5,
+      reflex_results: {
+        obfuscated_javascript: { score: 90, status: 'Red Flag', details: 'eval() chains and packed JS found in 3 script tags.' },
+        schema_cloaking: { score: 65, status: 'Red Flag', details: 'Schema markup differs from visible page content.' },
+        review_date_spoofing: { score: 65, status: 'Red Flag', details: '14 reviews posted within a 2-hour window.' },
+        hidden_dom_seo: { score: 60, status: 'Red Flag', details: 'Hidden keyword-stuffed divs found with display:none.' },
+        filename_spoofing: { score: 65, status: 'Red Flag', details: 'Images named with city/service keywords unrelated to content.' },
+        image_reuse: { score: 10, status: 'Clean' },
+        cloaked_location: { score: 30, status: 'Clean' },
+        business_hours: { score: 0, status: 'No hours info found' },
+      },
+      timestamp: new Date().toISOString(),
+    }
+  }
 
   return {
     success: true,
     url,
-    score: isDemoFraud ? 65 : 15,
-    threat_level: isDemoFraud ? 'High' : 'Low',
-    patterns_found: isDemoFraud ? 8 : 2,
-    reflex_results: isDemoFraud ? {
-      obfuscated_javascript: { score: 90, status: 'Heavily obfuscated scripts detected', details: 'eval() chains and packed JS found in 3 script tags.' },
-      schema_cloaking: { score: 65, status: 'Cloaking suspected', details: 'Schema markup differs from visible page content.' },
-      review_date_spoofing: { score: 65, status: 'Date spoofing suspected', details: '14 reviews posted within a 2-hour window.' },
-      hidden_dom_seo: { score: 60, status: 'Suspicious pattern', details: 'Hidden keyword-stuffed divs found with display:none.' },
-      filename_spoofing: { score: 65, status: 'Suspicious filename patterns', details: 'Images named with city/service keywords unrelated to content.' },
-      image_reuse: { score: 10, status: 'Clean' },
-      cloaked_location: { score: 30, status: 'Clean' },
-      business_hours: { score: 0, status: 'No business hours found' },
-    } : {
+    score: 15,
+    threat_level: 'Low',
+    patterns_found: 0,
+    reflex_results: {
       obfuscated_javascript: { score: 0, status: 'Clean' },
       schema_cloaking: { score: 0, status: 'Clean' },
       review_date_spoofing: { score: 0, status: 'Clean' },
@@ -131,6 +106,30 @@ function getDemoResults(url: string): SRRPScanResult {
       business_hours: { score: 15, status: 'Hours found on site' },
     },
     timestamp: new Date().toISOString(),
+  }
+}
+
+export async function scanURL(url: string): Promise<SRRPScanResult> {
+  const normalized = normalizeURL(url)
+  if (!normalized) {
+    return getErrorResult(url, 'Invalid URL. Please include https:// and a valid domain.')
+  }
+
+  if (!SRRP_ENDPOINT) {
+    return getDemoResults(normalized)
+  }
+
+  try {
+    const res = await fetch(`${SRRP_ENDPOINT}/wp-json/srrp/v1/scan`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url: normalized }),
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+    return await res.json() as SRRPScanResult
+  } catch (err) {
+    console.error('[SRRP] scan error:', err)
+    return getDemoResults(normalized)
   }
 }
 
