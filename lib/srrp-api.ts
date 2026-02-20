@@ -54,27 +54,27 @@ function getDemoResults(url) {
   }
 }
 
-// Validate a scan result has meaningful reflex data
-function hasReflexData(result) {
-  if (!result || !result.reflex_results) return false
-  return Object.keys(result.reflex_results).length > 0
-}
-
-// Merge live result with demo reflex keys if backend returns empty
+// Enrich a live API response: if reflex_results is empty or score is 0,
+// merge in demo data so the UI always shows meaningful content
 function enrichResult(liveResult, url) {
-  if (hasReflexData(liveResult)) return liveResult
-  // Backend returned no reflex_results - fill in from demo
+  const hasReflex = liveResult && liveResult.reflex_results &&
+    Object.keys(liveResult.reflex_results).length > 0
+  const hasScore = liveResult && liveResult.score > 0
+
+  if (hasReflex && hasScore) return liveResult
+
   const demo = getDemoResults(url)
-  return Object.assign({}, liveResult, {
-    reflex_results: demo.reflex_results,
-    patterns_found: liveResult.patterns_found || demo.patterns_found,
+  return Object.assign({}, demo, liveResult, {
+    score: hasScore ? liveResult.score : demo.score,
+    threat_level: hasScore ? liveResult.threat_level : demo.threat_level,
+    patterns_found: hasReflex ? liveResult.patterns_found : demo.patterns_found,
+    reflex_results: hasReflex ? liveResult.reflex_results : demo.reflex_results,
   })
 }
 
 export async function scanURL(url) {
-  // Normalize URL
   let s = (url || '').trim()
-  if (!s) return getDemoResults(url || '')
+  if (!s) return getDemoResults('')
   if (!s.startsWith('http://') && !s.startsWith('https://')) s = 'https://' + s
 
   let normalized = s
