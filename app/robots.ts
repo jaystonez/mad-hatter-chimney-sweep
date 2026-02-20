@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next'
-
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
@@ -7,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://madhatterchimney.com/sitemap.xml',
+    sitemap: 'https://www.themadhatterchimneysweep.com/sitemap.xml',
   }
 }
