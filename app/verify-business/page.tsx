@@ -6,7 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
 import { Search, AlertTriangle, CheckCircle2, MapPin, Calendar, Star, Building, Shield, ExternalLink, Code, Clock } from "lucide-react"
-import { ImageIcon } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -16,41 +15,49 @@ const REFLEX_META = {
   obfuscated_javascript: {
     label: "JavaScript Obfuscation",
     icon: Code,
+    severity: "high",
     description: "Site code is heavily scrambled — a common technique used by lead-gen networks to hide tracking and redirect chains from security tools."
   },
   schema_cloaking: {
     label: "Schema / Review Cloaking",
     icon: Shield,
+    severity: "high",
     description: "Structured data shown to search engines differs from what real users see. May include fake review counts or inflated ratings."
   },
   review_date_spoofing: {
     label: "Review Date Manipulation",
     icon: Star,
+    severity: "medium",
     description: "Review timestamps show suspicious patterns consistent with backdating or bulk-posting fake reviews."
   },
   hidden_dom_seo: {
     label: "Hidden DOM SEO Content",
     icon: Building,
+    severity: "medium",
     description: "Invisible keyword-stuffed text is present in the page code but hidden from human visitors — a banned search manipulation tactic."
   },
   filename_spoofing: {
     label: "Image Filename Spoofing",
-    icon: ImageIcon,
+    icon: Calendar,
+    severity: "medium",
     description: "Image filenames use location keywords unrelated to the actual photo content, designed to manipulate image search rankings."
   },
   image_reuse: {
     label: "Stolen / Reused Photos",
-    icon: ImageIcon,
+    icon: MapPin,
+    severity: "medium",
     description: "Photos appear to be reused across multiple unrelated business listings, suggesting stolen project photos."
   },
   cloaked_location: {
     label: "Location Pin Fraud",
     icon: MapPin,
+    severity: "high",
     description: "Address appears to match a residential home, UPS Store, virtual office, or an unrelated business such as a school or daycare."
   },
   business_hours: {
     label: "Business Hours Verification",
     icon: Clock,
+    severity: "low",
     description: "No verifiable business hours found on the site or associated profiles."
   },
 }
@@ -83,7 +90,7 @@ export default function VerifyBusinessPage() {
     return "text-red-600"
   }
 
-  const getThreatVariant = (level) => {
+  const getThreatBadgeVariant = (level) => {
     if (level === "Clean" || level === "Low") return "default"
     if (level === "Medium") return "secondary"
     return "destructive"
@@ -99,10 +106,10 @@ export default function VerifyBusinessPage() {
               <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20">
                 Free Public Service{!liveMode && " — Demo Mode"}
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
                 Verify Any Home Services Business
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-muted-foreground mb-8 text-balance">
                 Protect yourself from fraud. Check for common red flags before hiring a contractor.
               </p>
               <Card className="shadow-lg">
@@ -123,8 +130,17 @@ export default function VerifyBusinessPage() {
                       className="flex-1"
                       disabled={loading}
                     />
-                    <Button onClick={handleScan} disabled={!url || loading} size="lg" className="min-w-32">
-                      {loading ? <>Scanning...</> : <><Search className="mr-2 h-4 w-4" />Check Now</>}
+                    <Button
+                      onClick={handleScan}
+                      disabled={!url || loading}
+                      size="lg"
+                      className="min-w-32"
+                    >
+                      {loading ? (
+                        <>Scanning...</>
+                      ) : (
+                        <><Search className="mr-2 h-4 w-4" />Check Now</>
+                      )}
                     </Button>
                   </div>
                   {error && (
@@ -153,7 +169,7 @@ export default function VerifyBusinessPage() {
                             {result.score}
                           </span>
                           <div>
-                            <Badge variant={getThreatVariant(result.threat_level)}>
+                            <Badge variant={getThreatBadgeVariant(result.threat_level)}>
                               {result.threat_level} Risk
                             </Badge>
                             <p className="text-xs text-muted-foreground mt-1">
@@ -163,11 +179,18 @@ export default function VerifyBusinessPage() {
                         </div>
                         <p className="text-xs text-muted-foreground mt-2">Lower score = cleaner site</p>
                       </div>
-                      <Button variant="outline" size="sm" asChild>
-                        <a href="https://lni.wa.gov/licensing-permits/contractors/verify-contractor-registration" target="_blank" rel="noopener noreferrer">
-                          Check WA L&I License <ExternalLink className="ml-2 h-3 w-3" />
-                        </a>
-                      </Button>
+                      <div className="text-right">
+                        <p className="text-sm text-muted-foreground mb-2">Always verify with official sources</p>
+                        <Button variant="outline" size="sm" asChild>
+                          <a
+                            href="https://lni.wa.gov/licensing-permits/contractors/verify-contractor-registration"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Check WA L&I License <ExternalLink className="ml-2 h-3 w-3" />
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -180,7 +203,10 @@ export default function VerifyBusinessPage() {
                     const Icon = meta.icon
                     const flagged = val.score > 30
                     return (
-                      <Card key={key} className={flagged ? "border-l-4 border-l-yellow-500" : ""}>
+                      <Card
+                        key={key}
+                        className={flagged ? "border-l-4 border-l-yellow-500" : ""}
+                      >
                         <CardContent className="pt-6">
                           <div className="flex items-start gap-4">
                             <div className={`p-3 rounded-lg ${flagged ? "bg-yellow-100 text-yellow-700" : "bg-green-100 text-green-700"}`}>
@@ -200,8 +226,12 @@ export default function VerifyBusinessPage() {
                                 )}
                               </div>
                               <p className="text-muted-foreground text-sm">{meta.description}</p>
-                              {val.details && <p className="text-xs text-muted-foreground mt-1 italic">{val.details}</p>}
-                              <p className="text-xs text-muted-foreground mt-1">Status: <span className="font-medium">{val.status}</span></p>
+                              {val.details && (
+                                <p className="text-xs text-muted-foreground mt-1 italic">{val.details}</p>
+                              )}
+                              <p className="text-xs text-muted-foreground mt-1">
+                                Status: <span className="font-medium">{val.status}</span>
+                              </p>
                             </div>
                           </div>
                         </CardContent>
@@ -214,15 +244,20 @@ export default function VerifyBusinessPage() {
                   <AlertTriangle className="h-4 w-4 text-blue-600" />
                   <AlertDescription className="text-blue-900">
                     <strong>Important:</strong> This tool checks for common technical red flags but is not a substitute for proper verification.
-                    Always verify contractor licenses with Washington State L&I, check references, and get multiple quotes.
+                    Always verify contractor licenses with the Washington State Department of Labor &amp; Industries, check references,
+                    and get multiple quotes before hiring.
                   </AlertDescription>
                 </Alert>
 
                 <Card className="mt-8 bg-gradient-to-br from-primary/5 to-primary/10">
                   <CardContent className="pt-6 text-center">
                     <h3 className="text-xl font-bold mb-2">Looking for a Verified Contractor?</h3>
-                    <p className="text-muted-foreground mb-4">Mad Hatter Chimney Sweep is fully licensed, insured, and has served Seattle since 1979.</p>
-                    <Button size="lg" asChild><Link href="/#contact">Get a Free Quote</Link></Button>
+                    <p className="text-muted-foreground mb-4">
+                      Mad Hatter Chimney Sweep is fully licensed, insured, and has served the Seattle area since 1979.
+                    </p>
+                    <Button size="lg" asChild>
+                      <Link href="/#contact">Get a Free Quote</Link>
+                    </Button>
                   </CardContent>
                 </Card>
               </div>
