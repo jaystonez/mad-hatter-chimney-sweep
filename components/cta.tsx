@@ -1,154 +1,166 @@
 "use client"
 
-import React from "react"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent } from "@/components/ui/card"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import React, { useState } from "react"
+import { Phone, Mail, Clock, MapPin, Send, CheckCircle } from "lucide-react"
 
-export default function CTA() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  })
+export function CTA() {
+  const [submitted, setSubmitted] = useState(false)
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" })
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    alert("Thank you for your inquiry! We'll get back to you soon.")
+    setSubmitted(true)
   }
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 to-orange-50">
+    <section id="contact" className="py-24 bg-stone-900">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Left Side - Contact Form */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Schedule Your Service?</h2>
-            <p className="text-muted-foreground mb-8">
-              Fill out the form below or give us a call. We'll respond promptly to discuss your needs and schedule a convenient time.
-            </p>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">Full Name *</label>
-                <Input
-                  id="name"
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="John Smith"
-                  className="w-full"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">Email Address *</label>
-                <Input
-                  id="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="john@example.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone Number *</label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  required
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  placeholder="(206) 274-6409"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">Tell Us About Your Needs</label>
-                <Textarea
-                  id="message"
-                  rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Describe the service you need or any questions you have..."
-                  className="w-full"
-                />
-              </div>
-              <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
-                Send Message
-              </Button>
-            </form>
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <Phone className="w-4 h-4" />
+            Get In Touch
           </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Ready to Schedule Your Service?
+          </h2>
+          <p className="text-xl text-stone-400 max-w-2xl mx-auto">
+            Fill out the form or give us a call. We respond promptly and offer free inspections throughout Greater Seattle.
+          </p>
+        </div>
 
-          {/* Right Side - Contact Info */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
-              <div className="space-y-6">
-                <Card>
-                  <CardContent className="p-6 flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground mb-1">Phone</p>
-                      <a href="tel:+12062746409" className="text-primary hover:underline">
-                        (206) 274-6409
-                      </a>
-                      <p className="text-sm text-muted-foreground mt-1">Call us for immediate assistance</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6 flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground mb-1">Email</p>
-                      <a href="mailto:services@themadhatterchimneysweep.com" className="text-primary hover:underline">
-                        services@themadhatterchimneysweep.com
-                      </a>
-                      <p className="text-sm text-muted-foreground mt-1">We respond within 24 hours</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6 flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground mb-1">Service Area</p>
-                      <p className="text-muted-foreground">Serving all of King &amp; Snohomish Counties and surrounding areas</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardContent className="p-6 flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-foreground mb-1">Business Hours</p>
-                      <p className="text-muted-foreground">
-                        Monday - Friday: 8am - 6pm<br />
-                        Saturday: 9am - 4pm<br />
-                        Sunday: Closed
-                      </p>
-                      <p className="text-sm text-primary mt-2">Emergency services available</p>
-                    </div>
-                  </CardContent>
-                </Card>
+        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          {/* Contact info */}
+          <div className="space-y-6">
+            <div className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-amber-400" />
+                </div>
+                <div>
+                  <div className="text-xs text-stone-500 uppercase tracking-wide font-medium">Call Us</div>
+                  <a href="tel:+12062746409" className="text-xl font-bold text-white hover:text-amber-400 transition-colors">
+                    (206) 274-6409
+                  </a>
+                </div>
+              </div>
+              <p className="text-stone-400 text-sm pl-14">Available for emergency calls</p>
+            </div>
+
+            <div className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-amber-400" />
+                </div>
+                <div>
+                  <div className="text-xs text-stone-500 uppercase tracking-wide font-medium">Email Us</div>
+                  <a href="mailto:services@themadhatterchimneysweep.com" className="text-sm font-semibold text-white hover:text-amber-400 transition-colors">
+                    services@themadhatterchimneysweep.com
+                  </a>
+                </div>
+              </div>
+              <p className="text-stone-400 text-sm pl-14">We respond within 24 hours</p>
+            </div>
+
+            <div className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
+                  <Clock className="w-5 h-5 text-amber-400" />
+                </div>
+                <div className="text-xs text-stone-500 uppercase tracking-wide font-medium">Business Hours</div>
+              </div>
+              <div className="pl-14 space-y-1 text-sm">
+                <div className="flex justify-between"><span className="text-stone-400">Mon - Fri</span><span className="text-white font-medium">8am - 6pm</span></div>
+                <div className="flex justify-between"><span className="text-stone-400">Saturday</span><span className="text-white font-medium">9am - 4pm</span></div>
+                <div className="flex justify-between"><span className="text-stone-400">Sunday</span><span className="text-stone-500">Closed</span></div>
               </div>
             </div>
+
+            <div className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-6">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-amber-400" />
+                </div>
+                <div>
+                  <div className="text-xs text-stone-500 uppercase tracking-wide font-medium">Service Area</div>
+                  <div className="text-white font-semibold">King &amp; Snohomish Counties</div>
+                  <div className="text-stone-400 text-sm">and surrounding areas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Form */}
+          <div className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-8">
+            {submitted ? (
+              <div className="text-center py-12">
+                <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Message Sent!</h3>
+                <p className="text-stone-400">We&apos;ll get back to you within 24 hours.</p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-stone-400 text-sm font-medium mb-1.5">Full Name *</label>
+                  <input
+                    required
+                    type="text"
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    className="w-full bg-stone-900/50 border border-stone-600 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 transition-colors"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-stone-400 text-sm font-medium mb-1.5">Email *</label>
+                    <input
+                      required
+                      type="email"
+                      value={form.email}
+                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                      className="w-full bg-stone-900/50 border border-stone-600 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 transition-colors"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-stone-400 text-sm font-medium mb-1.5">Phone *</label>
+                    <input
+                      required
+                      type="tel"
+                      value={form.phone}
+                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      className="w-full bg-stone-900/50 border border-stone-600 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 transition-colors"
+                      placeholder="(206) 555-0100"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-stone-400 text-sm font-medium mb-1.5">Tell Us About Your Needs</label>
+                  <textarea
+                    rows={4}
+                    value={form.message}
+                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    className="w-full bg-stone-900/50 border border-stone-600 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 transition-colors resize-none"
+                    placeholder="Describe your chimney issue or service needed..."
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-lg shadow-amber-500/25"
+                >
+                  <Send className="w-5 h-5" />
+                  Send Message
+                </button>
+                <p className="text-stone-500 text-xs text-center">We&apos;ll respond within 24 hours. No spam, ever.</p>
+              </form>
+            )}
           </div>
         </div>
       </div>
     </section>
   )
 }
+
+export default CTA
