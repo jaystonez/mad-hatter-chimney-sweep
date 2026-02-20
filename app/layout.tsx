@@ -4,13 +4,23 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import SchemaMarkup from '@/components/schema-markup'
 import './globals.css'
-
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
-
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.themadhatterchimneysweep.com'),
   title: 'The Mad Hatter Chimney Sweep | Professional Chimney Services Since 1979',
   description: 'Trusted chimney sweep and fireplace services since 1979. Over 2500 satisfied customers. Professional cleaning, inspections, and repairs throughout Greater Seattle.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'The Mad Hatter Chimney Sweep | Professional Chimney Services Since 1979',
+    description: 'Trusted chimney sweep and fireplace services since 1979. Over 2500 satisfied customers throughout Greater Seattle.',
+    url: 'https://www.themadhatterchimneysweep.com',
+    siteName: 'The Mad Hatter Chimney Sweep',
+    locale: 'en_US',
+    type: 'website',
+  },
   icons: {
     icon: [
       {
@@ -29,7 +39,6 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
 }
-
 export default function RootLayout({
   children,
 }: Readonly<{
