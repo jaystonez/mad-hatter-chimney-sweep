@@ -35,7 +35,7 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2 whitespace-nowrap">
             <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-xl">MH</span>
             </div>
@@ -68,7 +68,7 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+12062746409" className="flex items-center space-x-2 text-primary font-semibold">
+            <a href="tel:+12062746409" className="flex items-center space-x-2 whitespace-nowrap text-primary font-semibold">
               <Phone className="w-5 h-5" />
               <span>(206) 274-6409</span>
             </a>
@@ -104,7 +104,7 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <a href="tel:+12062746409" className="flex items-center space-x-2 text-primary font-semibold">
+              <a href="tel:+12062746409" className="flex items-center space-x-2 whitespace-nowrap text-primary font-semibold">
                 <Phone className="w-5 h-5" />
                 <span>(206) 274-6409</span>
               </a>
