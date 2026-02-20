@@ -1,15 +1,12 @@
 // @ts-nocheck
-import { CheckCircle, Clock, Award, Heart } from "lucide-react"
+import { CheckCircle, Clock, Award, Heart, Shield, Star } from "lucide-react"
 import Image from "next/image"
-
-const WHY_IMAGE_SRC = process.env.NEXT_PUBLIC_WHY_IMAGE_URL ||
-  "/images/herringbone-victorian.jpg"
 
 const reasons = [
   {
-    icon: CheckCircle,
+    icon: Award,
     title: "Certified Professionals",
-    description: "Our team is fully trained, certified, and stays current with the latest industry standards and safety protocols.",
+    description: "Fully trained and certified technicians who stay current with the latest industry standards and safety protocols.",
   },
   {
     icon: Clock,
@@ -17,7 +14,7 @@ const reasons = [
     description: "We respect your time. Count on us to arrive on schedule and complete work efficiently without cutting corners.",
   },
   {
-    icon: Award,
+    icon: Star,
     title: "Quality Workmanship",
     description: "We take pride in our work and stand behind it with comprehensive warranties and a satisfaction guarantee.",
   },
@@ -26,62 +23,75 @@ const reasons = [
     title: "Customer-Focused",
     description: "Your safety and satisfaction are our top priorities. We treat every home as if it were our own.",
   },
+  {
+    icon: Shield,
+    title: "Licensed & Insured",
+    description: "Fully licensed and insured for your peace of mind. We carry comprehensive liability coverage on every job.",
+  },
+  {
+    icon: CheckCircle,
+    title: "Transparent Pricing",
+    description: "No hidden fees, no surprises. We provide detailed written estimates before any work begins.",
+  },
 ]
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-stone-900">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Why Choose The Mad Hatter Chimney Sweep?
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Since 1979, we&apos;ve served over 2,500 satisfied customers throughout Greater Seattle.
-              We&apos;ve built our reputation on trust, quality, and exceptional service. When you
-              choose us, you&apos;re choosing peace of mind backed by 45+ years of expertise.
-            </p>
-            {reasons.map((reason, index) => (
-              <div key={index} className="flex items-start space-x-4 mb-6">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <reason.icon className="w-5 h-5 text-primary" />
+        {/* Section header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <Shield className="w-4 h-4" />
+            Why Seattle Chooses Us
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            The Mad Hatter Difference
+          </h2>
+          <p className="text-xl text-stone-400 max-w-2xl mx-auto">
+            Since 1979, we&apos;ve built our reputation on trust, quality, and exceptional service across Greater Seattle.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Image */}
+          <div className="relative rounded-3xl overflow-hidden h-[500px] shadow-2xl shadow-black/50">
+            <Image
+              src="/images/herringbone-victorian.jpg"
+              alt="Expert chimney masonry work by Mad Hatter Chimney Sweep Seattle"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent" />
+            {/* Stats overlay */}
+            <div className="absolute bottom-6 left-6 right-6 grid grid-cols-3 gap-3">
+              {[
+                { value: "2,500+", label: "Happy Customers" },
+                { value: "45+", label: "Years Experience" },
+                { value: "100%", label: "Satisfaction" },
+              ].map((stat) => (
+                <div key={stat.label} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-3 text-center">
+                  <div className="text-2xl font-bold text-amber-400">{stat.value}</div>
+                  <div className="text-xs text-white/80">{stat.label}</div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1">{reason.title}</h3>
-                  <p className="text-muted-foreground text-sm">{reason.description}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
-          {/* Right Content - Stats & Image */}
-          <div className="space-y-6">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
-              <Image
-                src={WHY_IMAGE_SRC}
-                alt="Experienced chimney sweep professional inspecting fireplace with safety equipment and tools"
-                width={1200}
-                height={1600}
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            {/* Stats Grid */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="text-center p-4 bg-primary/5 rounded-xl">
-                <div className="text-2xl font-bold text-primary">2,500+</div>
-                <div className="text-xs text-muted-foreground mt-1">Happy Customers</div>
+          {/* Right: Reasons grid */}
+          <div className="grid sm:grid-cols-2 gap-6">
+            {reasons.map((reason) => (
+              <div
+                key={reason.title}
+                className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-6 hover:border-amber-500/30 hover:bg-stone-800 transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-500/20 transition-colors">
+                  <reason.icon className="w-6 h-6 text-amber-400" />
+                </div>
+                <h3 className="font-bold text-white mb-2">{reason.title}</h3>
+                <p className="text-stone-400 text-sm leading-relaxed">{reason.description}</p>
               </div>
-              <div className="text-center p-4 bg-primary/5 rounded-xl">
-                <div className="text-2xl font-bold text-primary">45+</div>
-                <div className="text-xs text-muted-foreground mt-1">Years Since 1979</div>
-              </div>
-              <div className="text-center p-4 bg-primary/5 rounded-xl">
-                <div className="text-2xl font-bold text-primary">100%</div>
-                <div className="text-xs text-muted-foreground mt-1">Satisfaction Rate</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
