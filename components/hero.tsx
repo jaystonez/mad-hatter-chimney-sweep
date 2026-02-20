@@ -1,90 +1,100 @@
 // @ts-nocheck
 import { Button } from "@/components/ui/button"
-import { Phone, Calendar, Shield } from "lucide-react"
+import { Phone, Shield, Star, CheckCircle } from "lucide-react"
 import Image from "next/image"
-
-const HERO_IMAGE_SRC = process.env.NEXT_PUBLIC_HERO_IMAGE_URL ||
-  "/images/hero-fireplace.jpg"
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-slate-50 via-white to-orange-50">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8">
-            <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full">
-              <Shield className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary">Trusted Since 1979</span>
+    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-stone-900 via-stone-800 to-amber-900 overflow-hidden">
+      {/* Background image with overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero-fireplace.jpg"
+          alt="Professional chimney sweep services - Mad Hatter Chimney Sweep Seattle"
+          fill
+          className="object-cover opacity-30"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40" />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 py-24">
+        <div className="max-w-3xl">
+          {/* Trust badge */}
+          <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/30 text-amber-300 px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
+            <Shield className="w-4 h-4" />
+            Trusted Since 1979 — Family Owned & Operated
+          </div>
+
+          {/* Headline */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+            Seattle&apos;s Most{" "}
+            <span className="text-amber-400">Trusted</span>
+            <br />Chimney Experts
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl text-stone-300 leading-relaxed mb-8 max-w-2xl">
+            Expert chimney sweeping, inspections, and repairs. Keeping Seattle homes safe and fireplaces running beautifully since 1979.
+          </p>
+
+          {/* Social proof strip */}
+          <div className="flex flex-wrap gap-6 mb-10 text-stone-300">
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                ))}
+              </div>
+              <span className="text-sm font-medium">500+ 5-Star Reviews</span>
             </div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight text-balance">
-              Professional Chimney Services You Can{" "}
-              <span className="text-primary">Trust</span>
-            </h1>
-
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty">
-              Expert chimney sweeping, inspections, and repairs. Keeping your home safe and your fireplace running efficiently since 1979.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="text-lg px-8" asChild>
-                <a href="#contact">Schedule Service</a>
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
-                <a href="tel:+12062746409">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (206) 274-6409
-                </a>
-              </Button>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-amber-400" />
+              <span className="text-sm font-medium">Licensed &amp; Insured</span>
             </div>
-
-            {/* Trust Badges */}
-            <div className="grid grid-cols-2 gap-4 pt-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm font-medium">Licensed &amp; Insured</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span className="text-sm font-medium">Full Coverage</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-sm font-medium"><strong>45+</strong> Years Since 1979</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-primary rounded-full"></div>
-                <span className="text-sm font-medium">Family Owned</span>
-              </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-amber-400" />
+              <span className="text-sm font-medium">2,500+ Happy Customers</span>
             </div>
           </div>
 
-          {/* Right Content - Image */}
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={HERO_IMAGE_SRC}
-                alt="Professional chimney after expert repair and cap installation - Mad Hatter Chimney Sweep Seattle"
-                className="w-full h-auto object-cover"
-                width={1920}
-                height={2560}
-              />
-            </div>
-
-            {/* Floating Card */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                  <span className="text-green-600 font-bold">✓</span>
-                </div>
-                <div>
-                  <p className="font-semibold text-sm">2,500+ Happy Customers</p>
-                  <p className="text-xs text-muted-foreground">5-star rated service</p>
-                </div>
-              </div>
-            </div>
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button
+              size="lg"
+              className="bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold text-lg px-8 py-6 shadow-lg shadow-amber-500/25 transition-all hover:shadow-amber-400/40 hover:scale-105"
+              asChild
+            >
+              <a href="#contact">Schedule Free Inspection</a>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-white/30 text-white hover:bg-white/10 font-semibold text-lg px-8 py-6 backdrop-blur-sm"
+              asChild
+            >
+              <a href="tel:+12062746409">
+                <Phone className="w-5 h-5 mr-2" />
+                (206) 274-6409
+              </a>
+            </Button>
           </div>
+        </div>
+      </div>
+
+      {/* Floating stats card */}
+      <div className="absolute bottom-8 right-8 z-10 hidden lg:flex gap-4">
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
+          <div className="text-3xl font-bold text-amber-400">45+</div>
+          <div className="text-xs text-stone-300">Years Experience</div>
+        </div>
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
+          <div className="text-3xl font-bold text-amber-400">2,500+</div>
+          <div className="text-xs text-stone-300">Happy Customers</div>
+        </div>
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
+          <div className="text-3xl font-bold text-amber-400">100%</div>
+          <div className="text-xs text-stone-300">Satisfaction</div>
         </div>
       </div>
     </section>
