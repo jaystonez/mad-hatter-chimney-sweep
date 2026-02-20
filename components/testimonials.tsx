@@ -4,37 +4,37 @@ import { Star } from "lucide-react"
 const testimonials = [
   {
     name: "Sarah Johnson",
-    location: "Springfield",
+    location: "Ballard",
     rating: 5,
     text: "Absolutely fantastic service! They were professional, thorough, and explained everything they were doing. Our chimney has never worked better. Highly recommend!",
   },
   {
     name: "Michael Chen",
-    location: "Riverside",
+    location: "Queen Anne",
     rating: 5,
     text: "After getting quotes from three companies, The Mad Hatter offered the best value and service. They arrived on time, did a meticulous job, and left no mess behind.",
   },
   {
     name: "Emily Rodriguez",
-    location: "Oakmont",
+    location: "Capitol Hill",
     rating: 5,
     text: "We had an emergency chimney issue and they responded immediately. The team was knowledgeable, friendly, and fixed the problem quickly. True professionals!",
   },
   {
     name: "David Thompson",
-    location: "Maplewood",
+    location: "Fremont",
     rating: 5,
     text: "I've been using their services for 5 years now. They're consistent, reliable, and always go above and beyond. Wouldn't trust anyone else with our chimney.",
   },
   {
     name: "Jennifer Martinez",
-    location: "Lakeside",
+    location: "Kirkland",
     rating: 5,
     text: "The inspection was incredibly thorough. They found issues we didn't know existed and provided clear solutions. Their honesty and expertise are unmatched.",
   },
   {
     name: "Robert Williams",
-    location: "Hillcrest",
+    location: "Bothell",
     rating: 5,
     text: "Great experience from start to finish. Fair pricing, excellent communication, and top-notch workmanship. Our fireplace looks and works like new!",
   },

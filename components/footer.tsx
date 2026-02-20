@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Twitter, Instagram } from "lucide-react"
+import { Facebook, Twitter, Instagram, Flame } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -12,7 +12,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">MH</span>
+                <Flame className="w-6 h-6 text-white" />
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-tight">The Mad Hatter</span>
@@ -31,6 +31,11 @@ export function Footer() {
               </a>
               <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
                 <Instagram className="w-5 h-5" />
+              </a>
+            </div>
+            <div className="mt-4">
+              <a href="tel:+12062746409" className="text-slate-400 hover:text-primary transition-colors">
+                (206) 274-6409
               </a>
             </div>
           </div>

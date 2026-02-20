@@ -2,23 +2,23 @@ export default function SchemaMarkup() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://madhatterchimney.com",
+    "@id": "https://themadhatterchimneysweep.com",
     "name": "Mad Hatter Chimney Sweep",
     "alternateName": "The Mad Hatter Chimney Sweep",
     "description": "Professional chimney sweep services in Greater Seattle since 1979. Expert chimney cleaning, inspection, repair, and maintenance.",
-    "url": "https://madhatterchimney.com",
-    "telephone": "+1-425-409-2344",
-    "email": "info@madhatterchimney.com",
+    "url": "https://themadhatterchimneysweep.com",
+    "telephone": "+1-206-274-6409",
+    "email": "info@themadhatterchimneysweep.com",
     "foundingDate": "1979",
     "priceRange": "$$",
-    "image": "https://madhatterchimney.com/logo.png",
-    "logo": "https://madhatterchimney.com/logo.png",
+    "image": "https://themadhatterchimneysweep.com/logo.png",
+    "logo": "https://themadhatterchimneysweep.com/logo.png",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "[Your Street Address]",
-      "addressLocality": "Seattle",
+      "streetAddress": "Bothell, WA",
+      "addressLocality": "Bothell",
       "addressRegion": "WA",
-      "postalCode": "[Your Zip]",
+      "postalCode": "98011",
       "addressCountry": "US"
     },
     "geo": {
@@ -172,8 +172,8 @@ export default function SchemaMarkup() {
       "worstRating": "1"
     },
     "sameAs": [
-      "https://www.facebook.com/madhatterchimney",
-      "https://www.yelp.com/biz/mad-hatter-chimney-sweep",
+      "https://www.facebook.com/themadhatterchimneysweep",
+      "https://www.yelp.com/biz/the-mad-hatter-chimney-sweep-seattle",
       "https://www.google.com/maps/place/mad-hatter-chimney-sweep"
     ]
   }

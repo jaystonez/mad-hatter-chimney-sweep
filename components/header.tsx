@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Phone, Menu, X } from "lucide-react"
+import { Phone, Menu, X, Flame } from "lucide-react"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,7 +37,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 whitespace-nowrap">
             <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">MH</span>
+              <Flame className="w-6 h-6 text-white" />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-lg leading-tight text-foreground">

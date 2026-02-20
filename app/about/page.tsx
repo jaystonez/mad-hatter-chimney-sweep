@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Award, Users, MapPin, Phone, Mail, CheckCircle2 } from "lucide-react"
 
 export const metadata = {
-  title: "About The Mad Hatter Chimney Sweep | Real Local Business Since [YEAR]",
+  title: "About The Mad Hatter Chimney Sweep | Real Local Business Since 1979",
   description: "Meet the real team behind The Mad Hatter Chimney Sweep. Licensed, insured, and locally owned - not a lead generation scam.",
 }
 
@@ -78,12 +78,12 @@ export default function AboutPage() {
               <Card className="border-2 border-purple-200 bg-purple-50">
                 <CardContent className="pt-6">
                   <Award className="w-12 h-12 text-purple-600 mb-4" />
-                  <h3 className="text-xl font-bold mb-2 text-purple-900">Certified & Trained</h3>
+                  <h3 className="text-xl font-bold mb-2 text-purple-900">Experienced & Trained</h3>
                   <p className="text-purple-800">
-                    CSIA Certified Chimney Sweep<br/>
-                    [Additional certifications]<br/>
-                    Over [X] years experience<br/>
-                    Ongoing professional training
+                    Over 45 years in the trade<br/>
+                    Family-taught craftsmanship<br/>
+                    Ongoing professional training<br/>
+                    We clean it right — not just 4 fingers deep
                   </p>
                 </CardContent>
               </Card>
@@ -93,8 +93,8 @@ export default function AboutPage() {
                   <Users className="w-12 h-12 text-orange-600 mb-4" />
                   <h3 className="text-xl font-bold mb-2 text-orange-900">Local & Family Owned</h3>
                   <p className="text-orange-800">
-                    Seattle resident since [YEAR]<br/>
-                    [Number] employees on staff<br/>
+                    Seattle area resident since 1979<br/>
+                    Dedicated team on staff<br/>
                     Active in the local community<br/>
                     No subcontractors on commission
                   </p>
@@ -137,16 +137,16 @@ export default function AboutPage() {
               />
 
               <p className="text-lg leading-relaxed mb-6">
-                The Mad Hatter Chimney Sweep was founded in [YEAR] by [OWNER NAME], a Seattle native 
-                who saw the need for honest, professional chimney services in the area. Unlike the 
-                corporate franchises and lead-generation scams that have flooded the market, we built 
+                The Mad Hatter Chimney Sweep was founded in 1979, a Seattle native
+                who saw the need for honest, professional chimney services in the area. Unlike the
+                corporate franchises and lead-generation scams that have flooded the market, we built
                 our reputation the old-fashioned way: one satisfied customer at a time.
               </p>
 
               <p className="text-lg leading-relaxed mb-6">
-                [OWNER NAME] started in the trade working for [previous experience/how you got started]. 
-                After seeing too many homeowners getting ripped off by bait-and-switch pricing and 
-                unqualified technicians, [he/she] decided to open a company that would do things differently.
+                What started as a family trade has grown into one of the most trusted chimney service
+                companies in the greater Seattle area. We built our reputation on doing the job right —
+                not cutting corners, not upselling unnecessary work, and never leaving a chimney half-cleaned.
               </p>
 
               <h3 className="text-2xl font-bold mb-4 mt-8">Our Values</h3>
@@ -207,48 +207,13 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-1 gap-8 max-w-lg mx-auto">
               <Card>
                 <CardContent className="pt-6 text-center">
-                  <img 
-                    src="https://placehold.co/300x300?text=Professional+headshot+of+owner+in+work+uniform+smiling" 
-                    alt="Professional headshot of owner in work uniform smiling" 
-                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="font-bold text-xl mb-1">[Owner Name]</h3>
+                  <h3 className="font-bold text-xl mb-1">Billy</h3>
                   <p className="text-primary font-medium mb-2">Owner & Master Sweep</p>
                   <p className="text-sm text-muted-foreground">
-                    CSIA Certified, [X] years experience
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-6 text-center">
-                  <img 
-                    src="https://placehold.co/300x300?text=Professional+headshot+of+lead+technician+in+work+uniform" 
-                    alt="Professional headshot of lead technician in work uniform" 
-                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="font-bold text-xl mb-1">[Team Member Name]</h3>
-                  <p className="text-primary font-medium mb-2">Lead Technician</p>
-                  <p className="text-sm text-muted-foreground">
-                    [Certification], [X] years experience
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="pt-6 text-center">
-                  <img 
-                    src="https://placehold.co/300x300?text=Professional+headshot+of+office+manager+smiling" 
-                    alt="Professional headshot of office manager smiling" 
-                    className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="font-bold text-xl mb-1">[Team Member Name]</h3>
-                  <p className="text-primary font-medium mb-2">Office Manager</p>
-                  <p className="text-sm text-muted-foreground">
-                    Scheduling & Customer Service
+                    45+ years experience, family-taught craftsmanship
                   </p>
                 </CardContent>
               </Card>
@@ -276,8 +241,8 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center gap-3">
                 <Phone className="w-6 h-6" />
-                <a href="tel:5555555555" className="text-2xl font-bold hover:text-primary transition-colors">
-                  (555) 555-5555
+                <a href="tel:+12062746409" className="text-2xl font-bold hover:text-primary transition-colors">
+                  (206) 274-6409
                 </a>
               </div>
               <span className="hidden sm:inline text-white/50">|</span>
