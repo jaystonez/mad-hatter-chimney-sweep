@@ -148,7 +148,7 @@ export default function ServicesPage() {
                 <Link href="/#contact">Get Free Estimate</Link>
               </Button>
               <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
-                <a href="tel:5555555555">Call (555) 555-5555</a>
+                                <a href="tel:+12062746409">Call (206) 274-6409</a>
               </Button>
             </div>
           </div>
