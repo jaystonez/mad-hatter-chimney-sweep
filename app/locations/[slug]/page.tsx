@@ -175,9 +175,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" asChild>
-                  <a href="tel:5555555555">
+                                <a href="tel:+12062746409">
                     <Phone className="w-4 h-4 mr-2" />
-                    (555) 555-5555
+                                    (206) 274-6409
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
@@ -280,9 +280,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                       variant="secondary" 
                       asChild
                     >
-                      <a href="tel:5555555555">
+                                                <a href="tel:+12062746409">
                         <Phone className="w-4 h-4 mr-2" />
-                        Call (555) 555-5555
+                                                    Call (206) 274-6409
                       </a>
                     </Button>
                     <Button 
