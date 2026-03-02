@@ -68,9 +68,9 @@ export default function Hero() {
               <a href="#contact">Schedule Free Inspection</a>
             </Button>
             <Button
-              variant="outline"
+              variant="ghost"
               size="lg"
-              className="border-white/30 text-white hover:bg-white/10 font-semibold text-lg px-8 py-6 backdrop-blur-sm"
+              className="border-2 border-white/70 bg-white/10 text-white hover:bg-white/20 font-semibold text-lg px-8 py-6 backdrop-blur-sm"
               asChild
             >
               <a href="tel:+12062746409">
@@ -85,8 +85,8 @@ export default function Hero() {
       {/* Floating stats card */}
       <div className="absolute bottom-8 right-8 z-10 hidden lg:flex gap-4">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
-          <div className="text-3xl font-bold text-amber-400">45+</div>
-          <div className="text-xs text-stone-300">Years Experience</div>
+          <div className="text-3xl font-bold text-amber-400">Since 1979</div>
+          <div className="text-xs text-stone-300">Trusted in Seattle</div>
         </div>
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
           <div className="text-3xl font-bold text-amber-400">2,500+</div>
