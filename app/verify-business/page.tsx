@@ -103,7 +103,7 @@ export default function VerifyBusinessPage() {
     }
   }
 
-
+  const getScoreColor = (score: number) => {
     if (score <= 30) return "text-green-600"
     if (score <= 60) return "text-yellow-600"
     return "text-red-600"
