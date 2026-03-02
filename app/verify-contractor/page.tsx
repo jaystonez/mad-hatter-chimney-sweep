@@ -292,7 +292,7 @@ export default function VerifyContractorPage() {
                   <CardTitle className="text-white">Our L&I Registration</CardTitle>
                 </CardHeader>
                 <CardContent className="text-slate-300">
-                  <p className="mb-2"><strong className="text-white">License #:</strong> [YOUR LICENSE NUMBER]</p>
+                  <p className="mb-2"><strong className="text-white">License #:</strong> MADHAHL790LW</p>
                   <p className="text-sm mb-4">Fully bonded and insured. Verify us at secure.lni.wa.gov/verify/</p>
                   <Button asChild variant="outline" size="sm">
                     <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener noreferrer">
@@ -308,10 +308,10 @@ export default function VerifyContractorPage() {
                   <CardTitle className="text-white">Our Real Shop Location</CardTitle>
                 </CardHeader>
                 <CardContent className="text-slate-300">
-                  <p className="mb-2"><strong className="text-white">Address:</strong> [YOUR ACTUAL SHOP ADDRESS]</p>
+                  <p className="mb-2"><strong className="text-white">Address:</strong> Bothell, WA 98011</p>
                   <p className="text-sm mb-4">Not a UPS box. Not a hijacked address. A real, physical shop you can visit.</p>
                   <Button asChild variant="outline" size="sm">
-                    <a href="[GOOGLE MAPS LINK]" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.google.com/maps/search/Mad+Hatter+Chimney+Sweep+Bothell+WA" target="_blank" rel="noopener noreferrer">
                       View on Google Maps →
                     </a>
                   </Button>
@@ -324,7 +324,7 @@ export default function VerifyContractorPage() {
                   <CardTitle className="text-white">Direct Owner Contact</CardTitle>
                 </CardHeader>
                 <CardContent className="text-slate-300">
-                  <p className="mb-2"><strong className="text-white">Phone:</strong> (555) 555-5555</p>
+                  <p className="mb-2"><strong className="text-white">Phone:</strong> (206) 274-6409</p>
                   <p className="text-sm">One phone number, one business. When you call, you get us - not a call center managing 50 fake companies.</p>
                 </CardContent>
               </Card>

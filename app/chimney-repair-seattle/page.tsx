@@ -23,7 +23,7 @@ export default function ChimneyRepairSeattle() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+12065551234"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors text-lg shadow-lg"
               >
                 <Phone className="h-5 w-5" />
@@ -486,7 +486,7 @@ export default function ChimneyRepairSeattle() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+12065551234"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-colors text-lg shadow-lg"
               >
                 <Phone className="h-5 w-5" />
