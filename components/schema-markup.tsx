@@ -8,7 +8,7 @@ export default function SchemaMarkup() {
     "description": "Professional chimney sweep services in Greater Seattle since 1979. Expert chimney cleaning, inspection, repair, and maintenance.",
     "url": "https://themadhatterchimneysweep.com",
     "telephone": "+1-206-274-6409",
-    "email": "info@themadhatterchimneysweep.com",
+    "email": "services@themadhatterchimneysweep.com",
     "foundingDate": "1979",
     "priceRange": "$$",
     "image": "https://themadhatterchimneysweep.com/logo.png",

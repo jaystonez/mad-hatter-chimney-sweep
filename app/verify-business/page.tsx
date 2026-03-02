@@ -86,7 +86,24 @@ export default function VerifyBusinessPage() {
     }
   }
 
-  const getScoreColor = (score) => {
+  const getRiskDescription = (level: string) => {
+    switch (level) {
+      case "Clean":
+        return "No significant red flags detected. This site appears consistent with a legitimate local business. Always confirm the license at WA L&I before hiring."
+      case "Low":
+        return "Minor signals worth noting, but nothing alarming. Do your standard due diligence — check the license number and read recent reviews carefully."
+      case "Medium":
+        return "Several patterns suggest this site may be part of a lead-generation network. Verify the physical address, read all reviews critically, and confirm the license before committing."
+      case "High":
+        return "Multiple red flags in code, reviews, or location signals. Consider getting a second opinion before hiring. Verify the contractor license at WA L&I and confirm the address is real."
+      case "Critical":
+        return "Strong indicators of fraud or deceptive practices. This site shows patterns commonly used by scam chimney companies. We strongly recommend finding a different contractor."
+      default:
+        return "Unable to determine risk level. Proceed with standard verification steps."
+    }
+  }
+
+
     if (score <= 30) return "text-green-600"
     if (score <= 60) return "text-yellow-600"
     return "text-red-600"
@@ -180,6 +197,9 @@ export default function VerifyBusinessPage() {
                           </div>
                         </div>
                         <p className="text-xs text-muted-foreground mt-2">Lower score = cleaner site</p>
+                        <p className="text-sm text-muted-foreground mt-2 max-w-xs">
+                          {getRiskDescription(result.threat_level || 'Clean')}
+                        </p>
                       </div>
                       <div className="text-right">
                         <p className="text-sm text-muted-foreground mb-2">Always verify with official sources</p>

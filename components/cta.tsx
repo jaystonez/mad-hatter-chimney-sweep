@@ -132,7 +132,7 @@ export function CTA() {
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       className="w-full bg-stone-900/50 border border-stone-600 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 transition-colors"
-                      placeholder="(206) 555-0100"
+                      placeholder="(206) 274-6409"
                     />
                   </div>
                 </div>

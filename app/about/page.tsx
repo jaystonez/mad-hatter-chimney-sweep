@@ -47,8 +47,8 @@ export default function AboutPage() {
                   <Shield className="w-12 h-12 text-green-600 mb-4" />
                   <h3 className="text-xl font-bold mb-2 text-green-900">WA State L&I Licensed</h3>
                   <p className="text-green-800 mb-4">
-                    License #: <strong>[YOUR LICENSE NUMBER]</strong><br/>
-                    Fully bonded and insured
+                    License #: <strong>MADHAHL790LW</strong><br/>
+                    Licensed, bonded &amp; insured in Washington State.
                   </p>
                   <Button asChild variant="outline" size="sm" className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white bg-transparent">
                     <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener noreferrer">
@@ -63,12 +63,12 @@ export default function AboutPage() {
                   <MapPin className="w-12 h-12 text-blue-600 mb-4" />
                   <h3 className="text-xl font-bold mb-2 text-blue-900">Real Shop Location</h3>
                   <p className="text-blue-800 mb-4">
-                    <strong>[YOUR ACTUAL ADDRESS]</strong><br/>
-                    Seattle, WA [ZIP]<br/>
+                    <strong>Bothell, WA 98011</strong><br/>
+                    Serving Seattle since 1979.<br/>
                     Not a mailbox. Visit us.
                   </p>
                   <Button asChild variant="outline" size="sm" className="border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white bg-transparent">
-                    <a href="[GOOGLE MAPS LINK]" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.google.com/maps/search/Mad+Hatter+Chimney+Sweep+Bothell+WA" target="_blank" rel="noopener noreferrer">
                       View on Google Maps →
                     </a>
                   </Button>

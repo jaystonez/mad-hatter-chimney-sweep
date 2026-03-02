@@ -399,7 +399,7 @@ export default function ChimneySweepBothellPage() {
                 <Link href="/contact">Schedule Service Today</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="tel:+12065551234">Call Now</Link>
+                <Link href="tel:+12062746409">Call Now</Link>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground">
