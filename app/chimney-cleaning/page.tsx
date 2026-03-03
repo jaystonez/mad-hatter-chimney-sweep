@@ -5,8 +5,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Phone, CheckCircle2, AlertTriangle, Flame, Wind, Shield } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Chimney Cleaning Seattle | Professional Creosote Removal",
-  description: "Professional chimney cleaning and creosote removal in Seattle. Master certified technicians with 45+ years experience. Same-day service available.",
+  title: "Chimney Cleaning in Seattle, WA | Mad Hatter Chimney Sweep",
+  description: "Professional chimney cleaning & creosote removal in Seattle by master certified technicians with 45+ years of experience. Licensed & insured. Call (206) 274-6409.",
 }
 
 export default function ChimneyCleaningPage() {

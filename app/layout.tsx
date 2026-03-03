@@ -14,12 +14,26 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'The Mad Hatter Chimney Sweep | Professional Chimney Services Since 1979',
-    description: 'Trusted chimney sweep and fireplace services since 1979. Over 2500 satisfied customers throughout Greater Seattle.',
-    url: 'https://www.themadhatterchimneysweep.com',
-    siteName: 'The Mad Hatter Chimney Sweep',
-    locale: 'en_US',
     type: 'website',
+    locale: 'en_US',
+    url: 'https://www.themadhatterchimneysweep.com',
+    siteName: 'Mad Hatter Chimney Sweep',
+    title: "Mad Hatter Chimney Sweep | Seattle's Most Trusted Since 1979",
+    description: 'Professional chimney sweep, inspection & repair in Greater Seattle. Licensed, bonded & insured. WA License MADHAHL790LW. Call (206) 274-6409.',
+    images: [
+      {
+        url: 'https://www.themadhatterchimneysweep.com/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mad Hatter Chimney Sweep Seattle',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Mad Hatter Chimney Sweep | Seattle's Most Trusted Since 1979",
+    description: 'Professional chimney sweep, inspection & repair in Greater Seattle. Licensed, bonded & insured. Call (206) 274-6409.',
+    images: ['https://www.themadhatterchimneysweep.com/images/og-image.jpg'],
   },
   icons: {
     icon: [

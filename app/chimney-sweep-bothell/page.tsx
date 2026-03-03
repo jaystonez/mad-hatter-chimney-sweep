@@ -1,8 +1,14 @@
+import type { Metadata } from "next"
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Droplets, Home, Flame, Trees, Shield, CheckCircle2, AlertTriangle, Award, Clock, FileCheck, Phone } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: "Chimney Sweep in Bothell, WA | Mad Hatter Chimney Sweep",
+  description: "Professional chimney sweep, inspection & repair in Bothell, WA. Licensed, bonded & insured since 1979. WA License MADHAHL790LW. Call (206) 274-6409 for a free estimate.",
+}
 
 export default function ChimneySweepBothellPage() {
   return (

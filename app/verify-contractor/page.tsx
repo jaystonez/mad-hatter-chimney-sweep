@@ -4,8 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { AlertTriangle, CheckCircle2, XCircle, Shield, MapPin, FileCheck, Phone, CreditCard } from "lucide-react"
 
 export const metadata = {
-  title: "How to Verify a Chimney Contractor | Avoid Scams | The Mad Hatter",
-  description: "Protect yourself from chimney sweep scams. Learn how to verify legitimate contractors and spot common fraud tactics in the Seattle area.",
+  title: "How to Verify a Chimney Contractor in Seattle, WA | Mad Hatter Chimney Sweep",
+  description: "Learn how to verify a legitimate chimney contractor and avoid scams in Seattle. Mad Hatter holds WA License MADHAHL790LW and is fully licensed and insured. Call (206) 274-6409.",
 }
 
 export default function VerifyContractorPage() {
