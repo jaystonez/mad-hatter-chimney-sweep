@@ -1,9 +1,62 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Flame, Search, Wrench, Shield, Hammer, Droplet } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+
+export const metadata: Metadata = {
+  title: "Chimney Services in Seattle, WA | Mad Hatter Chimney Sweep",
+  description: "Full-service chimney sweep, inspection, repair & liner installation in Greater Seattle. Licensed, bonded & insured since 1979. Call (206) 274-6409 for a free estimate.",
+}
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a chimney sweep service include?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our chimney sweep service includes a thorough cleaning of the firebox, smoke chamber, flue, and damper area to remove creosote, soot, and debris. Every sweep includes a complimentary Level 1 inspection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in a chimney inspection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Level 1 inspection covers all accessible areas of the chimney interior and exterior. A Level 2 inspection adds video camera scanning of the flue liner and is required when selling a home. A Level 3 inspection involves more invasive investigation for serious structural concerns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a chimney sweep appointment take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard chimney sweep and Level 1 inspection typically takes 45–90 minutes depending on the size of the chimney and amount of buildup. We will let you know if additional time is needed before we begin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be home during the chimney service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we require someone 18 or older to be present during the appointment to provide access and to review our findings with you after the service is complete."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Mad Hatter Chimney Sweep do chimney repairs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We offer a full range of chimney repair services including flashing repair, mortar repointing, crown repair, firebox restoration, liner installation, and waterproofing. If we find a problem during your inspection, we can discuss repair options and provide a written estimate."
+      }
+    }
+  ]
+}
 
 export default function ServicesPage() {
   const services = [
@@ -83,6 +136,10 @@ export default function ServicesPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Header />
       <main className="min-h-screen">
         {/* Hero Section */}

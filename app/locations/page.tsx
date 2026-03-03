@@ -1,9 +1,15 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { MapPin } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+
+export const metadata: Metadata = {
+  title: "Chimney Sweep Service Locations in Greater Seattle, WA | Mad Hatter Chimney Sweep",
+  description: "Mad Hatter Chimney Sweep serves Greater Seattle and surrounding communities. Licensed & insured since 1979. Find your location and call (206) 274-6409 for a free estimate.",
+}
 
 export default function LocationsPage() {
   const locations = [

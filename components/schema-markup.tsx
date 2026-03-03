@@ -1,7 +1,7 @@
 export default function SchemaMarkup() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": "https://themadhatterchimneysweep.com",
     "name": "Mad Hatter Chimney Sweep",
     "alternateName": "The Mad Hatter Chimney Sweep",
@@ -13,6 +13,8 @@ export default function SchemaMarkup() {
     "priceRange": "$$",
     "image": "https://themadhatterchimneysweep.com/logo.png",
     "logo": "https://themadhatterchimneysweep.com/logo.png",
+    "paymentAccepted": "Cash, Check, Credit Card",
+    "currenciesAccepted": "USD",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Bothell, WA",
@@ -27,67 +29,32 @@ export default function SchemaMarkup() {
       "longitude": "-122.3321"
     },
     "areaServed": [
-      {
-        "@type": "City",
-        "name": "Seattle"
-      },
-      {
-        "@type": "City",
-        "name": "Bellevue"
-      },
-      {
-        "@type": "City",
-        "name": "Redmond"
-      },
-      {
-        "@type": "City",
-        "name": "Kirkland"
-      },
-      {
-        "@type": "City",
-        "name": "Renton"
-      },
-      {
-        "@type": "City",
-        "name": "Kent"
-      },
-      {
-        "@type": "City",
-        "name": "Sammamish"
-      },
-      {
-        "@type": "City",
-        "name": "Issaquah"
-      },
-      {
-        "@type": "City",
-        "name": "Bothell"
-      },
-      {
-        "@type": "City",
-        "name": "Woodinville"
-      },
-      {
-        "@type": "City",
-        "name": "Shoreline"
-      },
-      {
-        "@type": "City",
-        "name": "Mercer Island"
-      },
-      {
-        "@type": "City",
-        "name": "Newcastle"
-      },
-      {
-        "@type": "City",
-        "name": "Kenmore"
-      },
-      {
-        "@type": "City",
-        "name": "Lake Forest Park"
-      }
+      { "@type": "City", "name": "Bothell" },
+      { "@type": "City", "name": "Seattle" },
+      { "@type": "City", "name": "Kirkland" },
+      { "@type": "City", "name": "Redmond" },
+      { "@type": "City", "name": "Bellevue" },
+      { "@type": "City", "name": "Everett" },
+      { "@type": "City", "name": "Woodinville" },
+      { "@type": "City", "name": "Kenmore" },
+      { "@type": "City", "name": "Shoreline" },
+      { "@type": "City", "name": "Edmonds" },
+      { "@type": "City", "name": "Lynnwood" },
+      { "@type": "City", "name": "Marysville" },
+      { "@type": "City", "name": "Snohomish" },
+      { "@type": "City", "name": "Monroe" },
+      { "@type": "City", "name": "Mill Creek" },
+      { "@type": "City", "name": "Mountlake Terrace" },
+      { "@type": "City", "name": "Mukilteo" },
+      { "@type": "City", "name": "Renton" },
+      { "@type": "City", "name": "Kent" },
+      { "@type": "City", "name": "Sammamish" },
+      { "@type": "City", "name": "Issaquah" },
+      { "@type": "City", "name": "Mercer Island" },
+      { "@type": "City", "name": "Newcastle" },
+      { "@type": "City", "name": "Lake Forest Park" }
     ],
+    "openingHours": ["Mo-Fr 08:00-18:00", "Sa 08:00-16:00"],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -98,7 +65,7 @@ export default function SchemaMarkup() {
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Saturday",
-        "opens": "09:00",
+        "opens": "08:00",
         "closes": "16:00"
       }
     ],

@@ -4,8 +4,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Award, Users, MapPin, Phone, Mail, CheckCircle2 } from "lucide-react"
 
 export const metadata = {
-  title: "About The Mad Hatter Chimney Sweep | Real Local Business Since 1979",
-  description: "Meet the real team behind The Mad Hatter Chimney Sweep. Licensed, insured, and locally owned - not a lead generation scam.",
+  title: "About Mad Hatter Chimney Sweep in Seattle, WA | Mad Hatter Chimney Sweep",
+  description: "Mad Hatter Chimney Sweep has served Greater Seattle since 1979 as a licensed, locally owned chimney service. WA License MADHAHL790LW. Call (206) 274-6409 to schedule.",
 }
 
 export default function AboutPage() {

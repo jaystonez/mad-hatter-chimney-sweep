@@ -7,8 +7,8 @@ import Footer from "@/components/footer"
 import { Phone, CheckCircle, Camera, FileText, Shield, AlertTriangle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Chimney Inspection Seattle | Professional Level 1, 2 & 3 Inspections",
-  description: "Professional chimney inspection services in Seattle. Level 1, 2, and 3 inspections with video camera technology. 45+ years of certified expertise. Same-day service available.",
+  title: "Chimney Inspection in Seattle, WA | Mad Hatter Chimney Sweep",
+  description: "Professional Level 1, 2 & 3 chimney inspections in Seattle with video camera technology. Licensed & insured with 45+ years of certified expertise. Call (206) 274-6409.",
 }
 
 export default function ChimneyInspectionPage() {

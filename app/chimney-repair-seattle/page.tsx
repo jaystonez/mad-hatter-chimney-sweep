@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Phone, CheckCircle, Shield, Clock, Award, Droplet, Snowflake, Home } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Chimney Repair Seattle | Expert Masonry & Flashing Restoration',
-  description: 'Professional chimney repair in Seattle. Expert flashing, mortar, crown, liner repairs. 45+ years serving Seattle homes. Master certified. Call for inspection.',
+  title: "Chimney Repair in Seattle, WA | Mad Hatter Chimney Sweep",
+  description: "Expert chimney repair in Seattle including flashing, mortar repointing, crown repair & liner restoration. 45+ years of local experience. Call (206) 274-6409 for an inspection.",
 }
 
 export default function ChimneyRepairSeattle() {
