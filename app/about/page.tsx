@@ -64,7 +64,7 @@ export default function AboutPage() {
                     Not a mailbox. A real, registered business &mdash; we come to you.
                   </p>
                   <p className="text-blue-700 text-sm bg-blue-100 rounded-md px-3 py-2">
-                    <strong>Service-area business:</strong> We operate out of the Bothell area but do not have a public walk-in location. All service is performed at your home. Our Google listing will be updated shortly.
+                    <strong>Service-area business:</strong> We operate out of the Bothell area but do not have a public walk-in location. All service is performed at your home
                   </p>
                 </CardContent>
               </Card>
