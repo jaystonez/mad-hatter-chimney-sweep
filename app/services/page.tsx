@@ -3,8 +3,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Flame, Search, Wrench, Shield, Hammer, Droplet } from "lucide-react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Chimney Services in Seattle, WA | Mad Hatter Chimney Sweep",
@@ -140,8 +138,8 @@ export default function ServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Header />
-      <main className="min-h-screen">
+      
+      
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-muted/50 to-background py-20">
           <div className="container mx-auto px-4">
@@ -210,8 +208,8 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
+      
+      
     </>
   )
 }
