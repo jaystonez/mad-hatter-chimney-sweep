@@ -2,8 +2,6 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { CheckCircle2, Phone, MapPin, Clock, Star } from "lucide-react"
 
 const locations = {
@@ -158,8 +156,8 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
-      <Header />
-      <main className="min-h-screen">
+      
+      
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-muted/50 to-background py-16">
           <div className="container mx-auto px-4">
@@ -299,8 +297,8 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
+      
+      
     </>
   )
 }
