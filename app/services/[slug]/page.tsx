@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { CheckCircle2, Phone } from "lucide-react"
+import { CheckCircle2, Phone, AlertTriangle, Shield, Camera } from "lucide-react"
 
 const services = {
   "chimney-inspection-sweeping": {
@@ -207,6 +207,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     notFound()
   }
 
+  const isInspectionPage = resolvedParams.slug === "chimney-inspection-sweeping"
+
   return (
     <>
       <Header />
@@ -266,6 +268,156 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </CardContent>
               </Card>
 
+              {/* NFPA 211 Inspection Levels - Only on Inspection & Sweeping page */}
+              {isInspectionPage && (
+                <div className="mb-12">
+                  <h2 className="text-3xl font-serif font-bold mb-4">Understanding NFPA 211 Inspection Levels</h2>
+                  <p className="text-lg text-muted-foreground mb-8">
+                    Every chimney inspection is defined by NFPA 211 — the national standard for chimneys, fireplaces, vents, and solid fuel-burning appliances. The level ordered must match the actual conditions present. A responsible contractor will never recommend a higher level without proper justification.
+                  </p>
+
+                  {/* Level 1 */}
+                  <Card className="mb-6 border-l-4 border-l-green-500">
+                    <CardContent className="pt-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Shield className="w-8 h-8 text-green-600" />
+                        <div>
+                          <h3 className="text-2xl font-bold">Level 1 Inspection</h3>
+                          <span className="text-sm font-semibold text-green-700 bg-green-100 px-2 py-1 rounded">MOST COMMON</span>
+                        </div>
+                      </div>
+                      <p className="text-lg mb-4">
+                        A Level 1 is the standard annual inspection for any chimney system that has not changed and is being used as designed. This is the most common inspection we perform and is appropriate for the vast majority of homeowners.
+                      </p>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div>
+                          <h4 className="font-bold mb-2">When It Applies:</h4>
+                          <ul className="space-y-1 text-muted-foreground">
+                            <li>• Routine annual maintenance</li>
+                            <li>• No changes to the system or fuel type</li>
+                            <li>• Appliance used as originally designed</li>
+                            <li>• No known problems or events requiring deeper evaluation</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-bold mb-2">What We Inspect:</h4>
+                          <ul className="space-y-1 text-muted-foreground">
+                            <li>• All readily accessible chimney exterior and interior</li>
+                            <li>• Firebox condition</li>
+                            <li>• Visible flue surfaces</li>
+                            <li>• Basic draft assessment and clearances check</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="mt-4 p-3 bg-green-50 rounded-lg">
+                        <p className="text-sm text-green-800">
+                          <strong>Invasiveness:</strong> Minimal — no demolition, no specialized access equipment. This is a visual inspection of accessible components only.
+                        </p>
+                      </div>
+                      <p className="mt-3 text-lg font-semibold text-primary">Typical cost: $150–250</p>
+                    </CardContent>
+                  </Card>
+
+                  {/* Level 2 */}
+                  <Card className="mb-6 border-l-4 border-l-blue-500">
+                    <CardContent className="pt-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Camera className="w-8 h-8 text-blue-600" />
+                        <div>
+                          <h3 className="text-2xl font-bold">Level 2 Inspection</h3>
+                          <span className="text-sm font-semibold text-blue-700 bg-blue-100 px-2 py-1 rounded">EVENT-DRIVEN</span>
+                        </div>
+                      </div>
+                      <p className="text-lg mb-4">
+                        A Level 2 is required when specific conditions have changed or a qualifying event has occurred. It includes everything in a Level 1 plus video camera scanning of the full flue interior and inspection of additional accessible areas.
+                      </p>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div>
+                          <h4 className="font-bold mb-2">When It Applies:</h4>
+                          <ul className="space-y-1 text-muted-foreground">
+                            <li>• Property is being sold or transferred</li>
+                            <li>• Appliance, fuel type, or flue liner has changed</li>
+                            <li>• A chimney fire or significant weather event has occurred</li>
+                            <li>• Operation was irregular, discontinued, or resumed after extended period</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-bold mb-2">What’s Added Beyond Level 1:</h4>
+                          <ul className="space-y-1 text-muted-foreground">
+                            <li>• Video camera scan of the full flue interior</li>
+                            <li>• Attic and crawlspace assessment</li>
+                            <li>• Clearance verification to combustibles</li>
+                            <li>• Detailed component evaluation with video documentation</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="mt-4 p-3 bg-blue-50 rounded-lg">
+                        <p className="text-sm text-blue-800">
+                          <strong>Invasiveness:</strong> Moderate — more access points inspected, but no finished walls or structural components are opened.
+                        </p>
+                      </div>
+                      <div className="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+                        <p className="text-sm text-amber-800">
+                          <strong>Good Practice Note:</strong> A Level 2 should not be upsold for a routine annual check on an unchanged system. It is specifically designed for situations where conditions have changed or an event has occurred that warrants deeper evaluation.
+                        </p>
+                      </div>
+                      <p className="mt-3 text-lg font-semibold text-primary">Typical cost: $250–500</p>
+                    </CardContent>
+                  </Card>
+
+                  {/* Level 3 */}
+                  <Card className="mb-6 border-l-4 border-l-red-500">
+                    <CardContent className="pt-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <AlertTriangle className="w-8 h-8 text-red-600" />
+                        <div>
+                          <h3 className="text-2xl font-bold">Level 3 Inspection</h3>
+                          <span className="text-sm font-semibold text-red-700 bg-red-100 px-2 py-1 rounded">RARE — REQUIRES JUSTIFICATION</span>
+                        </div>
+                      </div>
+                      <p className="text-lg mb-4">
+                        A Level 3 is reserved for situations where Levels 1 and 2 cannot adequately evaluate a suspected hazard. NFPA 211 requires clear documented evidence of a hidden safety concern before a Level 3 can be ordered.
+                      </p>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div>
+                          <h4 className="font-bold mb-2">When It Applies:</h4>
+                          <ul className="space-y-1 text-muted-foreground">
+                            <li>• Confirmed structural damage from a prior Level 2</li>
+                            <li>• A serious chimney fire with suspected hidden damage</li>
+                            <li>• Findings from Level 2 that cannot be resolved without opening the structure</li>
+                            <li>• Suspected serious hazards in concealed areas</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-bold mb-2">What’s Added Beyond Level 2:</h4>
+                          <ul className="space-y-1 text-muted-foreground">
+                            <li>• Removal of chase or wall coverings</li>
+                            <li>• Full structural evaluation of concealed areas</li>
+                            <li>• Hidden damage assessment</li>
+                            <li>• Comprehensive documentation and code compliance verification</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="mt-4 p-3 bg-red-50 rounded-lg">
+                        <p className="text-sm text-red-800">
+                          <strong>Invasiveness:</strong> Highly invasive — building components (drywall, masonry, chase covers) are physically removed. Repairs are typically required afterward.
+                        </p>
+                      </div>
+                      <div className="mt-3 p-3 bg-red-50 border border-red-300 rounded-lg">
+                        <p className="text-sm text-red-900">
+                          <strong>⚠️ Good Practice Warning:</strong> A Level 3 is rare and should never be recommended as a routine matter or as an upsell. It involves physical removal of building components and may result in damage that requires repair. Any contractor recommending a Level 3 without documented findings from a prior Level 2 should be questioned.
+                        </p>
+                      </div>
+                      <p className="mt-3 text-lg font-semibold text-primary">Typical cost: $500–2,000+</p>
+                    </CardContent>
+                  </Card>
+
+                  <p className="text-sm text-muted-foreground text-center italic">
+                    Based on NFPA 211: Standard for Chimneys, Fireplaces, Vents, and Solid Fuel-Burning Appliances.
+                  </p>
+                </div>
+              )}
+
               {/* Process */}
               <Card className="mb-12">
                 <CardContent className="pt-6">
@@ -308,9 +460,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                       className="bg-transparent border-white text-white hover:bg-white hover:text-primary"
                       asChild
                     >
-                                                  <a href="tel:+12062746409">
+                      <a href="tel:+12062746409">
                         <Phone className="w-4 h-4 mr-2" />
-                                                      Call (206) 274-6409
+                        Call (206) 274-6409
                       </a>
                     </Button>
                   </div>
