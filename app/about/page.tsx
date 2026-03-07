@@ -2,12 +2,10 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Award, Users, MapPin, Phone, Mail, CheckCircle2 } from "lucide-react"
-
 export const metadata = {
   title: "About Mad Hatter Chimney Sweep in Seattle, WA | Mad Hatter Chimney Sweep",
   description: "Mad Hatter Chimney Sweep has served Greater Seattle since 1979 as a licensed, locally owned chimney service. WA License MADHAHL790LW. Call (206) 274-6409 to schedule.",
 }
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
@@ -25,7 +23,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link href="/verify-contractor">Verify Our Credentials →</Link>
+                <Link href="/verify-contractor">Verify Our Credentials &rarr;</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-slate-900">
                 <Link href="/#contact">Get a Quote</Link>
@@ -34,7 +32,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Credentials Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -45,53 +42,48 @@ export default function AboutPage() {
               <Card className="border-2 border-green-200 bg-green-50">
                 <CardContent className="pt-6">
                   <Shield className="w-12 h-12 text-green-600 mb-4" />
-                  <h3 className="text-xl font-bold mb-2 text-green-900">WA State L&I Licensed</h3>
+                  <h3 className="text-xl font-bold mb-2 text-green-900">WA State L&amp;I Licensed</h3>
                   <p className="text-green-800 mb-4">
                     License #: <strong>MADHAHL790LW</strong><br/>
                     Licensed, bonded &amp; insured in Washington State.
                   </p>
                   <Button asChild variant="outline" size="sm" className="border-green-600 text-green-700 hover:bg-green-600 hover:text-white bg-transparent">
                     <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener noreferrer">
-                      Verify on L&I Website →
+                      Verify on L&amp;I Website &rarr;
                     </a>
                   </Button>
                 </CardContent>
               </Card>
-
               <Card className="border-2 border-blue-200 bg-blue-50">
                 <CardContent className="pt-6">
                   <MapPin className="w-12 h-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-bold mb-2 text-blue-900">Real Shop Location</h3>
+                  <h3 className="text-xl font-bold mb-2 text-blue-900">Verified Local Business</h3>
                   <p className="text-blue-800 mb-4">
-                    <strong>Bothell, WA 98011</strong><br/>
-                    Serving Seattle since 1979.<br/>
-                    Not a mailbox. Visit us.
+                    <strong>Bothell, WA</strong><br/>
+                    Serving Greater Seattle since 1979.<br/>
+                    Not a mailbox. A real, registered business &mdash; we come to you.
                   </p>
-                  <Button asChild variant="outline" size="sm" className="border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white bg-transparent">
-                    <a href="https://www.google.com/maps/search/Mad+Hatter+Chimney+Sweep+Bothell+WA" target="_blank" rel="noopener noreferrer">
-                      View on Google Maps →
-                    </a>
-                  </Button>
+                  <p className="text-blue-700 text-sm bg-blue-100 rounded-md px-3 py-2">
+                    <strong>Service-area business:</strong> We operate out of the Bothell area but do not have a public walk-in location. All service is performed at your home. Our Google listing will be updated shortly.
+                  </p>
                 </CardContent>
               </Card>
-
               <Card className="border-2 border-purple-200 bg-purple-50">
                 <CardContent className="pt-6">
                   <Award className="w-12 h-12 text-purple-600 mb-4" />
-                  <h3 className="text-xl font-bold mb-2 text-purple-900">Experienced & Trained</h3>
+                  <h3 className="text-xl font-bold mb-2 text-purple-900">Experienced &amp; Trained</h3>
                   <p className="text-purple-800">
                     Over 45 years in the trade<br/>
                     Family-taught craftsmanship<br/>
                     Ongoing professional training<br/>
-                    We clean it right — not just 4 fingers deep
+                    We clean it right &mdash; not just 4 fingers deep
                   </p>
                 </CardContent>
               </Card>
-
               <Card className="border-2 border-orange-200 bg-orange-50">
                 <CardContent className="pt-6">
                   <Users className="w-12 h-12 text-orange-600 mb-4" />
-                  <h3 className="text-xl font-bold mb-2 text-orange-900">Local & Family Owned</h3>
+                  <h3 className="text-xl font-bold mb-2 text-orange-900">Local &amp; Family Owned</h3>
                   <p className="text-orange-800">
                     Seattle area resident since 1979<br/>
                     Dedicated team on staff<br/>
@@ -101,7 +93,6 @@ export default function AboutPage() {
                 </CardContent>
               </Card>
             </div>
-
             <Card className="bg-slate-100 border-slate-300">
               <CardContent className="pt-6">
                 <h3 className="text-xl font-bold mb-4">Why Verification Matters</h3>
@@ -115,14 +106,13 @@ export default function AboutPage() {
                   will never be offended by due diligence - in fact, we insist on it.
                 </p>
                 <Button asChild>
-                  <Link href="/verify-contractor">Learn How to Spot Scams →</Link>
+                  <Link href="/verify-contractor">Learn How to Spot Scams &rarr;</Link>
                 </Button>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
-
       {/* Our Story */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
@@ -135,20 +125,17 @@ export default function AboutPage() {
                 alt="The Mad Hatter Chimney Sweep team photo in front of actual shop with company truck and signage"
                 className="w-full rounded-lg mb-8"
               />
-
               <p className="text-lg leading-relaxed mb-6">
                 The Mad Hatter Chimney Sweep was founded in 1979, a Seattle native
                 who saw the need for honest, professional chimney services in the area. Unlike the
                 corporate franchises and lead-generation scams that have flooded the market, we built
                 our reputation the old-fashioned way: one satisfied customer at a time.
               </p>
-
               <p className="text-lg leading-relaxed mb-6">
                 What started as a family trade has grown into one of the most trusted chimney service
-                companies in the greater Seattle area. We built our reputation on doing the job right —
+                companies in the greater Seattle area. We built our reputation on doing the job right &mdash;
                 not cutting corners, not upselling unnecessary work, and never leaving a chimney half-cleaned.
               </p>
-
               <h3 className="text-2xl font-bold mb-4 mt-8">Our Values</h3>
               
               <div className="grid md:grid-cols-2 gap-6 my-8 not-prose">
@@ -162,29 +149,26 @@ export default function AboutPage() {
                     </p>
                   </CardContent>
                 </Card>
-
                 <Card>
                   <CardContent className="pt-6">
                     <CheckCircle2 className="w-8 h-8 text-green-600 mb-3" />
                     <h4 className="font-bold text-lg mb-2">Real Local Presence</h4>
                     <p className="text-muted-foreground">
-                      We have an actual shop you can visit. Our trucks are branded. 
+                      We are a verified, registered business based in the Bothell area. Our trucks are branded. 
                       Our technicians are W-2 employees, not subcontractors on commission.
                     </p>
                   </CardContent>
                 </Card>
-
                 <Card>
                   <CardContent className="pt-6">
                     <CheckCircle2 className="w-8 h-8 text-green-600 mb-3" />
-                    <h4 className="font-bold text-lg mb-2">Licensed & Accountable</h4>
+                    <h4 className="font-bold text-lg mb-2">Licensed &amp; Accountable</h4>
                     <p className="text-muted-foreground">
                       We maintain all required licenses and insurance. If something goes wrong, 
                       we're here to make it right - not hiding behind a shell company.
                     </p>
                   </CardContent>
                 </Card>
-
                 <Card>
                   <CardContent className="pt-6">
                     <CheckCircle2 className="w-8 h-8 text-green-600 mb-3" />
@@ -200,7 +184,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Meet the Team */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -211,14 +194,13 @@ export default function AboutPage() {
               <Card>
                 <CardContent className="pt-6 text-center">
                   <h3 className="font-bold text-xl mb-1">Billy</h3>
-                  <p className="text-primary font-medium mb-2">Owner & Master Sweep</p>
+                  <p className="text-primary font-medium mb-2">Owner &amp; Master Sweep</p>
                   <p className="text-sm text-muted-foreground">
                     45+ years experience, family-taught craftsmanship
                   </p>
                 </CardContent>
               </Card>
             </div>
-
             <div className="mt-12 text-center">
               <p className="text-lg mb-6">
                 When you call The Mad Hatter, you get <strong>real people</strong> who work for <strong>one company</strong> - 
@@ -228,7 +210,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
       <section className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
