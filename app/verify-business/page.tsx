@@ -8,8 +8,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Badge } from "@/components/ui/badge"
 import { Search, AlertTriangle, CheckCircle2, MapPin, Calendar, Star, Building, Shield, ExternalLink, Code, Clock } from "lucide-react"
 import Link from "next/link"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
 import { scanURL, isLiveMode } from "@/lib/srrp-api"
 
 const REFLEX_META = {
@@ -117,7 +115,7 @@ export default function VerifyBusinessPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      
       <main className="flex-1">
         <section className="py-16 bg-gradient-to-b from-slate-50 to-white">
           <div className="container mx-auto px-4">
@@ -314,8 +312,8 @@ export default function VerifyBusinessPage() {
             </div>
           </section>
         )}
-      </main>
-      <Footer />
+      
+      
     </div>
   )
 }
