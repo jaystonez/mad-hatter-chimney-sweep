@@ -3,8 +3,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { MapPin } from "lucide-react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Chimney Sweep Service Locations in Greater Seattle, WA | Mad Hatter Chimney Sweep",
@@ -65,8 +63,8 @@ export default function LocationsPage() {
 
   return (
     <>
-      <Header />
-      <main className="min-h-screen">
+      
+      
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-muted/50 to-background py-20">
           <div className="container mx-auto px-4">
@@ -140,8 +138,8 @@ export default function LocationsPage() {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
+      
+      
     </>
   )
 }
