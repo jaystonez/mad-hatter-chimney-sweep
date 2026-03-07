@@ -27,7 +27,7 @@ export async function POST(request: Request) {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "Mad Hatter Contact Form <onboarding@resend.dev>",
+                from: "Mad Hatter Contact Form <services@themadhatterchimneysweep.com>",
         to: ["services@themadhatterchimneysweep.com"],
         subject: `New Contact Form Submission from ${name}`,
         reply_to: email,
