@@ -1,15 +1,35 @@
 "use client"
 
 import React, { useState } from "react"
-import { Phone, Mail, Clock, MapPin, Send, CheckCircle } from "lucide-react"
+import { Phone, Mail, Clock, MapPin, Send, CheckCircle, Loader2 } from "lucide-react"
 
 export function CTA() {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState("")
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError("")
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) {
+        const data = await res.json()
+        throw new Error(data.error || "Failed to send message")
+      }
+      setSubmitted(true)
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Something went wrong. Please try again."
+      setError(message)
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -27,7 +47,6 @@ export function CTA() {
             Fill out the form or give us a call. We respond promptly and offer free inspections throughout Greater Seattle.
           </p>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact info */}
           <div className="space-y-6">
@@ -45,7 +64,6 @@ export function CTA() {
               </div>
               <p className="text-stone-400 text-sm pl-14">Available for emergency calls</p>
             </div>
-
             <div className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-6">
               <div className="flex items-center gap-4 mb-2">
                 <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
@@ -60,7 +78,6 @@ export function CTA() {
               </div>
               <p className="text-stone-400 text-sm pl-14">We respond within 24 hours</p>
             </div>
-
             <div className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-6">
               <div className="flex items-center gap-4 mb-3">
                 <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
@@ -74,7 +91,6 @@ export function CTA() {
                 <div className="flex justify-between"><span className="text-stone-400">Sunday</span><span className="text-stone-500">Closed</span></div>
               </div>
             </div>
-
             <div className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-6">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
@@ -82,13 +98,12 @@ export function CTA() {
                 </div>
                 <div>
                   <div className="text-xs text-stone-500 uppercase tracking-wide font-medium">Service Area</div>
-                  <div className="text-white font-semibold">King &amp; Snohomish Counties</div>
+                  <div className="text-white font-semibold">King & Snohomish Counties</div>
                   <div className="text-stone-400 text-sm">and surrounding areas</div>
                 </div>
               </div>
             </div>
           </div>
-
           {/* Form */}
           <div className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-8">
             {submitted ? (
@@ -97,7 +112,7 @@ export function CTA() {
                   <CheckCircle className="w-8 h-8 text-green-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-stone-400">We&apos;ll get back to you within 24 hours.</p>
+                <p className="text-stone-400">We'll get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -146,14 +161,21 @@ export function CTA() {
                     placeholder="Describe your chimney issue or service needed..."
                   />
                 </div>
+                {error && (
+                  <p className="text-red-400 text-sm text-center">{error}</p>
+                )}
                 <button
                   type="submit"
-                  className="w-full bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-lg shadow-amber-500/25"
+                  disabled={loading}
+                  className="w-full bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold py-4 rounded-xl flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-lg shadow-amber-500/25 disabled:opacity-50 disabled:hover:scale-100"
                 >
-                  <Send className="w-5 h-5" />
-                  Send Message
+                  {loading ? (
+                    <><Loader2 className="w-5 h-5 animate-spin" /> Sending...</>
+                  ) : (
+                    <><Send className="w-5 h-5" /> Send Message</>
+                  )}
                 </button>
-                <p className="text-stone-500 text-xs text-center">We&apos;ll respond within 24 hours. No spam, ever.</p>
+                <p className="text-stone-500 text-xs text-center">We'll respond within 24 hours. No spam, ever.</p>
               </form>
             )}
           </div>
@@ -162,5 +184,4 @@ export function CTA() {
     </section>
   )
 }
-
 export default CTA
