@@ -1,12 +1,10 @@
 import type { Metadata } from "next"
-import Header from "@/components/header"
 import Hero from "@/components/hero"
 import Services from "@/components/services"
 import WhyChooseUs from "@/components/why-choose-us"
 import Gallery from "@/components/gallery"
 import Testimonials from "@/components/testimonials"
 import CTA from "@/components/cta"
-import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
   title: "Chimney Sweep & Inspection in Seattle, WA | Mad Hatter Chimney Sweep",
@@ -22,7 +20,7 @@ const faqSchema = {
       "name": "How much does a chimney sweep cost in Seattle?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A standard chimney sweep and inspection in Seattle typically costs $150–$250. Mad Hatter Chimney Sweep offers upfront pricing with no hidden fees. Call (206) 274-6409 for a free estimate."
+        "text": "A standard chimney sweep and inspection in Seattle typically costs $150\u2013$250. Mad Hatter Chimney Sweep offers upfront pricing with no hidden fees. Call (206) 274-6409 for a free estimate."
       }
     },
     {
@@ -78,19 +76,17 @@ const faqSchema = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Header />
       <Hero />
       <Services />
       <Gallery />
       <WhyChooseUs />
       <Testimonials />
       <CTA />
-      <Footer />
-    </main>
+    </>
   )
 }
