@@ -1,23 +1,58 @@
 "use client"
 
-import React, { useState } from "react"
-import { Phone, Mail, Clock, MapPin, Send, CheckCircle, Loader2 } from "lucide-react"
+import React, { useState, useRef } from "react"
+import { Phone, Mail, Clock, MapPin, Send, CheckCircle, Loader2, ImagePlus, X } from "lucide-react"
 
 export function CTA() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" })
+  const [image, setImage] = useState<File | null>(null)
+  const [imagePreview, setImagePreview] = useState<string | null>(null)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    if (!file.type.startsWith("image/")) {
+      setError("Please upload an image file")
+      return
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      setError("Image must be under 5MB")
+      return
+    }
+    setImage(file)
+    setError("")
+    const reader = new FileReader()
+    reader.onload = (ev) => setImagePreview(ev.target?.result as string)
+    reader.readAsDataURL(file)
+  }
+
+  const removeImage = () => {
+    setImage(null)
+    setImagePreview(null)
+    if (fileInputRef.current) fileInputRef.current.value = ""
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
     setError("")
     try {
+      let imageData = null
+      if (image) {
+        const reader = new FileReader()
+        imageData = await new Promise<string>((resolve) => {
+          reader.onload = (ev) => resolve(ev.target?.result as string)
+          reader.readAsDataURL(image)
+        })
+      }
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, image: imageData, imageName: image?.name }),
       })
       if (!res.ok) {
         const data = await res.json()
@@ -160,6 +195,33 @@ export function CTA() {
                     className="w-full bg-stone-900/50 border border-stone-600 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500 transition-colors resize-none"
                     placeholder="Describe your chimney issue or service needed..."
                   />
+                </div>
+                <div>
+                  <label className="block text-stone-400 text-sm font-medium mb-1.5">Upload Photo (optional)</label>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    onChange={handleImageChange}
+                    className="hidden"
+                  />
+                  {imagePreview ? (
+                    <div className="relative inline-block">
+                      <img src={imagePreview} alt="Preview" className="w-24 h-24 object-cover rounded-xl border border-stone-600" />
+                      <button type="button" onClick={removeImage} className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-0.5 hover:bg-red-400 transition-colors">
+                        <X className="w-4 h-4" />
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => fileInputRef.current?.click()}
+                      className="flex items-center gap-2 px-4 py-3 bg-stone-900/50 border border-stone-600 border-dashed rounded-xl text-stone-400 hover:border-amber-500 hover:text-amber-400 transition-colors text-sm"
+                    >
+                      <ImagePlus className="w-5 h-5" />
+                      Add a photo of your chimney or issue
+                    </button>
+                  )}
                 </div>
                 {error && (
                   <p className="text-red-400 text-sm text-center">{error}</p>
