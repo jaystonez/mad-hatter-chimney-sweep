@@ -58,6 +58,12 @@ export default function LocationsPage() {
       slug: "burien",
       description: "Dependable chimney sweeping and repairs in Burien",
       neighborhoods: ["Gregory Heights", "Boulevard Park", "Seahurst", "Town Square", "Lake Burien"]
+    },
+        {
+      name: "Bothell",
+      slug: "bothell",
+      description: "Professional chimney sweep and fireplace services in Bothell and Snohomish County",
+      neighborhoods: ["Downtown Bothell", "Canyon Park", "North Creek", "Mill Creek", "Maltby"]
     }
   ]
 
@@ -73,7 +79,7 @@ export default function LocationsPage() {
                 Service Areas
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Providing professional chimney services throughout the Greater Seattle area. We're proud to serve homeowners in King County and beyond.
+                Providing professional chimney services throughout the Greater Seattle area. We're proud to serve homeowners in King County, Snohomish County, and beyond.
               </p>
               <Button size="lg" asChild>
                 <Link href="/#contact">Schedule Service</Link>
@@ -122,10 +128,10 @@ export default function LocationsPage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-serif font-bold mb-6">
-                Serving All of King County
+                Serving King County & Snohomish County
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                We're proud to provide professional chimney services throughout the Seattle metropolitan area. Don't see your city listed? Give us a call - we may still be able to help!
+                We're proud to provide professional chimney services throughout the Seattle metropolitan area and Snohomish County. Don't see your city listed? Give us a call - we may still be able to help!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
