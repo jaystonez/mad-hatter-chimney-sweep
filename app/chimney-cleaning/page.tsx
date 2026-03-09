@@ -125,7 +125,7 @@ export default function ChimneyCleaningPage() {
                   </div>
                   <h3 className="font-bold text-lg">Bottom-Up Rotary Cleaning</h3>
                 </div>
-                <p className="text-slate-700">Our rotary brush system works from the bottom up, cleaning the full length of the flue from inside the firebox. A HEPA-filtered vacuum runs continuously right at the firebox opening to capture all soot and debris as it's loosened—keeping your home completely clean throughout the process.</p>
+                <p className="text-slate-700">Using our rotary brush system, we work from the bottom up, cleaning the full length of the flue from inside the firebox. A HEPA-filtered vacuum runs continuously right at the firebox opening to capture all soot and debris as it's loosened—keeping your home completely clean throughout the process.</p>
               </CardContent>
             </Card>
 
