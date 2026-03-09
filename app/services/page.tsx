@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Flame, Search, Wrench, Shield, Hammer, Droplet } from "lucide-react"
+import { Flame, Search, Wrench, Shield, Hammer, Droplet, Wind } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Chimney Services in Seattle, WA | Mad Hatter Chimney Sweep",
@@ -129,6 +129,19 @@ export default function ServicesPage() {
         "Fireplace Restoration",
         "Stone Veneer Installation"
       ]
+    },
+        {
+      title: "Chimney Cleaning",
+      slug: "chimney-cleaning",
+      href: "/chimney-cleaning",
+      icon: Wind,
+      description: "Professional chimney cleaning starting at $289.95 for standard open-ended fireplaces. Bottom-up rotary brush system with HEPA-filtered vacuum.",
+      subServices: [
+        "Rotary Brush Cleaning",
+        "HEPA-Filtered Vacuum System",
+        "Creosote & Soot Removal",
+        "21-Point Inspection Included"
+      ]
     }
   ]
 
@@ -180,7 +193,7 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                     <Button variant="outline" asChild className="w-full bg-transparent">
-                      <Link href={`/services/${service.slug}`}>Learn More</Link>
+                      <Link href={service.href || `/services/${service.slug}`}>Learn More</Link>
                     </Button>
                   </CardContent>
                 </Card>
