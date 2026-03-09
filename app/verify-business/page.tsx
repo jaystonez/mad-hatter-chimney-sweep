@@ -311,6 +311,7 @@ export default function VerifyBusinessPage() {
               </div>
             </div>
           </section>
+            </main>
         )}
       
       
