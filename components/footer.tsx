@@ -112,12 +112,12 @@ export function Footer() {
               © {currentYear} The Mad Hatter Chimney Sweep. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-slate-400 hover:text-primary transition-colors">
+                          <Link href="/privacy-policy" className="text-slate-400 hover:text-primary transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-slate-400 hover:text-primary transition-colors">
+                          </Link>
+                          <Link href="/terms-of-service" className="text-slate-400 hover:text-primary transition-colors">
                 Terms of Service
-              </a>
+                          </Link>
             </div>
           </div>
         </div>
