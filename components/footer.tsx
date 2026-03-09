@@ -37,6 +37,7 @@ export function Footer() {
               <a href="tel:+12062746409" className="text-slate-400 hover:text-primary transition-colors">
                 (206) 274-6409
               </a>
+                            <p className="text-slate-400 text-sm mt-2">WA License #: MADHAHL790LW</p>
             </div>
           </div>
 
