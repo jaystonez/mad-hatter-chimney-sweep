@@ -113,7 +113,7 @@ export default function ChimneyCleaningPage() {
                   </div>
                   <h3 className="font-bold text-lg">Preparation</h3>
                 </div>
-                <p className="text-slate-700">Seal fireplace opening with professional drop cloths and barriers. Contains all soot and debris within the fireplace area. Zero mess in your home.</p>
+                <p className="text-slate-700">Set up our HEPA-filtered vacuum system directly in the firebox and seal the work area with professional drop cloths. The vacuum captures all soot and debris at the source. Zero mess in your home.</p>
               </CardContent>
             </Card>
 
@@ -123,9 +123,9 @@ export default function ChimneyCleaningPage() {
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <span className="text-xl font-bold text-primary">2</span>
                   </div>
-                  <h3 className="font-bold text-lg">Top-Down Cleaning</h3>
+                  <h3 className="font-bold text-lg">Bottom-Up Rotary Cleaning</h3>
                 </div>
-                <p className="text-slate-700">Professional-grade brushes sized for your flue, working downward through the full chimney length. Gravity brings all loosened material to the firebox.</p>
+                <p className="text-slate-700">Our rotary brush system works from the bottom up, cleaning the full length of the flue from inside the firebox. A HEPA-filtered vacuum runs continuously right at the firebox opening to capture all soot and debris as it's loosened—keeping your home completely clean throughout the process.</p>
               </CardContent>
             </Card>
 
