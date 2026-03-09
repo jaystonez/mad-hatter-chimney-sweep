@@ -94,7 +94,19 @@ const locations = {
     ],
     zipCodes: ["98146", "98166", "98168"],
     localContent: "Burien homeowners choose The Mad Hatter for honest, professional chimney services. From Seahurst to Gregory Heights, we provide the reliable chimney maintenance your home deserves."
-  }
+  },
+    "bothell": {
+    name: "Bothell",
+    county: "Snohomish County",
+    description: "Professional chimney sweep and fireplace services in Bothell, WA. Serving Bothell and surrounding Snohomish County communities with expert chimney cleaning, inspection, and repair services.",
+    neighborhoods: [
+      "Downtown Bothell", "Canyon Park", "North Creek", "Queensborough",
+      "Filbert", "Maltby", "Clearview", "Thrashers Corner",
+      "Mill Creek", "Kenmore", "Woodinville", "Lake Forest Park"
+    ],
+    zipCodes: ["98011", "98012", "98021", "98036", "98072", "98077"],
+    localContent: "As Bothell's trusted chimney sweep service based right here in the community, we understand the unique needs of Snohomish County homes. From established neighborhoods in Downtown Bothell to newer developments in Canyon Park and North Creek, our technicians are experienced with all types of chimney systems found throughout Bothell and the surrounding area."
+  },
 }
 
 const services = [
