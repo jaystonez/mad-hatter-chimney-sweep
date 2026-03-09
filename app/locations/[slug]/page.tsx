@@ -107,6 +107,66 @@ const locations = {
     zipCodes: ["98011", "98012", "98021", "98036", "98072", "98077"],
     localContent: "As Bothell's trusted chimney sweep service based right here in the community, we understand the unique needs of Snohomish County homes. From established neighborhoods in Downtown Bothell to newer developments in Canyon Park and North Creek, our technicians are experienced with all types of chimney systems found throughout Bothell and the surrounding area."
   },
+    "everett": {
+    name: "Everett",
+    county: "Snohomish County",
+    description: "Professional chimney sweep and fireplace services in Everett, WA. Serving all Everett neighborhoods with expert chimney cleaning, inspection, and repair services.",
+    neighborhoods: [
+      "Bayside", "Boulevard Bluffs", "Delta", "Evergreen",
+      "Glacier View", "Holly", "Lowell", "Northwest Everett",
+      "Port Gardner", "Riverside", "Silver Lake", "Twin Creeks"
+    ],
+    zipCodes: ["98201", "98203", "98204", "98205", "98208"],
+    localContent: "As Snohomish County's largest city, Everett has a diverse mix of historic and modern homes that all need reliable chimney maintenance. From waterfront properties in Port Gardner to established neighborhoods in Lowell and Silver Lake, our technicians are experienced with every type of chimney system found throughout Everett."
+  },
+  "mukilteo": {
+    name: "Mukilteo",
+    county: "Snohomish County",
+    description: "Expert chimney sweep and fireplace services in Mukilteo, WA. Professional chimney cleaning, inspection, and repair for Mukilteo homeowners.",
+    neighborhoods: [
+      "Old Town Mukilteo", "Harbour Pointe", "Chennault",
+      "Paine Field", "Japanese Gulch", "Mukilteo Speedway",
+      "Possession Point", "Elliot Point"
+    ],
+    zipCodes: ["98275"],
+    localContent: "Mukilteo's coastal location exposes chimneys to salt air and moisture that accelerate deterioration. Our waterproofing and maintenance services help protect Mukilteo homes from these unique challenges, keeping your chimney safe and efficient year-round."
+  },
+  "marysville": {
+    name: "Marysville",
+    county: "Snohomish County",
+    description: "Trusted chimney sweep and repair services in Marysville, WA. Comprehensive chimney cleaning, inspection, and maintenance for Marysville residents.",
+    neighborhoods: [
+      "Downtown Marysville", "Smokey Point", "Lakewood",
+      "Sunnyside", "Whiskey Ridge", "Grove",
+      "Cedarcrest", "Kellogg Marsh"
+    ],
+    zipCodes: ["98270", "98271"],
+    localContent: "Marysville homeowners rely on The Mad Hatter for dependable chimney services. Whether you're in the established neighborhoods near Downtown Marysville or the newer developments around Smokey Point, we provide thorough inspections and expert chimney care."
+  },
+  "lake-stevens": {
+    name: "Lake Stevens",
+    county: "Snohomish County",
+    description: "Professional chimney cleaning and inspection services in Lake Stevens, WA. Expert chimney maintenance, repair, and installation for Lake Stevens homeowners.",
+    neighborhoods: [
+      "Downtown Lake Stevens", "North Lake Stevens", "Frontier Heights",
+      "Hartford", "Lake Cassidy", "Cavalero",
+      "Machias", "South Lake Stevens"
+    ],
+    zipCodes: ["98258"],
+    localContent: "Lake Stevens is one of the fastest-growing communities in Snohomish County, with both newer homes and established properties that require regular chimney care. Our technicians serve all Lake Stevens neighborhoods with the same professional, thorough service we've provided since 1979."
+  },
+  "snohomish": {
+    name: "Snohomish",
+    county: "Snohomish County",
+    description: "Reliable chimney sweep services in the City of Snohomish, WA. Professional chimney cleaning, inspection, and repair for Snohomish area homes.",
+    neighborhoods: [
+      "Historic Downtown Snohomish", "Pilchuck", "Bickford",
+      "Snohomish Hill", "Riverview", "Fobes Hill",
+      "Clearview", "High Bridge"
+    ],
+    zipCodes: ["98290", "98296"],
+    localContent: "The historic City of Snohomish features many older homes with original chimneys that require specialized care and attention. Our experienced technicians understand the unique needs of these heritage properties while also serving newer construction throughout the Snohomish area."
+  },
 }
 
 const services = [
