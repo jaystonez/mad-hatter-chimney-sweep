@@ -193,7 +193,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-1 gap-8 max-w-lg mx-auto">
               <Card>
                 <CardContent className="pt-6 text-center">
-                  <h3 className="font-bold text-xl mb-1">Billy</h3>
+                  <h3 className="font-bold text-xl mb-1">Jason Smith</h3>
                   <p className="text-primary font-medium mb-2">Owner &amp; Master Sweep</p>
                   <p className="text-sm text-muted-foreground">
                     45+ years experience, family-taught craftsmanship
