@@ -64,6 +64,36 @@ export default function LocationsPage() {
       slug: "bothell",
       description: "Professional chimney sweep and fireplace services in Bothell and Snohomish County",
       neighborhoods: ["Downtown Bothell", "Canyon Park", "North Creek", "Mill Creek", "Maltby"]
+    },
+        {
+      name: "Everett",
+      slug: "everett",
+      description: "Professional chimney sweep and fireplace services in Everett",
+      neighborhoods: ["Bayside", "Boulevard Bluffs", "Port Gardner", "Lowell", "Silver Lake"]
+    },
+    {
+      name: "Mukilteo",
+      slug: "mukilteo",
+      description: "Expert chimney sweep and fireplace services in Mukilteo",
+      neighborhoods: ["Old Town Mukilteo", "Harbour Pointe", "Chennault", "Paine Field", "Japanese Gulch"]
+    },
+    {
+      name: "Marysville",
+      slug: "marysville",
+      description: "Trusted chimney sweep and repair services in Marysville",
+      neighborhoods: ["Downtown Marysville", "Smokey Point", "Lakewood", "Sunnyside", "Cedarcrest"]
+    },
+    {
+      name: "Lake Stevens",
+      slug: "lake-stevens",
+      description: "Professional chimney cleaning and inspection in Lake Stevens",
+      neighborhoods: ["Downtown Lake Stevens", "North Lake Stevens", "Frontier Heights", "Hartford", "Cavalero"]
+    },
+    {
+      name: "Snohomish",
+      slug: "snohomish",
+      description: "Reliable chimney sweep services in the City of Snohomish",
+      neighborhoods: ["Historic Downtown Snohomish", "Pilchuck", "Bickford", "Snohomish Hill", "Riverview"]
     }
   ]
 
