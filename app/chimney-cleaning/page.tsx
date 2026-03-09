@@ -354,7 +354,7 @@ export default function ChimneyCleaningPage() {
 
           <div className="text-center p-6 bg-primary/5 rounded-lg">
             <p className="text-lg font-medium text-slate-900">
-              Mad Hatter's standard cleaning and 21-point inspection starts at <span className="text-primary font-bold">$289.95</span> in the greater Seattle area
+              Mad Hatter's standard cleaning and 21-point inspection for standard open-ended fireplaces starts at <span className="text-primary font-bold">$289.95</span> in the greater Seattle area
             </p>
           </div>
         </div>
