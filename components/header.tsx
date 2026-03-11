@@ -37,6 +37,7 @@ export function Header() {
     { label: "Services", href: "/services" },
     { label: "Locations", href: "/locations" },
     { label: "Fraud Check", href: "/verify-business", highlight: true },
+        { label: "Resources", href: "/resources" },
     { label: "Contact", href: "/#contact" },
   ]
 
