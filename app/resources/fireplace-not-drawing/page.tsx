@@ -150,7 +150,7 @@ export default function FireplaceNotDrawingPage() {
             href="/contact"
             className="bg-yellow-500 text-black font-bold px-8 py-4 rounded-lg text-lg hover:bg-yellow-400 transition inline-block"
           >
-            Schedule Your Inspection &mdash; (206) 555-0123
+            Schedule Your Inspection &mdash; (206) 274-6409
           </Link>
         </div>
       </section>
