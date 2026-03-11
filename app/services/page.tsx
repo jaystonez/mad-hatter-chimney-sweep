@@ -71,6 +71,19 @@ export default function ServicesPage() {
       ]
     },
     {
+      title: "Chimney Cleaning",
+      slug: "chimney-cleaning",
+      href: "/chimney-cleaning",
+      icon: Wind,
+      description: "Professional chimney cleaning starting at $289.95 for standard open-ended fireplaces. Bottom-up rotary brush system with HEPA-filtered vacuum.",
+      subServices: [
+        "Rotary Brush Cleaning",
+        "HEPA-Filtered Vacuum System",
+        "Creosote & Soot Removal",
+        "21-Point Inspection Included"
+      ]
+    },
+    {
       title: "Chimney Repairs",
       slug: "chimney-repairs",
       icon: Wrench,
@@ -128,19 +141,6 @@ export default function ServicesPage() {
         "Brick Replacement",
         "Fireplace Restoration",
         "Stone Veneer Installation"
-      ]
-    },
-        {
-      title: "Chimney Cleaning",
-      slug: "chimney-cleaning",
-      href: "/chimney-cleaning",
-      icon: Wind,
-      description: "Professional chimney cleaning starting at $289.95 for standard open-ended fireplaces. Bottom-up rotary brush system with HEPA-filtered vacuum.",
-      subServices: [
-        "Rotary Brush Cleaning",
-        "HEPA-Filtered Vacuum System",
-        "Creosote & Soot Removal",
-        "21-Point Inspection Included"
       ]
     }
   ]
