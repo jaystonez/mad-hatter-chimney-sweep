@@ -122,7 +122,20 @@ export default function ChimneySweepCostPage() {
         </div>
       </article>
 
-      {/* CTA */}
+            {/* Related Services */}
+      <section className="py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Services</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Link href="/services/chimney-inspection-sweeping" className="block p-4 rounded-lg border hover:border-primary hover:shadow-md transition-all">
+              <h3 className="font-bold text-primary mb-1">Chimney Inspection & Sweeping</h3>
+              <p className="text-sm text-slate-600">Professional chimney inspection and cleaning services</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+{/* CTA */}
       <section className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Schedule Your Chimney Sweep?</h2>
