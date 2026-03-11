@@ -94,6 +94,30 @@ export default function LocationsPage() {
       slug: "snohomish",
       description: "Reliable chimney sweep services in the City of Snohomish",
       neighborhoods: ["Historic Downtown Snohomish", "Pilchuck", "Bickford", "Snohomish Hill", "Riverview"]
+    },
+    {
+      name: "Lynnwood",
+      slug: "lynnwood",
+      description: "Professional chimney sweep and fireplace services in Lynnwood",
+      neighborhoods: ["Alderwood Manor", "Martha Lake", "Meadowdale", "Larch Way", "North Lynnwood"]
+    },
+    {
+      name: "Edmonds",
+      slug: "edmonds",
+      description: "Expert chimney sweep and maintenance services in Edmonds",
+      neighborhoods: ["Downtown Edmonds", "Bowl", "Westgate", "Perrinville", "Esperance"]
+    },
+    {
+      name: "Mountlake Terrace",
+      slug: "mountlake-terrace",
+      description: "Reliable chimney sweep services in Mountlake Terrace",
+      neighborhoods: ["Town Center", "Ballinger", "Gateway", "Melody Hill", "Evergreen"]
+    },
+    {
+      name: "Arlington",
+      slug: "arlington",
+      description: "Trusted chimney sweep and repair services in Arlington",
+      neighborhoods: ["Downtown Arlington", "Smokey Point", "Lakewood", "Trafton", "Jim Creek"]
     }
   ]
 
