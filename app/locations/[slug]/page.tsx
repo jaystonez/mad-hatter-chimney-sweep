@@ -167,6 +167,50 @@ const locations = {
     zipCodes: ["98290", "98296"],
     localContent: "The historic City of Snohomish features many older homes with original chimneys that require specialized care and attention. Our experienced technicians understand the unique needs of these heritage properties while also serving newer construction throughout the Snohomish area."
   },
+    "lynnwood": {
+    name: "Lynnwood",
+    county: "Snohomish County",
+    description: "Professional chimney sweep and fireplace services in Lynnwood, WA. Expert chimney cleaning, inspection, and repair for Lynnwood homeowners and surrounding communities.",
+    neighborhoods: [
+      "Alderwood Manor", "Martha Lake", "Meadowdale", "Larch Way",
+      "North Lynnwood", "Interurban Trail", "Scriber Lake", "South Lynnwood"
+    ],
+    zipCodes: ["98036", "98037", "98046", "98087"],
+    localContent: "Lynnwood is a thriving Snohomish County city with a mix of established mid-century homes and modern construction. Many Alderwood Manor and Meadowdale homes feature wood-burning fireplaces that benefit from annual cleaning and inspection. Our technicians are familiar with the chimney systems throughout Lynnwood and provide reliable service to keep your home safe and warm."
+  },
+  "edmonds": {
+    name: "Edmonds",
+    county: "Snohomish County",
+    description: "Expert chimney sweep and maintenance services in Edmonds, WA. Professional chimney cleaning, inspection, waterproofing, and repair for Edmonds residents.",
+    neighborhoods: [
+      "Downtown Edmonds", "Bowl", "Westgate", "Firdale Village",
+      "Perrinville", "Esperance", "Seaview", "Maplewood"
+    ],
+    zipCodes: ["98020", "98026"],
+    localContent: "Edmonds' waterfront charm comes with chimney challenges. Salt air and Puget Sound moisture accelerate deterioration of masonry and flashing. Our waterproofing and leak repair services protect Edmonds chimneys from coastal exposure, while routine sweeping keeps your fireplace ready for cozy evenings overlooking the water."
+  },
+  "mountlake-terrace": {
+    name: "Mountlake Terrace",
+    county: "Snohomish County",
+    description: "Reliable chimney sweep services in Mountlake Terrace, WA. Comprehensive chimney cleaning, inspection, and maintenance for Mountlake Terrace homeowners.",
+    neighborhoods: [
+      "Town Center", "Ballinger", "Gateway", "Lakeview Trail",
+      "Melody Hill", "Evergreen", "Cedar Way", "Veterans Memorial Park"
+    ],
+    zipCodes: ["98043"],
+    localContent: "Mountlake Terrace's well-established neighborhoods feature many homes built in the 1950s through 1970s with original masonry chimneys that require regular maintenance. Our technicians understand the specific needs of these heritage chimney systems and provide expert care to keep them functioning safely for years to come."
+  },
+  "arlington": {
+    name: "Arlington",
+    county: "Snohomish County",
+    description: "Trusted chimney sweep and repair services in Arlington, WA. Professional chimney cleaning, inspection, and installation for Arlington and north Snohomish County residents.",
+    neighborhoods: [
+      "Downtown Arlington", "Smokey Point", "Lakewood", "Trafton",
+      "Jim Creek", "Bryant", "Oso", "Darrington Road"
+    ],
+    zipCodes: ["98223"],
+    localContent: "Arlington and north Snohomish County homeowners rely on their fireplaces and wood stoves heavily during the long Pacific Northwest winters. With rural properties and older farmhouses common in the area, regular chimney inspections and cleaning are essential for safety. The Mad Hatter proudly extends our trusted service to Arlington and the surrounding communities."
+  },
 }
 
 const services = [
