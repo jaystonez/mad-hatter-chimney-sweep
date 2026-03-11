@@ -21,6 +21,10 @@ export default function ChimneyCleaningPage() {
           <p className="text-xl text-slate-300 mb-8 text-pretty leading-relaxed">
             Chimney cleaning is the single most important maintenance task for any home with a fireplace. The National Fire Protection Association identifies failure to clean chimneys as the leading factor in home heating fires.
           </p>
+                        <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8">
+                <span className="text-white/80 text-lg">Standard cleaning starts at</span>
+                <span className="text-3xl font-bold text-white ml-2">$289.95</span>
+              </div>
           <div className="flex flex-wrap gap-4">
             <Button size="lg" className="bg-primary hover:bg-primary/90">
               <Phone className="mr-2 h-5 w-5" />
@@ -352,9 +356,9 @@ export default function ChimneyCleaningPage() {
             </Card>
           </div>
 
-          <div className="text-center p-6 bg-primary/5 rounded-lg">
+          <div className="text-center p-8 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-xl border-2 border-primary/20 shadow-lg">
             <p className="text-lg font-medium text-slate-900">
-              Mad Hatter's standard cleaning and 21-point inspection for standard open-ended fireplaces starts at <span className="text-primary font-bold">$289.95</span> in the greater Seattle area
+              Mad Hatter's standard cleaning and 21-point inspection for standard open-ended fireplaces starts at <span className="text-primary font-bold text-3xl">$289.95</span> in the greater Seattle area
             </p>
           </div>
         </div>
