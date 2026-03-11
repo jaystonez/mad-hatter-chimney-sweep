@@ -31,6 +31,12 @@ const services = {
       "Professional Cleaning - Removing creosote, soot, and debris from top to bottom",
       "Final Report - Detailed findings with photos and recommendations",
       "Follow-up Care - Scheduling future maintenance and addressing any repairs needed"
+    ],
+    relatedResources: [
+      { title: "How Much Does a Chimney Sweep Cost?", href: "/resources/chimney-sweep-cost", description: "Pricing guide for chimney sweep services" },
+      { title: "Signs of Creosote Buildup", href: "/resources/creosote-buildup-signs", description: "Identify dangerous creosote in your chimney" },
+      { title: "Why Does My Chimney Smell Smoky?", href: "/resources/chimney-smells-smoky", description: "Common causes of chimney odors" },
+      { title: "Fireplace Not Drawing?", href: "/resources/fireplace-not-drawing", description: "Diagnose poor chimney draft problems" }
     ]
   },
   "chimney-repairs": {
@@ -59,6 +65,11 @@ const services = {
       "Skilled Repairs - Expert masonry work by certified technicians",
       "Quality Materials - Premium mortar, brick, and sealants",
       "Final Inspection - Ensuring all repairs meet safety standards"
+    ],
+    relatedResources: [
+      { title: "Water Leaking Through Chimney?", href: "/resources/water-leaking-through-chimney", description: "Diagnose chimney water intrusion issues" },
+      { title: "White Stuff on Chimney?", href: "/resources/white-stuff-on-chimney", description: "Understanding efflorescence on your chimney" },
+      { title: "Signs of Creosote Buildup", href: "/resources/creosote-buildup-signs", description: "Identify dangerous creosote in your chimney" }
     ]
   },
   "chimney-relining": {
@@ -87,6 +98,10 @@ const services = {
       "Professional Installation - Top-to-bottom liner installation",
       "Insulation - Adding insulation for improved performance",
       "Connection - Proper connection to appliance and chimney cap"
+    ],
+    relatedResources: [
+      { title: "Why Does My Chimney Smell Smoky?", href: "/resources/chimney-smells-smoky", description: "Common causes of chimney odors" },
+      { title: "Fireplace Not Drawing?", href: "/resources/fireplace-not-drawing", description: "Diagnose poor chimney draft problems" }
     ]
   },
   "waterproofing-leak-repair": {
@@ -115,6 +130,10 @@ const services = {
       "Comprehensive Repairs - Fixing flashing, crowns, and other issues",
       "Waterproofing Application - Applying breathable water repellent",
       "Preventive Measures - Installing caps and covers for long-term protection"
+    ],
+    relatedResources: [
+      { title: "Water Leaking Through Chimney?", href: "/resources/water-leaking-through-chimney", description: "Diagnose chimney water intrusion issues" },
+      { title: "White Stuff on Chimney?", href: "/resources/white-stuff-on-chimney", description: "Understanding efflorescence on your chimney" }
     ]
   },
   "stove-fireplace-installation": {
@@ -143,6 +162,10 @@ const services = {
       "Professional Installation - Expert setup of your new appliance",
       "Venting System - Proper liner and venting installation",
       "Final Testing - Ensuring safe and efficient operation"
+    ],
+    relatedResources: [
+      { title: "Fireplace Not Drawing?", href: "/resources/fireplace-not-drawing", description: "Diagnose poor chimney draft problems" },
+      { title: "Why Does My Chimney Smell Smoky?", href: "/resources/chimney-smells-smoky", description: "Common causes of chimney odors" }
     ]
   },
   "rebuilds-restorations": {
@@ -171,6 +194,10 @@ const services = {
       "Safe Demolition - Removing damaged sections carefully",
       "Expert Reconstruction - Building with quality materials and craftsmanship",
       "Finishing Touches - Ensuring beautiful appearance and proper function"
+    ],
+    relatedResources: [
+      { title: "Water Leaking Through Chimney?", href: "/resources/water-leaking-through-chimney", description: "Diagnose chimney water intrusion issues" },
+      { title: "White Stuff on Chimney?", href: "/resources/white-stuff-on-chimney", description: "Understanding efflorescence on your chimney" }
     ]
   }
 }
@@ -436,6 +463,24 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </div>
               </CardContent>
             </Card>
+
+            
+                            {/* Related Resources */}
+          {service.relatedResources && service.relatedResources.length > 0 && (
+            <Card>
+              <CardContent className="pt-6">
+                <h2 className="text-2xl font-serif font-bold mb-4">Related Resources</h2>
+                <div className="grid gap-4 md:grid-cols-2">
+                  {service.relatedResources.map((resource) => (
+                    <Link key={resource.href} href={resource.href} className="block p-4 rounded-lg border hover:border-primary hover:shadow-md transition-all">
+                      <h3 className="font-bold text-primary mb-1">{resource.title}</h3>
+                      <p className="text-sm text-muted-foreground">{resource.description}</p>
+                    </Link>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          )}
 
             {/* CTA */}
             <Card className="bg-primary text-primary-foreground">
