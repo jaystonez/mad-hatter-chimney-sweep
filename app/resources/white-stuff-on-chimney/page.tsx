@@ -98,7 +98,28 @@ export default function WhiteStuffOnChimneyPage() {
         </div>
       </article>
 
-      <section className="bg-primary text-primary-foreground py-16">
+            {/* Related Services */}
+      <section className="py-12">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Services</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Link href="/services/chimney-repairs" className="block p-4 rounded-lg border hover:border-primary hover:shadow-md transition-all">
+              <h3 className="font-bold text-primary mb-1">Chimney Repairs</h3>
+              <p className="text-sm text-slate-600">Expert masonry and structural chimney repairs</p>
+            </Link>
+            <Link href="/services/waterproofing-leak-repair" className="block p-4 rounded-lg border hover:border-primary hover:shadow-md transition-all">
+              <h3 className="font-bold text-primary mb-1">Waterproofing & Leak Repair</h3>
+              <p className="text-sm text-slate-600">Comprehensive chimney leak detection and waterproofing</p>
+            </Link>
+            <Link href="/services/rebuilds-restorations" className="block p-4 rounded-lg border hover:border-primary hover:shadow-md transition-all">
+              <h3 className="font-bold text-primary mb-1">Rebuilds & Restorations</h3>
+              <p className="text-sm text-slate-600">Complete chimney rebuilding and restoration services</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+<section className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Concerned About White Stains on Your Chimney?</h2>
           <p className="text-xl mb-8 opacity-90">A professional inspection will identify the moisture source and recommend the right repair.</p>
