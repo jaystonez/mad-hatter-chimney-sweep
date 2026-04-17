@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about',
     '/contact',
+    '/blog/fake-chimney-sweep-companies-seattle',
     '/services',
     '/locations',
     '/fraud-check',
