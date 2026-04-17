@@ -16,7 +16,6 @@ export default function Hero() {
           priority
           fetchPriority="high"
           sizes="100vw"
-          quality={60}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40" />
       </div>
