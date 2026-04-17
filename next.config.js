@@ -20,7 +20,6 @@ const nextConfig = {
       { source: '/fireplace-chimney-cleaning-seattle/', destination: '/chimney-cleaning-seattle', permanent: true },
       { source: '/get-cleaner-chimney-fireplace-today/', destination: '/chimney-cleaning', permanent: true },
       { source: '/about-mad-hatter-chimney-sweep/', destination: '/about', permanent: true },
-      { source: '/blog/', destination: '/', permanent: true },
       { source: '/contact/', destination: '/contact', permanent: true },
       { source: '/contact-us/', destination: '/contact', permanent: true },
       { source: '/privacy-policy/', destination: '/privacy-policy', permanent: true },
