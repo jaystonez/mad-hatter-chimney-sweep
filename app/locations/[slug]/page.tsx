@@ -240,21 +240,25 @@ const services = [
   }
 ]
 
-const canonicalLocationSlugs: Record<string, string> = {
-  seattle: "/chimney-sweep-seattle",
-  bellevue: "/chimney-sweep-bellevue",
-  redmond: "/chimney-sweep-redmond",
-  kirkland: "/chimney-sweep-kirkland",
-  issaquah: "/chimney-sweep-issaquah",
-  sammamish: "/chimney-sweep-sammamish",
-  shoreline: "/chimney-sweep-shoreline",
-  bothell: "/chimney-sweep-bothell",
-  kenmore: "/chimney-sweep-kenmore",
-  woodinville: "/chimney-sweep-woodinville",
-  "mercer-island": "/chimney-sweep-mercer-island",
-  newcastle: "/chimney-sweep-newcastle",
-  "lake-forest-park": "/chimney-sweep-lake-forest-park",
-}
+const canonicalLocationSlugs = [
+  "seattle",
+  "bellevue",
+  "redmond",
+  "kirkland",
+  "issaquah",
+  "sammamish",
+  "shoreline",
+  "bothell",
+  "kenmore",
+  "woodinville",
+  "mercer-island",
+  "newcastle",
+  "lake-forest-park",
+] as const
+
+const canonicalLocationPaths = Object.fromEntries(
+  canonicalLocationSlugs.map((slug) => [slug, `/chimney-sweep-${slug}`])
+) as Record<string, string>
 
 export async function generateStaticParams() {
   return Object.keys(locations).map((slug) => ({
@@ -265,7 +269,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params
   const location = locations[resolvedParams.slug as keyof typeof locations]
-  const canonicalPath = canonicalLocationSlugs[resolvedParams.slug]
+  const canonicalPath = canonicalLocationPaths[resolvedParams.slug]
   
   if (!location) {
     return {
