@@ -240,6 +240,22 @@ const services = [
   }
 ]
 
+const canonicalLocationSlugs: Record<string, string> = {
+  seattle: "/chimney-sweep-seattle",
+  bellevue: "/chimney-sweep-bellevue",
+  redmond: "/chimney-sweep-redmond",
+  kirkland: "/chimney-sweep-kirkland",
+  issaquah: "/chimney-sweep-issaquah",
+  sammamish: "/chimney-sweep-sammamish",
+  shoreline: "/chimney-sweep-shoreline",
+  bothell: "/chimney-sweep-bothell",
+  kenmore: "/chimney-sweep-kenmore",
+  woodinville: "/chimney-sweep-woodinville",
+  "mercer-island": "/chimney-sweep-mercer-island",
+  newcastle: "/chimney-sweep-newcastle",
+  "lake-forest-park": "/chimney-sweep-lake-forest-park",
+}
+
 export async function generateStaticParams() {
   return Object.keys(locations).map((slug) => ({
     slug: slug,
@@ -249,6 +265,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params
   const location = locations[resolvedParams.slug as keyof typeof locations]
+  const canonicalPath = canonicalLocationSlugs[resolvedParams.slug]
   
   if (!location) {
     return {
@@ -259,6 +276,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `Chimney Sweep ${location.name} WA | The Mad Hatter Chimney Sweep`,
     description: location.description,
+    ...(canonicalPath && {
+      alternates: {
+        canonical: `https://www.themadhatterchimneysweep.com${canonicalPath}`,
+      },
+    }),
   }
 }
 
