@@ -2,17 +2,17 @@ export default function SchemaMarkup() {
   const schema = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
-    "@id": "https://themadhatterchimneysweep.com",
+    "@id": "https://www.themadhatterchimneysweep.com",
     "name": "Mad Hatter Chimney Sweep",
     "alternateName": "The Mad Hatter Chimney Sweep",
     "description": "Professional chimney sweep services in Greater Seattle since 1979. Expert chimney cleaning, inspection, repair, and maintenance.",
-    "url": "https://themadhatterchimneysweep.com",
+    "url": "https://www.themadhatterchimneysweep.com",
     "telephone": "+1-206-274-6409",
     "email": "services@themadhatterchimneysweep.com",
     "foundingDate": "1979",
     "priceRange": "$$",
-    "image": "https://themadhatterchimneysweep.com/logo.png",
-    "logo": "https://themadhatterchimneysweep.com/logo.png",
+    "image": "https://www.themadhatterchimneysweep.com/logo.png",
+    "logo": "https://www.themadhatterchimneysweep.com/logo.png",
     "paymentAccepted": "Cash, Check, Credit Card",
     "currenciesAccepted": "USD",
     "address": {
@@ -25,8 +25,8 @@ export default function SchemaMarkup() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "47.6062",
-      "longitude": "-122.3321"
+      "latitude": "47.7601",
+      "longitude": "-122.2054"
     },
     "areaServed": [
       { "@type": "City", "name": "Bothell" },
@@ -134,7 +134,7 @@ export default function SchemaMarkup() {
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
-      "reviewCount": "247",
+      "reviewCount": "500",
       "bestRating": "5",
       "worstRating": "1"
     },
