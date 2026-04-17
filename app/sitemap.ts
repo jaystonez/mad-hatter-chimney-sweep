@@ -87,19 +87,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...serviceCityCombos,
   ]
 
+  const getPriority = (route: string) => {
+    if (route === '') return 1
+    if (route.startsWith('/locations/')) return 0.8
+    if (route === '/fraud-check') return 0.6
+    if (route.includes('sweep-') || route.includes('cleaning')) return 0.8
+    return 0.6
+  }
+
   return allPages.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority:
-      route === ''
-        ? 1
-        : route.startsWith('/locations/')
-          ? 0.8
-          : route === '/fraud-check'
-            ? 0.6
-            : route.includes('sweep-') || route.includes('cleaning')
-              ? 0.8
-              : 0.6,
+    priority: getPriority(route),
   }))
 }
