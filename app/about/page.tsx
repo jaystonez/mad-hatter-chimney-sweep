@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Award, Users, MapPin, Phone, Mail, CheckCircle2 } from "lucide-react"
@@ -120,10 +121,14 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-center mb-12">Our Story</h2>
             
             <div className="prose max-w-none">
-              <img
-                src="/images/family-dinner.jpg"
+              <Image
+                src="/images/family-dinner.webp"
                 alt="The Mad Hatter Chimney Sweep team photo in front of actual shop with company truck and signage"
+                width={1200}
+                height={900}
+                sizes="(max-width: 1024px) 100vw, 1024px"
                 className="w-full rounded-lg mb-8"
+                loading="lazy"
               />
               <p className="text-lg leading-relaxed mb-6">
                 The Mad Hatter Chimney Sweep was founded in 1979, a Seattle native

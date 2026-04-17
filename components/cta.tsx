@@ -207,7 +207,15 @@ export function CTA() {
                   />
                   {imagePreview ? (
                     <div className="relative inline-block">
-                      <img src={imagePreview} alt="Preview" className="w-24 h-24 object-cover rounded-xl border border-stone-600" />
+                      <img
+                        src={imagePreview}
+                        alt="Preview"
+                        width={96}
+                        height={96}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-24 h-24 object-cover rounded-xl border border-stone-600"
+                      />
                       <button type="button" onClick={removeImage} className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-0.5 hover:bg-red-400 transition-colors">
                         <X className="w-4 h-4" />
                       </button>

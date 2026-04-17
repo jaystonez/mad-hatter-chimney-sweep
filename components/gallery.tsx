@@ -1,36 +1,37 @@
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 
 const galleryItems = [
   {
     category: "Chimney Cap Installation",
     before: {
-      src: "/images/before-no-cap.jpg",
+      src: "/images/before-no-cap.webp",
       alt: "Before: Chimney without protective cap"
     },
     after: {
-      src: "/images/after-cap-installed.jpg",
+      src: "/images/after-cap-installed.webp",
       alt: "After: Professional chimney cap installed"
     }
   },
   {
     category: "Crown Repair",
     before: {
-      src: "/images/before-crumbling-crown.jpg",
+      src: "/images/before-crumbling-crown.webp",
       alt: "Before: Crumbling chimney crown with damage"
     },
     after: {
-      src: "/images/after-new-crown.jpg",
+      src: "/images/after-new-crown.webp",
       alt: "After: New chimney crown professionally rebuilt"
     }
   },
   {
     category: "Chimney Cleaning & Restoration",
     before: {
-      src: "/images/before-mossy-chimney.jpg",
+      src: "/images/before-mossy-chimney.webp",
       alt: "Before: Mossy and weathered chimney exterior"
     },
     after: {
-      src: "/images/after-new-caps.jpg",
+      src: "/images/after-new-caps.webp",
       alt: "After: Clean, restored chimney with new protective caps"
     }
   }
@@ -59,10 +60,14 @@ export default function Gallery() {
                 <div className="space-y-4">
                   {/* Before */}
                   <div className="relative overflow-hidden bg-muted h-48">
-                    <img
+                    <Image
                       src={item.before.src}
                       alt={item.before.alt}
+                      width={1200}
+                      height={900}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                     <span className="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 text-sm font-semibold rounded">
                       Before
@@ -71,10 +76,14 @@ export default function Gallery() {
 
                   {/* After */}
                   <div className="relative overflow-hidden bg-muted h-48">
-                    <img
+                    <Image
                       src={item.after.src}
                       alt={item.after.alt}
+                      width={1200}
+                      height={900}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                     <span className="absolute top-3 left-3 bg-green-500 text-white px-3 py-1 text-sm font-semibold rounded">
                       After
@@ -98,10 +107,14 @@ export default function Gallery() {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/herringbone-victorian.jpg"
+              <Image
+                src="/images/herringbone-victorian.webp"
                 alt="Stunning herringbone brick pattern on Victorian chimney"
+                width={1200}
+                height={1600}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="w-full h-64 object-cover"
+                loading="lazy"
               />
               <div className="p-4 bg-white">
                 <h4 className="font-semibold text-foreground">Victorian Masonry</h4>
@@ -110,10 +123,14 @@ export default function Gallery() {
             </div>
 
             <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/exterior-chimney-sunny.jpg"
+              <Image
+                src="/images/exterior-chimney-sunny.webp"
                 alt="Full height exterior chimney in excellent condition"
+                width={1200}
+                height={1600}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="w-full h-64 object-cover"
+                loading="lazy"
               />
               <div className="p-4 bg-white">
                 <h4 className="font-semibold text-foreground">Exterior Chimney</h4>
@@ -122,10 +139,14 @@ export default function Gallery() {
             </div>
 
             <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/white-brick-rebuild.jpg"
+              <Image
+                src="/images/white-brick-rebuild.webp"
                 alt="Complete chimney rebuild with white brick"
+                width={1200}
+                height={1600}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="w-full h-64 object-cover"
+                loading="lazy"
               />
               <div className="p-4 bg-white">
                 <h4 className="font-semibold text-foreground">Brick Rebuild</h4>
@@ -134,10 +155,14 @@ export default function Gallery() {
             </div>
 
             <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/warm-brick-flashing.jpg"
+              <Image
+                src="/images/warm-brick-flashing.webp"
                 alt="Professional flashing installation on brick chimney"
+                width={1200}
+                height={2119}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="w-full h-64 object-cover"
+                loading="lazy"
               />
               <div className="p-4 bg-white">
                 <h4 className="font-semibold text-foreground">Flashing Repair</h4>
@@ -146,10 +171,14 @@ export default function Gallery() {
             </div>
 
             <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/brick-chimney-trees.jpg"
+              <Image
+                src="/images/brick-chimney-trees.webp"
                 alt="Beautiful brick chimney among mature trees"
+                width={1200}
+                height={900}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="w-full h-64 object-cover"
+                loading="lazy"
               />
               <div className="p-4 bg-white">
                 <h4 className="font-semibold text-foreground">Tree Removal Service</h4>
@@ -158,10 +187,14 @@ export default function Gallery() {
             </div>
 
             <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-              <img
-                src="/images/waterproofed-chimney.jpg"
+              <Image
+                src="/images/waterproofed-chimney.webp"
                 alt="Professionally waterproofed chimney with protective coating"
+                width={1200}
+                height={900}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="w-full h-64 object-cover"
+                loading="lazy"
               />
               <div className="p-4 bg-white">
                 <h4 className="font-semibold text-foreground">Waterproofing</h4>

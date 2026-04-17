@@ -9,11 +9,14 @@ export default function Hero() {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-fireplace.jpg"
+          src="/images/hero-fireplace.webp"
           alt="Professional chimney sweep services - Mad Hatter Chimney Sweep Seattle"
           fill
           className="object-cover opacity-30"
           priority
+          fetchPriority="high"
+          sizes="100vw"
+          quality={60}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40" />
       </div>
