@@ -10,8 +10,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/services',
     '/locations',
+    '/fraud-check',
     '/verify-contractor',
     '/verify-business',
+  ]
+
+  const locationSubpages = [
+    '/locations/seattle',
+    '/locations/bellevue',
+    '/locations/redmond',
+    '/locations/kirkland',
+    '/locations/issaquah',
+    '/locations/sammamish',
+    '/locations/shoreline',
+    '/locations/burien',
+    '/locations/bothell',
+    '/locations/everett',
+    '/locations/mukilteo',
+    '/locations/marysville',
+    '/locations/lake-stevens',
+    '/locations/snohomish',
+    '/locations/lynnwood',
+    '/locations/edmonds',
+    '/locations/mountlake-terrace',
+    '/locations/arlington',
   ]
 
   // Service pages
@@ -59,15 +81,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const allPages = [
     ...staticPages,
+    ...locationSubpages,
     ...services,
     ...cities,
     ...serviceCityCombos,
   ]
 
+  const getPriority = (route: string) => {
+    if (route === '') return 1
+    if (route.startsWith('/locations/')) return 0.8
+    if (route === '/fraud-check') return 0.6
+    if (route.includes('sweep-') || route.includes('cleaning')) return 0.8
+    return 0.6
+  }
+
   return allPages.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: route === '' ? 1 : route.includes('sweep-') || route.includes('cleaning') ? 0.8 : 0.6,
+    priority: getPriority(route),
   }))
 }
