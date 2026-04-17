@@ -256,9 +256,10 @@ const canonicalLocationSlugs = [
   "lake-forest-park",
 ] as const
 
-const canonicalLocationPaths = Object.fromEntries(
-  canonicalLocationSlugs.map((slug) => [slug, `/chimney-sweep-${slug}`])
-) as Record<string, string>
+const canonicalLocationPaths = canonicalLocationSlugs.reduce<Record<string, string>>((acc, slug) => {
+  acc[slug] = `/chimney-sweep-${slug}`
+  return acc
+}, {})
 
 export async function generateStaticParams() {
   return Object.keys(locations).map((slug) => ({
