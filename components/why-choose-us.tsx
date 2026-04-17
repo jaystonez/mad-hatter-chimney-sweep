@@ -57,10 +57,11 @@ export default function WhyChooseUs() {
           {/* Left: Image */}
           <div className="relative rounded-3xl overflow-hidden h-[500px] shadow-2xl shadow-black/50">
             <Image
-              src="/images/herringbone-victorian.jpg"
+              src="/images/herringbone-victorian.webp"
               alt="Expert chimney masonry work by Mad Hatter Chimney Sweep Seattle"
               fill
               className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent" />
             {/* Stats overlay */}
