@@ -9,6 +9,45 @@ export const metadata: Metadata = {
   description: "Professional chimney repair services in Seattle. Crown repair, flashing replacement, repointing, liner installation. 45+ years experience. Licensed & certified.",
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What are the most common chimney repairs in Seattle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Common chimney repairs include crown repair, flashing repair, mortar repointing, liner replacement, chimney cap replacement, and brick repair from water-related damage.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does chimney repair cost in Seattle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Chimney repair costs in Seattle range from a few hundred dollars for minor fixes to several thousand for major structural or liner repairs, depending on damage severity and access.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What signs indicate I need chimney repair?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Warning signs include cracked crown areas, crumbling mortar, spalling bricks, interior water stains, smoke leaks, and pieces of tile or masonry falling into the fireplace.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I delay chimney repairs if the fireplace still works?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Delaying repairs usually increases cost because moisture and freeze-thaw cycles worsen damage quickly. Early professional repair helps avoid larger structural restoration later.",
+      },
+    },
+  ],
+}
+
 export default function ChimneyRepairPage() {
   const commonRepairs = [
     {
@@ -120,9 +159,14 @@ export default function ChimneyRepairPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="min-h-screen bg-background">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
@@ -372,7 +416,8 @@ export default function ChimneyRepairPage() {
             </Button>
           </div>
         </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   )
 }

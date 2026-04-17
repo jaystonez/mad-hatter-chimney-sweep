@@ -9,11 +9,55 @@ export const metadata: Metadata = {
   description: "Professional chimney liner installation and replacement. Stainless steel and cast-in-place liners. Restore safe flue function. 45+ years serving greater Seattle.",
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "When does a chimney liner need to be replaced?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A chimney liner should be replaced when inspections find cracks, gaps, deterioration, or improper sizing that can allow heat and gases to escape into unsafe areas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What types of chimney liners are available?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Common liner options include stainless steel liners for durability and compatibility with many appliances, and cast-in-place liners for structural restoration in damaged masonry flues.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does chimney liner installation cost in Seattle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Chimney liner installation in Seattle commonly ranges from about $1,200 to $4,000+, depending on chimney height, liner material, and the amount of prep or repair required.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is chimney liner installation required for safety?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. A properly sized, intact liner is a core chimney safety requirement because it contains heat, improves draft, and helps prevent carbon monoxide leakage into living spaces.",
+      },
+    },
+  ],
+}
+
 export default function ChimneyLinerInstallationPage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="flex flex-col min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
@@ -453,7 +497,8 @@ export default function ChimneyLinerInstallationPage() {
             </p>
           </div>
         </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   )
 }

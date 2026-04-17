@@ -9,11 +9,55 @@ export const metadata: Metadata = {
   description: "Professional chimney cleaning & creosote removal in Seattle by master certified technicians with 45+ years of experience. Licensed & insured. Call (206) 274-6409.",
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How often should I get my chimney cleaned in Seattle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most Seattle homeowners should schedule chimney cleaning once a year. Homes that burn wood frequently may need cleaning more often based on creosote buildup and inspection findings.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does chimney cleaning cost in Seattle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Typical chimney cleaning in Seattle generally starts around $289.95, with final pricing based on chimney height, accessibility, and creosote level.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is included in a professional chimney cleaning service?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A professional chimney cleaning usually includes flue sweeping, creosote removal, firebox cleanup, and a visual safety check to identify potential damage or venting issues.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does a chimney cleaning appointment take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most chimney cleaning appointments take about 45 to 90 minutes, depending on system condition, buildup level, and whether additional safety concerns are found.",
+      },
+    },
+  ],
+}
+
 export default function ChimneyCleaningPage() {
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
             Chimney Cleaning: Why It Matters, What It Costs & How to Choose a Professional
@@ -485,7 +529,8 @@ export default function ChimneyCleaningPage() {
             Master certified technicians. Same-day service available throughout the greater Seattle area.
           </p>
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   )
 }

@@ -7,11 +7,55 @@ export const metadata: Metadata = {
   description: 'Professional fireplace cleaning for safe, efficient operation. Expert creosote removal, damper service, and complete system cleaning. 45+ years serving Seattle.',
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is the difference between fireplace cleaning and chimney sweeping?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Fireplace cleaning focuses on firebox and visible fireplace components, while chimney sweeping targets the flue system. Comprehensive service often includes both for full safety and performance.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How often should I have my fireplace cleaned in Seattle?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Most Seattle homeowners should schedule yearly fireplace and chimney service before peak burning season. Heavy use may require more frequent cleaning based on buildup and inspection results.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does fireplace cleaning cost in Seattle?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Fireplace cleaning costs in Seattle vary based on system type, access, and buildup condition. Homeowners usually receive exact pricing after a quick service assessment.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does professional fireplace cleaning take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A standard professional fireplace cleaning visit typically takes about 45 to 90 minutes, depending on soot and creosote levels, system complexity, and any issues discovered.',
+      },
+    },
+  ],
+}
+
 export default function FireplaceCleaningPage() {
   return (
-    <main className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground py-16 px-4">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main className="min-h-screen bg-background">
+        {/* Hero Section */}
+        <section className="bg-primary text-primary-foreground py-16 px-4">
         <div className="container mx-auto max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
             Fireplace Cleaning: Professional Service for Safe, Efficient Operation
@@ -473,7 +517,8 @@ export default function FireplaceCleaningPage() {
             Master certified technicians • 45+ years of experience • Same-day service available throughout the greater Seattle area
           </p>
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   )
 }

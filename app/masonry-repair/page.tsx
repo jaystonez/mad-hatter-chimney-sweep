@@ -6,11 +6,55 @@ export const metadata = {
   description: 'Expert masonry repair services across Seattle. 45+ years restoring chimneys, fireplaces, and masonry structures. Professional repointing, brick replacement, and stone restoration.',
 }
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is tuckpointing and when does my chimney need it?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Tuckpointing is the removal and replacement of failing mortar joints. It is needed when mortar is cracking, crumbling, or missing between bricks on your chimney or masonry walls.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does masonry repair cost in Seattle?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Masonry repair pricing in Seattle depends on damage depth, access, and materials. Small repairs may cost a few hundred dollars, while larger restoration projects can reach several thousand.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are signs of chimney masonry deterioration?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Common signs include cracking mortar joints, loose or spalling bricks, white staining, leaning sections, interior moisture staining, and visible gaps around masonry components.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can damaged mortar be repaired without rebuilding the whole chimney?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In many cases yes. Targeted repointing and selective brick replacement can restore structural performance when deterioration is addressed early through professional inspection.',
+      },
+    },
+  ],
+}
+
 export default function MasonryRepairPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative bg-primary py-16 sm:py-24">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="min-h-screen bg-background">
+        {/* Hero Section */}
+        <section className="relative bg-primary py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-balance text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
@@ -520,7 +564,8 @@ export default function MasonryRepairPage() {
             45 years of masonry expertise serving the greater Seattle area
           </p>
         </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   )
 }

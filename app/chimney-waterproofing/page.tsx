@@ -10,6 +10,45 @@ export const metadata: Metadata = {
   keywords: "chimney waterproofing Seattle, masonry sealing, chimney protection, water damage prevention, breathable sealant",
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Why is chimney waterproofing important in Seattle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Seattle's long wet season keeps masonry damp for months. Waterproofing helps reduce water absorption that leads to mortar failure, brick spalling, and interior leak damage.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What products are used for chimney waterproofing?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Professional chimney waterproofing uses breathable, vapor-permeable masonry repellents designed to block rain penetration while allowing trapped moisture inside the chimney to escape.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How often should chimney waterproofing be reapplied?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most chimneys in the Seattle area should be re-evaluated every year and typically re-waterproofed about every 5 to 7 years, based on weather exposure and product performance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does chimney waterproofing cost in Seattle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Chimney waterproofing usually ranges around $200 to $500 for many homes, with pricing influenced by chimney size, access, and whether repairs are needed before application.",
+      },
+    },
+  ],
+}
+
 export default function ChimneyWaterproofingPage() {
   const damageTypes = [
     {
@@ -90,9 +129,14 @@ export default function ChimneyWaterproofingPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-b from-muted/50 to-background py-16 md:py-24">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="min-h-screen bg-background">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-b from-muted/50 to-background py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
@@ -409,7 +453,8 @@ export default function ChimneyWaterproofingPage() {
             </p>
           </div>
         </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   )
 }
