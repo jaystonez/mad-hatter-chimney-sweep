@@ -17,7 +17,7 @@ export default function Hero() {
           fetchPriority="high"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-900/95 via-stone-900/80 to-stone-900/55" />
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-24">
@@ -36,12 +36,12 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-stone-300 leading-relaxed mb-8 max-w-2xl">
+          <p className="text-xl md:text-2xl text-stone-100 leading-relaxed mb-8 max-w-2xl">
             Expert chimney sweeping, inspections, and repairs. Keeping Seattle homes safe and fireplaces running beautifully since 1979.
           </p>
 
           {/* Social proof strip */}
-          <div className="flex flex-wrap gap-6 mb-10 text-stone-300">
+          <div className="flex flex-wrap gap-6 mb-10 text-stone-200">
             <div className="flex items-center gap-2">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (

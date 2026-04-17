@@ -23,18 +23,30 @@ export function Footer() {
               Professional chimney services since 1979. Over 2,500 satisfied customers throughout Greater Seattle. Your safety and satisfaction are our top priorities.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+              <a
+                href="#"
+                aria-label="Visit our Facebook page"
+                className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+              <a
+                href="#"
+                aria-label="Visit our X (Twitter) profile"
+                className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
+              <a
+                href="#"
+                aria-label="Visit our Instagram profile"
+                className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
             <div className="mt-4">
-              <a href="tel:+12062746409" className="text-slate-400 hover:text-primary transition-colors">
+              <a href="tel:+12062746409" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                 (206) 274-6409
               </a>
                             <p className="text-slate-400 text-sm mt-2">WA License #: MADHAHL790LW</p>
@@ -43,30 +55,30 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Quick Links</h4>
+            <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-slate-400 hover:text-primary transition-colors">
+                <Link href="/" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-400 hover:text-primary transition-colors">
+                <Link href="/services" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Our Services
                 </Link>
               </li>
               <li>
-                <Link href="/locations" className="text-slate-400 hover:text-primary transition-colors">
+                <Link href="/locations" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Service Areas
                 </Link>
               </li>
               <li>
-                <Link href="/#testimonials" className="text-slate-400 hover:text-primary transition-colors">
+                <Link href="/#testimonials" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Testimonials
                 </Link>
               </li>
               <li>
-                <Link href="/#contact" className="text-slate-400 hover:text-primary transition-colors">
+                <Link href="/#contact" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Contact Us
                 </Link>
               </li>
@@ -75,30 +87,30 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-bold text-lg mb-4">Services</h4>
+            <h3 className="font-bold text-lg mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/chimney-inspection-sweeping" className="text-slate-400 hover:text-primary transition-colors">
+                <Link href="/services/chimney-inspection-sweeping" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Chimney Sweeping
                 </Link>
               </li>
               <li>
-                <Link href="/services/chimney-repairs" className="text-slate-400 hover:text-primary transition-colors">
+                <Link href="/services/chimney-repairs" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Chimney Repairs
                 </Link>
               </li>
               <li>
-                <Link href="/services/chimney-relining" className="text-slate-400 hover:text-primary transition-colors">
+                <Link href="/services/chimney-relining" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Chimney Relining
                 </Link>
               </li>
               <li>
-                <Link href="/services/waterproofing-leak-repair" className="text-slate-400 hover:text-primary transition-colors">
+                <Link href="/services/waterproofing-leak-repair" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Leak Repair
                 </Link>
               </li>
               <li>
-                <Link href="/services/stove-fireplace-installation" className="text-slate-400 hover:text-primary transition-colors">
+                <Link href="/services/stove-fireplace-installation" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Installation
                 </Link>
               </li>
@@ -113,10 +125,10 @@ export function Footer() {
               © {currentYear} The Mad Hatter Chimney Sweep. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-                          <Link href="/privacy-policy" className="text-slate-400 hover:text-primary transition-colors">
+                          <Link href="/privacy-policy" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                 Privacy Policy
                           </Link>
-                          <Link href="/terms-of-service" className="text-slate-400 hover:text-primary transition-colors">
+                          <Link href="/terms-of-service" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                 Terms of Service
                           </Link>
             </div>

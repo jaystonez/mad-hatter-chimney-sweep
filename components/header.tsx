@@ -141,6 +141,9 @@ export function Header() {
           <button
             className="md:hidden p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -152,7 +155,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t pt-4">
+          <div id="mobile-navigation" className="md:hidden mt-4 pb-4 border-t pt-4">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
