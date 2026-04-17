@@ -9,11 +9,55 @@ export const metadata: Metadata = {
   description: "Professional Level 1, 2 & 3 chimney inspections in Seattle with video camera technology. Licensed & insured with 45+ years of certified expertise. Call (206) 274-6409.",
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How often should I get my chimney inspected in Seattle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The NFPA recommendation is a yearly chimney inspection for any home with a fireplace, wood stove, or vented fuel appliance, even if you use it occasionally.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between Level 1, Level 2, and Level 3 chimney inspections?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Level 1 is a routine visual check, Level 2 adds camera evaluation and is typically required for home sales or system changes, and Level 3 is a detailed inspection when serious hazards are suspected.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does a chimney inspection cost in Seattle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Chimney inspection pricing in Seattle varies by inspection level, chimney access, and whether camera documentation is needed. Most homeowners receive exact pricing after discussing property details.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "When should I schedule a chimney inspection?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Schedule an inspection before the heating season, after severe weather, before buying or selling a home, or any time you notice smoke issues, odors, leaks, or masonry damage.",
+      },
+    },
+  ],
+}
+
 export default function ChimneyInspectionPage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
@@ -471,7 +515,8 @@ export default function ChimneyInspectionPage() {
             </p>
           </div>
         </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   )
 }

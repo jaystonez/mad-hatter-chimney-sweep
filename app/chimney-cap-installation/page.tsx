@@ -9,11 +9,55 @@ export const metadata: Metadata = {
   description: "Professional chimney cap installation in Seattle. Protect your chimney from water, animals, and debris. Stainless steel, copper, and custom caps available. 45+ years experience.",
 }
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Why do I need a chimney cap in Seattle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A chimney cap helps block rain, animals, and debris while reducing downdrafts and spark escape. In Seattle's wet climate, caps are key to limiting moisture damage.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What type of chimney cap is best for my home?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Stainless steel caps are the most common for durability and corrosion resistance, while copper and custom multi-flue caps are options for specific sizing or architectural style.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does chimney cap installation cost in Seattle?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most chimney cap installations in Seattle fall in the $200 to $800 range depending on material, flue size, roof access, and whether custom fabrication is needed.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does chimney cap installation take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Standard chimney cap installation is often completed in one visit, usually in under two hours, unless custom parts or additional chimney repairs are required.",
+      },
+    },
+  ],
+}
+
 export default function ChimneyCapInstallationPage() {
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
@@ -426,7 +470,8 @@ export default function ChimneyCapInstallationPage() {
           </div>
           <p className="mt-8 text-sm">Same-day service often available throughout the greater Seattle area</p>
         </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   )
 }
