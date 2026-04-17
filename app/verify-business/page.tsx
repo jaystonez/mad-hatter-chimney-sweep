@@ -180,7 +180,7 @@ export default function VerifyBusinessPage() {
                   <CardContent className="pt-6">
                     <div className="flex items-center justify-between flex-wrap gap-4">
                       <div>
-                        <h3 className="text-sm font-medium text-muted-foreground mb-1">Threat Score</h3>
+                        <h2 className="text-sm font-medium text-muted-foreground mb-1">Threat Score</h2>
                         <div className="flex items-center gap-3">
                           <span className={`text-5xl font-bold ${getScoreColor(result.score || 0)}`}>
                             {result.score || 0}

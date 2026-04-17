@@ -158,6 +158,7 @@ export default function AdminDashboard() {
             />
             <button
               onClick={addTodo}
+              aria-label="Add action item"
               className="bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold px-4 py-2 rounded-lg flex items-center gap-1 text-sm transition-colors"
             >
               <Plus className="w-4 h-4" />

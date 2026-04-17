@@ -91,7 +91,7 @@ export function CTA() {
                   <Phone className="w-5 h-5 text-amber-400" />
                 </div>
                 <div>
-                  <div className="text-xs text-stone-500 uppercase tracking-wide font-medium">Call Us</div>
+                  <div className="text-xs text-stone-300 uppercase tracking-wide font-medium">Call Us</div>
                   <a href="tel:+12062746409" className="text-xl font-bold text-white hover:text-amber-400 transition-colors">
                     (206) 274-6409
                   </a>
@@ -105,7 +105,7 @@ export function CTA() {
                   <Mail className="w-5 h-5 text-amber-400" />
                 </div>
                 <div>
-                  <div className="text-xs text-stone-500 uppercase tracking-wide font-medium">Email Us</div>
+                  <div className="text-xs text-stone-300 uppercase tracking-wide font-medium">Email Us</div>
                   <a href="mailto:services@themadhatterchimneysweep.com" className="text-sm font-semibold text-white hover:text-amber-400 transition-colors">
                     services@themadhatterchimneysweep.com
                   </a>
@@ -118,12 +118,12 @@ export function CTA() {
                 <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
                   <Clock className="w-5 h-5 text-amber-400" />
                 </div>
-                <div className="text-xs text-stone-500 uppercase tracking-wide font-medium">Business Hours</div>
+                <div className="text-xs text-stone-300 uppercase tracking-wide font-medium">Business Hours</div>
               </div>
               <div className="pl-14 space-y-1 text-sm">
                 <div className="flex justify-between"><span className="text-stone-400">Mon - Fri</span><span className="text-white font-medium">8am - 6pm</span></div>
                 <div className="flex justify-between"><span className="text-stone-400">Saturday</span><span className="text-white font-medium">9am - 4pm</span></div>
-                <div className="flex justify-between"><span className="text-stone-400">Sunday</span><span className="text-stone-500">Closed</span></div>
+                <div className="flex justify-between"><span className="text-stone-400">Sunday</span><span className="text-stone-300">Closed</span></div>
               </div>
             </div>
             <div className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-6">
@@ -132,7 +132,7 @@ export function CTA() {
                   <MapPin className="w-5 h-5 text-amber-400" />
                 </div>
                 <div>
-                  <div className="text-xs text-stone-500 uppercase tracking-wide font-medium">Service Area</div>
+                  <div className="text-xs text-stone-300 uppercase tracking-wide font-medium">Service Area</div>
                   <div className="text-white font-semibold">King & Snohomish Counties</div>
                   <div className="text-stone-400 text-sm">and surrounding areas</div>
                 </div>
@@ -208,7 +208,7 @@ export function CTA() {
                   {imagePreview ? (
                     <div className="relative inline-block">
                       <img src={imagePreview} alt="Preview" className="w-24 h-24 object-cover rounded-xl border border-stone-600" />
-                      <button type="button" onClick={removeImage} className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-0.5 hover:bg-red-400 transition-colors">
+                      <button type="button" onClick={removeImage} aria-label="Remove uploaded image" className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full p-0.5 hover:bg-red-400 transition-colors">
                         <X className="w-4 h-4" />
                       </button>
                     </div>
@@ -237,7 +237,7 @@ export function CTA() {
                     <><Send className="w-5 h-5" /> Send Message</>
                   )}
                 </button>
-                <p className="text-stone-500 text-xs text-center">We'll respond within 24 hours. No spam, ever.</p>
+                <p className="text-stone-300 text-xs text-center">We'll respond within 24 hours. No spam, ever.</p>
               </form>
             )}
           </div>

@@ -134,7 +134,7 @@ export default function ChimneySweepRedmond() {
                     <CheckCircle2 className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Full Creosote Removal</h4>
+                    <h3 className="font-semibold mb-1">Full Creosote Removal</h3>
                     <p className="text-muted-foreground text-sm">All three stages of creosote removed from full flue, smoke chamber, firebox, and damper assembly</p>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ export default function ChimneySweepRedmond() {
                     <CheckCircle2 className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Top-Down Professional Method</h4>
+                    <h3 className="font-semibold mb-1">Top-Down Professional Method</h3>
                     <p className="text-muted-foreground text-sm">Starting at roofline with professional brushes sized for your chimney—gravity assists removal</p>
                   </div>
                 </div>
@@ -154,7 +154,7 @@ export default function ChimneySweepRedmond() {
                     <CheckCircle2 className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">21-Point Inspection Included</h4>
+                    <h3 className="font-semibold mb-1">21-Point Inspection Included</h3>
                     <p className="text-muted-foreground text-sm">Comprehensive system evaluation with written report, photographs, and prioritized recommendations</p>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ export default function ChimneySweepRedmond() {
                     <CheckCircle2 className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Professional Home Protection</h4>
+                    <h3 className="font-semibold mb-1">Professional Home Protection</h3>
                     <p className="text-muted-foreground text-sm">Complete containment at fireplace keeps your home pristine throughout the process</p>
                   </div>
                 </div>
