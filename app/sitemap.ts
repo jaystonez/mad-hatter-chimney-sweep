@@ -10,8 +10,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/services',
     '/locations',
+    '/fraud-check',
     '/verify-contractor',
     '/verify-business',
+  ]
+
+  const locationSubpages = [
+    '/locations/seattle',
+    '/locations/bellevue',
+    '/locations/redmond',
+    '/locations/kirkland',
+    '/locations/issaquah',
+    '/locations/sammamish',
+    '/locations/shoreline',
+    '/locations/burien',
+    '/locations/bothell',
+    '/locations/everett',
+    '/locations/mukilteo',
+    '/locations/marysville',
+    '/locations/lake-stevens',
+    '/locations/snohomish',
+    '/locations/lynnwood',
+    '/locations/edmonds',
+    '/locations/mountlake-terrace',
+    '/locations/arlington',
   ]
 
   // Service pages
@@ -59,6 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const allPages = [
     ...staticPages,
+    ...locationSubpages,
     ...services,
     ...cities,
     ...serviceCityCombos,
@@ -68,6 +91,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: route === '' ? 1 : route.includes('sweep-') || route.includes('cleaning') ? 0.8 : 0.6,
+    priority:
+      route === ''
+        ? 1
+        : route.startsWith('/locations/')
+          ? 0.8
+          : route === '/fraud-check'
+            ? 0.6
+            : route.includes('sweep-') || route.includes('cleaning')
+              ? 0.8
+              : 0.6,
   }))
 }
