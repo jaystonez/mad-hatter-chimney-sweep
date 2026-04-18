@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🜇 artifact.html — File 2.0 Sovereign Membrane</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+  body { font-family: 'Inter', system-ui; background: #0a0a0a; color: #0f0; }
+  .membrane { background: rgba(255,255,255,0.04); backdrop-filter: blur(16px); border: 1px solid rgba(0,255,170,0.25); box-shadow: 0 0 30px rgba(0,255,170,0.15); border-radius: 16px; }
+  .widget:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 0 40px rgba(0,255,170,0.3); }
+  .neon { text-shadow: 0 0 15px #0ff; }
+</style>
+</head>
+<body class="min-h-screen">
+<div class="flex h-screen">
+
+  <div class="flex-1 p-8 overflow-auto bg-gradient-to-br from-zinc-950 to-black">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex justify-between items-center mb-8">
+        <div class="flex items-center gap-4">
+          <span class="text-5xl">🜇</span>
+          <h1 class="text-5xl font-bold tracking-tighter neon">artifact.html</h1>
+          <span class="px-4 py-1 bg-emerald-400 text-black text-xs font-mono rounded-2xl">File 2.0 • Membrane</span>
+        </div>
+        <div class="flex gap-3">
+          <button onclick="loadMnt()" class="px-8 py-4 bg-emerald-400 hover:bg-emerald-300 text-black font-semibold rounded-3xl">📂 Load mnt.csv</button>
+          <button onclick="runStreaming()" class="px-8 py-4 border border-emerald-400 hover:bg-emerald-400/10 text-emerald-400 font-semibold rounded-3xl">▶ Stream mnt.csv</button>
+        </div>
+      </div>
+
+      <div class="membrane p-6 mb-8 flex justify-between text-xs font-mono">
+        <div>Authority: <span id="auth" class="text-emerald-400">verified</span></div>
+        <div>Lane: <span id="lane" class="text-emerald-400">lane.react.ui.hero</span></div>
+        <div>Diff: <span id="diff" class="text-emerald-400">ready</span></div>
+        <div>Proof: <span id="proof" class="text-emerald-400">sha256:…</span></div>
+        <div>Hydration: <span id="hydration" class="text-emerald-400">ram_only</span></div>
+      </div>
+
+      <div id="canvas" class="membrane p-8 rounded-3xl space-y-6"></div>
+    </div>
+  </div>
+
+  <div class="w-96 bg-zinc-950 border-l border-emerald-400/30 flex flex-col">
+    <div class="membrane m-4 p-6">
+      <h2 class="text-lg font-semibold">AI Mirrored Workspace</h2>
+      <p class="text-emerald-400 text-sm">Scoped lane • Proof-aware • User-gated only</p>
+    </div>
+    <div id="proposals" class="flex-1 p-4 overflow-auto space-y-4"></div>
+    <div class="membrane m-4 p-6">
+      <textarea id="aiInput" rows="4" placeholder="Propose inside current lane only…" class="w-full bg-zinc-900 border border-emerald-400/30 rounded-2xl p-4 text-emerald-100"></textarea>
+      <button onclick="aiPropose()" class="mt-4 w-full py-4 bg-emerald-400 hover:bg-emerald-300 text-black font-semibold rounded-3xl">Submit Proposal → Gate</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const REPO_RECON_MOCK = Object.freeze({
+  branch: "copilot/add-repo-recon-dashboard",
+  commitCount: 19,
+  lastCommit: "24e0c13 · chore: seed repo recon dashboard proposal",
+  collaborators: ["@jaystonez", "@copilot-swe-agent", "@copilot"]
+});
+
+const REPO_RECON_PROPOSAL = Object.freeze({
+  step: "0040",
+  name: "repo recon dashboard",
+  lane: "lane.repo.recon.dashboard",
+  script: "hydrate lane.repo.recon.dashboard (RAM-only, proof-aware, user-gated), then render read-only mock repo metadata: branch, commit count, last commit, collaborators",
+  status: "idle"
+});
+
+let mntRows = [];
+let aiProposals = [];
+
+function seedMnt() {
+  mntRows = [
+    {step:"0000", name:"boot_anchor", lane:"lane.system.boot", script:"echo '🜇 File 2.0 membrane online'", status:"idle"},
+    {step:"0010", name:"verify_identity", lane:"lane.system.auth", script:"sha256 verify artifact + lineage", status:"idle"},
+    {step:"0020", name:"mount_membrane", lane:"lane.react.ui.hero", script:"render auth + lane + diff canvas", status:"idle"},
+    {step:"0030", name:"open_hero_lane", lane:"lane.react.ui.hero", script:"lane.react.ui.hero • ram_only", status:"idle"}
+  ];
+}
+
+function seedAiProposals() {
+  aiProposals = [{
+    id: Date.now(),
+    payload: { ...REPO_RECON_PROPOSAL }
+  }];
+}
+
+async function repoProof() {
+  const payload = JSON.stringify(REPO_RECON_MOCK);
+  if (window.crypto?.subtle && window.TextEncoder) {
+    const bytes = new TextEncoder().encode(payload);
+    const digest = await window.crypto.subtle.digest("SHA-256", bytes);
+    return Array.from(new Uint8Array(digest)).map((byte) => byte.toString(16).padStart(2, "0")).join("").slice(0, 12);
+  }
+  return `ram-${btoa(payload).replace(/=+/g, "").slice(0, 8)}`;
+}
+
+function renderRepoReconPanel() {
+  return `
+    <div class="mt-4 grid grid-cols-2 gap-3 text-xs font-mono text-emerald-300 bg-zinc-950/50 rounded-2xl p-4 border border-emerald-400/20">
+      <div><span class="text-emerald-500">branch</span><br>${REPO_RECON_MOCK.branch}</div>
+      <div><span class="text-emerald-500">commits</span><br>${REPO_RECON_MOCK.commitCount}</div>
+      <div><span class="text-emerald-500">last commit</span><br>${REPO_RECON_MOCK.lastCommit}</div>
+      <div><span class="text-emerald-500">collaborators</span><br>${REPO_RECON_MOCK.collaborators.join(", ")}</div>
+    </div>
+  `;
+}
+
+function renderCanvas() {
+  const el = document.getElementById('canvas');
+  el.innerHTML = mntRows.map((r,i) => `
+    <div class="row-card widget membrane p-6 flex items-start gap-6">
+      <div class="font-mono text-xs bg-emerald-900/50 px-4 py-2 rounded-2xl">${r.step}</div>
+      <div class="flex-1">
+        <div class="font-semibold">${r.name}</div>
+        <div class="font-mono text-xs text-emerald-400/70 mt-1">${r.script}</div>
+        <div class="font-mono text-[11px] text-emerald-500/80 mt-2">${r.lane || 'lane.unscoped'} • ${r.status}</div>
+        ${r.lane === 'lane.repo.recon.dashboard' ? renderRepoReconPanel() : ''}
+      </div>
+      <button onclick="runRow(${i})" class="px-8 py-3 bg-emerald-400 hover:bg-emerald-300 text-black font-semibold rounded-3xl">Run</button>
+    </div>
+  `).join('');
+}
+
+window.runRow = function(i) {
+  const row = mntRows[i];
+  log(`▶ [${row.step}] ${row.name} — executing inside ${row.lane || 'lane.unscoped'}`);
+  mntRows[i].status = 'running';
+  renderCanvas();
+  setTimeout(() => {
+    log(`✓ bloomed in RAM • proof sealed • hydration gated`);
+    mntRows[i].status = 'idle';
+    renderCanvas();
+  }, 900);
+};
+
+function log(msg) {
+  const logEl = document.createElement('div');
+  logEl.className = 'text-xs py-1';
+  logEl.textContent = `${new Date().toLocaleTimeString()} — ${msg}`;
+  const container = document.getElementById('canvas');
+  container.appendChild(logEl);
+  container.scrollTop = container.scrollHeight;
+}
+
+window.aiPropose = function() {
+  const input = document.getElementById('aiInput').value.trim();
+  if (!input) return;
+  const id = Date.now();
+  aiProposals.push({
+    id,
+    payload: {
+      step: String(1000 + mntRows.length).padStart(4,'0'),
+      name: input.slice(0,40),
+      lane: "lane.react.ui.hero",
+      script: input,
+      status: "idle"
+    }
+  });
+  renderProposals();
+  document.getElementById('aiInput').value = '';
+};
+
+function renderProposals() {
+  const el = document.getElementById('proposals');
+  el.innerHTML = aiProposals.map(p => `
+    <div class="membrane p-6 rounded-3xl">
+      <strong>Proposed inside lane</strong><br>
+      <div class="font-mono text-xs text-emerald-400 mt-1">step: ${p.payload.step}</div>
+      <div class="font-mono text-xs text-emerald-400">name: ${p.payload.name}</div>
+      <div class="font-mono text-xs text-emerald-400">lane: ${p.payload.lane || 'lane.unscoped'}</div>
+      <div class="font-mono text-xs text-emerald-400/80 mt-2">${p.payload.script}</div>
+      <div class="flex gap-3 mt-6">
+        <button onclick="approveProposal(${p.id})" class="flex-1 py-4 bg-emerald-400 text-black font-semibold rounded-3xl">Approve &amp; Bloom</button>
+        <button onclick="rejectProposal(${p.id})" class="flex-1 py-4 bg-zinc-800 rounded-3xl">Reject</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+window.approveProposal = async function(id) {
+  const p = aiProposals.find(x => x.id === id);
+  if (p) {
+    const payload = { ...p.payload };
+    if (payload.name === REPO_RECON_PROPOSAL.name) {
+      payload.script = `${payload.script} • proof sha256:${await repoProof()}`;
+    }
+    mntRows.push(payload);
+  }
+  aiProposals = aiProposals.filter(x => x.id !== id);
+  renderCanvas();
+  renderProposals();
+  log(`✅ Proposal approved • bloomed in ${p?.payload?.lane || 'lane.unscoped'}`);
+};
+
+window.rejectProposal = function(id) {
+  aiProposals = aiProposals.filter(x => x.id !== id);
+  renderProposals();
+};
+
+window.loadMnt = function() {
+  seedMnt();
+  renderCanvas();
+  log("✅ mnt.csv loaded • membrane active • RAM-first • user-gated");
+};
+
+window.runStreaming = function() {
+  log("▶ stream mnt.csv requested • previewing RAM rows only");
+};
+
+seedMnt();
+seedAiProposals();
+renderCanvas();
+renderProposals();
+repoProof().then((proof) => {
+  document.getElementById('proof').textContent = `sha256:${proof}`;
+});
+log("🜇 File 2.0 membrane online.");
+log("React = auth surface + live diff canvas + scoped lane boundary.");
+log("One lane + one surface is enough.");
+</script>
+</body>
+</html>
