@@ -4,7 +4,7 @@ const nextConfig = {
   async redirects() {
     return [
       // Service pages (trailing slash -> no trailing slash)
-      { source: '/services/dryer-vent-cleaning/', destination: '/services/dryer-vent-cleaning', permanent: true },
+      { source: '/services/dryer-vent-cleaning/', destination: '/', permanent: true },
       { source: '/services/chimney-sweep/', destination: '/services/chimney-sweeping', permanent: true },
       { source: '/services/chimney-inspection/', destination: '/services/chimney-inspection', permanent: true },
       { source: '/services/chimney-repair/', destination: '/services/chimney-repairs', permanent: true },
@@ -16,8 +16,9 @@ const nextConfig = {
       { source: '/services/', destination: '/services', permanent: true },
 
       // Legacy blog/content pages
+      { source: '/blog/', destination: '/blog', permanent: true },
       { source: '/mad-hatter-chimney-sweep-seattle/', destination: '/about', permanent: true },
-      { source: '/fireplace-chimney-cleaning-seattle/', destination: '/chimney-cleaning-seattle', permanent: true },
+      { source: '/fireplace-chimney-cleaning-seattle/', destination: '/chimney-cleaning', permanent: true },
       { source: '/get-cleaner-chimney-fireplace-today/', destination: '/chimney-cleaning', permanent: true },
       { source: '/about-mad-hatter-chimney-sweep/', destination: '/about', permanent: true },
       { source: '/contact/', destination: '/contact', permanent: true },
@@ -30,11 +31,11 @@ const nextConfig = {
       { source: '/tag/chimney-sweep/', destination: '/chimney-sweep-near-me', permanent: true },
       { source: '/tag/fireplace-cleaning/', destination: '/fireplace-cleaning', permanent: true },
       { source: '/tag/fireplace-repair/', destination: '/chimney-repair', permanent: true },
-      { source: '/tag/dryer-vent-cleaning/', destination: '/services/dryer-vent-cleaning', permanent: true },
-      { source: '/tag/roof-snow-removal/', destination: '/services', permanent: true },
-      { source: '/tag/the-mad-hatter-chimney-sweep/', destination: '/', permanent: true },
+      { source: '/tag/dryer-vent-cleaning/', destination: '/', permanent: true },
+      { source: '/tag/roof-snow-removal/', destination: '/', permanent: true },
+      { source: '/tag/the-mad-hatter-chimney-sweep/', destination: '/about', permanent: true },
       { source: '/category/chimney-services/', destination: '/services', permanent: true },
-      { source: '/author/drmoh/', destination: '/', permanent: true },
+      { source: '/author/drmoh/', destination: '/about', permanent: true },
 
       // Feed URLs
       { source: '/feed/', destination: '/', permanent: true },
@@ -44,6 +45,11 @@ const nextConfig = {
       { source: '/tag/fireplace-repair/feed/', destination: '/', permanent: true },
       { source: '/tag/dryer-vent-cleaning/feed/', destination: '/', permanent: true },
       { source: '/tag/roof-snow-removal/feed/', destination: '/', permanent: true },
+
+      // Catch-all legacy WordPress archives
+      { source: '/tag/:slug*', destination: '/blog', permanent: true },
+      { source: '/author/:slug*', destination: '/about', permanent: true },
+      { source: '/services/:slug*', destination: '/', permanent: true },
     ]
   },
   images: {
