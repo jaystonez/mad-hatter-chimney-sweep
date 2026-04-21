@@ -15,14 +15,20 @@ const nextConfig = {
       { source: '/services/wood-stove-cleaning/', destination: '/services', permanent: true },
       { source: '/services/', destination: '/services', permanent: true },
 
-      // Legacy blog/content pages
+      // Legacy blog/content pages (with AND without trailing slash)
       { source: '/blog/', destination: '/blog', permanent: true },
       { source: '/mad-hatter-chimney-sweep-seattle/', destination: '/about', permanent: true },
+      { source: '/mad-hatter-chimney-sweep-seattle', destination: '/about', permanent: true },
       { source: '/fireplace-chimney-cleaning-seattle/', destination: '/chimney-cleaning', permanent: true },
+      { source: '/fireplace-chimney-cleaning-seattle', destination: '/chimney-cleaning', permanent: true },
       { source: '/get-cleaner-chimney-fireplace-today/', destination: '/chimney-cleaning', permanent: true },
+      { source: '/get-cleaner-chimney-fireplace-today', destination: '/chimney-cleaning', permanent: true },
       { source: '/about-mad-hatter-chimney-sweep/', destination: '/about', permanent: true },
-      { source: '/contact/', destination: '/contact', permanent: true },
-      { source: '/contact-us/', destination: '/contact', permanent: true },
+      { source: '/about-mad-hatter-chimney-sweep', destination: '/about', permanent: true },
+      { source: '/contact/', destination: '/', permanent: true },
+      { source: '/contact', destination: '/', permanent: true },
+      { source: '/contact-us/', destination: '/', permanent: true },
+      { source: '/contact-us', destination: '/', permanent: true },
       { source: '/privacy-policy/', destination: '/privacy-policy', permanent: true },
       { source: '/about/', destination: '/about', permanent: true },
 
@@ -36,9 +42,11 @@ const nextConfig = {
       { source: '/tag/the-mad-hatter-chimney-sweep/', destination: '/about', permanent: true },
       { source: '/category/chimney-services/', destination: '/services', permanent: true },
       { source: '/author/drmoh/', destination: '/about', permanent: true },
+      { source: '/author/drmoh', destination: '/about', permanent: true },
 
       // Feed URLs
       { source: '/feed/', destination: '/', permanent: true },
+      { source: '/feed', destination: '/', permanent: true },
       { source: '/tag/chimney-sweep/feed/', destination: '/', permanent: true },
       { source: '/tag/chimney-repair/feed/', destination: '/', permanent: true },
       { source: '/tag/fireplace-cleaning/feed/', destination: '/', permanent: true },
