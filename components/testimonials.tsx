@@ -25,23 +25,27 @@ export default function Testimonials() {
 
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             {/* TODO: Replace with real Google Business Profile URL when available */}
-            <a
-              href="#TODO-google-business-profile-url"
-              className="inline-flex items-center gap-2 bg-white border-2 border-stone-200 hover:border-amber-400 text-stone-800 font-semibold px-6 py-3 rounded-xl shadow-sm hover:shadow-md transition-all"
-              aria-label="Read our reviews on Google"
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              className="inline-flex items-center gap-2 bg-white border-2 border-stone-200 text-stone-400 font-semibold px-6 py-3 rounded-xl shadow-sm cursor-not-allowed opacity-60"
+              title="Google review link coming soon"
             >
               <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
               Read Reviews on Google
-            </a>
+            </button>
             {/* TODO: Replace with real Yelp Business Profile URL when available */}
-            <a
-              href="#TODO-yelp-business-profile-url"
-              className="inline-flex items-center gap-2 bg-white border-2 border-stone-200 hover:border-amber-400 text-stone-800 font-semibold px-6 py-3 rounded-xl shadow-sm hover:shadow-md transition-all"
-              aria-label="Read our reviews on Yelp"
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              className="inline-flex items-center gap-2 bg-white border-2 border-stone-200 text-stone-400 font-semibold px-6 py-3 rounded-xl shadow-sm cursor-not-allowed opacity-60"
+              title="Yelp review link coming soon"
             >
               <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
               Read Reviews on Yelp
-            </a>
+            </button>
           </div>
         </div>
       </div>
