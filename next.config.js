@@ -32,30 +32,12 @@ const nextConfig = {
       { source: '/privacy-policy/', destination: '/privacy-policy', permanent: true },
       { source: '/about/', destination: '/about', permanent: true },
 
-      // Old tag/archive pages
-      { source: '/tag/chimney-repair/', destination: '/chimney-repair', permanent: true },
-      { source: '/tag/chimney-sweep/', destination: '/chimney-sweep-near-me', permanent: true },
-      { source: '/tag/fireplace-cleaning/', destination: '/fireplace-cleaning', permanent: true },
-      { source: '/tag/fireplace-repair/', destination: '/chimney-repair', permanent: true },
-      { source: '/tag/dryer-vent-cleaning/', destination: '/', permanent: true },
-      { source: '/tag/roof-snow-removal/', destination: '/', permanent: true },
-      { source: '/tag/the-mad-hatter-chimney-sweep/', destination: '/about', permanent: true },
+      // Legacy WordPress category/author archives (tag, feed, and wp-* are handled in middleware)
       { source: '/category/chimney-services/', destination: '/services', permanent: true },
       { source: '/author/drmoh/', destination: '/about', permanent: true },
       { source: '/author/drmoh', destination: '/about', permanent: true },
 
-      // Feed URLs
-      { source: '/feed/', destination: '/', permanent: true },
-      { source: '/feed', destination: '/', permanent: true },
-      { source: '/tag/chimney-sweep/feed/', destination: '/', permanent: true },
-      { source: '/tag/chimney-repair/feed/', destination: '/', permanent: true },
-      { source: '/tag/fireplace-cleaning/feed/', destination: '/', permanent: true },
-      { source: '/tag/fireplace-repair/feed/', destination: '/', permanent: true },
-      { source: '/tag/dryer-vent-cleaning/feed/', destination: '/', permanent: true },
-      { source: '/tag/roof-snow-removal/feed/', destination: '/', permanent: true },
-
-      // Catch-all legacy WordPress archives
-      { source: '/tag/:slug*', destination: '/blog', permanent: true },
+      // Catch-all legacy WordPress author archives
       { source: '/author/:slug*', destination: '/about', permanent: true },
       { source: '/services/:slug*', destination: '/', permanent: true },
     ]
