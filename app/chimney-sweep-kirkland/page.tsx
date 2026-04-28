@@ -14,8 +14,8 @@ import {
 import Link from "next/link"
 
 export const metadata = {
-  title: "Chimney Sweep Kirkland | Professional Cleaning & Inspection | Mad Hatter",
-  description: "Certified chimney sweep services in Kirkland. Professional cleaning, 21-point inspection, and repairs for lakeside properties. 45+ years serving Kirkland families. Call now.",
+  title: "Chimney Sweep Kirkland | Certified | Mad Hatter",
+  description: "Certified chimney sweep services in Kirkland. Professional cleaning, inspection & lakeside property expertise. 45+ years serving Kirkland. Call today.",
 }
 
 export default function ChimneySweepKirklandPage() {

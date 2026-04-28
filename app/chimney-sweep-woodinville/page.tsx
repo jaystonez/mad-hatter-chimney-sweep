@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Chimney Sweep Woodinville | Professional Cleaning & Inspection',
-  description: 'Professional chimney sweep services in Woodinville. 45+ years experience. Master certified. Complete cleaning, inspection & repair. Same-day service available.',
+  title: 'Chimney Sweep Woodinville | Mad Hatter',
+  description: 'Professional chimney sweep in Woodinville. Master-certified. Complete cleaning, inspection & repair. 45+ years experience. Same-day service available.',
 }
 
 export default function ChimneySweepWoodinvillePage() {

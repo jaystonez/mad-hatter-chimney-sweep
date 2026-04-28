@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Fireplace Not Drawing? Causes & Fixes | Mad Hatter Chimney Sweep",
+  title: "Fireplace Not Drawing? Fixes | Mad Hatter",
   description:
-    "Fireplace not drawing properly? Learn why smoke comes into your home instead of going up the chimney and how to fix draft problems. Seattle chimney experts.",
+    "Fireplace not drawing properly? Learn why smoke enters your home instead of going up the chimney & how to fix draft problems.",
   openGraph: {
     title: "Fireplace Not Drawing? Causes & Fixes | Mad Hatter Chimney Sweep",
     description:

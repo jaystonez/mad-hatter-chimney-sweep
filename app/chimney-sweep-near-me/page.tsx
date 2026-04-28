@@ -3,8 +3,8 @@ import Link from "next/link"
 import { Phone, CheckCircle, AlertTriangle, Shield, MapPin, Award, FileCheck, Users, Flame, Wind, Gauge, Search } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Chimney Sweep Near Me | Find Certified Service in Greater Seattle | Mad Hatter",
-  description: "Looking for a chimney sweep near you? Master certified service throughout Seattle & Eastside. 45+ years experience. Transparent pricing. Same-day service available.",
+  title: "Chimney Sweep Near Me | CSIA Certified | Mad Hatter",
+  description: "Master-certified chimney sweep throughout Seattle & Eastside. 45+ years experience, transparent pricing. Same-day service available. Call today.",
 }
 
 export default function ChimneySweepNearMePage() {

@@ -5,9 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { AlertTriangle, Phone, Search, Wind } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Chimney Troubleshooting Seattle | Diagnose Smoke, Draft & Odor Issues",
+  title: "Chimney Troubleshooting Seattle | Mad Hatter",
   description:
-    "Chimney troubleshooting in Seattle, Bellevue, and Kirkland. Diagnose smoky fireplaces, draft issues, and chimney odors with certified inspection and repair guidance.",
+    "Chimney troubleshooting in Seattle: diagnose smoky fireplaces, draft issues & odors. Certified inspection & repair guidance. Call (206) 274-6409.",
 }
 
 const serviceSchema = {

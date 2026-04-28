@@ -4,8 +4,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Wind, ArrowLeft, AlertTriangle, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Why Does My Chimney Smell Smoky? Causes & Fixes | Mad Hatter Chimney Sweep",
-  description: "Smoky chimney smell in your home? Learn the 6 most common causes of chimney odor, from creosote buildup to draft problems, and how to fix each one.",
+  title: "Why Chimney Smells Smoky | Causes & Fixes | Mad Hatter",
+  description: "Smoky chimney smell in your home? Learn the 6 most common causes from creosote buildup to draft problems & how to fix each one.",
 }
 
 export default function ChimneySmellsSmokyPage() {

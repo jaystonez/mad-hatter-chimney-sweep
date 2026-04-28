@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Phone, MapPin, Shield, Flame, Wind, Eye, CheckCircle, AlertTriangle, Clock, Home } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Chimney Cleaning Bellevue | Professional Creosote Removal - Mad Hatter',
-  description: 'Professional chimney cleaning in Bellevue. 45+ years of certified expertise removing dangerous creosote buildup. Master certified sweeps. Same-day service available.',
+  title: 'Chimney Cleaning Bellevue | CSIA Certified | Mad Hatter',
+  description: 'Professional chimney cleaning in Bellevue, WA. CSIA-certified sweeps remove dangerous creosote. Licensed & insured. Call (206) 274-6409.',
 }
 
 export default function ChimneyCleaningBellevuePage() {

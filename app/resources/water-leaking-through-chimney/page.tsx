@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Water Leaking Through Chimney? Causes & Solutions | Mad Hatter Chimney Sweep",
+  title: "Water Leaking Through Chimney | Solutions | Mad Hatter",
   description:
-    "Water leaking through your chimney can cause serious structural damage. Learn the common causes of chimney leaks and how to stop them before costly repairs.",
+    "Water leaking through your chimney causes structural damage. Learn common causes of chimney leaks & how to stop them before costly repairs occur.",
   openGraph: {
     title: "Water Leaking Through Chimney? Causes & Solutions | Mad Hatter Chimney Sweep",
     description:

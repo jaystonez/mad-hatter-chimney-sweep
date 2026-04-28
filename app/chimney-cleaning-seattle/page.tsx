@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Phone, MapPin, Shield, Clock, Flame, Wind, CheckCircle2, AlertTriangle, Home, Eye, Droplets, ThermometerSun } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Chimney Cleaning Seattle | Professional Creosote Removal & Maintenance',
-  description: 'Professional chimney cleaning in Seattle. 45+ years removing dangerous creosote, improving efficiency, and protecting Seattle homes. Master certified. $289.95 includes 21-point inspection.',
+  title: 'Chimney Cleaning Seattle | $289.95 | Mad Hatter',
+  description: 'Professional chimney cleaning in Seattle. $289.95 includes 21-point inspection. Master-certified sweeps, 45+ years experience. Call (206) 274-6409.',
 }
 
 export default function ChimneyCleaningSeattle() {

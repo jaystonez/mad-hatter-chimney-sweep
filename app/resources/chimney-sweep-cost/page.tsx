@@ -4,8 +4,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { DollarSign, CheckCircle2, AlertTriangle, ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "How Much Does a Chimney Sweep Cost in Seattle? (2026 Guide) | Mad Hatter",
-  description: "Chimney sweep costs in Seattle range from $150-$500. Learn what affects pricing, what's included in professional service, and Mad Hatter's transparent rates.",
+  title: "Chimney Sweep Cost in Seattle | 2026 Guide | Mad Hatter",
+  description: "Chimney sweep costs in Seattle range from $150-$500. Learn what affects pricing, what's included in service & Mad Hatter's transparent rates.",
 }
 
 export default function ChimneySweepCostPage() {

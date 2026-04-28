@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Phone, MapPin, Shield, Award, CheckCircle2, Home, Droplets, Trees, DollarSign } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Chimney Sweep Mercer Island | Premium Chimney Cleaning & Service',
-  description: 'Professional chimney sweep services for Mercer Island premium homes. Master certified technicians serving lakefront estates and island properties. 45+ years expertise. Call now.',
+  title: 'Chimney Sweep Mercer Island | Mad Hatter',
+  description: 'Professional chimney sweep for Mercer Island homes. Master-certified technicians, 45+ years expertise serving island & lakefront properties.',
 }
 
 export default function MercerIslandChimneySweepPage() {

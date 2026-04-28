@@ -7,7 +7,7 @@ import { Flame, Phone, ShieldAlert, Wrench } from "lucide-react"
 export const metadata: Metadata = {
   title: "Creosote Removal Seattle | Stage 3 Glazed Creosote Cleaning",
   description:
-    "Stage 3 creosote removal in Seattle, Bellevue, and Kirkland. Professional glazed creosote treatment for high-risk chimney systems with safety-first cleaning methods.",
+    "Stage 3 creosote removal in Seattle, Bellevue & Kirkland. Professional glazed creosote treatment for high-risk chimney systems with safety-first methods.",
 }
 
 const serviceSchema = {

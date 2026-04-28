@@ -280,7 +280,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return {
     title: `Chimney Sweep ${location.name} WA | The Mad Hatter Chimney Sweep`,
-    description: location.description,
+    description: location.description.length <= 155
+      ? location.description
+      : `Chimney sweep, inspection & repair in ${location.name}, WA. Licensed & insured since 1979. WA License MADHAHL790LW. Call (206) 274-6409.`,
     ...(canonicalPath && {
       alternates: {
         canonical: `https://www.themadhatterchimneysweep.com${canonicalPath}`,

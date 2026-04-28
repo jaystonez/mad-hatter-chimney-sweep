@@ -5,8 +5,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Building2, Shield, FileText, Clock, Users, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Apartment Chimney Sweep Seattle | Multi-Unit Building Specialists",
-  description: "Specialized chimney service for apartments, condos, and multi-unit buildings in Seattle. 45+ years experience with shared flue systems, HOA compliance, and property management coordination.",
+  title: "Apartment Chimney Sweep Seattle | Mad Hatter",
+  description: "Specialized chimney service for apartments, condos & multi-unit buildings in Seattle. 45+ years with shared flue systems & HOA compliance.",
 }
 
 export default function ApartmentChimneySweepSeattle() {

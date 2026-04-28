@@ -202,6 +202,17 @@ const services = {
   }
 }
 
+const serviceMeta: Record<string, { title: string; description: string }> = {
+  "chimney-inspection-sweeping": {
+    title: "Professional Chimney Sweeping Seattle | CSIA Certified | Mad Hatter",
+    description: "CSIA-certified chimney sweeping & inspection in Seattle. Creosote removal, Level 1–3 inspections, video scans. Licensed WA contractor. Call (206) 274-6409.",
+  },
+  "chimney-repairs": {
+    title: "Chimney Repair Seattle | Licensed Masons Since 1979 | Mad Hatter",
+    description: "Expert chimney masonry repairs in Seattle: crown, flashing, tuckpointing, liner, firebox. 45+ years of certified experience. Free estimates. WA License MADHAHL790LW.",
+  },
+}
+
 export async function generateStaticParams() {
   return Object.keys(services).map((slug) => ({
     slug: slug,
@@ -218,9 +229,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
   }
 
+  const override = serviceMeta[resolvedParams.slug]
   return {
-    title: `${service.title} | The Mad Hatter Chimney Sweep`,
-    description: service.description,
+    title: override?.title ?? `${service.title} | The Mad Hatter Chimney Sweep`,
+    description: override?.description ?? service.description,
   }
 }
 

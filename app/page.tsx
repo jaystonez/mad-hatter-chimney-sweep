@@ -7,8 +7,8 @@ import Testimonials from "@/components/testimonials"
 import CTA from "@/components/cta"
 
 export const metadata: Metadata = {
-  title: "Chimney Sweep & Inspection in Seattle, WA | Mad Hatter Chimney Sweep",
-  description: "Professional chimney sweep, inspection & repair in Greater Seattle since 1979. Licensed, bonded & insured. WA License MADHAHL790LW. Call (206) 274-6409 for a free estimate.",
+  title: "Chimney Sweep Seattle | Licensed & Insured Since 1979 | Mad Hatter",
+  description: "Seattle's most trusted chimney sweep service. Licensed, insured, family-owned since 1979. Chimney cleaning, inspections, repairs. Call today!",
 }
 
 const faqSchema = {

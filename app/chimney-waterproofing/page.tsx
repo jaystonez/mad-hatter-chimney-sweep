@@ -5,8 +5,8 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Chimney Waterproofing Seattle | Protect Your Masonry from Moisture",
-  description: "Professional chimney waterproofing in Seattle. Protect your chimney from water damage, freeze-thaw cycles, and mortar deterioration. 45+ years experience. Call today.",
+  title: "Chimney Waterproofing Seattle | Mad Hatter",
+  description: "Professional chimney waterproofing in Seattle. Protects masonry from water damage & freeze-thaw cycles. 45+ years experience. WA #MADHAHL790LW. Call today.",
   keywords: "chimney waterproofing Seattle, masonry sealing, chimney protection, water damage prevention, breathable sealant",
 }
 

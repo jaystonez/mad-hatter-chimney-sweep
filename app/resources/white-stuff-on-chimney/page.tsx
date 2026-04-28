@@ -3,8 +3,8 @@ import Link from "next/link"
 import { ArrowLeft, AlertTriangle, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "White Stuff on Chimney? What Efflorescence Means | Mad Hatter Chimney Sweep",
-  description: "White stains on your chimney bricks are called efflorescence. Learn what causes it, whether it signals a serious problem, and when you need professional repair.",
+  title: "White Stuff on Chimney | Efflorescence | Mad Hatter",
+  description: "White stains on chimney bricks are efflorescence. Learn what causes it, if it signals problems & when you need professional repair.",
 }
 
 export default function WhiteStuffOnChimneyPage() {

@@ -5,8 +5,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2, Shield, Droplets, Bird, Flame, Wind, Phone } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Chimney Cap Installation Seattle | Mad Hatter Chimney Sweep",
-  description: "Professional chimney cap installation in Seattle. Protect your chimney from water, animals, and debris. Stainless steel, copper, and custom caps available. 45+ years experience.",
+  title: "Chimney Cap Installation Seattle | Mad Hatter",
+  description: "Professional chimney cap installation in Seattle. Protects against water, animals & debris. Stainless steel & custom caps. 45+ years experience.",
 }
 
 const faqSchema = {

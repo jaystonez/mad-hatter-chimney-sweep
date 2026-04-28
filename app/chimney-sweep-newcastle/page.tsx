@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Chimney Sweep Newcastle | Professional Cleaning & Inspection',
-  description: 'Newcastle chimney sweep services by Mad Hatter. Certified cleaning, inspection & repair for hillside homes. 45+ years serving Newcastle. Call for same-day service.',
+  description: 'Newcastle chimney sweep by Mad Hatter. Certified cleaning, inspection & repair for hillside homes. 45+ years serving Newcastle. Same-day service.',
 }
 
 export default function NewcastleChimneySweepPage() {

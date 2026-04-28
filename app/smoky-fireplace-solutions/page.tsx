@@ -5,9 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Flame, Phone, Wind, Wrench } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Smoky Fireplace Solutions Seattle | Fix Fireplace Smoke Problems",
+  title: "Smoky Fireplace Solutions Seattle | Mad Hatter",
   description:
-    "Smoky fireplace diagnosis and repair in Seattle, Bellevue, and Redmond. Fix smoke backdraft, startup smoke, and venting issues with certified chimney specialists.",
+    "Smoky fireplace diagnosis & repair in Seattle. Fix smoke backdraft, startup smoke & venting issues with certified chimney specialists. Call today.",
 }
 
 const serviceSchema = {

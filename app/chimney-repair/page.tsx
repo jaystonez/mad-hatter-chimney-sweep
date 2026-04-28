@@ -5,8 +5,8 @@ import { AlertTriangle, Check, Phone, Wrench, Home, ShieldCheck, Award, FileText
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Chimney Repair Seattle | Crown, Flashing, Mortar & Liner Repair",
-  description: "Professional chimney repair services in Seattle. Crown repair, flashing replacement, repointing, liner installation. 45+ years experience. Licensed & certified.",
+  title: "Chimney Repair Seattle | Licensed Masons Since 1979 | Mad Hatter",
+  description: "Expert chimney repair in Seattle: crown, flashing, mortar, liner & brick. Licensed masons, 45+ years experience. WA #MADHAHL790LW. Free estimates.",
 }
 
 const faqSchema = {

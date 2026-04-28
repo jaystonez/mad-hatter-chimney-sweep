@@ -20,7 +20,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-slate-400 mb-4 leading-relaxed">
-              Professional chimney services since 1979. Over 2,500 satisfied customers throughout Greater Seattle. Your safety and satisfaction are our top priorities.
+              Professional chimney services since 1979. Family-owned and locally operated throughout Greater Seattle. Licensed WA contractor #MADHAHL790LW.
             </p>
             <div className="flex space-x-4">
               <a
@@ -115,6 +115,40 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Sitewide Internal Links */}
+        <div className="border-t border-slate-800 pt-8 pb-4 mb-4">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-3">Core Services</h3>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                <Link href="/chimney-cleaning" className="text-slate-400 hover:text-primary transition-colors">Chimney Cleaning</Link>
+                <Link href="/chimney-repair" className="text-slate-400 hover:text-primary transition-colors">Chimney Repair</Link>
+                <Link href="/chimney-inspection" className="text-slate-400 hover:text-primary transition-colors">Chimney Inspection</Link>
+                <Link href="/services/chimney-inspection-sweeping" className="text-slate-400 hover:text-primary transition-colors">Chimney Sweeping</Link>
+                <Link href="/services/chimney-relining" className="text-slate-400 hover:text-primary transition-colors">Chimney Relining</Link>
+                <Link href="/services/waterproofing-leak-repair" className="text-slate-400 hover:text-primary transition-colors">Waterproofing</Link>
+                <Link href="/creosote-removal" className="text-slate-400 hover:text-primary transition-colors">Creosote Removal</Link>
+                <Link href="/chimney-cap-installation" className="text-slate-400 hover:text-primary transition-colors">Cap Installation</Link>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-3">Service Areas</h3>
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                <Link href="/chimney-sweep-seattle" className="text-slate-400 hover:text-primary transition-colors">Seattle</Link>
+                <Link href="/locations/bellevue" className="text-slate-400 hover:text-primary transition-colors">Bellevue</Link>
+                <Link href="/chimney-sweep-kirkland" className="text-slate-400 hover:text-primary transition-colors">Kirkland</Link>
+                <Link href="/chimney-sweep-redmond" className="text-slate-400 hover:text-primary transition-colors">Redmond</Link>
+                <Link href="/chimney-sweep-bothell" className="text-slate-400 hover:text-primary transition-colors">Bothell</Link>
+                <Link href="/chimney-sweep-kenmore" className="text-slate-400 hover:text-primary transition-colors">Kenmore</Link>
+                <Link href="/chimney-sweep-woodinville" className="text-slate-400 hover:text-primary transition-colors">Woodinville</Link>
+                <Link href="/chimney-sweep-shoreline" className="text-slate-400 hover:text-primary transition-colors">Shoreline</Link>
+                <Link href="/chimney-sweep-renton" className="text-slate-400 hover:text-primary transition-colors">Renton</Link>
+                <Link href="/chimney-sweep-sammamish" className="text-slate-400 hover:text-primary transition-colors">Sammamish</Link>
+              </div>
+            </div>
           </div>
         </div>
 

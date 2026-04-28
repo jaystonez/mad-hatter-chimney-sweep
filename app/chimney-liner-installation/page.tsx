@@ -5,8 +5,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Shield, CheckCircle2, AlertTriangle, Wrench, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Chimney Liner Installation & Replacement Seattle | Mad Hatter Chimney Sweep",
-  description: "Professional chimney liner installation and replacement. Stainless steel and cast-in-place liners. Restore safe flue function. 45+ years serving greater Seattle.",
+  title: "Chimney Liner Installation Seattle | Mad Hatter",
+  description: "Professional chimney liner installation in Seattle. Stainless steel & cast-in-place liners restore safe venting. 45+ years experience. Call (206) 274-6409.",
 }
 
 const faqSchema = {

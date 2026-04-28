@@ -2,8 +2,8 @@ import { CheckCircle2, Flame, Shield, DollarSign, Home, Clock } from 'lucide-rea
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Chimney Sweep Seattle: Professional Cleaning & Inspection Services | Mad Hatter',
-  description: '45+ years serving Seattle. Certified chimney sweep services starting at $289.95. Complete cleaning, 21-point inspection, and expert repairs. Same-day service available.',
+  title: 'Chimney Sweep Seattle | Since 1979 | Mad Hatter',
+  description: 'Certified chimney sweep in Seattle starting at $289.95. Complete cleaning, 21-point inspection & expert repairs. 45+ years experience. Same-day service.',
 }
 
 export default function ChimneySweepSeattlePage() {

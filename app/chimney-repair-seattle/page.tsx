@@ -4,7 +4,7 @@ import { Phone, CheckCircle, Shield, Clock, Award, Droplet, Snowflake, Home } fr
 
 export const metadata: Metadata = {
   title: "Chimney Repair in Seattle, WA | Mad Hatter Chimney Sweep",
-  description: "Expert chimney repair in Seattle including flashing, mortar repointing, crown repair & liner restoration. 45+ years of local experience. Call (206) 274-6409 for an inspection.",
+  description: "Expert chimney repair in Seattle: flashing, mortar repointing, crown repair & liner restoration. 45+ years local experience. Call (206) 274-6409.",
 }
 
 export default function ChimneyRepairSeattle() {

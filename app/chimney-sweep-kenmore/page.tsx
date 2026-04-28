@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Phone, MapPin, Calendar, CheckCircle2, Droplets, Home, TreePine, Shield } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Chimney Sweep Kenmore | Professional Cleaning & Inspection Services',
-  description: 'Expert chimney sweep services in Kenmore, WA. 45+ years of certified chimney cleaning and inspection. Lake Washington moisture specialists. Call (206) 737-8785.',
+  title: 'Chimney Sweep Kenmore | Certified Service | Mad Hatter',
+  description: 'Expert chimney sweep services in Kenmore, WA. CSIA-certified cleaning & inspection. Lake Washington moisture specialists. Call (206) 274-6409.',
 }
 
 export default function KenmoreSweepPage() {

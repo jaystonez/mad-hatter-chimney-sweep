@@ -67,7 +67,7 @@ export default function WhyChooseUs() {
             {/* Stats overlay */}
             <div className="absolute bottom-6 left-6 right-6 grid grid-cols-3 gap-3">
               {[
-                { value: "2,500+", label: "Happy Customers" },
+                { value: "Since 1979", label: "Family-Owned" },
                 { value: "45+", label: "Years Experience" },
                 { value: "100%", label: "Satisfaction" },
               ].map((stat) => (

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Signs of Creosote Buildup in Your Chimney | Mad Hatter Chimney Sweep",
+  title: "Creosote Buildup Signs | Mad Hatter Chimney Sweep",
   description:
-    "Learn how to identify dangerous creosote buildup in your chimney. Understand the three stages of creosote, warning signs, and why professional removal is critical.",
+    "Identify dangerous creosote buildup in your chimney. Understand the three stages of creosote & warning signs. Why professional removal is critical.",
   openGraph: {
-    title: "Signs of Creosote Buildup in Your Chimney | Mad Hatter Chimney Sweep",
+    title: "Creosote Buildup Signs | Mad Hatter Chimney Sweep",
     description:
       "Learn how to identify dangerous creosote buildup and why professional removal is critical for chimney safety.",
     url: "https://www.themadhatterchimneysweep.com/resources/creosote-buildup-signs",

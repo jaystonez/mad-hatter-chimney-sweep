@@ -5,8 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Flame, Search, Wrench, Shield, Hammer, Droplet, Wind } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Chimney Services in Seattle, WA | Mad Hatter Chimney Sweep",
-  description: "Full-service chimney sweep, inspection, repair & liner installation in Greater Seattle. Licensed, bonded & insured since 1979. Call (206) 274-6409 for a free estimate.",
+  title: "Chimney Services Seattle, WA | Mad Hatter Chimney Sweep",
+  description: "Chimney sweep, inspection, repair & liner installation in Greater Seattle. Licensed, bonded & insured since 1979. Call (206) 274-6409 for a free estimate.",
 }
 
 const faqSchema = {

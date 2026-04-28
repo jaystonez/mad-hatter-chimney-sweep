@@ -2,8 +2,8 @@ import Link from 'next/link'
 import { Phone, CheckCircle2, AlertTriangle, Hammer, Droplets, Shield } from 'lucide-react'
 
 export const metadata = {
-  title: 'Masonry Repair Seattle | Professional Brick, Mortar & Stone Restoration',
-  description: 'Expert masonry repair services across Seattle. 45+ years restoring chimneys, fireplaces, and masonry structures. Professional repointing, brick replacement, and stone restoration.',
+  title: 'Masonry Repair Seattle | Brick, Mortar & Stone | Mad Hatter',
+  description: 'Expert masonry repair in Seattle. 45+ years restoring chimneys & fireplaces. Repointing, brick replacement & stone restoration. WA #MADHAHL790LW.',
 }
 
 const faqSchema = {

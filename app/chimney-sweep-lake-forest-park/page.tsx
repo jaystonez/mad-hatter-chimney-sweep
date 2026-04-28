@@ -5,8 +5,8 @@ import { CheckCircle, TreeDeciduous, Droplets, Home, Bird, Shield, Award, FileCh
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Chimney Sweep Lake Forest Park | Professional Cleaning & Inspection | Mad Hatter",
-  description: "Expert chimney sweep services for Lake Forest Park's forested, lakeside homes. Certified professionals serving mid-century properties for 45+ years. Call for same-day service.",
+  title: "Chimney Sweep Lake Forest Park | Mad Hatter",
+  description: "Expert chimney sweep for Lake Forest Park homes. CSIA-certified, 45+ years serving forested & lakeside properties. Licensed & insured. Call today.",
 }
 
 export default function ChimneySweepLakeForestParkPage() {

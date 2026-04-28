@@ -2,8 +2,8 @@ import { Phone, CheckCircle2, Flame, Shield, Wind, Eye, Wrench, MapPin, Award, U
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Chimney Sweep Redmond | Professional Cleaning & Inspection | Mad Hatter',
-  description: 'Certified chimney sweep services in Redmond. Professional cleaning, 21-point inspection, and repair. Serving Education Hill, Grass Lawn, Novelty Hill. 45+ years experience.',
+  title: 'Chimney Sweep Redmond | Certified | Mad Hatter',
+  description: 'Certified chimney sweep in Redmond. Professional cleaning, inspection & repair. Serving Education Hill, Grass Lawn & Novelty Hill. 45+ years experience.',
 }
 
 export default function ChimneySweepRedmond() {

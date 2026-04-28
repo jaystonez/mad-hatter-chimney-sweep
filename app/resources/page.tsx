@@ -5,7 +5,7 @@ import { BookOpen, DollarSign, Wind, Droplet, Flame, AlertTriangle, Search } fro
 
 export const metadata: Metadata = {
   title: "Chimney Resources & Guides | Mad Hatter Chimney Sweep",
-  description: "Expert chimney care guides for Seattle homeowners. Learn about chimney sweep costs, common chimney problems, maintenance tips, and when to call a professional.",
+  description: "Chimney care guides for Seattle homeowners. Learn about chimney sweep costs, common problems, maintenance tips & when to call a professional.",
 }
 
 const articles = [

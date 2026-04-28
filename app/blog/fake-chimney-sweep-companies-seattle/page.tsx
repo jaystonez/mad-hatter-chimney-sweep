@@ -4,9 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { AlertTriangle, CheckCircle2, Phone, ShieldCheck, ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "How to Spot Fake Chimney Sweep Companies in Seattle (2026 Guide) | Mad Hatter",
+  title: "Spot Fake Chimney Sweep Companies Seattle | Mad Hatter",
   description:
-    "Learn how to identify fake chimney sweep companies in Seattle, verify WA contractor licensing, and avoid common chimney sweep scams with this 2026 consumer guide.",
+    "Identify fake chimney sweep companies in Seattle, verify WA contractor licensing & avoid chimney sweep scams with this 2026 consumer guide.",
 }
 
 const faqSchema = {

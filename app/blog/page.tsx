@@ -6,7 +6,7 @@ import { allBlogIndexPosts } from "./blog-posts"
 export const metadata: Metadata = {
   title: "Seattle Chimney Blog | Mad Hatter Chimney Sweep",
   description:
-    "Read Seattle chimney safety guides from Mad Hatter Chimney Sweep, including inspection levels, chimney cleaning timing, creosote dangers, and carbon monoxide prevention.",
+    "Seattle chimney safety guides: inspection levels, cleaning timing, creosote dangers, and carbon monoxide tips from Mad Hatter Chimney Sweep.",
 }
 
 export default function BlogIndexPage() {

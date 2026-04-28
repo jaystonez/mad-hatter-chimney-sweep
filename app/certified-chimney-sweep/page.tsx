@@ -5,8 +5,8 @@ import { Card } from '@/components/ui/card'
 import { Phone, CheckCircle2, Shield, AlertTriangle, Award, BookOpen, Flame, Wind } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Certified Chimney Sweep | Master Certification | Mad Hatter Chimney Sweep',
-  description: 'Why certification matters for chimney safety. Master certified chimney sweeps with 45+ years serving Seattle. Professional expertise, proper technique, accurate assessment.',
+  title: 'Certified Chimney Sweep | Master Certified | Mad Hatter',
+  description: 'Why certification matters for chimney safety. Master-certified sweeps with 45+ years serving Seattle. Professional expertise & accurate assessments.',
   keywords: 'certified chimney sweep, master chimney sweep, CSIA certified, chimney certification, professional chimney sweep, Seattle chimney sweep',
 }
 

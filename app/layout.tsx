@@ -12,7 +12,7 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.themadhatterchimneysweep.com'),
   title: 'The Mad Hatter Chimney Sweep | Professional Chimney Services Since 1979',
-  description: 'Trusted chimney sweep and fireplace services since 1979. Over 2500 satisfied customers. Professional cleaning, inspections, and repairs throughout Greater Seattle.',
+  description: 'Professional chimney sweep, inspection & repair in Greater Seattle since 1979. Licensed, bonded & insured. WA License MADHAHL790LW. Call (206) 274-6409 for a free estimate.',
   alternates: {
     canonical: '/',
   },

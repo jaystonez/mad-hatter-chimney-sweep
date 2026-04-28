@@ -7,7 +7,7 @@ import { Droplets, Home, Flame, Trees, Shield, CheckCircle2, AlertTriangle, Awar
 
 export const metadata: Metadata = {
   title: "Chimney Sweep in Bothell, WA | Mad Hatter Chimney Sweep",
-  description: "Professional chimney sweep, inspection & repair in Bothell, WA. Licensed, bonded & insured since 1979. WA License MADHAHL790LW. Call (206) 274-6409 for a free estimate.",
+  description: "Professional chimney sweep in Bothell, WA. Licensed & insured since 1979. WA License MADHAHL790LW. Expert cleaning & inspection. Call (206) 274-6409.",
 }
 
 export default function ChimneySweepBothellPage() {

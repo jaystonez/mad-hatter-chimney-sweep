@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { BrickWall, Hammer, Phone, ShieldAlert } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Firebox Repair Seattle | Fireplace Firebox Rebuild & Restoration",
+  title: "Firebox Repair Seattle | Rebuild & Restoration | Mad Hatter",
   description:
     "Firebox repair and rebuild services in Seattle, Bellevue, and Shoreline. Fix cracked firebrick, failed mortar joints, and unsafe fireplace conditions.",
 }

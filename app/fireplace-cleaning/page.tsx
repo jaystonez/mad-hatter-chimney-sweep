@@ -3,8 +3,8 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Fireplace Cleaning Service | Professional Cleaning & Safety | Mad Hatter',
-  description: 'Professional fireplace cleaning for safe, efficient operation. Expert creosote removal, damper service, and complete system cleaning. 45+ years serving Seattle.',
+  title: 'Fireplace Cleaning Seattle | Safety Service | Mad Hatter',
+  description: 'Professional fireplace cleaning for safe, efficient operation. Expert creosote removal, damper service & system cleaning. 45+ years serving Seattle',
 }
 
 const faqSchema = {

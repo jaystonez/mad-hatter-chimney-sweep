@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { Button } from "@/components/ui/button"
-import { Phone, Shield, Star, CheckCircle } from "lucide-react"
+import { Phone, Shield, CheckCircle } from "lucide-react"
 import Image from "next/image"
 
 export default function Hero() {
@@ -40,15 +40,11 @@ export default function Hero() {
             Expert chimney sweeping, inspections, and repairs. Keeping Seattle homes safe and fireplaces running beautifully since 1979.
           </p>
 
-          {/* Social proof strip */}
+          {/* Trust strip */}
           <div className="flex flex-wrap gap-6 mb-10 text-stone-200">
             <div className="flex items-center gap-2">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
-                ))}
-              </div>
-              <span className="text-sm font-medium">500+ 5-Star Reviews</span>
+              <CheckCircle className="w-4 h-4 text-amber-400" />
+              <span className="text-sm font-medium">Family-owned in Seattle since 1979</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-amber-400" />
@@ -56,7 +52,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-amber-400" />
-              <span className="text-sm font-medium">2,500+ Happy Customers</span>
+              <span className="text-sm font-medium">WA Contractor #MADHAHL790LW</span>
             </div>
           </div>
 
@@ -88,11 +84,11 @@ export default function Hero() {
       <div className="absolute bottom-8 right-8 z-10 hidden lg:flex gap-4">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
           <div className="text-3xl font-bold text-amber-400">Since 1979</div>
-          <div className="text-xs text-stone-300">Trusted in Seattle</div>
+          <div className="text-xs text-stone-300">Family-owned in Seattle</div>
         </div>
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
-          <div className="text-3xl font-bold text-amber-400">2,500+</div>
-          <div className="text-xs text-stone-300">Happy Customers</div>
+          <div className="text-xl font-bold text-amber-400">#MADHAHL790LW</div>
+          <div className="text-xs text-stone-300">Licensed WA Contractor</div>
         </div>
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
           <div className="text-3xl font-bold text-amber-400">100%</div>

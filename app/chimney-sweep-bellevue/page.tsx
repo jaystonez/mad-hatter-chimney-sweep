@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Phone, MapPin, Award, Shield, CheckCircle2, Clock, Star, Flame, Droplet, AlertTriangle, Wrench, Search, Camera, Users } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Chimney Sweep Bellevue | Professional Cleaning & Inspection Services | Mad Hatter',
-  description: 'Professional chimney sweep services in Bellevue. 45+ years of certified expertise. Comprehensive cleaning, inspection, and repair. Same-day service available. Call Mad Hatter today.',
+  title: 'Chimney Sweep Bellevue | Certified Service | Mad Hatter',
+  description: 'Professional chimney sweep services in Bellevue, WA. Certified cleaning, inspection & repair. 45+ years expertise. Same-day service available.',
 }
 
 export default function ChimneySweepBellevuePage() {
