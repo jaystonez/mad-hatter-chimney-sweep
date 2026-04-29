@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { Button } from "@/components/ui/button"
-import { Phone, Shield, CheckCircle } from "lucide-react"
+import { Phone, Shield, Star, CheckCircle } from "lucide-react"
 import Image from "next/image"
 
 export default function Hero() {
@@ -43,16 +43,16 @@ export default function Hero() {
           {/* Trust strip */}
           <div className="flex flex-wrap gap-6 mb-10 text-stone-200">
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-amber-400" />
-              <span className="text-sm font-medium">Family-owned in Seattle since 1979</span>
+              <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
+              <span className="text-sm font-medium">4.6★ on Google</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-amber-400" />
-              <span className="text-sm font-medium">Licensed &amp; Insured</span>
+              <span className="text-sm font-medium">45+ years serving Seattle since 1979</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-amber-400" />
-              <span className="text-sm font-medium">WA Contractor #MADHAHL790LW</span>
+              <span className="text-sm font-medium">Licensed WA Contractor #MADHAHL790LW</span>
             </div>
           </div>
 
@@ -84,15 +84,15 @@ export default function Hero() {
       <div className="absolute bottom-8 right-8 z-10 hidden lg:flex gap-4">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
           <div className="text-3xl font-bold text-amber-400">Since 1979</div>
-          <div className="text-xs text-stone-300">Family-owned in Seattle</div>
+          <div className="text-xs text-stone-300">45+ Years Serving Seattle</div>
+        </div>
+        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
+          <div className="text-3xl font-bold text-amber-400">4.6★</div>
+          <div className="text-xs text-stone-300">Real Google Reviews</div>
         </div>
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
           <div className="text-xl font-bold text-amber-400">#MADHAHL790LW</div>
           <div className="text-xs text-stone-300">Licensed WA Contractor</div>
-        </div>
-        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
-          <div className="text-3xl font-bold text-amber-400">100%</div>
-          <div className="text-xs text-stone-300">Satisfaction</div>
         </div>
       </div>
     </section>

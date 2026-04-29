@@ -133,8 +133,8 @@ export default function SchemaMarkup() {
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "500",
+      "ratingValue": "4.6",
+      "reviewCount": "51",
       "bestRating": "5",
       "worstRating": "1"
     },
