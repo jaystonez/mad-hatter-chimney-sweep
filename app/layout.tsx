@@ -11,8 +11,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.themadhatterchimneysweep.com'),
-  title: 'The Mad Hatter Chimney Sweep | Professional Chimney Services Since 1979',
-  description: 'Trusted chimney sweep and fireplace services since 1979. Over 2500 satisfied customers. Professional cleaning, inspections, and repairs throughout Greater Seattle.',
+  title: 'Seattle & Bellevue Chimney Sweep Since 1979 | Mad Hatter',
+  description: "Seattle & Bellevue's trusted chimney sweep since 1979. Licensed (WA #MADHAHL790LW), bonded, insured. Inspections, sweeping, repairs, masonry. Call (206) 274-6409.",
   alternates: {
     canonical: '/',
   },
@@ -21,21 +21,21 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.themadhatterchimneysweep.com',
     siteName: 'Mad Hatter Chimney Sweep',
-    title: "Mad Hatter Chimney Sweep | Seattle's Most Trusted Since 1979",
-    description: 'Professional chimney sweep, inspection & repair in Greater Seattle. Licensed, bonded & insured. WA License MADHAHL790LW. Call (206) 274-6409.',
+    title: 'Seattle & Bellevue Chimney Sweep Since 1979 | Mad Hatter',
+    description: 'Family-owned chimney sweep serving Seattle, Bellevue & King County since 1979. Licensed, bonded & insured. WA License MADHAHL790LW. Call (206) 274-6409.',
     images: [
       {
         url: 'https://www.themadhatterchimneysweep.com/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Mad Hatter Chimney Sweep Seattle',
+        alt: 'Mad Hatter Chimney Sweep - Seattle & Bellevue Since 1979',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Mad Hatter Chimney Sweep | Seattle's Most Trusted Since 1979",
-    description: 'Professional chimney sweep, inspection & repair in Greater Seattle. Licensed, bonded & insured. Call (206) 274-6409.',
+    title: 'Seattle & Bellevue Chimney Sweep Since 1979 | Mad Hatter',
+    description: 'Family-owned chimney sweep serving Seattle, Bellevue & King County since 1979. Licensed, bonded & insured. Call (206) 274-6409.',
     images: ['https://www.themadhatterchimneysweep.com/images/og-image.jpg'],
   },
   icons: {
@@ -69,7 +69,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
         <PageBreadcrumbSchema />
         <Header />
-                    <main className="min-h-screen pt-20">
+        <main className="min-h-screen pt-20">
           {children}
         </main>
         <Footer />
