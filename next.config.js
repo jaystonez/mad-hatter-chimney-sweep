@@ -62,6 +62,10 @@ const nextConfig = {
       // Catch-all legacy WordPress author archives only.
       // DO NOT add a /services/:slug* catch-all here; it redirects valid service pages away.
       { source: '/author/:slug*', destination: '/about', permanent: true },
+      // Legacy WordPress tag archives → consolidate to /blog (kills GSC 404s)
+      { source: '/tag/:slug*', destination: '/blog', permanent: true },
+  { source: '/tag/', destination: '/blog', permanent: true },
+{ source: '/tag', destination: '/blog', permanent: true },
     ]
   },
   images: {
