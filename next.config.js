@@ -11,7 +11,8 @@ const nextConfig = {
         permanent: true,
       },
       // Service pages (trailing slash -> no trailing slash)
-      { source: '/services/dryer-vent-cleaning/', destination: '/', permanent: true },
+      { source: '/services/dryer-vent-cleaning/', destination: '/services', permanent: true },
+      { source: '/services/dryer-vent-cleaning', destination: '/services', permanent: true },
       { source: '/services/chimney-sweep/', destination: '/services/chimney-sweeping', permanent: true },
       { source: '/services/chimney-inspection/', destination: '/services/chimney-inspection', permanent: true },
       { source: '/services/chimney-repair/', destination: '/services/chimney-repairs', permanent: true },
@@ -24,18 +25,18 @@ const nextConfig = {
 
       // Legacy blog/content pages (with AND without trailing slash)
       { source: '/blog/', destination: '/blog', permanent: true },
-      { source: '/mad-hatter-chimney-sweep-seattle/', destination: '/about', permanent: true },
-      { source: '/mad-hatter-chimney-sweep-seattle', destination: '/about', permanent: true },
-      { source: '/fireplace-chimney-cleaning-seattle/', destination: '/chimney-cleaning', permanent: true },
-      { source: '/fireplace-chimney-cleaning-seattle', destination: '/chimney-cleaning', permanent: true },
-      { source: '/get-cleaner-chimney-fireplace-today/', destination: '/chimney-cleaning', permanent: true },
-      { source: '/get-cleaner-chimney-fireplace-today', destination: '/chimney-cleaning', permanent: true },
+      { source: '/mad-hatter-chimney-sweep-seattle/', destination: '/chimney-sweep-seattle', permanent: true },
+      { source: '/mad-hatter-chimney-sweep-seattle', destination: '/chimney-sweep-seattle', permanent: true },
+      { source: '/fireplace-chimney-cleaning-seattle/', destination: '/chimney-cleaning-seattle', permanent: true },
+      { source: '/fireplace-chimney-cleaning-seattle', destination: '/chimney-cleaning-seattle', permanent: true },
+      { source: '/get-cleaner-chimney-fireplace-today/', destination: '/chimney-cleaning-seattle', permanent: true },
+      { source: '/get-cleaner-chimney-fireplace-today', destination: '/chimney-cleaning-seattle', permanent: true },
       { source: '/about-mad-hatter-chimney-sweep/', destination: '/about', permanent: true },
       { source: '/about-mad-hatter-chimney-sweep', destination: '/about', permanent: true },
-      { source: '/contact/', destination: '/', permanent: true },
-      { source: '/contact', destination: '/', permanent: true },
-      { source: '/contact-us/', destination: '/', permanent: true },
-      { source: '/contact-us', destination: '/', permanent: true },
+      { source: '/contact/', destination: '/#contact', permanent: true },
+      { source: '/contact', destination: '/#contact', permanent: true },
+      { source: '/contact-us/', destination: '/#contact', permanent: true },
+      { source: '/contact-us', destination: '/#contact', permanent: true },
       { source: '/privacy-policy/', destination: '/privacy-policy', permanent: true },
       { source: '/about/', destination: '/about', permanent: true },
 
@@ -44,9 +45,9 @@ const nextConfig = {
       { source: '/author/drmoh/', destination: '/about', permanent: true },
       { source: '/author/drmoh', destination: '/about', permanent: true },
 
-      // Catch-all legacy WordPress author archives
+      // Catch-all legacy WordPress author archives only.
+      // Do NOT catch all /services/:slug* here; it can redirect valid service pages to the homepage.
       { source: '/author/:slug*', destination: '/about', permanent: true },
-      { source: '/services/:slug*', destination: '/', permanent: true },
     ]
   },
   images: {
