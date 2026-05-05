@@ -5,9 +5,9 @@ import { Card } from '@/components/ui/card'
 import { Phone, CheckCircle2, Shield, AlertTriangle, Award, BookOpen, Flame, Wind } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Certified Chimney Sweep | Master Certification | Mad Hatter Chimney Sweep',
-  description: 'Why certification matters for chimney safety. Master certified chimney sweeps with 45+ years serving Seattle. Professional expertise, proper technique, accurate assessment.',
-  keywords: 'certified chimney sweep, chimney sweep certification, professional chimney sweep, Seattle chimney sweep, licensed chimney sweep',
+  title: 'Licensed & Insured Chimney Sweep | Mad Hatter Chimney Sweep',
+  description: 'Licensed, bonded, and insured chimney sweep serving Seattle and Bellevue since 1979. We follow NFPA and industry safety guidelines.',
+  keywords: 'chimney sweep seattle, chimney sweep bellevue, licensed chimney sweep',
 }
 
 export default function CertifiedChimneySweepPage() {
@@ -23,10 +23,10 @@ export default function CertifiedChimneySweepPage() {
               Licensed, Bonded &amp; Insured
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
-              Certified Chimney Sweep: Why Certification Matters for Your Home's Safety
+              Licensed, Bonded &amp; Insured Chimney Sweep Serving Seattle &amp; Bellevue
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-8 text-balance">
-              Master certified professionals with 45+ years serving greater Seattle. The expertise your chimney requires, the safety your family deserves.
+              Licensed and insured professionals with 45+ years serving greater Seattle. We follow NFPA and industry safety guidelines.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg" asChild>
