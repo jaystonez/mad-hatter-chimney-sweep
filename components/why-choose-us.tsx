@@ -6,7 +6,7 @@ const reasons = [
   {
     icon: Award,
     title: "Certified Professionals",
-    description: "Fully trained and certified technicians who stay current with the latest industry standards and safety protocols.",
+    description: "Fully trained technicians who follow NFPA and Washington State safety standards on every job.",
   },
   {
     icon: Clock,
@@ -64,18 +64,11 @@ export default function WhyChooseUs() {
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent" />
-            {/* Stats overlay */}
-            <div className="absolute bottom-6 left-6 right-6 grid grid-cols-3 gap-3">
-              {[
-                { value: "2,500+", label: "Happy Customers" },
-                { value: "45+", label: "Years Experience" },
-                { value: "100%", label: "Satisfaction" },
-              ].map((stat) => (
-                <div key={stat.label} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-3 text-center">
-                  <div className="text-2xl font-bold text-amber-400">{stat.value}</div>
-                  <div className="text-xs text-white/80">{stat.label}</div>
-                </div>
-              ))}
+            <div className="absolute bottom-6 left-0 right-0 flex justify-center">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-6 py-3 text-center">
+                <div className="text-2xl font-bold text-amber-400">Since 1979</div>
+                <div className="text-xs text-white/80">45+ Years Serving Seattle &amp; Bellevue</div>
+              </div>
             </div>
           </div>
 

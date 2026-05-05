@@ -7,7 +7,7 @@ import Testimonials from "@/components/testimonials"
 import CTA from "@/components/cta"
 
 export const metadata: Metadata = {
-  title: "Chimney Sweep & Inspection in Seattle, WA | Mad Hatter Chimney Sweep",
+  title: "Seattle & Bellevue Chimney Sweep Since 1979 | Mad Hatter",
   description: "Professional chimney sweep, inspection & repair in Greater Seattle since 1979. Licensed, bonded & insured. WA License MADHAHL790LW. Call (206) 274-6409 for a free estimate.",
 }
 
@@ -28,7 +28,7 @@ const faqSchema = {
       "name": "How often should I get my chimney cleaned?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The CSIA recommends annual chimney inspections and cleaning for any chimney that is used regularly. If you burn wood frequently, cleaning may be needed more often."
+        "text": "NFPA 211 recommends annual chimney inspections and cleaning for any chimney that is used regularly. If you burn wood frequently, cleaning may be needed more often."
       }
     },
     {
@@ -52,7 +52,7 @@ const faqSchema = {
       "name": "Do you offer chimney inspections?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We perform CSIA-standard Level 1, Level 2, and Level 3 chimney inspections. A Level 1 inspection is included with every sweep."
+        "text": "Yes. We perform NFPA 211 Level 1, Level 2, and Level 3 chimney inspections. A Level 1 inspection is included with every sweep."
       }
     },
     {
