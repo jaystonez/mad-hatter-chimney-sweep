@@ -7,7 +7,7 @@ import { Phone, CheckCircle2, Shield, AlertTriangle, Award, BookOpen, Flame, Win
 export const metadata: Metadata = {
   title: 'Certified Chimney Sweep | Master Certification | Mad Hatter Chimney Sweep',
   description: 'Why certification matters for chimney safety. Master certified chimney sweeps with 45+ years serving Seattle. Professional expertise, proper technique, accurate assessment.',
-  keywords: 'certified chimney sweep, master chimney sweep, CSIA certified, chimney certification, professional chimney sweep, Seattle chimney sweep',
+  keywords: 'certified chimney sweep, chimney sweep certification, professional chimney sweep, Seattle chimney sweep, licensed chimney sweep',
 }
 
 export default function CertifiedChimneySweepPage() {
@@ -20,7 +20,7 @@ export default function CertifiedChimneySweepPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-primary/20 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="h-4 w-4" />
-              Master Chimney Sweep Certified
+              Licensed, Bonded &amp; Insured
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
               Certified Chimney Sweep: Why Certification Matters for Your Home's Safety
@@ -30,9 +30,9 @@ export default function CertifiedChimneySweepPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg" asChild>
-                <a href="tel:+12065234722">
+                <a href="tel:+12062746409">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (206) 523-4722
+                  Call (206) 274-6409
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="text-lg bg-white/10 hover:bg-white/20 text-white border-white/20" asChild>
@@ -48,7 +48,7 @@ export default function CertifiedChimneySweepPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto prose prose-lg">
             <p className="text-lg leading-relaxed">
-              When you hire a chimney sweep, certification is the single most important credential to verify. A certified chimney sweep has demonstrated knowledge of chimney systems, fire science, building codes, safety practices, and proper maintenance techniques through rigorous testing. An uncertified sweep may lack the training to identify dangerous conditions, use proper techniques, or protect your home. Mad Hatter Chimney Sweep holds Master Chimney Sweep certification—the highest credential in the industry—and has served the greater Seattle area for over 45 years.
+              When you hire a chimney sweep, certification and licensing are the most important credentials to verify. A trained chimney sweep has demonstrated knowledge of chimney systems, fire science, building codes, safety practices, and proper maintenance techniques. An untrained sweep may lack the training to identify dangerous conditions, use proper techniques, or protect your home. Mad Hatter Chimney Sweep is fully licensed (WA License MADHAHL790LW), bonded, and insured, and has served the greater Seattle area for over 45 years.
             </p>
             <p className="text-lg leading-relaxed">
               Certification isn't just a piece of paper. It represents comprehensive knowledge that protects your home and family from chimney fires, carbon monoxide exposure, and expensive damage caused by improper maintenance.
@@ -358,12 +358,12 @@ export default function CertifiedChimneySweepPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Award className="h-16 w-16 mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Mad Hatter: Master Certified Chimney Sweep</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Mad Hatter: Licensed &amp; Experienced Chimney Sweep</h2>
             
             <div className="grid md:grid-cols-2 gap-6 text-left mb-8">
               <div className="bg-primary-foreground/10 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-2">Highest Certification Available</h3>
-                <p className="text-primary-foreground/90">Our technicians hold Master Chimney Sweep certification—beyond standard certification, demonstrating advanced expertise and extensive experience.</p>
+                <h3 className="text-xl font-semibold mb-2">Licensed &amp; Insured</h3>
+                <p className="text-primary-foreground/90">Our technicians are fully licensed under WA License MADHAHL790LW, bonded, and insured — giving you documented proof of professional accountability on every job.</p>
               </div>
 
               <div className="bg-primary-foreground/10 p-6 rounded-lg">
@@ -408,9 +408,9 @@ export default function CertifiedChimneySweepPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg" asChild>
-                <a href="tel:+12065234722">
+                <a href="tel:+12062746409">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (206) 523-4722
+                  Call (206) 274-6409
                 </a>
               </Button>
               <Button size="lg" variant="outline" className="text-lg bg-white/10 hover:bg-white/20 text-white border-white/20" asChild>

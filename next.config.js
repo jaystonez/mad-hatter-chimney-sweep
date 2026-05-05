@@ -3,6 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
+      // Canonical host: bare domain → www (P0 SEO fix)
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'themadhatterchimneysweep.com' }],
+        destination: 'https://www.themadhatterchimneysweep.com/:path*',
+        permanent: true,
+      },
       // Service pages (trailing slash -> no trailing slash)
       { source: '/services/dryer-vent-cleaning/', destination: '/', permanent: true },
       { source: '/services/chimney-sweep/', destination: '/services/chimney-sweeping', permanent: true },

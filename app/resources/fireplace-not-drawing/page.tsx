@@ -164,7 +164,7 @@ export default function FireplaceNotDrawingPage() {
             Tired of a Smoky Living Room?
           </h2>
           <p className="text-gray-300 mb-8 text-lg">
-            Our CSIA-certified technicians will diagnose your draft problem and
+            Our licensed technicians will diagnose your draft problem and
             get your fireplace drawing properly again.
           </p>
           <Link

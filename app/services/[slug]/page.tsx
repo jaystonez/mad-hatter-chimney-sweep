@@ -8,7 +8,7 @@ const services = {
   "chimney-inspection-sweeping": {
     title: "Chimney Inspection & Sweeping",
     description: "Professional chimney inspection and cleaning services to ensure your chimney is safe, clean, and operating efficiently.",
-    longDescription: "Regular chimney inspections and sweeping are essential for the safety and efficiency of your fireplace or heating system. Our CSIA-certified technicians provide comprehensive inspections using state-of-the-art video camera technology to identify any issues before they become major problems.",
+    longDescription: "Regular chimney inspections and sweeping are essential for the safety and efficiency of your fireplace or heating system. Our licensed technicians provide comprehensive inspections using state-of-the-art video camera technology to identify any issues before they become major problems.",
     benefits: [
       "Prevents dangerous chimney fires from creosote buildup",
       "Identifies structural issues early",

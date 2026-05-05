@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { Button } from "@/components/ui/button"
-import { Phone, Shield, Star, CheckCircle } from "lucide-react"
+import { Phone, Shield, CheckCircle } from "lucide-react"
 import Image from "next/image"
 
 export default function Hero() {
@@ -30,33 +30,21 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-            Seattle&apos;s Most{" "}
+            Seattle &amp; Bellevue&apos;s{" "}
             <span className="text-amber-400">Trusted</span>
             <br />Chimney Experts
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-stone-100 leading-relaxed mb-8 max-w-2xl">
-            Expert chimney sweeping, inspections, and repairs. Keeping Seattle homes safe and fireplaces running beautifully since 1979.
+            Expert chimney sweeping, inspections, and repairs serving Seattle, Bellevue, and the Greater Eastside since 1979.
           </p>
 
           {/* Social proof strip */}
           <div className="flex flex-wrap gap-6 mb-10 text-stone-200">
             <div className="flex items-center gap-2">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
-                ))}
-              </div>
-              <span className="text-sm font-medium">500+ 5-Star Reviews</span>
-            </div>
-            <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-amber-400" />
               <span className="text-sm font-medium">Licensed &amp; Insured</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-amber-400" />
-              <span className="text-sm font-medium">2,500+ Happy Customers</span>
             </div>
           </div>
 
@@ -84,21 +72,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Floating stats card */}
-      <div className="absolute bottom-8 right-8 z-10 hidden lg:flex gap-4">
-        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
-          <div className="text-3xl font-bold text-amber-400">Since 1979</div>
-          <div className="text-xs text-stone-300">Trusted in Seattle</div>
-        </div>
-        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
-          <div className="text-3xl font-bold text-amber-400">2,500+</div>
-          <div className="text-xs text-stone-300">Happy Customers</div>
-        </div>
-        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
-          <div className="text-3xl font-bold text-amber-400">100%</div>
-          <div className="text-xs text-stone-300">Satisfaction</div>
-        </div>
-      </div>
+
     </section>
   )
 }

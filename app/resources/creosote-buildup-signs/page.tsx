@@ -143,7 +143,7 @@ export default function CreosoteBuildupSignsPage() {
             Don&apos;t Wait for a Chimney Fire
           </h2>
           <p className="text-gray-300 mb-8 text-lg">
-            Our CSIA-certified technicians will inspect your chimney for
+            Our licensed technicians will inspect your chimney for
             creosote buildup and remove it safely before it becomes a hazard.
           </p>
           <Link
