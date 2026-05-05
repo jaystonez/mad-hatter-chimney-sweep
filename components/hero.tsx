@@ -25,14 +25,14 @@ export default function Hero() {
           {/* Trust badge */}
           <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/30 text-amber-300 px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
             <Shield className="w-4 h-4" />
-            Trusted Since 1979 — Family Owned & Operated
+            Trusted Since 1979 &mdash; Family Owned & Operated
           </div>
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-            Seattle&apos;s Most{" "}
-            <span className="text-amber-400">Trusted</span>
-            <br />Chimney Experts
+            Seattle&apos;s Local{" "}
+            <span className="text-amber-400">Chimney</span>
+            <br />Service Experts
           </h1>
 
           {/* Subheadline */}
@@ -43,12 +43,12 @@ export default function Hero() {
           {/* Social proof strip */}
           <div className="flex flex-wrap gap-6 mb-10 text-stone-200">
             <div className="flex items-center gap-2">
-              <div className="flex">
+              <div className="flex" aria-hidden="true">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />
                 ))}
               </div>
-              <span className="text-sm font-medium">500+ 5-Star Reviews</span>
+              <span className="text-sm font-medium">Customer-Reviewed Local Service</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-amber-400" />
@@ -56,7 +56,7 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-amber-400" />
-              <span className="text-sm font-medium">2,500+ Happy Customers</span>
+              <span className="text-sm font-medium">Family Owned &amp; Operated</span>
             </div>
           </div>
 
@@ -88,15 +88,15 @@ export default function Hero() {
       <div className="absolute bottom-8 right-8 z-10 hidden lg:flex gap-4">
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
           <div className="text-3xl font-bold text-amber-400">Since 1979</div>
-          <div className="text-xs text-stone-300">Trusted in Seattle</div>
+          <div className="text-xs text-stone-300">Serving Seattle</div>
         </div>
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
-          <div className="text-3xl font-bold text-amber-400">2,500+</div>
-          <div className="text-xs text-stone-300">Happy Customers</div>
+          <div className="text-3xl font-bold text-amber-400">Family</div>
+          <div className="text-xs text-stone-300">Owned & Operated</div>
         </div>
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 text-white text-center">
-          <div className="text-3xl font-bold text-amber-400">100%</div>
-          <div className="text-xs text-stone-300">Satisfaction</div>
+          <div className="text-3xl font-bold text-amber-400">Local</div>
+          <div className="text-xs text-stone-300">Chimney Experts</div>
         </div>
       </div>
     </section>
