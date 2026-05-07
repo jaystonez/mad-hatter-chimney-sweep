@@ -42,7 +42,7 @@ export default function SmokyFireplaceSolutionsPage() {
               We pinpoint why smoke spills into your room and deliver permanent fixes for safer, cleaner fireplace use.
             </p>
             <Button size="lg" asChild>
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Phone className="mr-2 h-5 w-5" />
                 Get Smoke Diagnosis
               </Link>
@@ -110,7 +110,7 @@ export default function SmokyFireplaceSolutionsPage() {
                 <Link href="/chimney-inspection" className="text-primary hover:underline">
                   Chimney Inspection Services
                 </Link>{" "}
-                and <Link href="/chimney-repair" className="text-primary hover:underline">Chimney Repair</Link>
+                and <Link href="/chimney-repair-seattle" className="text-primary hover:underline">Chimney Repair</Link>
               </li>
               <li>
                 Areas served: <Link href="/locations/seattle" className="text-primary hover:underline">Seattle</Link>,{" "}

@@ -7,28 +7,28 @@ const services = [
     icon: Flame,
     title: "Chimney Sweeping",
     description: "Thorough cleaning to remove creosote, soot, and blockages for safe, efficient operation.",
-    href: "/services/chimney-inspection-sweeping",
+    href: "/chimney-inspection",
     color: "from-orange-500/20 to-amber-500/10",
   },
   {
     icon: Search,
     title: "Chimney Inspections",
     description: "Comprehensive Level 1, 2, and 3 inspections to identify potential hazards and structural issues.",
-    href: "/services/chimney-inspection-sweeping",
+    href: "/chimney-inspection",
     color: "from-blue-500/20 to-cyan-500/10",
   },
   {
     icon: Wrench,
     title: "Chimney Repairs",
     description: "Expert masonry repairs, crown rebuilding, and flue liner replacement for long-lasting results.",
-    href: "/services/chimney-repairs",
+    href: "/chimney-repair-seattle",
     color: "from-stone-500/20 to-stone-400/10",
   },
   {
     icon: Shield,
     title: "Chimney Caps & Covers",
     description: "Installation of quality caps to prevent water damage, animal intrusion, and debris buildup.",
-    href: "/services/chimney-repairs",
+    href: "/chimney-cap-installation",
     color: "from-green-500/20 to-emerald-500/10",
   },
   {
@@ -42,7 +42,7 @@ const services = [
     icon: Sparkles,
     title: "Fireplace Restoration",
     description: "Complete restoration services to bring your fireplace back to its original beauty.",
-    href: "/services/stove-fireplace-installation",
+    href: "/fireplace-cleaning",
     color: "from-rose-500/20 to-pink-500/10",
   },
 ]
@@ -88,7 +88,7 @@ export default function Services() {
         <div className="text-center">
           <p className="text-stone-600 mb-4">Not sure what you need? We&apos;re happy to provide a free consultation.</p>
           <Link
-            href="#contact"
+            href="/contact"
             className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg shadow-amber-500/25"
           >
             Get a Free Quote <ArrowRight className="w-5 h-5" />

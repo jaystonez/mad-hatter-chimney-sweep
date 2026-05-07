@@ -74,7 +74,7 @@ export default function ChimneyCapInstallationPage() {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild className="bg-transparent text-white border-white hover:bg-white hover:text-slate-900">
-                <Link href="/#contact">Schedule Installation</Link>
+                <Link href="/contact">Schedule Installation</Link>
               </Button>
             </div>
           </div>
@@ -465,7 +465,7 @@ export default function ChimneyCapInstallationPage() {
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild className="bg-transparent text-white border-white hover:bg-white hover:text-primary">
-              <Link href="/#contact">Request Quote</Link>
+              <Link href="/contact">Request Quote</Link>
             </Button>
           </div>
           <p className="mt-8 text-sm">Same-day service often available throughout the greater Seattle area</p>

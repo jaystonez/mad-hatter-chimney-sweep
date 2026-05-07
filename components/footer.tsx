@@ -66,7 +66,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#contact" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                <Link href="/contact" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Contact Us
                 </Link>
               </li>
@@ -78,27 +78,27 @@ export function Footer() {
             <h3 className="font-bold text-lg mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services/chimney-inspection-sweeping" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                <Link href="/chimney-inspection" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Chimney Sweeping
                 </Link>
               </li>
               <li>
-                <Link href="/services/chimney-repairs" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                <Link href="/chimney-repair-seattle" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Chimney Repairs
                 </Link>
               </li>
               <li>
-                <Link href="/services/chimney-relining" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                <Link href="/chimney-liner-installation" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Chimney Relining
                 </Link>
               </li>
               <li>
-                <Link href="/services/waterproofing-leak-repair" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                <Link href="/chimney-waterproofing" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Leak Repair
                 </Link>
               </li>
               <li>
-                <Link href="/services/stove-fireplace-installation" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                <Link href="/fireplace-cleaning" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Installation
                 </Link>
               </li>

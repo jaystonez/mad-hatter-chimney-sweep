@@ -27,7 +27,7 @@ export default function AboutPage() {
                 <Link href="/verify-contractor">Verify Our Credentials &rarr;</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-slate-900">
-                <Link href="/#contact">Get a Quote</Link>
+                <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
           </div>
@@ -233,7 +233,7 @@ export default function AboutPage() {
               </div>
               <span className="hidden sm:inline text-white/50">|</span>
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link href="/#contact">Request a Quote</Link>
+                <Link href="/contact">Request a Quote</Link>
               </Button>
             </div>
           </div>

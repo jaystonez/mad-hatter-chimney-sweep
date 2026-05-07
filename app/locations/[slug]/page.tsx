@@ -322,7 +322,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="/#contact">Schedule Online</Link>
+                  <Link href="/contact">Schedule Online</Link>
                 </Button>
               </div>
             </div>
@@ -432,7 +432,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                       className="bg-transparent border-white text-white hover:bg-white hover:text-primary"
                       asChild
                     >
-                      <Link href="/#contact">Request Free Estimate</Link>
+                      <Link href="/contact">Request Free Estimate</Link>
                     </Button>
                   </div>
                 </CardContent>

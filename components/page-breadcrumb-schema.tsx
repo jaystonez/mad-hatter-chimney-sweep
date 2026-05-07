@@ -6,7 +6,7 @@ import BreadcrumbSchema, { type BreadcrumbItem } from "@/components/breadcrumb-s
 const serviceBreadcrumbs: Record<string, string> = {
   "/chimney-cleaning": "Chimney Cleaning",
   "/chimney-inspection": "Chimney Inspection",
-  "/chimney-repair": "Chimney Repair",
+  "/chimney-repair-seattle": "Chimney Repair",
   "/chimney-cap-installation": "Chimney Cap Installation",
   "/chimney-liner-installation": "Chimney Liner Installation",
   "/chimney-waterproofing": "Chimney Waterproofing",

@@ -147,7 +147,7 @@ export default function ChimneyWaterproofingPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg">
-                <Link href="/#contact">Schedule Waterproofing</Link>
+                <Link href="/contact">Schedule Waterproofing</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link href="/chimney-inspection">Get Inspection First</Link>
@@ -439,7 +439,7 @@ export default function ChimneyWaterproofingPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
-                <Link href="/#contact">
+                <Link href="/contact">
                   <Phone className="mr-2 h-5 w-5" />
                   Schedule Service
                 </Link>

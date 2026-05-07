@@ -42,7 +42,7 @@ export default function CreosoteRemovalPage() {
               Glazed creosote is a high-fire-risk deposit that requires specialized treatment beyond standard chimney sweeping.
             </p>
             <Button size="lg" asChild>
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Phone className="mr-2 h-5 w-5" />
                 Schedule Safety Cleaning
               </Link>

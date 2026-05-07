@@ -343,7 +343,7 @@ export default function VerifyContractorPage() {
 
             <div className="mt-12 text-center">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link href="/#contact">Get Your Free, Honest Quote</Link>
+                <Link href="/contact">Get Your Free, Honest Quote</Link>
               </Button>
             </div>
           </div>

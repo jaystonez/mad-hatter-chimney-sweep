@@ -42,7 +42,7 @@ export default function ChimneyCrownRepairPage() {
               Protect your chimney from rain damage with professional crown crack repair and waterproof restoration.
             </p>
             <Button size="lg" asChild>
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Phone className="mr-2 h-5 w-5" />
                 Book Crown Inspection
               </Link>
@@ -101,7 +101,7 @@ export default function ChimneyCrownRepairPage() {
             <h2 className="mb-4 text-3xl font-bold">Related Pages</h2>
             <ul className="space-y-3 text-lg">
               <li>
-                <Link href="/chimney-repair" className="text-primary hover:underline">
+                <Link href="/chimney-repair-seattle" className="text-primary hover:underline">
                   Chimney Repair Services
                 </Link>
               </li>

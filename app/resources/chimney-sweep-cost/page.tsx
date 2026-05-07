@@ -127,7 +127,7 @@ export default function ChimneySweepCostPage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Services</h2>
           <div className="grid gap-4 md:grid-cols-2">
-            <Link href="/services/chimney-inspection-sweeping" className="block p-4 rounded-lg border hover:border-primary hover:shadow-md transition-all">
+            <Link href="/chimney-inspection" className="block p-4 rounded-lg border hover:border-primary hover:shadow-md transition-all">
               <h3 className="font-bold text-primary mb-1">Chimney Inspection & Sweeping</h3>
               <p className="text-sm text-slate-600">Professional chimney inspection and cleaning services</p>
             </Link>
@@ -141,7 +141,7 @@ export default function ChimneySweepCostPage() {
           <h2 className="text-3xl font-bold mb-4">Ready to Schedule Your Chimney Sweep?</h2>
           <p className="text-xl mb-8 opacity-90">Transparent pricing. No hidden fees. Written estimates before work begins.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contact" className="inline-flex items-center justify-center rounded-md bg-white text-primary px-8 py-3 font-medium hover:bg-white/90 transition-colors">
+            <Link href="/contact" className="inline-flex items-center justify-center rounded-md bg-white text-primary px-8 py-3 font-medium hover:bg-white/90 transition-colors">
               Get Free Estimate
             </Link>
             <a href="tel:+12062746409" className="inline-flex items-center justify-center rounded-md border border-white text-white px-8 py-3 font-medium hover:bg-white hover:text-primary transition-colors">

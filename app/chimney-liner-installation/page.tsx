@@ -489,7 +489,7 @@ export default function ChimneyLinerInstallationPage() {
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10" asChild>
-                <Link href="/#contact">Schedule Assessment</Link>
+                <Link href="/contact">Schedule Assessment</Link>
               </Button>
             </div>
             <p className="mt-8 text-slate-200">
