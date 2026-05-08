@@ -58,7 +58,7 @@ export default function TroubleshootingChimneyPage() {
               expensive repairs.
             </p>
             <Button size="lg" asChild>
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Phone className="mr-2 h-5 w-5" />
                 Schedule Chimney Diagnosis
               </Link>
@@ -128,7 +128,7 @@ export default function TroubleshootingChimneyPage() {
                 for detailed diagnostics
               </li>
               <li>
-                <Link href="/chimney-repair" className="text-primary hover:underline">
+                <Link href="/chimney-repair-seattle" className="text-primary hover:underline">
                   Chimney Repair
                 </Link>{" "}
                 for structural and venting fixes

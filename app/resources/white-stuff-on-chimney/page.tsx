@@ -103,11 +103,11 @@ export default function WhiteStuffOnChimneyPage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Related Services</h2>
           <div className="grid gap-4 md:grid-cols-2">
-            <Link href="/services/chimney-repairs" className="block p-4 rounded-lg border hover:border-primary hover:shadow-md transition-all">
+            <Link href="/chimney-repair-seattle" className="block p-4 rounded-lg border hover:border-primary hover:shadow-md transition-all">
               <h3 className="font-bold text-primary mb-1">Chimney Repairs</h3>
               <p className="text-sm text-slate-600">Expert masonry and structural chimney repairs</p>
             </Link>
-            <Link href="/services/waterproofing-leak-repair" className="block p-4 rounded-lg border hover:border-primary hover:shadow-md transition-all">
+            <Link href="/chimney-waterproofing" className="block p-4 rounded-lg border hover:border-primary hover:shadow-md transition-all">
               <h3 className="font-bold text-primary mb-1">Waterproofing & Leak Repair</h3>
               <p className="text-sm text-slate-600">Comprehensive chimney leak detection and waterproofing</p>
             </Link>
@@ -124,7 +124,7 @@ export default function WhiteStuffOnChimneyPage() {
           <h2 className="text-3xl font-bold mb-4">Concerned About White Stains on Your Chimney?</h2>
           <p className="text-xl mb-8 opacity-90">A professional inspection will identify the moisture source and recommend the right repair.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contact" className="inline-flex items-center justify-center rounded-md bg-white text-primary px-8 py-3 font-medium hover:bg-white/90 transition-colors">Schedule Inspection</Link>
+            <Link href="/contact" className="inline-flex items-center justify-center rounded-md bg-white text-primary px-8 py-3 font-medium hover:bg-white/90 transition-colors">Schedule Inspection</Link>
             <a href="tel:+12062746409" className="inline-flex items-center justify-center rounded-md border border-white text-white px-8 py-3 font-medium hover:bg-white hover:text-primary transition-colors">Call (206) 274-6409</a>
           </div>
         </div>

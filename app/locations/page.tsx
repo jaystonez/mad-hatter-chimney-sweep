@@ -136,7 +136,7 @@ export default function LocationsPage() {
                 Providing professional chimney services throughout the Greater Seattle area. We're proud to serve homeowners in King County, Snohomish County, and beyond.
               </p>
               <Button size="lg" asChild>
-                <Link href="/#contact">Schedule Service</Link>
+                <Link href="/contact">Schedule Service</Link>
               </Button>
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function LocationsPage() {
                                 <a href="tel:+12062746409">Call (206) 274-6409</a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="/#contact">Request Service Online</Link>
+                  <Link href="/contact">Request Service Online</Link>
                 </Button>
               </div>
             </div>

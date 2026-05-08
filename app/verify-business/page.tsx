@@ -277,7 +277,7 @@ export default function VerifyBusinessPage() {
                       Mad Hatter Chimney Sweep is fully licensed, insured, and has served the Seattle area since 1979.
                     </p>
                     <Button size="lg" asChild>
-                      <Link href="/#contact">Get a Free Quote</Link>
+                      <Link href="/contact">Get a Free Quote</Link>
                     </Button>
                   </CardContent>
                 </Card>

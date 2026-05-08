@@ -107,7 +107,7 @@ export const phaseOneBlogPosts: BlogPost[] = [
     internalLinks: [
       { href: "/chimney-inspection", label: "Chimney Inspection Services" },
       { href: "/chimney-cleaning", label: "Chimney Cleaning" },
-      { href: "/chimney-repair", label: "Chimney Repair" },
+      { href: "/chimney-repair-seattle", label: "Chimney Repair" },
     ],
   },
   {
@@ -396,7 +396,7 @@ export const phaseOneBlogPosts: BlogPost[] = [
     internalLinks: [
       { href: "/chimney-inspection", label: "Schedule a Chimney Safety Inspection" },
       { href: "/chimney-cleaning", label: "Book Chimney Cleaning" },
-      { href: "/chimney-repair", label: "Chimney Repair Services" },
+      { href: "/chimney-repair-seattle", label: "Chimney Repair Services" },
     ],
   },
   {
@@ -470,7 +470,7 @@ export const phaseOneBlogPosts: BlogPost[] = [
     internalLinks: [
       { href: "/chimney-cleaning", label: "Professional Chimney Cleaning" },
       { href: "/chimney-inspection", label: "Chimney Inspection" },
-      { href: "/chimney-repair", label: "Chimney Repair and Restoration" },
+      { href: "/chimney-repair-seattle", label: "Chimney Repair and Restoration" },
     ],
   },
   // ─── Phase 2 posts ────────────────────────────────────────────────────────
@@ -711,7 +711,7 @@ export const phaseOneBlogPosts: BlogPost[] = [
       },
     ],
     internalLinks: [
-      { href: "/chimney-repair", label: "Chimney Repair Services" },
+      { href: "/chimney-repair-seattle", label: "Chimney Repair Services" },
       { href: "/chimney-inspection", label: "Schedule a Chimney Inspection" },
       { href: "/chimney-crown-repair", label: "Chimney Crown Repair" },
       { href: "/masonry-repair", label: "Masonry Repair" },

@@ -51,7 +51,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const services = [
     '/chimney-cleaning',
     '/chimney-inspection',
-    '/chimney-repair',
     '/troubleshooting-chimney',
     '/smoky-fireplace-solutions',
     '/firebox-repair',

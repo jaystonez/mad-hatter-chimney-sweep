@@ -48,7 +48,7 @@ export default function FireboxRepairPage() {
               Restore fireplace safety and performance with code-conscious firebox masonry repair.
             </p>
             <Button size="lg" asChild>
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Phone className="mr-2 h-5 w-5" />
                 Request Firebox Evaluation
               </Link>
@@ -107,7 +107,7 @@ export default function FireboxRepairPage() {
             <h2 className="mb-4 text-3xl font-bold">Related Service Pages</h2>
             <ul className="space-y-3 text-lg">
               <li>
-                <Link href="/chimney-repair" className="text-primary hover:underline">
+                <Link href="/chimney-repair-seattle" className="text-primary hover:underline">
                   Chimney Repair
                 </Link>{" "}
                 for full-system restoration

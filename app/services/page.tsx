@@ -164,7 +164,7 @@ export default function ServicesPage() {
                 From routine maintenance to major repairs, we provide complete chimney and fireplace services throughout the Seattle area.
               </p>
               <Button size="lg" asChild>
-                <Link href="/#contact">Schedule Service</Link>
+                <Link href="/contact">Schedule Service</Link>
               </Button>
             </div>
           </div>
@@ -213,7 +213,7 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/#contact">Get Free Estimate</Link>
+                <Link href="/contact">Get Free Estimate</Link>
               </Button>
               <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
                                 <a href="tel:+12062746409">Call (206) 274-6409</a>

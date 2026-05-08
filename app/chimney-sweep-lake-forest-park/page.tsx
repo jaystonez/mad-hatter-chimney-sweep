@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Chimney Sweep Lake Forest Park | Professional Cleaning & Inspection | Mad Hatter",
-  description: "Expert chimney sweep services for Lake Forest Park's forested, lakeside homes. Certified professionals serving mid-century properties for 45+ years. Call for same-day service.",
+  description: "Expert chimney sweep services for Lake Forest Park's forested, lakeside homes. Experienced technicians serving mid-century properties for 45+ years. Call for same-day service.",
 }
 
 export default function ChimneySweepLakeForestParkPage() {
@@ -23,7 +23,7 @@ export default function ChimneySweepLakeForestParkPage() {
               Chimney Sweep Lake Forest Park: Professional Cleaning & Inspection
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 text-pretty">
-              Expert chimney service for Lake Forest Park's forested, lakeside homes. Certified professionals with 45+ years of experience maintaining mid-century chimney systems.
+                  Expert chimney service for Lake Forest Park's forested, lakeside homes. Experienced technicians with 45+ years of experience maintaining mid-century chimney systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="secondary" asChild>
@@ -45,7 +45,7 @@ export default function ChimneySweepLakeForestParkPage() {
               Lake Forest Park lives up to its name—a community defined by towering trees, lush forest canopy, and proximity to Lake Washington. This beautiful, nature-rich setting creates specific challenges for chimney systems that require professional attention.
             </p>
             <p className="text-lg text-muted-foreground">
-              The city's residential character is distinctive: primarily mid-century homes on generous wooded lots, many with original masonry chimneys that have served faithfully for decades. These mature systems—surrounded by trees, exposed to lake-effect moisture, and approaching 50-70 years of age—need expert assessment that only experienced, certified professionals provide.
+                  The city's residential character is distinctive: primarily mid-century homes on generous wooded lots, many with original masonry chimneys that have served faithfully for decades. These mature systems—surrounded by trees, exposed to lake-effect moisture, and approaching 50-70 years of age—need expert assessment from experienced chimney technicians.
             </p>
           </div>
         </div>

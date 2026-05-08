@@ -493,7 +493,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" variant="secondary" asChild>
-                    <Link href="/#contact">Request Free Estimate</Link>
+                    <Link href="/contact">Request Free Estimate</Link>
                   </Button>
                   <Button 
                     size="lg" 

@@ -5,7 +5,7 @@ import Image from "next/image"
 const reasons = [
   {
     icon: Award,
-    title: "Certified Professionals",
+    title: "Experienced Technicians",
     description: "Fully trained technicians who follow NFPA and Washington State safety standards on every job.",
   },
   {

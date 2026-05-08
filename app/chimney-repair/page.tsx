@@ -177,7 +177,7 @@ export default function ChimneyRepairPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
-                <Link href="/#contact">
+                <Link href="/contact">
                   <Phone className="mr-2 h-5 w-5" />
                   Schedule Assessment
                 </Link>
@@ -388,7 +388,7 @@ export default function ChimneyRepairPage() {
               </div>
             </div>
             <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Phone className="mr-2 h-5 w-5" />
                 Schedule Repair Assessment
               </Link>
@@ -409,7 +409,7 @@ export default function ChimneyRepairPage() {
               45 years of certified expertise serving the greater Seattle area.
             </p>
             <Button size="lg" asChild>
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Phone className="mr-2 h-5 w-5" />
                 Call for Professional Assessment
               </Link>

@@ -42,7 +42,7 @@ export default function ChimneyRepairBellevuePage() {
 
             <div className="prose prose-lg max-w-none">
               <p className="text-lg leading-relaxed">
-                Bellevue homeowners take pride in their properties. When your chimney needs repair, you want it done right—by certified professionals who understand quality homes and deliver results that last. Mad Hatter Chimney Sweep has repaired Bellevue chimneys for over 45 years with Master Chimney Sweep expertise, transparent pricing, and meticulous workmanship.
+                  Bellevue homeowners take pride in their properties. When your chimney needs repair, you want it done right—by experienced technicians who understand quality homes and deliver results that last. Mad Hatter Chimney Sweep has repaired Bellevue chimneys for over 45 years with Master Chimney Sweep expertise, transparent pricing, and meticulous workmanship.
               </p>
               <p className="text-lg leading-relaxed">
                 A small crack in your chimney crown becomes a major water leak. Deteriorating mortar allows moisture inside your walls. A damaged liner creates fire and carbon monoxide hazards. Professional repair addresses problems before they compound.

@@ -1,12 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-    // Emergency: unblock prod build. Re-tighten after live site verified.
+  skipTrailingSlashRedirect: true,
+  // Emergency: unblock prod build. Re-tighten after live site verified.
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: '(.*)\\.vercel\\.app' }],
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+    ]
+  },
+
   async redirects() {
     return [
-      // Canonical host: bare domain → www (P0 SEO fix)
+      // Canonical host: bare domain -> www.
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'themadhatterchimneysweep.com' }],
@@ -14,60 +26,70 @@ const nextConfig = {
         permanent: true,
       },
 
-      // High-value legacy WordPress URLs from Search Console.
-      // Keep these as explicit redirects so we do not damage real /services/* pages.
-      { source: '/services/dryer-vent-cleaning/', destination: '/services', permanent: true },
-      { source: '/services/dryer-vent-cleaning', destination: '/services', permanent: true },
-      { source: '/services/chimney-sweep/', destination: '/services/chimney-inspection-sweeping', permanent: true },
-      { source: '/services/chimney-sweep', destination: '/services/chimney-inspection-sweeping', permanent: true },
-      { source: '/services/chimney-inspection/', destination: '/services/chimney-inspection-sweeping', permanent: true },
-      { source: '/services/chimney-inspection', destination: '/services/chimney-inspection-sweeping', permanent: true },
-      { source: '/services/chimney-repair/', destination: '/services/chimney-repairs', permanent: true },
-      { source: '/services/chimney-repair', destination: '/services/chimney-repairs', permanent: true },
-      { source: '/services/chimney-cap-installation/', destination: '/services/chimney-caps', permanent: true },
-      { source: '/services/chimney-cap-installation', destination: '/services/chimney-caps', permanent: true },
-      { source: '/services/chimney-flashing/', destination: '/services/leak-repair', permanent: true },
-      { source: '/services/chimney-flashing', destination: '/services/leak-repair', permanent: true },
-      { source: '/services/chimney-liner/', destination: '/services/chimney-relining', permanent: true },
-      { source: '/services/chimney-liner', destination: '/services/chimney-relining', permanent: true },
-      { source: '/services/masonry-repair/', destination: '/services/rebuilds-restorations', permanent: true },
-      { source: '/services/masonry-repair', destination: '/services/rebuilds-restorations', permanent: true },
-      { source: '/services/wood-stove-cleaning/', destination: '/services', permanent: true },
-      { source: '/services/wood-stove-cleaning', destination: '/services', permanent: true },
-      { source: '/services/', destination: '/services', permanent: true },
-
-      // Legacy blog/content pages (with AND without trailing slash)
-      { source: '/blog/', destination: '/blog', permanent: true },
-      { source: '/mad-hatter-chimney-sweep-seattle/', destination: '/chimney-sweep-seattle', permanent: true },
-      { source: '/mad-hatter-chimney-sweep-seattle', destination: '/chimney-sweep-seattle', permanent: true },
+      // P0 Search Console redirect errors.
+      { source: '/contact/', destination: '/contact', permanent: true },
+      { source: '/contact-us/', destination: '/contact', permanent: true },
+      { source: '/contact-us', destination: '/contact', permanent: true },
       { source: '/fireplace-chimney-cleaning-seattle/', destination: '/chimney-cleaning-seattle', permanent: true },
       { source: '/fireplace-chimney-cleaning-seattle', destination: '/chimney-cleaning-seattle', permanent: true },
       { source: '/get-cleaner-chimney-fireplace-today/', destination: '/chimney-cleaning-seattle', permanent: true },
       { source: '/get-cleaner-chimney-fireplace-today', destination: '/chimney-cleaning-seattle', permanent: true },
+      { source: '/mad-hatter-chimney-sweep-seattle/', destination: '/chimney-sweep-seattle', permanent: true },
+      { source: '/mad-hatter-chimney-sweep-seattle', destination: '/chimney-sweep-seattle', permanent: true },
+
+      // Keep one canonical service URL family: indexed flat pages.
+      { source: '/services/chimney-inspection-sweeping/', destination: '/chimney-inspection', permanent: true },
+      { source: '/services/chimney-inspection-sweeping', destination: '/chimney-inspection', permanent: true },
+      { source: '/services/chimney-sweep/', destination: '/chimney-inspection', permanent: true },
+      { source: '/services/chimney-sweep', destination: '/chimney-inspection', permanent: true },
+      { source: '/services/chimney-inspection/', destination: '/chimney-inspection', permanent: true },
+      { source: '/services/chimney-inspection', destination: '/chimney-inspection', permanent: true },
+      { source: '/services/chimney-repairs/', destination: '/chimney-repair-seattle', permanent: true },
+      { source: '/services/chimney-repairs', destination: '/chimney-repair-seattle', permanent: true },
+      { source: '/services/chimney-repair/', destination: '/chimney-repair-seattle', permanent: true },
+      { source: '/services/chimney-repair', destination: '/chimney-repair-seattle', permanent: true },
+      { source: '/chimney-repair/', destination: '/chimney-repair-seattle', permanent: true },
+      { source: '/chimney-repair', destination: '/chimney-repair-seattle', permanent: true },
+      { source: '/services/chimney-relining/', destination: '/chimney-liner-installation', permanent: true },
+      { source: '/services/chimney-relining', destination: '/chimney-liner-installation', permanent: true },
+      { source: '/services/chimney-liner/', destination: '/chimney-liner-installation', permanent: true },
+      { source: '/services/chimney-liner', destination: '/chimney-liner-installation', permanent: true },
+      { source: '/services/chimney-caps/', destination: '/chimney-cap-installation', permanent: true },
+      { source: '/services/chimney-caps', destination: '/chimney-cap-installation', permanent: true },
+      { source: '/services/chimney-cap-installation/', destination: '/chimney-cap-installation', permanent: true },
+      { source: '/services/chimney-cap-installation', destination: '/chimney-cap-installation', permanent: true },
+      { source: '/services/leak-repair/', destination: '/chimney-waterproofing', permanent: true },
+      { source: '/services/leak-repair', destination: '/chimney-waterproofing', permanent: true },
+      { source: '/services/waterproofing-leak-repair/', destination: '/chimney-waterproofing', permanent: true },
+      { source: '/services/waterproofing-leak-repair', destination: '/chimney-waterproofing', permanent: true },
+      { source: '/services/chimney-flashing/', destination: '/chimney-waterproofing', permanent: true },
+      { source: '/services/chimney-flashing', destination: '/chimney-waterproofing', permanent: true },
+      { source: '/services/rebuilds-restorations/', destination: '/masonry-repair', permanent: true },
+      { source: '/services/rebuilds-restorations', destination: '/masonry-repair', permanent: true },
+      { source: '/services/masonry-repair/', destination: '/masonry-repair', permanent: true },
+      { source: '/services/masonry-repair', destination: '/masonry-repair', permanent: true },
+      { source: '/services/stove-fireplace-installation/', destination: '/fireplace-cleaning', permanent: true },
+      { source: '/services/stove-fireplace-installation', destination: '/fireplace-cleaning', permanent: true },
+      { source: '/services/dryer-vent-cleaning/', destination: '/services', permanent: true },
+      { source: '/services/dryer-vent-cleaning', destination: '/services', permanent: true },
+      { source: '/services/wood-stove-cleaning/', destination: '/services', permanent: true },
+      { source: '/services/wood-stove-cleaning', destination: '/services', permanent: true },
+      { source: '/services/', destination: '/services', permanent: true },
+
+      // Legacy WordPress pages and archives.
+      { source: '/blog/', destination: '/blog', permanent: true },
       { source: '/about-mad-hatter-chimney-sweep/', destination: '/about', permanent: true },
       { source: '/about-mad-hatter-chimney-sweep', destination: '/about', permanent: true },
-      { source: '/contact/', destination: '/#contact', permanent: true },
-      { source: '/contact', destination: '/#contact', permanent: true },
-      { source: '/contact-us/', destination: '/#contact', permanent: true },
-      { source: '/contact-us', destination: '/#contact', permanent: true },
       { source: '/privacy-policy/', destination: '/privacy-policy', permanent: true },
       { source: '/about/', destination: '/about', permanent: true },
-
-      // Legacy WordPress category/author archives (tag, feed, and wp-* are handled in middleware)
       { source: '/category/chimney-services/', destination: '/services', permanent: true },
       { source: '/category/chimney-services', destination: '/services', permanent: true },
       { source: '/author/drmoh/', destination: '/about', permanent: true },
       { source: '/author/drmoh', destination: '/about', permanent: true },
-
-      // Catch-all legacy WordPress author archives only.
-      // DO NOT add a /services/:slug* catch-all here; it redirects valid service pages away.
       { source: '/author/:slug*', destination: '/about', permanent: true },
-      // Legacy WordPress tag archives → consolidate to /blog (kills GSC 404s)
-      { source: '/tag/:slug*', destination: '/blog', permanent: true },
-  { source: '/tag/', destination: '/blog', permanent: true },
-{ source: '/tag', destination: '/blog', permanent: true },
     ]
   },
+
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
