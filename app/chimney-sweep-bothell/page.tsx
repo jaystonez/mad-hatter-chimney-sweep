@@ -32,7 +32,7 @@ export default function ChimneySweepBothellPage() {
                 <Link href="/contact">Schedule Service</Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="text-base">
-                <Link href="/pricing">View Pricing</Link>
+                <Link href="/contact">View Pricing</Link>
               </Button>
             </div>
             <p className="mt-6 text-sm text-muted-foreground">
