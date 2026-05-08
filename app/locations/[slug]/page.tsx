@@ -261,6 +261,8 @@ const canonicalLocationPaths = canonicalLocationSlugs.reduce<Record<string, stri
   return acc
 }, {})
 
+canonicalLocationPaths.issaquah = "/locations/issaquah"
+
 export async function generateStaticParams() {
   return Object.keys(locations).map((slug) => ({
     slug: slug,

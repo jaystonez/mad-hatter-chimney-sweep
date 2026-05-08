@@ -73,7 +73,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/chimney-sweep-renton',
     '/chimney-sweep-kent',
     '/chimney-sweep-sammamish',
-    '/chimney-sweep-issaquah',
     '/chimney-sweep-bothell',
     '/chimney-sweep-woodinville',
     '/chimney-sweep-shoreline',

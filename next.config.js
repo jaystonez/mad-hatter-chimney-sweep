@@ -36,6 +36,10 @@ const nextConfig = {
       { source: '/get-cleaner-chimney-fireplace-today', destination: '/chimney-cleaning-seattle', permanent: true },
       { source: '/mad-hatter-chimney-sweep-seattle/', destination: '/chimney-sweep-seattle', permanent: true },
       { source: '/mad-hatter-chimney-sweep-seattle', destination: '/chimney-sweep-seattle', permanent: true },
+      { source: '/chimney-sweep-issaquah/', destination: '/locations/issaquah', permanent: true },
+      { source: '/chimney-sweep-issaquah', destination: '/locations/issaquah', permanent: true },
+      { source: '/pricing/', destination: '/contact', permanent: true },
+      { source: '/pricing', destination: '/contact', permanent: true },
 
       // Keep one canonical service URL family: indexed flat pages.
       { source: '/services/chimney-inspection-sweeping/', destination: '/chimney-inspection', permanent: true },
