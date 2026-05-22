@@ -28,16 +28,22 @@ export default function Hero() {
             Trusted Since 1979 — Family Owned & Operated
           </div>
 
+          {/* Promo badge */}
+          <div className="inline-flex items-center gap-2 bg-red-600/90 border border-red-400 text-white px-4 py-2 rounded-full text-sm md:text-base font-bold uppercase tracking-wide mb-6 shadow-lg">
+            <CheckCircle className="w-4 h-4" />
+            Limited-Time Special
+          </div>
+
           {/* Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
-            Seattle &amp; Bellevue&apos;s{" "}
-            <span className="text-amber-400">Trusted</span>
-            <br />Chimney Experts
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
+            <span className="block text-amber-400">$99.95</span>
+            Chimney Cleaning
+            <br />Special
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-stone-100 leading-relaxed mb-8 max-w-2xl">
-            99.95 chimney cleaning special.
+            Family owned and trusted since 1979. Serving Seattle, Bellevue, and the Greater Eastside with honest chimney service at a price homeowners can afford.
           </p>
 
           {/* Social proof strip */}
@@ -45,6 +51,10 @@ export default function Hero() {
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-amber-400" />
               <span className="text-sm font-medium">Licensed &amp; Insured</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-amber-400" />
+              <span className="text-sm font-medium">Since 1979</span>
             </div>
           </div>
 
@@ -55,7 +65,7 @@ export default function Hero() {
               className="bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold text-lg px-8 py-6 shadow-lg shadow-amber-500/25 transition-all hover:shadow-amber-400/40 hover:scale-105"
               asChild
             >
-              <a href="#contact">Schedule Free Inspection</a>
+              <a href="#contact">Claim $99.95 Special</a>
             </Button>
             <Button
               variant="ghost"
