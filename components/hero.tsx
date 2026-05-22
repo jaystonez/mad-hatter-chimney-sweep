@@ -37,7 +37,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-stone-100 leading-relaxed mb-8 max-w-2xl">
-            Expert chimney sweeping, inspections, and repairs serving Seattle, Bellevue, and the Greater Eastside since 1979.
+            99.95 chimney cleaning special.
           </p>
 
           {/* Social proof strip */}
