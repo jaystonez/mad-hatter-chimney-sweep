@@ -24,7 +24,7 @@ export default function ChimneySweepSeattlePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="tel:+1234567890"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center px-8 py-4 bg-primary-foreground text-primary rounded-lg font-semibold hover:bg-primary-foreground/90 transition-colors"
               >
                 Schedule Service
@@ -36,6 +36,61 @@ export default function ChimneySweepSeattlePage() {
                 Our Services
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Verified Contractor Strip */}
+      <section className="bg-card border-t border-b py-8">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+              <div>
+                <h2 className="text-2xl font-bold mb-3">Verified Seattle Chimney Contractor Since 1979</h2>
+                <p className="text-foreground/80 mb-4">
+                  <strong>WA Contractor License:</strong> MADHAHL790LW
+                </p>
+                <p className="text-foreground/80 mb-4">
+                  Licensed, bonded & insured | Call: <strong>(206) 274-6409</strong>
+                </p>
+                <p className="text-foreground/80 font-medium">
+                  Level 1 inspection included with chimney cleaning
+                </p>
+              </div>
+              <div className="bg-muted/50 rounded-lg p-4 text-center">
+                <p className="text-sm font-semibold text-primary mb-2">WA LICENSE #</p>
+                <p className="text-2xl font-bold tracking-wider">MADHAHL790LW</p>
+              </div>
+            </div>
+            <p className="text-foreground/70 text-sm mt-6 italic">
+              Real local company — verify before you hire
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Verification & Action Buttons */}
+      <section className="bg-muted/50 py-6 border-b">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="tel:+12062746409"
+              className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+            >
+              Call (206) 274-6409
+            </Link>
+            <Link
+              href="/verify-contractor"
+              className="inline-flex items-center justify-center px-8 py-3 bg-card border text-foreground rounded-lg font-semibold hover:bg-muted transition-colors"
+            >
+              Verify Our License
+            </Link>
+            <Link
+              href="/blog/fake-chimney-sweep-companies-seattle"
+              className="inline-flex items-center justify-center px-8 py-3 bg-card border text-foreground rounded-lg font-semibold hover:bg-muted transition-colors"
+            >
+              Avoid Chimney Scams
+            </Link>
           </div>
         </div>
       </section>
@@ -339,7 +394,7 @@ export default function ChimneySweepSeattlePage() {
                     The National Fire Protection Association (NFPA) recommends chimney inspection and cleaning at least once per year. If you use your fireplace regularly, more frequent cleaning may be necessary.
                   </p>
                   <p className="text-muted-foreground mb-6">
-                    Think of chimney maintenance like vehicle maintenance: regular service prevents expensive problems. A yearly chimney sweep costs $289.95. A chimney fire or carbon monoxide incident costs far more in damage, danger, and heartbreak.
+                    Think of chimney maintenance like vehicle maintenance: regular service prevents expensive problems. A yearly chimney sweep costs $289.95. A chimney fire or carbon monoxide incident can cost thousands—or worse.
                   </p>
                   <div className="bg-muted/50 rounded-lg p-6">
                     <h3 className="font-semibold mb-3">What to Expect During Service:</h3>
@@ -386,7 +441,7 @@ export default function ChimneySweepSeattlePage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="tel:+1234567890"
+              href="tel:+12062746409"
               className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
               Call for Service
