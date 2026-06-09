@@ -1,39 +1,54 @@
 import { CheckCircle2, Flame, Shield, DollarSign, Home, Clock } from 'lucide-react'
 import Link from 'next/link'
+import { pricing, getDisplayPrice, isPromoActive } from '@/lib/pricing'
 
 export const metadata = {
   title: 'Chimney Sweep Seattle: Professional Cleaning & Inspection Services | Mad Hatter',
-  description: '45+ years serving Seattle. Certified chimney sweep services starting at $289.95. Complete cleaning, 21-point inspection, and expert repairs. Same-day service available.',
+  description: `45+ years serving Seattle. Certified chimney sweep services starting at $${pricing.services.chimneyCleaning.standard}. Complete cleaning, 21-point inspection, and expert repairs. Same-day service available.`,
+  alternates: {
+    canonical: 'https://www.themadhatterchimneysweep.com/chimney-sweep-seattle'
+  }
 }
 
 export default function ChimneySweepSeattlePage() {
+  const displayPrice = getDisplayPrice()
+  const showPromo = isPromoActive()
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
-            <div className="inline-block bg-primary-foreground/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Serving Seattle Since 1979
-            </div>
+            {/* Summer Special Badge */}
+            {showPromo && (
+              <div className="inline-block bg-yellow-400/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-6 text-yellow-50">
+                ☀️ {pricing.promo.label.toUpperCase()}: ${displayPrice.primary} (Reg. ${displayPrice.standard})
+              </div>
+            )}
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
               Professional Chimney Sweep Services in Seattle
             </h1>
+            
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 text-pretty">
-              Certified chimney cleaning, comprehensive inspection, and expert repairs for Seattle's wet climate. Over 45 years of protecting Seattle families.
+              {showPromo
+                ? `${pricing.promo.label}: $${displayPrice.primary} (Regular $${displayPrice.standard}). Includes Level 1 inspection. Limited availability.`
+                : `Certified chimney cleaning, comprehensive inspection, and expert repairs for Seattle's wet climate. Over 45 years of protecting Seattle families.`}
             </p>
+            
             <div className="flex flex-wrap gap-4">
               <Link
-                href="tel:+12062746409"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary-foreground text-primary rounded-lg font-semibold hover:bg-primary-foreground/90 transition-colors"
+                href={`tel:+1${pricing.phone.replace(/\D/g, '')}`}
+                className="inline-flex items-center justify-center px-8 py-4 bg-yellow-400 text-primary rounded-lg font-semibold hover:bg-yellow-300 transition-colors"
               >
-                Schedule Service
+                {showPromo ? `Call Now: $${displayPrice.primary} Special` : 'Schedule Service'}
               </Link>
               <Link
                 href="#services"
                 className="inline-flex items-center justify-center px-8 py-4 bg-primary-foreground/10 backdrop-blur-sm text-primary-foreground rounded-lg font-semibold hover:bg-primary-foreground/20 transition-colors"
               >
-                Our Services
+                Learn About Services
               </Link>
             </div>
           </div>
@@ -48,18 +63,19 @@ export default function ChimneySweepSeattlePage() {
               <div>
                 <h2 className="text-2xl font-bold mb-3">Verified Seattle Chimney Contractor Since 1979</h2>
                 <p className="text-foreground/80 mb-4">
-                  <strong>WA Contractor License:</strong> MADHAHL790LW
+                  <strong>WA Contractor License:</strong> {pricing.contractorLicense.number}
                 </p>
                 <p className="text-foreground/80 mb-4">
-                  Licensed, bonded & insured | Call: <strong>(206) 274-6409</strong>
+                  Licensed, bonded & insured | Call: <strong>{pricing.phone}</strong>
                 </p>
                 <p className="text-foreground/80 font-medium">
-                  Level 1 inspection included with chimney cleaning
+                  Standard Rate: ${pricing.services.chimneyCleaning.standard}
+                  {showPromo && ` | Current ${pricing.promo.label}: $${displayPrice.primary} (Limited availability)`}
                 </p>
               </div>
               <div className="bg-muted/50 rounded-lg p-4 text-center">
                 <p className="text-sm font-semibold text-primary mb-2">WA LICENSE #</p>
-                <p className="text-2xl font-bold tracking-wider">MADHAHL790LW</p>
+                <p className="text-2xl font-bold tracking-wider">{pricing.contractorLicense.number}</p>
               </div>
             </div>
             <p className="text-foreground/70 text-sm mt-6 italic">
@@ -74,10 +90,10 @@ export default function ChimneySweepSeattlePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="tel:+12062746409"
+              href={`tel:+1${pricing.phone.replace(/\D/g, '')}`}
               className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
-              Call (206) 274-6409
+              Call {pricing.phone}
             </Link>
             <Link
               href="/verify-contractor"
@@ -190,8 +206,13 @@ export default function ChimneySweepSeattlePage() {
               </div>
               <div className="pt-6 border-t">
                 <div className="text-sm text-muted-foreground mb-2">Starting at</div>
-                <div className="text-3xl font-bold text-primary">$289.95</div>
+                <div className="text-3xl font-bold text-primary">${pricing.services.chimneyCleaning.standard}</div>
                 <div className="text-sm text-muted-foreground mt-1">Includes 21-point inspection</div>
+                {showPromo && (
+                  <div className="text-xs text-yellow-600 font-semibold mt-3">
+                    {pricing.promo.label}: ${displayPrice.primary} (Limited availability)
+                  </div>
+                )}
               </div>
             </div>
 
@@ -353,7 +374,7 @@ export default function ChimneySweepSeattlePage() {
             </div>
 
             <div>
-              <div className="text-4xl font-bold mb-2">$289.95</div>
+              <div className="text-4xl font-bold mb-2">${pricing.services.chimneyCleaning.standard}</div>
               <div className="text-xl font-semibold mb-2">Transparent Pricing</div>
               <p className="text-primary-foreground/80">
                 Clear pricing with no hidden fees. Standard service includes cleaning and full inspection.
@@ -394,7 +415,7 @@ export default function ChimneySweepSeattlePage() {
                     The National Fire Protection Association (NFPA) recommends chimney inspection and cleaning at least once per year. If you use your fireplace regularly, more frequent cleaning may be necessary.
                   </p>
                   <p className="text-muted-foreground mb-6">
-                    Think of chimney maintenance like vehicle maintenance: regular service prevents expensive problems. A yearly chimney sweep costs $289.95. A chimney fire or carbon monoxide incident can cost thousands—or worse.
+                    Think of chimney maintenance like vehicle maintenance: regular service prevents expensive problems. A yearly chimney sweep costs ${pricing.services.chimneyCleaning.standard}. A chimney fire or carbon monoxide incident can cost thousands—or worse.
                   </p>
                   <div className="bg-muted/50 rounded-lg p-6">
                     <h3 className="font-semibold mb-3">What to Expect During Service:</h3>
@@ -436,15 +457,20 @@ export default function ChimneySweepSeattlePage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Schedule Your Seattle Chimney Sweep Today</h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          {showPromo && (
+            <p className="text-xl text-muted-foreground mb-4 max-w-3xl mx-auto">
+              ☀️ <strong>{pricing.promo.label}: ${displayPrice.primary}</strong> (Limited availability) | Regular Price: ${displayPrice.standard}
+            </p>
+          )}
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
             Don't wait for problems to develop. Professional chimney maintenance keeps your home safe and your fireplace working efficiently. Same-day and next-day service available throughout Seattle.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="tel:+12062746409"
+              href={`tel:+1${pricing.phone.replace(/\D/g, '')}`}
               className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
-              Call for Service
+              {showPromo ? `Call Now: $${displayPrice.primary} Special` : 'Call for Service'}
             </Link>
             <Link
               href="/contact"
