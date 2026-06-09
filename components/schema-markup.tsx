@@ -1,4 +1,9 @@
+import { pricing, getSchemaPrice, isPromoActive } from '@/lib/pricing'
+
 export default function SchemaMarkup() {
+  const schemaPrice = getSchemaPrice()
+  const showPromo = isPromoActive()
+
   const schema = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
@@ -7,7 +12,7 @@ export default function SchemaMarkup() {
     "alternateName": "The Mad Hatter Chimney Sweep",
     "description": "Family-owned chimney sweep, inspection, repair and masonry restoration serving Greater Seattle since 1979. Licensed, bonded & insured in Washington State.",
     "url": "https://www.themadhatterchimneysweep.com",
-    "telephone": "+1-206-274-6409",
+    "telephone": pricing.phone,
     "email": "services@themadhatterchimneysweep.com",
     "foundingDate": "1979",
     "priceRange": "$$",
@@ -18,7 +23,7 @@ export default function SchemaMarkup() {
     "identifier": {
       "@type": "PropertyValue",
       "propertyID": "WA Contractor License",
-      "value": "MADHAHL790LW"
+      "value": pricing.contractorLicense.number
     },
     "address": {
       "@type": "PostalAddress",
@@ -85,8 +90,19 @@ export default function SchemaMarkup() {
           "itemOffered": {
             "@type": "Service",
             "name": "Chimney Sweep and Cleaning",
-            "description": "Professional chimney cleaning and creosote removal starting at $289.95"
-          }
+            "description": `Professional chimney cleaning and creosote removal starting at $${schemaPrice}`
+          },
+          ...(showPromo && {
+            "priceValidUntil": pricing.promo.expiresAt,
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": pricing.promo.chimneyCleaning,
+              "priceCurrency": "USD",
+              "name": pricing.promo.label,
+              "validFrom": new Date().toISOString().split('T')[0],
+              "validThrough": pricing.promo.expiresAt,
+            }
+          })
         },
         {
           "@type": "Offer",
