@@ -20,32 +20,39 @@ export default function ChimneySweepSeattlePage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative bg-primary text-primary-foreground py-20">
+      <section className="relative bg-primary text-primary-foreground py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             {/* Summer Special Badge */}
             {showPromo && (
-              <div className="inline-block bg-yellow-400/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-6 text-yellow-50">
-                ☀️ {pricing.promo.label.toUpperCase()}: ${displayPrice.primary} (Reg. ${displayPrice.standard})
+              <div className="inline-block bg-yellow-400/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-5 text-yellow-50">
+                EARLY SUMMER SALE
               </div>
             )}
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance">
-              Professional Chimney Sweep Services in Seattle
+              {showPromo ? (
+                <>
+                  <span className="block text-yellow-300">${displayPrice.primary}</span>
+                  <span className="block">Chimney Cleaning Special</span>
+                </>
+              ) : (
+                'Professional Chimney Sweep Services in Seattle'
+              )}
             </h1>
             
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 text-pretty">
               {showPromo
-                ? `${pricing.promo.label}: $${displayPrice.primary} (Regular $${displayPrice.standard}). Includes Level 1 inspection. Limited availability.`
+                ? `Regular $${displayPrice.standard} | Includes Level 1 inspection | Limited availability`
                 : `Certified chimney cleaning, comprehensive inspection, and expert repairs for Seattle's wet climate. Over 45 years of protecting Seattle families.`}
             </p>
             
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-8">
               <Link
                 href={`tel:+1${pricing.phone.replace(/\D/g, '')}`}
                 className="inline-flex items-center justify-center px-8 py-4 bg-yellow-400 text-primary rounded-lg font-semibold hover:bg-yellow-300 transition-colors"
               >
-                {showPromo ? `Call Now: $${displayPrice.primary} Special` : 'Schedule Service'}
+                {showPromo ? `Call Now for $${displayPrice.primary} Special` : 'Schedule Service'}
               </Link>
               <Link
                 href="#services"
@@ -53,6 +60,21 @@ export default function ChimneySweepSeattlePage() {
               >
                 Learn About Services
               </Link>
+            </div>
+
+            <div className="grid sm:grid-cols-3 gap-3 text-sm md:text-base text-primary-foreground/90">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-yellow-300 flex-shrink-0" />
+                <span>Licensed &amp; Insured</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-yellow-300 flex-shrink-0" />
+                <span>Family Owned Since 1979</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-yellow-300 flex-shrink-0" />
+                <span>WA License {pricing.contractorLicense.number}</span>
+              </div>
             </div>
           </div>
         </div>
