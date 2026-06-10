@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { AlertTriangle, CheckCircle2, XCircle, Shield, MapPin, FileCheck, Phone, CreditCard } from "lucide-react"
+import { pricing } from "@/lib/pricing"
 
 export const metadata = {
   title: "How to Verify a Chimney Contractor in Seattle, WA | Mad Hatter Chimney Sweep",
@@ -23,6 +24,37 @@ export default function VerifyContractorPage() {
               The Seattle area has been infiltrated by fraudulent chimney companies using fake addresses, 
               bait-and-switch pricing, and operating without proper licenses. Learn how to protect yourself.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Stop Before You Pay */}
+      <section className="py-12 bg-red-950 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-[auto,1fr] gap-6 items-start">
+            <AlertTriangle className="w-12 h-12 text-amber-300" />
+            <div>
+              <h2 className="text-3xl font-bold mb-4">Stop Before You Pay for an Emergency Chimney Repair</h2>
+              <p className="text-white/85 leading-relaxed mb-5">
+                If someone says your chimney is dangerous and asks you to withdraw thousands of dollars the same day,
+                pause the job. Real chimney hazards should be documented with photos, a written scope, a contractor
+                license number, and time for a second opinion unless there is an immediate life-safety emergency.
+              </p>
+              <div className="grid sm:grid-cols-3 gap-4 text-sm">
+                <div className="rounded-lg border border-white/20 bg-white/10 p-4">
+                  <p className="font-semibold mb-1">Do not go to the bank</p>
+                  <p className="text-white/75">High cash demands are a major warning sign.</p>
+                </div>
+                <div className="rounded-lg border border-white/20 bg-white/10 p-4">
+                  <p className="font-semibold mb-1">Ask for proof</p>
+                  <p className="text-white/75">Require photos, written scope, and WA L&amp;I license details.</p>
+                </div>
+                <div className="rounded-lg border border-white/20 bg-white/10 p-4">
+                  <p className="font-semibold mb-1">Call someone local</p>
+                  <p className="text-white/75">Get a second opinion before approving major work.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -90,7 +122,7 @@ export default function VerifyContractorPage() {
                 <CardContent className="text-red-800">
                   <p className="mb-2"><strong>The Switch:</strong> "Your chimney is a fire hazard!"</p>
                   <p className="text-sm">Once inside, technicians claim to find "immediate dangers" requiring thousands in repairs. 
-                  They pressure you to sign contracts on the spot or claim they can't leave the chimney in "unsafe condition."</p>
+                  They pressure you to sign contracts on the spot, pay a large deposit, or claim they can't leave the chimney in "unsafe condition."</p>
                 </CardContent>
               </Card>
 
@@ -253,7 +285,7 @@ export default function VerifyContractorPage() {
                   <ul className="space-y-2">
                     <li className="flex items-start gap-2">
                       <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-                      <span>Tech immediately finds "emergency" problems requiring thousands? Walk away.</span>
+                      <span>Tech immediately finds "emergency" problems requiring thousands or asks you to withdraw cash? Stop and get a second opinion.</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <AlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
@@ -308,10 +340,10 @@ export default function VerifyContractorPage() {
                   <CardTitle className="text-white">Our Real Shop Location</CardTitle>
                 </CardHeader>
                 <CardContent className="text-slate-300">
-                  <p className="mb-2"><strong className="text-white">Address:</strong> Bothell, WA 98011</p>
-                  <p className="text-sm mb-4">Not a UPS box. Not a hijacked address. A real, physical shop you can visit.</p>
+                  <p className="mb-2"><strong className="text-white">Address:</strong> 1000 4th Ave, Seattle, WA 98104</p>
+                  <p className="text-sm mb-4">The same NAP we publish sitewide: The Mad Hatter Chimney Sweep, LLC, (206) 274-6409, services@themadhatterchimneysweep.com.</p>
                   <Button asChild variant="outline" size="sm">
-                    <a href="https://www.google.com/maps/search/Mad+Hatter+Chimney+Sweep+Bothell+WA" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.google.com/maps/search/The+Mad+Hatter+Chimney+Sweep+1000+4th+Ave+Seattle+WA+98104" target="_blank" rel="noopener noreferrer">
                       View on Google Maps →
                     </a>
                   </Button>
@@ -335,15 +367,18 @@ export default function VerifyContractorPage() {
                   <CardTitle className="text-white">Transparent Pricing</CardTitle>
                 </CardHeader>
                 <CardContent className="text-slate-300">
-                  <p className="mb-2"><strong className="text-white">Standard Sweep:</strong> $295-395</p>
+                  <p className="mb-2"><strong className="text-white">Standard Sweep:</strong> ${pricing.services.chimneyCleaning.standard}</p>
                   <p className="text-sm">No bait-and-switch. Written estimate before work begins. No high-pressure tactics.</p>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="mt-12 text-center">
+            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link href="/contact">Get Your Free, Honest Quote</Link>
+                <Link href="/contact">Get an Honest Quote</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link href="/chimney-sweep-seattle">View Seattle Chimney Sweep Page</Link>
               </Button>
             </div>
           </div>

@@ -47,6 +47,14 @@ const faqSchema = {
     },
     {
       "@type": "Question",
+      name: "What should I do if a chimney company asks for thousands of dollars today?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Do not withdraw cash or approve major work under pressure. Ask for photos, a written scope, license number, and time for a second opinion. Report suspected fraud to WA L&I, the Washington Attorney General, and the FTC.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "What should a legitimate chimney sweep business show online?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -111,6 +119,21 @@ export default function FakeChimneySweepCompaniesSeattlePage() {
             </p>
           </section>
 
+          <section className="rounded-lg border border-red-200 bg-red-50 p-6">
+            <h2 className="text-3xl font-bold mb-4">If a Technician Demands Thousands Today</h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              Pause before you pay. A legitimate chimney emergency should come with photos, a written scope, the
+              contractor license number, and time to get a second opinion unless there is an immediate life-safety issue.
+              Do not withdraw cash from the bank because someone pressured you at the door.
+            </p>
+            <ul className="space-y-3 text-slate-700">
+              <li>Ask for photo evidence and a written estimate before approving major repairs.</li>
+              <li>Verify the business name and license number with Washington L&amp;I.</li>
+              <li>Call a known local company for a second opinion before signing.</li>
+              <li>If you feel threatened or believe fraud is happening, contact local authorities and report it.</li>
+            </ul>
+          </section>
+
           <section>
             <h2 className="text-3xl font-bold mb-6">Red Flags to Watch For</h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -121,6 +144,7 @@ export default function FakeChimneySweepCompaniesSeattlePage() {
                 "No Better Business Bureau profile or history",
                 "Suspicious review patterns with abrupt spikes",
                 "High-pressure sales tactics or same-day repair urgency",
+                "Requests for large same-day deposits or cash withdrawals",
               ].map((flag) => (
                 <Card key={flag}>
                   <CardContent className="pt-6">
