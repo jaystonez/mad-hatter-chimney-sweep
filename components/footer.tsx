@@ -33,12 +33,23 @@ export function Footer() {
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
-            <div className="mt-4">
-              <a href="tel:+12062746409" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
-                (206) 274-6409
-              </a>
-                            <p className="text-slate-400 text-sm mt-2">WA License #: MADHAHL790LW</p>
-            </div>
+            <address className="mt-4 not-italic text-sm text-slate-400 space-y-1">
+              <p className="font-semibold text-slate-200">The Mad Hatter Chimney Sweep, LLC</p>
+              <p>1000 4th Ave, Seattle, WA 98104</p>
+              <p>
+                Phone:{' '}
+                <a href="tel:+12062746409" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                  (206) 274-6409
+                </a>
+              </p>
+              <p>
+                Email:{' '}
+                <a href="mailto:services@themadhatterchimneysweep.com" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                  services@themadhatterchimneysweep.com
+                </a>
+              </p>
+              <p>WA Contractor License: MADHAHL790LW</p>
+            </address>
           </div>
 
           {/* Quick Links */}
