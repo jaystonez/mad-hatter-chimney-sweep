@@ -84,6 +84,23 @@ export default function ChimneySweepSeattlePage() {
             <p className="text-foreground/70 text-sm mt-6 italic">
               Real local company — verify before you hire
             </p>
+            <address className="not-italic mt-6 bg-muted/50 rounded-lg border p-4 text-sm text-foreground/80">
+              <p className="font-semibold text-foreground mb-3">The Mad Hatter Chimney Sweep, LLC</p>
+              <p>1000 4th Ave, Seattle, WA 98104</p>
+              <p>
+                Phone:{' '}
+                <a href={`tel:${pricing.phoneE164}`} className="font-medium text-primary hover:underline">
+                  {pricing.phone}
+                </a>
+              </p>
+              <p>
+                Email:{' '}
+                <a href="mailto:services@themadhatterchimneysweep.com" className="font-medium text-primary hover:underline">
+                  services@themadhatterchimneysweep.com
+                </a>
+              </p>
+              <p>WA Contractor License: {pricing.contractorLicense.number}</p>
+            </address>
           </div>
         </div>
       </section>
