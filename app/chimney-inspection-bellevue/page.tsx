@@ -16,7 +16,7 @@ export default function ChimneyInspectionBellevuePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="tel:+1234567890" 
+                href="tel:+12062746409"
                 className="inline-block bg-accent text-accent-foreground px-8 py-3 rounded-lg font-semibold hover:bg-accent/90 transition-colors"
               >
                 Schedule Inspection
@@ -793,7 +793,7 @@ export default function ChimneyInspectionBellevuePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="tel:+1234567890" 
+                href="tel:+12062746409"
                 className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
               >
                 Call for Inspection

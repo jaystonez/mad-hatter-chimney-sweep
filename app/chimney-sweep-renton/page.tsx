@@ -27,7 +27,7 @@ export default function RentonChimneySweepPage() {
                 Schedule Service
               </Link>
               <Link
-                href="tel:+1234567890"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 bg-card border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary/5 transition-colors"
               >
                 <Phone className="h-5 w-5" />
@@ -308,7 +308,7 @@ export default function RentonChimneySweepPage() {
                 Schedule Service
               </Link>
               <Link
-                href="tel:+1234567890"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 bg-card border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary/5 transition-colors"
               >
                 <Phone className="h-5 w-5" />

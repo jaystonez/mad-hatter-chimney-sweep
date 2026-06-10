@@ -28,7 +28,7 @@ export default function ChimneySweepSammamishPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:+1234567890"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 bg-background text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-background/90 transition-colors"
               >
                 <Phone className="h-5 w-5" />
@@ -402,7 +402,7 @@ export default function ChimneySweepSammamishPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+1234567890"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
               >
                 <Phone className="h-5 w-5" />

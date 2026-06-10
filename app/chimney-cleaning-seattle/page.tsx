@@ -29,7 +29,7 @@ export default function ChimneyCleaningSeattle() {
 
             <div className="flex flex-wrap gap-4">
               <a 
-                href="tel:+1234567890"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg hover:bg-primary/90 transition-colors"
               >
                 <Phone className="h-5 w-5" />
@@ -665,7 +665,7 @@ export default function ChimneyCleaningSeattle() {
           
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href="tel:+1234567890"
+              href="tel:+12062746409"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-background px-8 py-4 text-base font-semibold text-foreground shadow-lg hover:bg-background/90 transition-colors"
             >
               <Phone className="h-5 w-5" />

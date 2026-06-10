@@ -39,6 +39,7 @@ export const pricing = {
   },
 
   phone: '(206) 274-6409',
+  phoneE164: '+12062746409',
 }
 
 /**
@@ -97,6 +98,7 @@ export const getPricingContext = () => {
     promo: pricing.promo.active ? pricing.promo.chimneyCleaning : null,
     label: pricing.promo.active ? pricing.promo.label : null,
     phone: pricing.phone,
+    phoneE164: pricing.phoneE164,
     license: pricing.contractorLicense.number,
   }
 }

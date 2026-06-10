@@ -27,7 +27,7 @@ export default function ChimneySweepLakeForestParkPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <a href="tel:+1234567890">Call for Service</a>
+                <a href="tel:+12062746409">Call for Service</a>
               </Button>
               <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10" asChild>
                 <Link href="/contact">Schedule Inspection</Link>
@@ -246,7 +246,7 @@ export default function ChimneySweepLakeForestParkPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <a href="tel:+1234567890">Call for Same-Day Service</a>
+              <a href="tel:+12062746409">Call for Same-Day Service</a>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="/contact">Schedule Online</Link>

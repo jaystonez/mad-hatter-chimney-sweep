@@ -19,7 +19,7 @@ export default function ChimneySweepShorelinePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+1234567890"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -323,7 +323,7 @@ export default function ChimneySweepShorelinePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+1234567890"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
               >
                 <Phone className="w-5 h-5 mr-2" />

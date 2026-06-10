@@ -7,6 +7,9 @@ export const metadata = {
   description: `45+ years serving Seattle. Certified chimney sweep services starting at $${pricing.services.chimneyCleaning.standard}. Complete cleaning, 21-point inspection, and expert repairs. Same-day service available.`,
   alternates: {
     canonical: 'https://www.themadhatterchimneysweep.com/chimney-sweep-seattle'
+  },
+  openGraph: {
+    url: 'https://www.themadhatterchimneysweep.com/chimney-sweep-seattle',
   }
 }
 

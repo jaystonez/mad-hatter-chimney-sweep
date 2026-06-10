@@ -30,7 +30,7 @@ export default function MercerIslandChimneySweepPage() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="tel:+1234567890"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
               >
                 <Phone className="h-5 w-5" />
@@ -337,7 +337,7 @@ export default function MercerIslandChimneySweepPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+1234567890"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
               >
                 <Phone className="h-5 w-5" />

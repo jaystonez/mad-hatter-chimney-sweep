@@ -25,7 +25,7 @@ export default function ChimneySweepWoodinvillePage() {
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" asChild>
-                <Link href="tel:+1234567890">
+                <Link href="tel:+12062746409">
                   <Phone className="mr-2 h-5 w-5" />
                   Call for Service
                 </Link>
@@ -253,7 +253,7 @@ export default function ChimneySweepWoodinvillePage() {
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" asChild>
-                <Link href="tel:+1234567890">
+                <Link href="tel:+12062746409">
                   <Phone className="mr-2 h-5 w-5" />
                   Call for Same-Day Service
                 </Link>

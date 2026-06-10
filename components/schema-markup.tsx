@@ -12,7 +12,7 @@ export default function SchemaMarkup() {
     "alternateName": "The Mad Hatter Chimney Sweep",
     "description": "Family-owned chimney sweep, inspection, repair and masonry restoration serving Greater Seattle since 1979. Licensed, bonded & insured in Washington State.",
     "url": "https://www.themadhatterchimneysweep.com",
-    "telephone": pricing.phone,
+    "telephone": pricing.phoneE164,
     "email": "services@themadhatterchimneysweep.com",
     "foundingDate": "1979",
     "priceRange": "$$",

@@ -65,7 +65,7 @@ export default function MasonryRepairPage() {
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
-                href="tel:+1234567890"
+                href="tel:+12062746409"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-background px-8 py-3 text-lg font-semibold text-foreground shadow-lg transition-all hover:bg-background/90 sm:w-auto"
               >
                 <Phone className="h-5 w-5" />
@@ -547,7 +547,7 @@ export default function MasonryRepairPage() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="tel:+1234567890"
+              href="tel:+12062746409"
               className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-background px-8 py-3 text-lg font-semibold text-foreground shadow-lg transition-all hover:bg-background/90 sm:w-auto"
             >
               <Phone className="h-5 w-5" />
