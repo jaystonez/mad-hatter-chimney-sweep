@@ -26,9 +26,9 @@ export default function NewcastleChimneySweepPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <a href="tel:206-679-3920">
+                <a href="tel:+12062746409">
                   <Phone className="mr-2 h-5 w-5" />
-                  (206) 679-3920
+                  (206) 274-6409
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild className="bg-primary-foreground/10 backdrop-blur-sm hover:bg-primary-foreground/20 border-primary-foreground/30 text-primary-foreground">
@@ -229,9 +229,9 @@ export default function NewcastleChimneySweepPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" asChild>
-              <a href="tel:206-679-3920">
+              <a href="tel:+12062746409">
                 <Phone className="mr-2 h-5 w-5" />
-                Call (206) 679-3920
+                Call (206) 274-6409
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild>

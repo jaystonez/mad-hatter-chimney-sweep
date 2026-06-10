@@ -5,10 +5,17 @@ import WhyChooseUs from "@/components/why-choose-us"
 import Gallery from "@/components/gallery"
 import Testimonials from "@/components/testimonials"
 import CTA from "@/components/cta"
+import { pricing } from "@/lib/pricing"
 
 export const metadata: Metadata = {
   title: "Seattle & Bellevue Chimney Sweep Since 1979 | Mad Hatter",
   description: "Professional chimney sweep, inspection & repair in Greater Seattle since 1979. Licensed, bonded & insured. WA License MADHAHL790LW. Call (206) 274-6409 for a free estimate.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    url: "https://www.themadhatterchimneysweep.com",
+  },
 }
 
 const faqSchema = {
@@ -20,7 +27,7 @@ const faqSchema = {
       "name": "How much does a chimney sweep cost in Seattle?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A standard chimney sweep and inspection in Seattle typically costs $150\u2013$250. Mad Hatter Chimney Sweep offers upfront pricing with no hidden fees. Call (206) 274-6409 for a free estimate."
+        "text": `Mad Hatter Chimney Sweep lists standard chimney cleaning with Level 1 inspection at $${pricing.services.chimneyCleaning.standard}. Seasonal promotions may be available when active. Call (206) 274-6409 to confirm eligibility and scheduling.`
       }
     },
     {

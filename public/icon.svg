@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mad Hatter Chimney Sweep">
+  <rect width="64" height="64" rx="12" fill="#1f2937"/>
+  <path d="M19 24h26v8H19z" fill="#d97706"/>
+  <path d="M24 14h16v28H24z" fill="#111827"/>
+  <path d="M17 42h30v7H17z" fill="#111827"/>
+  <path d="M31 31c4-4 1-7 1-11 5 4 9 8 9 15 0 6-4 11-9 11s-9-5-9-10c0-4 2-7 5-10 0 3 0 5 3 5z" fill="#f59e0b"/>
+</svg>

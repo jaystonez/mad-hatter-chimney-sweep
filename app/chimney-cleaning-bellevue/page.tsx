@@ -33,11 +33,11 @@ export default function ChimneyCleaningBellevuePage() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                href="tel:206-659-9090"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 <Phone className="h-5 w-5" />
-                Call (206) 659-9090
+                Call (206) 274-6409
               </Link>
               <Link 
                 href="/contact"
@@ -353,11 +353,11 @@ export default function ChimneyCleaningBellevuePage() {
               If you notice any of these signs, stop using your fireplace and call for professional service immediately.
             </p>
             <Link 
-              href="tel:206-659-9090"
+              href="tel:+12062746409"
               className="inline-flex items-center justify-center gap-2 bg-destructive text-destructive-foreground hover:bg-destructive/90 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               <Phone className="h-5 w-5" />
-              Emergency Service: (206) 659-9090
+              Emergency Service: (206) 274-6409
             </Link>
           </div>
         </div>
@@ -548,11 +548,11 @@ export default function ChimneyCleaningBellevuePage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link 
-                href="tel:206-659-9090"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 <Phone className="h-5 w-5" />
-                Call (206) 659-9090
+                Call (206) 274-6409
               </Link>
               <Link 
                 href="/contact"

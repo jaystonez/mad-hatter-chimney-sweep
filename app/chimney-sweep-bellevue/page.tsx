@@ -27,11 +27,11 @@ export default function ChimneySweepBellevuePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
-                href="tel:206-890-7141"
+                href="tel:+12062746409"
                 className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/90 transition-colors shadow-lg w-full sm:w-auto justify-center"
               >
                 <Phone className="h-5 w-5" />
-                Call (206) 890-7141
+                Call (206) 274-6409
               </a>
               <Link 
                 href="/contact"
@@ -610,11 +610,11 @@ export default function ChimneySweepBellevuePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
-                href="tel:206-890-7141"
+                href="tel:+12062746409"
                 className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/90 transition-colors shadow-lg w-full sm:w-auto justify-center"
               >
                 <Phone className="h-5 w-5" />
-                Call (206) 890-7141
+                Call (206) 274-6409
               </a>
               <Link 
                 href="/contact"

@@ -4,7 +4,7 @@ import { Phone, MapPin, Calendar, CheckCircle2, Droplets, Home, TreePine, Shield
 
 export const metadata: Metadata = {
   title: 'Chimney Sweep Kenmore | Professional Cleaning & Inspection Services',
-  description: 'Expert chimney sweep services in Kenmore, WA. 45+ years of certified chimney cleaning and inspection. Lake Washington moisture specialists. Call (206) 737-8785.',
+  description: 'Expert chimney sweep services in Kenmore, WA. 45+ years of certified chimney cleaning and inspection. Lake Washington moisture specialists. Call (206) 274-6409.',
 }
 
 export default function KenmoreSweepPage() {
@@ -26,11 +26,11 @@ export default function KenmoreSweepPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="tel:2067378785"
+                href="tel:+12062746409"
                 className="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                (206) 737-8785
+                (206) 274-6409
               </Link>
               <Link
                 href="/schedule"
@@ -349,11 +349,11 @@ export default function KenmoreSweepPage() {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link 
-                href="tel:2067378785"
+                href="tel:+12062746409"
                 className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                Call (206) 737-8785
+                Call (206) 274-6409
               </Link>
               <Link
                 href="/schedule"

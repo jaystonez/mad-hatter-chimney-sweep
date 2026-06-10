@@ -17,7 +17,7 @@ export default function SchemaMarkup() {
     "foundingDate": "1979",
     "priceRange": "$$",
     "image": "https://www.themadhatterchimneysweep.com/images/hero-fireplace.jpg",
-    "logo": "https://www.themadhatterchimneysweep.com/logo.png",
+    "logo": "https://www.themadhatterchimneysweep.com/icon.svg",
     "paymentAccepted": "Cash, Check, Credit Card",
     "currenciesAccepted": "USD",
     "identifier": {
@@ -27,16 +27,16 @@ export default function SchemaMarkup() {
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1499 130th Ave NE",
-      "addressLocality": "Bellevue",
+      "streetAddress": "1000 4th Ave",
+      "addressLocality": "Seattle",
       "addressRegion": "WA",
-      "postalCode": "98005",
+      "postalCode": "98104",
       "addressCountry": "US"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "47.6101",
-      "longitude": "-122.2015"
+      "latitude": "47.6062",
+      "longitude": "-122.3321"
     },
     "areaServed": [
       { "@type": "City", "name": "Seattle" },

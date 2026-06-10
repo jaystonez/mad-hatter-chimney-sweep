@@ -57,7 +57,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       name: "Mad Hatter Chimney Sweep",
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/logo.svg`,
+        url: `${SITE_URL}/icon.svg`,
       },
     },
     datePublished: post.publishedTime,

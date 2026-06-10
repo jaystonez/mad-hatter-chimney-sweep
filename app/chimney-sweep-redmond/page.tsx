@@ -28,11 +28,11 @@ export default function ChimneySweepRedmond() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="tel:206-284-8444"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center gap-2 bg-destructive hover:bg-destructive/90 text-destructive-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
               >
                 <Phone className="h-5 w-5" />
-                206-284-8444
+                (206) 274-6409
               </a>
               <Link
                 href="/contact"
@@ -530,11 +530,11 @@ export default function ChimneySweepRedmond() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="tel:206-284-8444"
+              href="tel:+12062746409"
               className="inline-flex items-center justify-center gap-2 bg-destructive hover:bg-destructive/90 text-destructive-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               <Phone className="h-5 w-5" />
-              206-284-8444
+              (206) 274-6409
             </a>
             <Link
               href="/contact"

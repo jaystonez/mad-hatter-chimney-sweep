@@ -13,19 +13,15 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.themadhatterchimneysweep.com'),
   title: 'Seattle & Bellevue Chimney Sweep Since 1979 | Mad Hatter',
   description: "Seattle & Bellevue's trusted chimney sweep since 1979. Licensed (WA #MADHAHL790LW), bonded, insured. Inspections, sweeping, repairs, masonry. Call (206) 274-6409.",
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.themadhatterchimneysweep.com',
     siteName: 'Mad Hatter Chimney Sweep',
     title: 'Seattle & Bellevue Chimney Sweep Since 1979 | Mad Hatter',
     description: 'Family-owned chimney sweep serving Seattle, Bellevue & King County since 1979. Licensed, bonded & insured. WA License MADHAHL790LW. Call (206) 274-6409.',
     images: [
       {
-        url: 'https://www.themadhatterchimneysweep.com/images/og-image.jpg',
+        url: 'https://www.themadhatterchimneysweep.com/images/hero-fireplace.jpg',
         width: 1200,
         height: 630,
         alt: 'Mad Hatter Chimney Sweep - Seattle & Bellevue Since 1979',
@@ -36,24 +32,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Seattle & Bellevue Chimney Sweep Since 1979 | Mad Hatter',
     description: 'Family-owned chimney sweep serving Seattle, Bellevue & King County since 1979. Licensed, bonded & insured. Call (206) 274-6409.',
-    images: ['https://www.themadhatterchimneysweep.com/images/og-image.jpg'],
+    images: ['https://www.themadhatterchimneysweep.com/images/hero-fireplace.jpg'],
   },
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/icon.svg',
   },
 }
 export default function RootLayout({

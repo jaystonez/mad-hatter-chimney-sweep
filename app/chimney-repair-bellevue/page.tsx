@@ -13,10 +13,10 @@ export default function ChimneyRepairBellevuePage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <a
-                href="tel:206-523-2229"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-semibold text-lg"
               >
-                Call (206) 523-2229
+                Call (206) 274-6409
               </a>
               <a
                 href="/contact"
@@ -553,10 +553,10 @@ export default function ChimneyRepairBellevuePage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:206-523-2229"
+                href="tel:+12062746409"
                 className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-semibold text-lg w-full sm:w-auto"
               >
-                Call (206) 523-2229
+                Call (206) 274-6409
               </a>
               <a
                 href="/contact"
