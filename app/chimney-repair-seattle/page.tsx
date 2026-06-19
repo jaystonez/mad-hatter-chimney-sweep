@@ -378,42 +378,42 @@ export default function ChimneyRepairSeattle() {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <Award className="h-12 w-12 mb-4 text-white" />
               <h3 className="font-bold text-lg mb-2">Master Certified</h3>
-              <p className="text-white/80">
+              <p className="text-white">
                 Highest industry credential. Current training in repair techniques, materials, and safety standards.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <Clock className="h-12 w-12 mb-4 text-white" />
               <h3 className="font-bold text-lg mb-2">45+ Years in Seattle</h3>
-              <p className="text-white/80">
+              <p className="text-white">
                 Repaired thousands of chimneys. We understand this climate and these homes intimately.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <Shield className="h-12 w-12 mb-4 text-white" />
               <h3 className="font-bold text-lg mb-2">Quality Materials</h3>
-              <p className="text-white/80">
+              <p className="text-white">
                 Proper materials for every repair—matched mortar, appropriate flashing, quality liners, proven sealants.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <CheckCircle className="h-12 w-12 mb-4 text-white" />
               <h3 className="font-bold text-lg mb-2">Transparent Communication</h3>
-              <p className="text-white/80">
+              <p className="text-white">
                 We explain what we find, what it means, and what it costs. You make informed decisions.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <Home className="h-12 w-12 mb-4 text-white" />
               <h3 className="font-bold text-lg mb-2">Complete Solutions</h3>
-              <p className="text-white/80">
+              <p className="text-white">
                 Inspection to cleaning to major repairs. One certified company handles everything.
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <Shield className="h-12 w-12 mb-4 text-white" />
               <h3 className="font-bold text-lg mb-2">Warranty Backed</h3>
-              <p className="text-white/80">
+              <p className="text-white">
                 We stand behind our work. If something isn't right, we fix it. Your satisfaction guaranteed.
               </p>
             </div>
@@ -499,7 +499,7 @@ export default function ChimneyRepairSeattle() {
                 Schedule Online
               </Link>
             </div>
-            <p className="mt-8 text-white/80">
+            <p className="mt-8 text-white">
               Same-day and next-day service available throughout Seattle and surrounding areas
             </p>
           </div>

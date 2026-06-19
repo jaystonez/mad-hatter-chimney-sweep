@@ -228,7 +228,7 @@ export default function FakeChimneySweepCompaniesSeattlePage() {
         <div className="container mx-auto px-4 text-center">
           <ShieldCheck className="h-10 w-10 mx-auto mb-4" />
           <h2 className="text-3xl font-bold mb-4">Need a Verified Local Chimney Sweep?</h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl mb-8 opacity-100">
             Mad Hatter Chimney Sweep has served Seattle since 1979 with licensed, documented service.
           </p>
           <a

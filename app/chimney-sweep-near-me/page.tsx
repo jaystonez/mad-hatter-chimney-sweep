@@ -19,7 +19,7 @@ export default function ChimneySweepNearMePage() {
           <p className="text-lg md:text-xl mb-6 leading-relaxed opacity-95">
             Searching for a chimney sweep near you? If you're in Seattle, Bellevue, or anywhere on the Eastside, Mad Hatter Chimney Sweep is your local certified professional. We've been cleaning, inspecting, and repairing chimneys across the greater Seattle area for over 45 years.
           </p>
-          <p className="text-base md:text-lg leading-relaxed opacity-90">
+          <p className="text-base md:text-lg leading-relaxed opacity-100">
             When you search for a chimney sweep nearby, you want someone local, certified, experienced, and trustworthy—that's us. Finding the right chimney sweep matters more than most homeowners realize. An unqualified service can miss dangerous conditions, damage your chimney, or simply not clean thoroughly enough to prevent hazards.
           </p>
         </div>
@@ -544,7 +544,7 @@ export default function ChimneySweepNearMePage() {
             </Link>
           </div>
 
-          <p className="text-lg opacity-90">
+          <p className="text-lg opacity-100">
             Master Chimney Sweep certified • 45+ years local experience • The professional choice near you
           </p>
         </div>

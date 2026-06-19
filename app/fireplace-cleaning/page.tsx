@@ -63,7 +63,7 @@ export default function FireplaceCleaningPage() {
           <p className="text-lg md:text-xl mb-8 text-pretty leading-relaxed opacity-95">
             A clean fireplace is a safe fireplace. Whether you burn wood, use gas, or have a decorative fireplace you're thinking about using again, professional cleaning ensures safe operation, prevents fire hazards, and improves heating efficiency. Mad Hatter Chimney Sweep has provided professional fireplace cleaning across the greater Seattle area for over 45 years.
           </p>
-          <p className="text-base md:text-lg leading-relaxed opacity-90">
+          <p className="text-base md:text-lg leading-relaxed opacity-100">
             Fireplace cleaning goes beyond sweeping out ashes. Professional service addresses the entire system—firebox, damper, smoke chamber, flue, and chimney—removing creosote, soot, debris, and obstructions that compromise safety and performance. A truly clean fireplace operates better, heats better, and protects your family.
           </p>
         </div>

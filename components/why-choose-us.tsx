@@ -65,9 +65,9 @@ export default function WhyChooseUs() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent" />
             <div className="absolute bottom-6 left-0 right-0 flex justify-center">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-6 py-3 text-center">
+              <div className="bg-stone-950/70 backdrop-blur-md border border-amber-200/70 rounded-xl px-6 py-3 text-center">
                 <div className="text-2xl font-bold text-amber-400">Since 1979</div>
-                <div className="text-xs text-white/80">45+ Years Serving Seattle &amp; Bellevue</div>
+                <div className="text-xs text-stone-100">45+ Years Serving Seattle &amp; Bellevue</div>
               </div>
             </div>
           </div>

@@ -71,7 +71,7 @@ export default function ChimneyInspectionPage() {
                 <Phone className="mr-2 h-5 w-5" />
                 Schedule Inspection
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-slate-900">
+              <Button size="lg" variant="outline" className="bg-black/40 border-white text-white hover:bg-white hover:text-slate-900">
                 Learn About Levels
               </Button>
             </div>
@@ -503,7 +503,7 @@ export default function ChimneyInspectionPage() {
                 <Phone className="mr-2 h-5 w-5" />
                 Call (206) 274-6409
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-slate-900">
+              <Button size="lg" variant="outline" className="bg-black/40 border-white text-white hover:bg-white hover:text-slate-900">
                 Request Inspection
               </Button>
             </div>

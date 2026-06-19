@@ -1,6 +1,11 @@
 // @ts-nocheck
 import { Star, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { businessProfiles } from "@/lib/business-profiles"
+
+const googleProfileUrl =
+  businessProfiles.find((profile) => profile.name === "Google Business Profile")?.url ??
+  "https://www.google.com/maps/place/Mad+Hatter+Chimney+Sweep"
 
 export default function Testimonials() {
   return (
@@ -32,7 +37,7 @@ export default function Testimonials() {
               asChild
             >
               <a
-                href="https://www.google.com/maps/place/Mad+Hatter+Chimney+Sweep/@47.6062095,-122.3320708,15z/data=!4m8!3m7!1s0x0:0x0!8m2!3d47.6062095!4d-122.3320708!9m1!1b1"
+                href={googleProfileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >

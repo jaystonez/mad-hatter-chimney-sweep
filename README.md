@@ -50,6 +50,49 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Scoped Witness Repair Guardrail
+
+This repo includes a claim-bound repair guardrail so an LLM can identify issues, but edits are restricted to an approved scope.
+
+Workflow:
+
+1. Create a scoped claim JSON (start from `security/claim.template.json`).
+2. Freeze the claim into a scope lock:
+
+```bash
+npm run scope:init -- --claim security/claim.template.json
+```
+
+3. Apply candidate edits.
+4. Validate that edits stayed in-scope:
+
+```bash
+npm run scope:validate
+```
+
+5. Record metric movement and generate an immutable receipt:
+
+```bash
+npm run scope:receipt -- --metric-after 12
+```
+
+If your claim includes a metric baseline (or you pass `--metric-before`), receipts also compute:
+- metric delta (`up` or `down` direction)
+- consecutive no-improvement streak
+- action decision:
+  - `promote_candidate`
+  - `iterate_scoped_patch`
+  - `escalate_human`
+  - `reject_out_of_scope`
+  - `manual_metric_review`
+
+Artifacts:
+
+- `scope_lock.json` stores frozen claim + policy + baseline file hashes.
+- `.scope-receipts/*.json` stores validation receipts with before/after digests and violations.
+
+If a diff touches files outside `allowedFiles` / `allowedPathPrefixes` (or creates new files when disallowed), validation fails.
+
 ## Project Structure
 
 ```
@@ -68,6 +111,10 @@ components/
   schema-markup.tsx     JSON-LD structured data
 lib/
   srrp-api.ts           SRRP scanner client helper
+scripts/
+  scoped-witness-repair.js   Scope lock, validation, and receipt CLI
+security/
+  claim.template.json   Template for scoped SEO repair claims
 ```
 
 ## Deploy

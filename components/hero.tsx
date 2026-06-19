@@ -1,5 +1,4 @@
 // @ts-nocheck
-import { Button } from "@/components/ui/button"
 import { Phone, Shield, CheckCircle } from "lucide-react"
 import Image from "next/image"
 
@@ -60,24 +59,19 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              size="lg"
-              className="bg-amber-500 hover:bg-amber-400 text-stone-900 font-bold text-lg px-8 py-6 shadow-lg shadow-amber-500/25 transition-all hover:shadow-amber-400/40 hover:scale-105"
-              asChild
+            <a
+              href="#contact"
+              className="inline-flex h-11 items-center justify-center rounded-md bg-amber-500 px-8 py-6 text-lg font-bold text-stone-900 shadow-lg shadow-amber-500/25 transition-all hover:scale-105 hover:bg-amber-400 hover:shadow-amber-400/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
             >
-              <a href="#contact">Call Now for $99.95 Special</a>
-            </Button>
-            <Button
-              variant="ghost"
-              size="lg"
-              className="border-2 border-white/70 bg-white/10 text-white hover:bg-white/20 font-semibold text-lg px-8 py-6 backdrop-blur-sm"
-              asChild
+              Call Now for $99.95 Special
+            </a>
+            <a
+              href="tel:+12062746409"
+              className="inline-flex h-11 items-center justify-center rounded-md border-2 border-amber-200 bg-stone-950/80 px-8 py-6 text-lg font-semibold text-amber-50 backdrop-blur-sm transition-colors hover:bg-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
             >
-              <a href="tel:+12062746409">
-                <Phone className="w-5 h-5 mr-2" />
-                (206) 274-6409
-              </a>
-            </Button>
+              <Phone className="w-5 h-5 mr-2" />
+              (206) 274-6409
+            </a>
           </div>
         </div>
       </div>

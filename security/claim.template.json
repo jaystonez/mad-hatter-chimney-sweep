@@ -1,0 +1,25 @@
+{
+  "claimId": "seo_claim_001",
+  "source": "llm_audit",
+  "target": "/chimney-sweep-seattle",
+  "issue": "Inconsistent business location messaging between page content and structured data.",
+  "notes": "Only update location wording and service-area representation.",
+  "allowedFiles": [
+    "app/chimney-sweep-seattle/page.tsx",
+    "components/schema-markup.tsx"
+  ],
+  "allowedPathPrefixes": [],
+  "forbiddenFiles": [
+    "app/api/scan/route.ts",
+    "middleware.ts"
+  ],
+  "allowNewFiles": false,
+  "metric": {
+    "name": "organic_clicks_target_url",
+    "direction": "up",
+    "baseline": 0,
+    "target": 5,
+    "minDelta": 1,
+    "maxNoImprovementRuns": 2
+  }
+}

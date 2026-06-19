@@ -333,7 +333,7 @@ export default function ChimneySweepBothellPage() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Why Bothell Chooses Mad Hatter
             </h2>
-            <p className="text-lg opacity-90">
+            <p className="text-lg opacity-100">
               Certified expertise and honest service for over four decades
             </p>
           </div>
@@ -344,7 +344,7 @@ export default function ChimneySweepBothellPage() {
                 <Clock className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">45+ Years Local</h3>
-              <p className="opacity-90">Serving Bothell since 1979 with deep knowledge of local homes</p>
+              <p className="opacity-100">Serving Bothell since 1979 with deep knowledge of local homes</p>
             </div>
 
             <div className="text-center">
@@ -352,7 +352,7 @@ export default function ChimneySweepBothellPage() {
                 <Award className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Master Certified</h3>
-              <p className="opacity-90">Highest industry credential with proven expertise</p>
+              <p className="opacity-100">Highest industry credential with proven expertise</p>
             </div>
 
             <div className="text-center">
@@ -360,7 +360,7 @@ export default function ChimneySweepBothellPage() {
                 <Shield className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Complete Service</h3>
-              <p className="opacity-90">Cleaning, inspection, and repair from one trusted company</p>
+              <p className="opacity-100">Cleaning, inspection, and repair from one trusted company</p>
             </div>
 
             <div className="text-center">
@@ -368,7 +368,7 @@ export default function ChimneySweepBothellPage() {
                 <FileCheck className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Transparent Pricing</h3>
-              <p className="opacity-90">Clear pricing before work begins—no hidden charges</p>
+              <p className="opacity-100">Clear pricing before work begins—no hidden charges</p>
             </div>
 
             <div className="text-center">
@@ -376,7 +376,7 @@ export default function ChimneySweepBothellPage() {
                 <CheckCircle2 className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Honest Communication</h3>
-              <p className="opacity-90">Plain language explanations and genuine recommendations</p>
+              <p className="opacity-100">Plain language explanations and genuine recommendations</p>
             </div>
 
             <div className="text-center">
@@ -384,7 +384,7 @@ export default function ChimneySweepBothellPage() {
                 <Home className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">21-Point Inspection</h3>
-              <p className="opacity-90">Comprehensive assessment included with every service</p>
+              <p className="opacity-100">Comprehensive assessment included with every service</p>
             </div>
           </div>
         </div>

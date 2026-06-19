@@ -4,12 +4,14 @@ import Services from "@/components/services"
 import WhyChooseUs from "@/components/why-choose-us"
 import Gallery from "@/components/gallery"
 import Testimonials from "@/components/testimonials"
+import HomeFaq from "@/components/home-faq"
+import HomeEntityDepth from "@/components/home-entity-depth"
 import CTA from "@/components/cta"
 import { pricing } from "@/lib/pricing"
 
 export const metadata: Metadata = {
   title: "Seattle & Bellevue Chimney Sweep Since 1979 | Mad Hatter",
-  description: "Professional chimney sweep, inspection & repair in Greater Seattle since 1979. Licensed, bonded & insured. WA License MADHAHL790LW. Call (206) 274-6409 for a free estimate.",
+  description: "Seattle chimney sweep, inspection and repair since 1979. Licensed, bonded and insured. Serving Seattle, Bellevue and nearby areas. Call (206) 274-6409.",
   alternates: {
     canonical: "/",
   },
@@ -92,7 +94,9 @@ export default function Home() {
       <Services />
       <Gallery />
       <WhyChooseUs />
+      <HomeEntityDepth />
       <Testimonials />
+      <HomeFaq />
       <CTA />
     </>
   )

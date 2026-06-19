@@ -69,7 +69,7 @@ export default function Gallery() {
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
-                    <span className="absolute top-3 left-3 bg-red-500 text-white px-3 py-1 text-sm font-semibold rounded">
+                    <span className="absolute top-3 left-3 bg-red-700 text-white px-3 py-1 text-sm font-semibold rounded">
                       Before
                     </span>
                   </div>
@@ -85,7 +85,7 @@ export default function Gallery() {
                       className="w-full h-full object-cover"
                       loading="lazy"
                     />
-                    <span className="absolute top-3 left-3 bg-green-500 text-white px-3 py-1 text-sm font-semibold rounded">
+                    <span className="absolute top-3 left-3 bg-emerald-700 text-white px-3 py-1 text-sm font-semibold rounded">
                       After
                     </span>
                   </div>

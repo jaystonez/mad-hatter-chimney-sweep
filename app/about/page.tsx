@@ -26,7 +26,7 @@ export default function AboutPage() {
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link href="/verify-contractor">Verify Our Credentials &rarr;</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-slate-900">
+              <Button asChild size="lg" variant="outline" className="bg-black/40 border-white text-white hover:bg-white hover:text-slate-900">
                 <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>

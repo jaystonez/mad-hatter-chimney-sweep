@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Phone, Menu, X, Flame, ChevronDown } from "lucide-react"
 
 export function Header() {
@@ -89,7 +88,7 @@ export function Header() {
                   href={item.href}
                   className={`block px-4 py-2.5 text-sm transition-colors ${
                     item.highlight
-                      ? "text-green-600 hover:bg-green-50 font-semibold"
+                      ? "text-green-900 hover:bg-green-100 hover:text-green-950 font-semibold"
                       : "text-gray-700 hover:bg-primary/5 hover:text-primary"
                   }`}
                   onClick={() => setIsDropdownOpen(false)}
@@ -100,7 +99,7 @@ export function Header() {
               <div className="border-t border-gray-100 mt-2 pt-2 px-4 pb-2">
                 <a
                   href="tel:+12062746409"
-                  className="flex items-center space-x-2 text-primary font-semibold text-sm py-1"
+                  className="flex items-center space-x-2 text-orange-900 hover:text-orange-950 font-semibold text-sm py-1 transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   <span>(206) 274-6409</span>
@@ -117,7 +116,7 @@ export function Header() {
                 href={item.href}
                 className={`text-sm font-medium transition-colors ${
                   item.highlight
-                    ? "text-green-600 hover:text-green-700 font-semibold"
+                    ? "text-green-900 hover:text-green-950 font-semibold"
                     : "text-foreground hover:text-primary"
                 }`}
               >
@@ -128,13 +127,19 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+12062746409" className="flex items-center space-x-2 whitespace-nowrap text-primary font-semibold">
+            <a
+              href="tel:+12062746409"
+              className="flex items-center space-x-2 whitespace-nowrap text-orange-900 hover:text-orange-950 font-semibold transition-colors"
+            >
               <Phone className="w-5 h-5" />
               <span>(206) 274-6409</span>
             </a>
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
+            <Link
+              href="/contact"
+              className="inline-flex h-11 items-center justify-center rounded-md bg-amber-800 px-5 text-sm font-semibold text-white transition-colors hover:bg-amber-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
+            >
               Schedule Service
-            </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -167,13 +172,20 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <a href="tel:+12062746409" className="flex items-center space-x-2 whitespace-nowrap text-primary font-semibold">
+              <a
+                href="tel:+12062746409"
+                className="flex items-center space-x-2 whitespace-nowrap text-orange-900 hover:text-orange-950 font-semibold transition-colors"
+              >
                 <Phone className="w-5 h-5" />
                 <span>(206) 274-6409</span>
               </a>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 w-full">
+              <Link
+                href="/contact"
+                className="inline-flex h-11 w-full items-center justify-center rounded-md bg-amber-800 px-5 text-sm font-semibold text-white transition-colors hover:bg-amber-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-700 focus-visible:ring-offset-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 Schedule Service
-              </Button>
+              </Link>
             </nav>
           </div>
         )}

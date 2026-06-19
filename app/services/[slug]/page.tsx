@@ -488,7 +488,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <h2 className="text-2xl font-serif font-bold mb-4">
                   Ready to Get Started?
                 </h2>
-                <p className="text-lg mb-6 opacity-90">
+                <p className="text-lg mb-6 opacity-100">
                   Contact us today for a free inspection and estimate
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -498,7 +498,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   <Button 
                     size="lg" 
                     variant="outline" 
-                    className="bg-transparent border-white text-white hover:bg-white hover:text-primary"
+                    className="bg-black/40 border-white text-white hover:bg-white hover:text-primary"
                     asChild
                   >
                     <a href="tel:+12062746409">

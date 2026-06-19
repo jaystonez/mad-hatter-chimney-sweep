@@ -1,5 +1,7 @@
 import Link from "next/link"
-import { Facebook, Flame } from "lucide-react"
+import { Flame } from "lucide-react"
+import { pricing } from "@/lib/pricing"
+import { businessProfiles } from "@/lib/business-profiles"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -22,24 +24,32 @@ export function Footer() {
             <p className="text-slate-400 mb-4 leading-relaxed">
               Professional chimney services since 1979. Serving Seattle, Bellevue, and Greater King County. Licensed, bonded &amp; insured — WA License MADHAHL790LW.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://www.facebook.com/chimneysweepseattlewa/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit our Facebook page"
-                className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
+            <div className="space-y-2">
+              <p className="text-sm font-semibold text-slate-200">Business Profiles</p>
+              <div className="flex flex-wrap gap-3 text-sm">
+                {businessProfiles.map((profile) => (
+                  <a
+                    key={profile.url}
+                    href={profile.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors"
+                  >
+                    {profile.name}
+                  </a>
+                ))}
+              </div>
             </div>
             <address className="mt-4 not-italic text-sm text-slate-400 space-y-1">
               <p className="font-semibold text-slate-200">The Mad Hatter Chimney Sweep, LLC</p>
-              <p>1000 4th Ave, Seattle, WA 98104</p>
+              <p>
+                {pricing.businessLocation.locality}, {pricing.businessLocation.region} {pricing.businessLocation.postalCode}
+              </p>
+              <p>Service-area business (no public walk-in location)</p>
               <p>
                 Phone:{' '}
-                <a href="tel:+12062746409" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
-                  (206) 274-6409
+                <a href={`tel:${pricing.phoneE164}`} className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                  {pricing.phone}
                 </a>
               </p>
               <p>
@@ -48,7 +58,7 @@ export function Footer() {
                   services@themadhatterchimneysweep.com
                 </a>
               </p>
-              <p>WA Contractor License: MADHAHL790LW</p>
+              <p>WA Contractor License: {pricing.contractorLicense.number}</p>
             </address>
           </div>
 

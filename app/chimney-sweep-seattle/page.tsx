@@ -86,7 +86,13 @@ export default function ChimneySweepSeattlePage() {
             </p>
             <address className="not-italic mt-6 bg-muted/50 rounded-lg border p-4 text-sm text-foreground/80">
               <p className="font-semibold text-foreground mb-3">The Mad Hatter Chimney Sweep, LLC</p>
-              <p>1000 4th Ave, Seattle, WA 98104</p>
+              <p>
+                Service base: {pricing.businessLocation.locality}, {pricing.businessLocation.region}{" "}
+                {pricing.businessLocation.postalCode}
+              </p>
+              {pricing.businessLocation.serviceAreaOnly && (
+                <p>No public walk-in location - service-area appointments only.</p>
+              )}
               <p>
                 Phone:{' '}
                 <a href={`tel:${pricing.phoneE164}`} className="font-medium text-primary hover:underline">

@@ -267,42 +267,42 @@ export default function ChimneySweepShorelinePage() {
               <div className="text-center">
                 <Award className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">45+ Years Local Service</h3>
-                <p className="opacity-90">
+                <p className="opacity-100">
                   Maintaining Shoreline chimneys since 1979. Deep experience with mid-century construction.
                 </p>
               </div>
               <div className="text-center">
                 <Shield className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Master Certification</h3>
-                <p className="opacity-90">
+                <p className="opacity-100">
                   Highest industry credential. Current training and national safety standards.
                 </p>
               </div>
               <div className="text-center">
                 <Home className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Older Chimney Experts</h3>
-                <p className="opacity-90">
+                <p className="opacity-100">
                   Specialized expertise for 50-70 year old chimney systems requiring proper restoration.
                 </p>
               </div>
               <div className="text-center">
                 <CheckCircle2 className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">21-Point Inspection</h3>
-                <p className="opacity-90">
+                <p className="opacity-100">
                   Comprehensive assessment included with every cleaning. Nothing overlooked.
                 </p>
               </div>
               <div className="text-center">
                 <Clock className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Transparent Pricing</h3>
-                <p className="opacity-90">
+                <p className="opacity-100">
                   $289.95 standard service. Detailed repair estimates before work begins.
                 </p>
               </div>
               <div className="text-center">
                 <Phone className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Honest Assessment</h3>
-                <p className="opacity-90">
+                <p className="opacity-100">
                   We tell you what your chimney actually needs—no pressure, no minimizing problems.
                 </p>
               </div>

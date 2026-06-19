@@ -35,7 +35,7 @@ export default function ApartmentChimneySweepSeattle() {
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link href="/contact">Schedule Building Assessment</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="bg-black/40 border-white text-white hover:bg-black/55">
                           <Link href="tel:+12062746409">Call (206) 274-6409</Link>
               </Button>
             </div>
@@ -422,7 +422,7 @@ export default function ApartmentChimneySweepSeattle() {
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
                 <Link href="/contact">Request Building Assessment</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="outline" className="bg-black/40 border-white text-white hover:bg-black/55">
                               <Link href="tel:+12062746409">Call (206) 274-6409</Link>
               </Button>
             </div>

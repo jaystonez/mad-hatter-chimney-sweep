@@ -38,6 +38,13 @@ export const pricing = {
     state: 'WA',
   },
 
+  businessLocation: {
+    locality: 'Bothell',
+    region: 'WA',
+    postalCode: '98011',
+    serviceAreaOnly: true,
+  },
+
   phone: '(206) 274-6409',
   phoneE164: '+12062746409',
 }

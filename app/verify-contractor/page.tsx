@@ -6,7 +6,7 @@ import { pricing } from "@/lib/pricing"
 
 export const metadata = {
   title: "How to Verify a Chimney Contractor in Seattle, WA | Mad Hatter Chimney Sweep",
-  description: "Learn how to verify a legitimate chimney contractor and avoid scams in Seattle. Mad Hatter holds WA License MADHAHL790LW and is fully licensed and insured. Call (206) 274-6409.",
+  description: `Learn how to verify a legitimate chimney contractor and avoid scams in Seattle. Mad Hatter holds WA License ${pricing.contractorLicense.number} and is fully licensed and insured. Call ${pricing.phone}.`,
 }
 
 export default function VerifyContractorPage() {
@@ -324,7 +324,7 @@ export default function VerifyContractorPage() {
                   <CardTitle className="text-white">Our L&I Registration</CardTitle>
                 </CardHeader>
                 <CardContent className="text-slate-300">
-                  <p className="mb-2"><strong className="text-white">License #:</strong> MADHAHL790LW</p>
+                  <p className="mb-2"><strong className="text-white">License #:</strong> {pricing.contractorLicense.number}</p>
                   <p className="text-sm mb-4">Fully bonded and insured. Verify us at secure.lni.wa.gov/verify/</p>
                   <Button asChild variant="outline" size="sm">
                     <a href="https://secure.lni.wa.gov/verify/" target="_blank" rel="noopener noreferrer">
@@ -337,15 +337,19 @@ export default function VerifyContractorPage() {
               <Card className="bg-slate-800 border-slate-700">
                 <CardHeader>
                   <MapPin className="w-8 h-8 text-green-400 mb-2" />
-                  <CardTitle className="text-white">Our Real Shop Location</CardTitle>
+                  <CardTitle className="text-white">Service Base and Coverage</CardTitle>
                 </CardHeader>
                 <CardContent className="text-slate-300">
-                  <p className="mb-2"><strong className="text-white">Address:</strong> 1000 4th Ave, Seattle, WA 98104</p>
-                  <p className="text-sm mb-4">The same NAP we publish sitewide: The Mad Hatter Chimney Sweep, LLC, (206) 274-6409, services@themadhatterchimneysweep.com.</p>
+                  <p className="mb-2">
+                    <strong className="text-white">Service base:</strong>{" "}
+                    {pricing.businessLocation.locality}, {pricing.businessLocation.region} {pricing.businessLocation.postalCode}
+                  </p>
+                  {pricing.businessLocation.serviceAreaOnly && (
+                    <p className="text-sm mb-2">No public walk-in location. Service appointments only.</p>
+                  )}
+                  <p className="text-sm mb-4">The same NAP we publish sitewide: The Mad Hatter Chimney Sweep, LLC, {pricing.phone}, services@themadhatterchimneysweep.com.</p>
                   <Button asChild variant="outline" size="sm">
-                    <a href="https://www.google.com/maps/search/The+Mad+Hatter+Chimney+Sweep+1000+4th+Ave+Seattle+WA+98104" target="_blank" rel="noopener noreferrer">
-                      View on Google Maps →
-                    </a>
+                    <Link href="/locations">View Service Area</Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -356,7 +360,7 @@ export default function VerifyContractorPage() {
                   <CardTitle className="text-white">Direct Owner Contact</CardTitle>
                 </CardHeader>
                 <CardContent className="text-slate-300">
-                  <p className="mb-2"><strong className="text-white">Phone:</strong> (206) 274-6409</p>
+                  <p className="mb-2"><strong className="text-white">Phone:</strong> {pricing.phone}</p>
                   <p className="text-sm">One phone number, one business. When you call, you get us - not a call center managing 50 fake companies.</p>
                 </CardContent>
               </Card>

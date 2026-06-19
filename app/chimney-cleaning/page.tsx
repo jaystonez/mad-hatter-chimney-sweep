@@ -74,7 +74,7 @@ export default function ChimneyCleaningPage() {
               <Phone className="mr-2 h-5 w-5" />
               Schedule Cleaning
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
+            <Button size="lg" variant="outline" className="bg-black/40 border-white text-white hover:bg-black/55">
               Learn More
             </Button>
           </div>
@@ -521,7 +521,7 @@ export default function ChimneyCleaningPage() {
               <Phone className="mr-2 h-5 w-5" />
               Call Now: (206) 274-6409
             </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
+            <Button size="lg" variant="outline" className="bg-black/40 border-white text-white hover:bg-black/55">
               Request Quote
             </Button>
           </div>

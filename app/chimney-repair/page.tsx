@@ -182,7 +182,7 @@ export default function ChimneyRepairPage() {
                   Schedule Assessment
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" asChild className="bg-transparent border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" asChild className="bg-black/40 border-white text-white hover:bg-black/55">
                 <Link href="/verify-business">Check Contractor Legitimacy</Link>
               </Button>
             </div>

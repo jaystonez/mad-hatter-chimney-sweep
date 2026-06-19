@@ -208,14 +208,14 @@ export default function ServicesPage() {
             <h2 className="text-3xl font-serif font-bold mb-4">
               Ready to Schedule Service?
             </h2>
-            <p className="text-xl mb-8 opacity-90">
+            <p className="text-xl mb-8 opacity-100">
               Contact us today for a free inspection and estimate
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" asChild>
                 <Link href="/contact">Get Free Estimate</Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary" asChild>
+              <Button size="lg" variant="outline" className="bg-black/40 border-white text-white hover:bg-white hover:text-primary" asChild>
                                 <a href="tel:+12062746409">Call (206) 274-6409</a>
               </Button>
             </div>

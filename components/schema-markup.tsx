@@ -1,11 +1,44 @@
 import { pricing, getSchemaPrice, isPromoActive } from '@/lib/pricing'
+import { businessProfileUrls } from '@/lib/business-profiles'
 
 export default function SchemaMarkup() {
   const schemaPrice = getSchemaPrice()
   const showPromo = isPromoActive()
 
-  const schema = {
-    "@context": "https://schema.org",
+  const organizationSchema = {
+    "@type": "Organization",
+    "@id": "https://www.themadhatterchimneysweep.com/#organization",
+    "name": "Mad Hatter Chimney Sweep",
+    "legalName": "The Mad Hatter Chimney Sweep, LLC",
+    "url": "https://www.themadhatterchimneysweep.com",
+    "logo": "https://www.themadhatterchimneysweep.com/icon.svg",
+    "telephone": pricing.phoneE164,
+    "email": "services@themadhatterchimneysweep.com",
+    "foundingDate": "1979",
+    "sameAs": businessProfileUrls,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": pricing.businessLocation.locality,
+      "addressRegion": pricing.businessLocation.region,
+      "postalCode": pricing.businessLocation.postalCode,
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "King County, WA" },
+      { "@type": "AdministrativeArea", "name": "Snohomish County, WA" }
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": pricing.phoneE164,
+        "email": "services@themadhatterchimneysweep.com",
+        "availableLanguage": ["English"]
+      }
+    ]
+  }
+
+  const localBusinessSchema = {
     "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": "https://www.themadhatterchimneysweep.com/#business",
     "name": "Mad Hatter Chimney Sweep",
@@ -18,6 +51,7 @@ export default function SchemaMarkup() {
     "priceRange": "$$",
     "image": "https://www.themadhatterchimneysweep.com/images/hero-fireplace.jpg",
     "logo": "https://www.themadhatterchimneysweep.com/icon.svg",
+    "hasMap": businessProfileUrls[0],
     "paymentAccepted": "Cash, Check, Credit Card",
     "currenciesAccepted": "USD",
     "identifier": {
@@ -27,16 +61,17 @@ export default function SchemaMarkup() {
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1000 4th Ave",
-      "addressLocality": "Seattle",
-      "addressRegion": "WA",
-      "postalCode": "98104",
+      "addressLocality": pricing.businessLocation.locality,
+      "addressRegion": pricing.businessLocation.region,
+      "postalCode": pricing.businessLocation.postalCode,
       "addressCountry": "US"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "47.6062",
-      "longitude": "-122.3321"
+    "serviceArea": {
+      "@type": "AdministrativeArea",
+      "name": "Greater Seattle, WA"
+    },
+    "parentOrganization": {
+      "@id": "https://www.themadhatterchimneysweep.com/#organization"
     },
     "areaServed": [
       { "@type": "City", "name": "Seattle" },
@@ -80,6 +115,17 @@ export default function SchemaMarkup() {
         "opens": "08:00",
         "closes": "16:00"
       }
+    ],
+    "knowsAbout": [
+      "Chimney sweeping",
+      "Chimney inspections",
+      "Chimney repair",
+      "Chimney caps and dampers",
+      "Fireplace cleaning",
+      "Dryer vent cleaning",
+      "Masonry restoration",
+      "Creosote prevention",
+      "NFPA 211 chimney safety standards",
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -154,12 +200,12 @@ export default function SchemaMarkup() {
         }
       ]
     },
-    "sameAs": [
-      "https://www.facebook.com/chimneysweepseattlewa/",
-      "https://www.yelp.com/biz/the-mad-hatter-chimney-sweep-seattle-5",
-      "https://www.bbb.org/us/wa/seattle/profile/chimney-cleaning/mad-hatter-chimney-sweep-seattle-1296-90102519",
-      "https://www.angi.com/companylist/us/wa/seattle/mad-hatter-chimney-sweep-reviews-6598625.htm"
-    ]
+    "sameAs": businessProfileUrls
+  }
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [organizationSchema, localBusinessSchema]
   }
 
   return (
