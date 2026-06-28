@@ -21,9 +21,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog/best-time-chimney-sweep-seattle',
     '/services',
     '/locations',
+    '/resources',
     '/fraud-check',
     '/verify-contractor',
     '/verify-business',
+    '/privacy-policy',
+    '/terms-of-service',
+    '/resources/chimney-smells-smoky',
+    '/resources/chimney-sweep-cost',
+    '/resources/creosote-buildup-signs',
+    '/resources/fireplace-not-drawing',
+    '/resources/water-leaking-through-chimney',
+    '/resources/white-stuff-on-chimney',
   ]
 
   const locationSubpages = [
