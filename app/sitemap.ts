@@ -27,15 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const locationSubpages = [
-    '/locations/seattle',
-    '/locations/bellevue',
-    '/locations/redmond',
-    '/locations/kirkland',
     '/locations/issaquah',
-    '/locations/sammamish',
-    '/locations/shoreline',
     '/locations/burien',
-    '/locations/bothell',
     '/locations/everett',
     '/locations/mukilteo',
     '/locations/marysville',

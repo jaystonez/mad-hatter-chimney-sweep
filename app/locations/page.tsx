@@ -10,6 +10,21 @@ export const metadata: Metadata = {
 }
 
 export default function LocationsPage() {
+  const canonicalCityPaths: Record<string, string> = {
+    seattle: "/chimney-sweep-seattle",
+    bellevue: "/chimney-sweep-bellevue",
+    redmond: "/chimney-sweep-redmond",
+    kirkland: "/chimney-sweep-kirkland",
+    sammamish: "/chimney-sweep-sammamish",
+    bothell: "/chimney-sweep-bothell",
+    woodinville: "/chimney-sweep-woodinville",
+    shoreline: "/chimney-sweep-shoreline",
+    "mercer-island": "/chimney-sweep-mercer-island",
+    newcastle: "/chimney-sweep-newcastle",
+    kenmore: "/chimney-sweep-kenmore",
+    "lake-forest-park": "/chimney-sweep-lake-forest-park",
+  }
+
   const locations = [
     {
       name: "Seattle",
@@ -146,7 +161,9 @@ export default function LocationsPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {locations.map((location) => (
+              {locations.map((location) => {
+                const locationHref = canonicalCityPaths[location.slug] ?? `/locations/${location.slug}`
+                return (
                 <Card key={location.slug} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
@@ -168,11 +185,12 @@ export default function LocationsPage() {
                       </ul>
                     </div>
                     <Button variant="outline" asChild className="w-full bg-transparent">
-                      <Link href={`/locations/${location.slug}`}>View Services in {location.name}</Link>
+                      <Link href={locationHref}>View Services in {location.name}</Link>
                     </Button>
                   </CardContent>
                 </Card>
-              ))}
+                )
+              })}
             </div>
           </div>
         </section>

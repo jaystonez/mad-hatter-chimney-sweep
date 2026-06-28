@@ -245,7 +245,6 @@ const canonicalLocationSlugs = [
   "bellevue",
   "redmond",
   "kirkland",
-  "issaquah",
   "sammamish",
   "shoreline",
   "bothell",
@@ -260,8 +259,6 @@ const canonicalLocationPaths = canonicalLocationSlugs.reduce<Record<string, stri
   acc[slug] = `/chimney-sweep-${slug}`
   return acc
 }, {})
-
-canonicalLocationPaths.issaquah = "/locations/issaquah"
 
 export async function generateStaticParams() {
   return Object.keys(locations).map((slug) => ({
