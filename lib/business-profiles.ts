@@ -6,7 +6,7 @@ export type BusinessProfile = {
 export const businessProfiles: BusinessProfile[] = [
   {
     name: "Google Business Profile",
-    url: "https://www.google.com/maps/place/Mad+Hatter+Chimney+Sweep",
+    url: "https://share.google/ZSrAG5hL902Zai6ZM",
   },
   {
     name: "Facebook",
@@ -18,7 +18,7 @@ export const businessProfiles: BusinessProfile[] = [
   },
   {
     name: "Better Business Bureau",
-    url: "https://www.bbb.org/us/wa/seattle/profile/chimney-cleaning/mad-hatter-chimney-sweep-seattle-1296-90102519",
+    url: "https://www.bbb.org/us/wa/seattle/profile/chimney-cleaning/the-mad-hatter-chimney-sweep-1296-22414196",
   },
   {
     name: "Angi",
