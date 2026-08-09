@@ -18,7 +18,7 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-lg leading-tight">The Mad Hatter</span>
-                <span className="text-xs text-slate-400 leading-tight">Chimney Sweep</span>
+                <span className="text-xs text-slate-400 leading-tight">Chimney Sweep &amp; Masonry</span>
               </div>
             </div>
             <p className="text-slate-400 mb-4 leading-relaxed">
@@ -41,11 +41,11 @@ export function Footer() {
               </div>
             </div>
             <address className="mt-4 not-italic text-sm text-slate-400 space-y-1">
-              <p className="font-semibold text-slate-200">The Mad Hatter Chimney Sweep, LLC</p>
+              <p className="font-semibold text-slate-200">The Mad Hatter Chimney Sweep &amp; Masonry LLC</p>
+              <p>{pricing.businessLocation.streetAddress}</p>
               <p>
                 {pricing.businessLocation.locality}, {pricing.businessLocation.region} {pricing.businessLocation.postalCode}
               </p>
-              <p>Service-area business (no public walk-in location)</p>
               <p>
                 Phone:{' '}
                 <a href={`tel:${pricing.phoneE164}`} className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
