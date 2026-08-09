@@ -39,10 +39,11 @@ export const pricing = {
   },
 
   businessLocation: {
-    locality: 'Bothell',
+    streetAddress: '1000 4th Ave',
+    locality: 'Seattle',
     region: 'WA',
-    postalCode: '98011',
-    serviceAreaOnly: true,
+    postalCode: '98104',
+    serviceAreaOnly: false,
   },
 
   phone: '(206) 274-6409',
