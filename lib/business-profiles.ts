@@ -6,11 +6,19 @@ export type BusinessProfile = {
 export const businessProfiles: BusinessProfile[] = [
   {
     name: "Google Business Profile",
-    url: "https://share.google/ZSrAG5hL902Zai6ZM",
+    url: "https://maps.app.goo.gl/zqzPH1Ekb3MnDJiN9",
+  },
+  {
+    name: "Google Reviews",
+    url: "https://g.page/r/CcvzoloFkLD_EBE/review",
   },
   {
     name: "Facebook",
     url: "https://www.facebook.com/chimneysweepseattlewa/",
+  },
+  {
+    name: "X",
+    url: "https://x.com/themadhatterchi",
   },
   {
     name: "Yelp",
