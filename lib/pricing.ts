@@ -36,6 +36,8 @@ export const pricing = {
   contractorLicense: {
     number: 'MADHAHL790LW',
     state: 'WA',
+    issuer: 'Washington State Department of Labor & Industries',
+    lookupUrl: 'https://secure.lni.wa.gov/verify/',
   },
 
   businessLocation: {
@@ -44,26 +46,22 @@ export const pricing = {
     region: 'WA',
     postalCode: '98104',
     serviceAreaOnly: false,
+    geo: {
+      latitude: 47.60454,
+      longitude: -122.33069,
+    },
   },
 
   phone: '(206) 274-6409',
   phoneE164: '+12062746409',
 }
 
-/**
- * Get the display price for chimney cleaning
- * Returns the promo price if active, otherwise the standard price
- */
 export const getChimneySweepPrice = () => {
   return pricing.promo.active
     ? pricing.promo.chimneyCleaning
     : pricing.services.chimneyCleaning.standard
 }
 
-/**
- * Get formatted price display with context
- * Shows both promo and standard price if promo is active
- */
 export const getDisplayPrice = () => {
   if (!pricing.promo.active) {
     return {
@@ -82,24 +80,14 @@ export const getDisplayPrice = () => {
   }
 }
 
-/**
- * Get pricing for metadata/schema
- * Always uses standard price as the baseline for search engines
- */
 export const getSchemaPrice = () => {
   return pricing.services.chimneyCleaning.standard
 }
 
-/**
- * Check if promotional pricing is currently active
- */
 export const isPromoActive = () => {
   return pricing.promo.active
 }
 
-/**
- * Get all pricing context for a page
- */
 export const getPricingContext = () => {
   return {
     standard: pricing.services.chimneyCleaning.standard,
