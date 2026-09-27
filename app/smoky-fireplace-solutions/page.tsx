@@ -1,14 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Flame, Phone, Wind, Wrench } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Smoky Fireplace Solutions Seattle | Fix Fireplace Smoke Problems",
-  description:
-    "Smoky fireplace diagnosis and repair in Seattle, Bellevue, and Redmond. Fix smoke backdraft, startup smoke, and venting issues with certified chimney specialists.",
-}
+export const metadata: Metadata = pageMetadata("Smoky Fireplace Solutions Seattle | Fix Fireplace Smoke Problems", "Smoky fireplace diagnosis and repair in Seattle, Bellevue, and Redmond. Fix smoke backdraft, startup smoke, and venting issues with certified chimney specialists.", "/smoky-fireplace-solutions")
 
 const serviceSchema = {
   "@context": "https://schema.org",

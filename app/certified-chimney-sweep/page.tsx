@@ -1,14 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Phone, CheckCircle2, Shield, AlertTriangle, Award, BookOpen, Flame, Wind } from 'lucide-react'
 
-export const metadata: Metadata = {
-  title: 'Licensed & Insured Chimney Sweep | Mad Hatter Chimney Sweep',
-  description: 'Licensed, bonded, and insured chimney sweep serving Seattle and Bellevue since 1979. We follow NFPA and industry safety guidelines.',
-  keywords: 'chimney sweep seattle, chimney sweep bellevue, licensed chimney sweep',
-}
+export const metadata: Metadata = pageMetadata('Licensed & Insured Chimney Sweep | Mad Hatter Chimney Sweep', 'Licensed, bonded, and insured chimney sweep serving Seattle and Bellevue since 1979. We follow NFPA and industry safety guidelines.', "/certified-chimney-sweep")
 
 export default function CertifiedChimneySweepPage() {
   return (

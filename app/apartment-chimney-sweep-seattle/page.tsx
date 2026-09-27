@@ -1,13 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Building2, Shield, FileText, Clock, Users, CheckCircle2 } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Apartment Chimney Sweep Seattle | Multi-Unit Building Specialists",
-  description: "Specialized chimney service for apartments, condos, and multi-unit buildings in Seattle. 45+ years experience with shared flue systems, HOA compliance, and property management coordination.",
-}
+export const metadata: Metadata = pageMetadata("Apartment Chimney Sweep Seattle | Multi-Unit Building Specialists", "Specialized chimney service for apartments, condos, and multi-unit buildings in Seattle. 45+ years experience with shared flue systems, HOA compliance, and property management coordination.", "/apartment-chimney-sweep-seattle")
 
 export default function ApartmentChimneySweepSeattle() {
   return (

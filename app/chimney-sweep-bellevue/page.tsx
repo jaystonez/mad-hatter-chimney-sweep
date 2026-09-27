@@ -1,11 +1,9 @@
+import { pageMetadata } from "@/lib/seo"
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Award, Shield, CheckCircle2, Clock, Star, Flame, Droplet, AlertTriangle, Wrench, Search, Camera, Users } from 'lucide-react'
 
-export const metadata: Metadata = {
-  title: 'Chimney Sweep Bellevue | Professional Cleaning & Inspection Services | Mad Hatter',
-  description: 'Professional chimney sweep services in Bellevue. 45+ years of certified expertise. Comprehensive cleaning, inspection, and repair. Same-day service available. Call Mad Hatter today.',
-}
+export const metadata: Metadata = pageMetadata('Chimney Sweep Bellevue | Professional Cleaning & Inspection Services | Mad Hatter', 'Professional chimney sweep services in Bellevue. 45+ years of certified expertise. Comprehensive cleaning, inspection, and repair. Same-day service available. Call Mad Hatter today.', "/chimney-sweep-bellevue")
 
 export default function ChimneySweepBellevuePage() {
   return (

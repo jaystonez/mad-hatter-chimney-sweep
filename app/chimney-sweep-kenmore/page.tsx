@@ -1,11 +1,9 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Calendar, CheckCircle2, Droplets, Home, TreePine, Shield } from 'lucide-react'
 
-export const metadata: Metadata = {
-  title: 'Chimney Sweep Kenmore | Professional Cleaning & Inspection Services',
-  description: 'Expert chimney sweep services in Kenmore, WA. 45+ years of certified chimney cleaning and inspection. Lake Washington moisture specialists. Call (206) 274-6409.',
-}
+export const metadata: Metadata = pageMetadata('Chimney Sweep Kenmore | Professional Cleaning & Inspection Services', 'Expert chimney sweep services in Kenmore, WA. 45+ years of certified chimney cleaning and inspection. Lake Washington moisture specialists. Call (206) 274-6409.', "/chimney-sweep-kenmore")
 
 export default function KenmoreSweepPage() {
   return (
@@ -33,7 +31,7 @@ export default function KenmoreSweepPage() {
                 (206) 274-6409
               </Link>
               <Link
-                href="/schedule"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors"
               >
                 <Calendar className="w-5 h-5" />
@@ -356,7 +354,7 @@ export default function KenmoreSweepPage() {
                 Call (206) 274-6409
               </Link>
               <Link
-                href="/schedule"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-card border-2 border-primary text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary/5 transition-colors"
               >
                 <Calendar className="w-5 h-5" />

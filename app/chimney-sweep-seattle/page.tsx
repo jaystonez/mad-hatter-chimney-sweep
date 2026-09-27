@@ -1,17 +1,9 @@
+import { pageMetadata } from "@/lib/seo"
 import { CheckCircle2, Flame, Shield, DollarSign, Home, Clock } from 'lucide-react'
 import Link from 'next/link'
 import { pricing, getDisplayPrice, isPromoActive } from '@/lib/pricing'
 
-export const metadata = {
-  title: 'Chimney Sweep Seattle: Professional Cleaning & Inspection Services | Mad Hatter',
-  description: `45+ years serving Seattle. Certified chimney sweep services starting at $${pricing.services.chimneyCleaning.standard}. Complete cleaning, 21-point inspection, and expert repairs. Same-day service available.`,
-  alternates: {
-    canonical: 'https://www.themadhatterchimneysweep.com/chimney-sweep-seattle'
-  },
-  openGraph: {
-    url: 'https://www.themadhatterchimneysweep.com/chimney-sweep-seattle',
-  }
-}
+export const metadata = pageMetadata('Chimney Sweep Seattle: Professional Cleaning & Inspection Services | Mad Hatter', `45+ years serving Seattle. Certified chimney sweep services starting at $${pricing.services.chimneyCleaning.standard}. Complete cleaning, 21-point inspection, and expert repairs. Same-day service available.`, "/chimney-sweep-seattle")
 
 export default function ChimneySweepSeattlePage() {
   const displayPrice = getDisplayPrice()

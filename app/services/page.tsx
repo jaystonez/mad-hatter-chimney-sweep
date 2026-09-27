@@ -1,13 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Flame, Search, Wrench, Shield, Hammer, Droplet, Wind } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Chimney Services in Seattle, WA | Mad Hatter Chimney Sweep",
-  description: "Full-service chimney sweep, inspection, repair & liner installation in Greater Seattle. Licensed, bonded & insured since 1979. Call (206) 274-6409 for a free estimate.",
-}
+export const metadata: Metadata = pageMetadata("Chimney Services in Seattle, WA | Mad Hatter Chimney Sweep", "Full-service chimney sweep, inspection, repair & liner installation in Greater Seattle. Licensed, bonded & insured since 1979. Call (206) 274-6409 for a free estimate.", "/services")
 
 const faqSchema = {
   "@context": "https://schema.org",

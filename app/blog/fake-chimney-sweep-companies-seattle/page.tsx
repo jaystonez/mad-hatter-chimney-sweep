@@ -1,13 +1,10 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { AlertTriangle, CheckCircle2, Phone, ShieldCheck, ExternalLink } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "How to Spot Fake Chimney Sweep Companies in Seattle (2026 Guide) | Mad Hatter",
-  description:
-    "Learn how to identify fake chimney sweep companies in Seattle, verify WA contractor licensing, and avoid common chimney sweep scams with this 2026 consumer guide.",
-}
+export const metadata: Metadata = pageMetadata("How to Spot Fake Chimney Sweep Companies in Seattle (2026 Guide) | Mad Hatter", "Learn how to identify fake chimney sweep companies in Seattle, verify WA contractor licensing, and avoid common chimney sweep scams with this 2026 consumer guide.", "/blog/fake-chimney-sweep-companies-seattle")
 
 const faqSchema = {
   "@context": "https://schema.org",

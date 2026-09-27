@@ -1,12 +1,10 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Wind, ArrowLeft, AlertTriangle, CheckCircle2 } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Why Does My Chimney Smell Smoky? Causes & Fixes | Mad Hatter Chimney Sweep",
-  description: "Smoky chimney smell in your home? Learn the 6 most common causes of chimney odor, from creosote buildup to draft problems, and how to fix each one.",
-}
+export const metadata: Metadata = pageMetadata("Why Does My Chimney Smell Smoky? Causes & Fixes | Mad Hatter Chimney Sweep", "Smoky chimney smell in your home? Learn the 6 most common causes of chimney odor, from creosote buildup to draft problems, and how to fix each one.", "/resources/chimney-smells-smoky")
 
 export default function ChimneySmellsSmokyPage() {
   return (

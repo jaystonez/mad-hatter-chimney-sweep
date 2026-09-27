@@ -1,12 +1,10 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { DollarSign, CheckCircle2, AlertTriangle, ArrowLeft } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "How Much Does a Chimney Sweep Cost in Seattle? (2026 Guide) | Mad Hatter",
-  description: "Chimney sweep costs in Seattle range from $150-$500. Learn what affects pricing, what's included in professional service, and Mad Hatter's transparent rates.",
-}
+export const metadata: Metadata = pageMetadata("How Much Does a Chimney Sweep Cost in Seattle? (2026 Guide) | Mad Hatter", "Chimney sweep costs in Seattle range from $150-$500. Learn what affects pricing, what's included in professional service, and Mad Hatter's transparent rates.", "/resources/chimney-sweep-cost")
 
 export default function ChimneySweepCostPage() {
   return (

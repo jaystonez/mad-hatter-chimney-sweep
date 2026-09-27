@@ -1,11 +1,9 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Phone, CheckCircle, AlertTriangle, Shield, MapPin, Award, FileCheck, Users, Flame, Wind, Gauge, Search } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Chimney Sweep Near Me | Find Certified Service in Greater Seattle | Mad Hatter",
-  description: "Looking for a chimney sweep near you? Master certified service throughout Seattle & Eastside. 45+ years experience. Transparent pricing. Same-day service available.",
-}
+export const metadata: Metadata = pageMetadata("Chimney Sweep Near Me | Find Certified Service in Greater Seattle | Mad Hatter", "Looking for a chimney sweep near you? Master certified service throughout Seattle & Eastside. 45+ years experience. Transparent pricing. Same-day service available.", "/chimney-sweep-near-me")
 
 export default function ChimneySweepNearMePage() {
   return (

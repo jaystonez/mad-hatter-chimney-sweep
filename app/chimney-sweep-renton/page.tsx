@@ -1,3 +1,6 @@
+import { pageMetadata } from "@/lib/seo"
+export const metadata = pageMetadata("Chimney Sweep Renton, WA | Mad Hatter", "Chimney sweeping, inspections and repairs for Renton homes. Serving Greater Seattle since 1979. Call Mad Hatter at (206) 274-6409.", "/chimney-sweep-renton")
+
 import Link from 'next/link'
 import { CheckCircle2, MapPin, Phone, Calendar } from 'lucide-react'
 

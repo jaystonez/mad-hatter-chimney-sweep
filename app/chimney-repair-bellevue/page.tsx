@@ -1,3 +1,6 @@
+import { pageMetadata } from "@/lib/seo"
+export const metadata = pageMetadata("Chimney Repair Bellevue, WA | Mad Hatter", "Chimney crown, flashing, mortar and masonry repairs in Bellevue. Serving Greater Seattle since 1979. Call (206) 274-6409 for an estimate.", "/chimney-repair-bellevue")
+
 export default function ChimneyRepairBellevuePage() {
   return (
     <div className="min-h-screen bg-background">

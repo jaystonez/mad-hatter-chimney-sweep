@@ -1,11 +1,9 @@
+import { pageMetadata } from "@/lib/seo"
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Shield, Award, CheckCircle2, Home, Droplets, Trees, DollarSign } from 'lucide-react'
 
-export const metadata: Metadata = {
-  title: 'Chimney Sweep Mercer Island | Premium Chimney Cleaning & Service',
-  description: 'Professional chimney sweep services for Mercer Island premium homes. Master certified technicians serving lakefront estates and island properties. 45+ years expertise. Call now.',
-}
+export const metadata: Metadata = pageMetadata('Chimney Sweep Mercer Island | Premium Chimney Cleaning & Service', 'Professional chimney sweep services for Mercer Island premium homes. Master certified technicians serving lakefront estates and island properties. 45+ years expertise. Call now.', "/chimney-sweep-mercer-island")
 
 export default function MercerIslandChimneySweepPage() {
   return (

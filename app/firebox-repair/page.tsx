@@ -1,14 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BrickWall, Hammer, Phone, ShieldAlert } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Firebox Repair Seattle | Fireplace Firebox Rebuild & Restoration",
-  description:
-    "Firebox repair and rebuild services in Seattle, Bellevue, and Shoreline. Fix cracked firebrick, failed mortar joints, and unsafe fireplace conditions.",
-}
+export const metadata: Metadata = pageMetadata("Firebox Repair Seattle | Fireplace Firebox Rebuild & Restoration", "Firebox repair and rebuild services in Seattle, Bellevue, and Shoreline. Fix cracked firebrick, failed mortar joints, and unsafe fireplace conditions.", "/firebox-repair")
 
 const serviceSchema = {
   "@context": "https://schema.org",

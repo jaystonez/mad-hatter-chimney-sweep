@@ -1,13 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { CheckCircle, TreeDeciduous, Droplets, Home, Bird, Shield, Award, FileCheck, Users } from "lucide-react"
 import Link from "next/link"
 
-export const metadata: Metadata = {
-  title: "Chimney Sweep Lake Forest Park | Professional Cleaning & Inspection | Mad Hatter",
-  description: "Expert chimney sweep services for Lake Forest Park's forested, lakeside homes. Experienced technicians serving mid-century properties for 45+ years. Call for same-day service.",
-}
+export const metadata: Metadata = pageMetadata("Chimney Sweep Lake Forest Park | Professional Cleaning & Inspection | Mad Hatter", "Expert chimney sweep services for Lake Forest Park's forested, lakeside homes. Experienced technicians serving mid-century properties for 45+ years. Call for same-day service.", "/chimney-sweep-lake-forest-park")
 
 export default function ChimneySweepLakeForestParkPage() {
   return (

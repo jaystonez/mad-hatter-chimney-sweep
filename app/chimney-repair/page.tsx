@@ -1,13 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { AlertTriangle, Check, Phone, Wrench, Home, ShieldCheck, Award, FileText } from "lucide-react"
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  title: "Chimney Repair Seattle | Crown, Flashing, Mortar & Liner Repair",
-  description: "Professional chimney repair services in Seattle. Crown repair, flashing replacement, repointing, liner installation. 45+ years experience. Licensed & certified.",
-}
+export const metadata: Metadata = pageMetadata("Chimney Repair Seattle | Crown, Flashing, Mortar & Liner Repair", "Professional chimney repair services in Seattle. Crown repair, flashing replacement, repointing, liner installation. 45+ years experience. Licensed & certified.", "/chimney-repair")
 
 const faqSchema = {
   "@context": "https://schema.org",

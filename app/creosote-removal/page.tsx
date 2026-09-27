@@ -1,14 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Flame, Phone, ShieldAlert, Wrench } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Creosote Removal Seattle | Stage 3 Glazed Creosote Cleaning",
-  description:
-    "Stage 3 creosote removal in Seattle, Bellevue, and Kirkland. Professional glazed creosote treatment for high-risk chimney systems with safety-first cleaning methods.",
-}
+export const metadata: Metadata = pageMetadata("Creosote Removal Seattle | Stage 3 Glazed Creosote Cleaning", "Stage 3 creosote removal in Seattle, Bellevue, and Kirkland. Professional glazed creosote treatment for high-risk chimney systems with safety-first cleaning methods.", "/creosote-removal")
 
 const serviceSchema = {
   "@context": "https://schema.org",

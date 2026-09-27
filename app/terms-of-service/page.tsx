@@ -1,9 +1,7 @@
+import { pageMetadata } from "@/lib/seo"
 import Link from "next/link"
 
-export const metadata = {
-  title: "Terms of Service | Mad Hatter Chimney Sweep",
-  description: "Terms of Service for The Mad Hatter Chimney Sweep. Read our terms and conditions for chimney services in Seattle, WA.",
-}
+export const metadata = pageMetadata("Terms of Service | Mad Hatter Chimney Sweep", "Terms of Service for The Mad Hatter Chimney Sweep. Read our terms and conditions for chimney services in Seattle, WA.", "/terms-of-service")
 
 export default function TermsOfServicePage() {
   return (

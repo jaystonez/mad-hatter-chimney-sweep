@@ -1,11 +1,9 @@
+import { pageMetadata } from "@/lib/seo"
 import { Phone, Shield, Flame, Wind, Home, CheckCircle, AlertTriangle, Clock, Gauge, Droplets } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Fireplace Cleaning Service | Professional Cleaning & Safety | Mad Hatter',
-  description: 'Professional fireplace cleaning for safe, efficient operation. Expert creosote removal, damper service, and complete system cleaning. 45+ years serving Seattle.',
-}
+export const metadata: Metadata = pageMetadata('Fireplace Cleaning Service | Professional Cleaning & Safety | Mad Hatter', 'Professional fireplace cleaning for safe, efficient operation. Expert creosote removal, damper service, and complete system cleaning. 45+ years serving Seattle.', "/fireplace-cleaning")
 
 const faqSchema = {
   '@context': 'https://schema.org',

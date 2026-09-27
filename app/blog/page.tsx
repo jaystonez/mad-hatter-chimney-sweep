@@ -1,13 +1,10 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { allBlogIndexPosts } from "./blog-posts"
 
-export const metadata: Metadata = {
-  title: "Seattle Chimney Blog | Mad Hatter Chimney Sweep",
-  description:
-    "Read Seattle chimney safety guides from Mad Hatter Chimney Sweep, including inspection levels, chimney cleaning timing, creosote dangers, and carbon monoxide prevention.",
-}
+export const metadata: Metadata = pageMetadata("Seattle Chimney Blog | Mad Hatter Chimney Sweep", "Read Seattle chimney safety guides from Mad Hatter Chimney Sweep, including inspection levels, chimney cleaning timing, creosote dangers, and carbon monoxide prevention.", "/blog")
 
 export default function BlogIndexPage() {
   return (
