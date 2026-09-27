@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { 
@@ -13,10 +14,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 
-export const metadata = {
-  title: "Chimney Sweep Kirkland | Professional Cleaning & Inspection | Mad Hatter",
-  description: "Certified chimney sweep services in Kirkland. Professional cleaning, 21-point inspection, and repairs for lakeside properties. 45+ years serving Kirkland families. Call now.",
-}
+export const metadata = pageMetadata("Chimney Sweep Kirkland | Professional Cleaning & Inspection | Mad Hatter", "Certified chimney sweep services in Kirkland. Professional cleaning, 21-point inspection, and repairs for lakeside properties. 45+ years serving Kirkland families. Call now.", "/chimney-sweep-kirkland")
 
 export default function ChimneySweepKirklandPage() {
   return (

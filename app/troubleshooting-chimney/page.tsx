@@ -1,14 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { AlertTriangle, Phone, Search, Wind } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Chimney Troubleshooting Seattle | Diagnose Smoke, Draft & Odor Issues",
-  description:
-    "Chimney troubleshooting in Seattle, Bellevue, and Kirkland. Diagnose smoky fireplaces, draft issues, and chimney odors with certified inspection and repair guidance.",
-}
+export const metadata: Metadata = pageMetadata("Chimney Troubleshooting Seattle | Diagnose Smoke, Draft & Odor Issues", "Chimney troubleshooting in Seattle, Bellevue, and Kirkland. Diagnose smoky fireplaces, draft issues, and chimney odors with certified inspection and repair guidance.", "/troubleshooting-chimney")
 
 const serviceSchema = {
   "@context": "https://schema.org",

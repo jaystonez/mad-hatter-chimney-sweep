@@ -1,12 +1,10 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { BookOpen, DollarSign, Wind, Droplet, Flame, AlertTriangle, Search } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Chimney Resources & Guides | Mad Hatter Chimney Sweep",
-  description: "Expert chimney care guides for Seattle homeowners. Learn about chimney sweep costs, common chimney problems, maintenance tips, and when to call a professional.",
-}
+export const metadata: Metadata = pageMetadata("Chimney Resources & Guides | Mad Hatter Chimney Sweep", "Expert chimney care guides for Seattle homeowners. Learn about chimney sweep costs, common chimney problems, maintenance tips, and when to call a professional.", "/resources")
 
 const articles = [
   {

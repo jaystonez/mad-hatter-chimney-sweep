@@ -1,11 +1,9 @@
+import { pageMetadata } from "@/lib/seo"
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Phone, MapPin, Award, Shield, Clock } from 'lucide-react'
 
-export const metadata: Metadata = {
-  title: 'Chimney Sweep Sammamish | Professional Cleaning & Inspection | Mad Hatter',
-  description: 'Professional chimney sweep services in Sammamish. 45+ years serving the Eastside with certified cleaning, inspection, and repair. Master Chimney Sweep certified.',
-}
+export const metadata: Metadata = pageMetadata('Chimney Sweep Sammamish | Professional Cleaning & Inspection | Mad Hatter', 'Professional chimney sweep services in Sammamish. 45+ years serving the Eastside with certified cleaning, inspection, and repair. Master Chimney Sweep certified.', "/chimney-sweep-sammamish")
 
 export default function ChimneySweepSammamishPage() {
   return (

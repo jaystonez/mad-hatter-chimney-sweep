@@ -1,18 +1,8 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Fireplace Not Drawing? Causes & Fixes | Mad Hatter Chimney Sweep",
-  description:
-    "Fireplace not drawing properly? Learn why smoke comes into your home instead of going up the chimney and how to fix draft problems. Seattle chimney experts.",
-  openGraph: {
-    title: "Fireplace Not Drawing? Causes & Fixes | Mad Hatter Chimney Sweep",
-    description:
-      "Fireplace not drawing properly? Learn why smoke comes into your home instead of going up the chimney and how to fix draft problems.",
-    url: "https://www.themadhatterchimneysweep.com/resources/fireplace-not-drawing",
-    type: "article",
-  },
-};
+export const metadata: Metadata = pageMetadata("Fireplace Not Drawing? Causes & Fixes | Mad Hatter Chimney Sweep", "Fireplace not drawing properly? Learn why smoke comes into your home instead of going up the chimney and how to fix draft problems. Seattle chimney experts.", "/resources/fireplace-not-drawing");
 
 export default function FireplaceNotDrawingPage() {
   return (

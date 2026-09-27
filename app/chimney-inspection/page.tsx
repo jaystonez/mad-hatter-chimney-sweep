@@ -1,13 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, CheckCircle, Camera, FileText, Shield, AlertTriangle } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Chimney Inspection in Seattle, WA | Mad Hatter Chimney Sweep",
-  description: "Professional Level 1, 2 & 3 chimney inspections in Seattle with video camera technology. Licensed & insured with 45+ years of certified expertise. Call (206) 274-6409.",
-}
+export const metadata: Metadata = pageMetadata("Chimney Inspection in Seattle, WA | Mad Hatter Chimney Sweep", "Professional Level 1, 2 & 3 chimney inspections in Seattle with video camera technology. Licensed & insured with 45+ years of certified expertise. Call (206) 274-6409.", "/chimney-inspection")
 
 const faqSchema = {
   "@context": "https://schema.org",

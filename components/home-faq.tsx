@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { pricing } from "@/lib/pricing"
 
-const faqItems = [
+export const faqItems = [
   {
     question: "How much does a chimney sweep cost in Seattle?",
     answer: `Mad Hatter lists standard chimney cleaning with a Level 1 inspection at $${pricing.services.chimneyCleaning.standard}. We also run seasonal promotions when available. Every appointment includes a written scope, safety notes, and clear next steps so homeowners are not surprised by vague upsells.`,
@@ -29,7 +29,7 @@ const faqItems = [
   {
     question: "What areas do you serve?",
     answer:
-      "We operate as a service-area business based in Bothell and serve Seattle, Bellevue, Kirkland, Redmond, Woodinville, Shoreline, Lynnwood, Everett, and nearby communities across King and Snohomish counties.",
+      "We operate as a service-area business based in Seattle and serve Seattle, Bellevue, Kirkland, Redmond, Woodinville, Shoreline, Lynnwood, Everett, and nearby communities across King and Snohomish counties.",
   },
 ]
 

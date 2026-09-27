@@ -1,10 +1,8 @@
+import { pageMetadata } from "@/lib/seo"
 import Link from 'next/link'
 import { Phone, CheckCircle2, AlertTriangle, Hammer, Droplets, Shield } from 'lucide-react'
 
-export const metadata = {
-  title: 'Masonry Repair Seattle | Professional Brick, Mortar & Stone Restoration',
-  description: 'Expert masonry repair services across Seattle. 45+ years restoring chimneys, fireplaces, and masonry structures. Professional repointing, brick replacement, and stone restoration.',
-}
+export const metadata = pageMetadata('Masonry Repair Seattle | Professional Brick, Mortar & Stone Restoration', 'Expert masonry repair services across Seattle. 45+ years restoring chimneys, fireplaces, and masonry structures. Professional repointing, brick replacement, and stone restoration.', "/masonry-repair")
 
 const faqSchema = {
   '@context': 'https://schema.org',

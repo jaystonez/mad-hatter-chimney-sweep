@@ -6,7 +6,7 @@ Built with [Next.js](https://nextjs.org), React, TypeScript, and Tailwind CSS.
 
 ## About This Project
 
-This is the public-facing website for The Mad Hatter Chimney Sweep — a locally owned, licensed, bonded, and insured chimney services company based in Bothell, WA.
+This is the public-facing website for The Mad Hatter Chimney Sweep — a locally owned, licensed, bonded, and insured chimney services company based at 1000 4th Ave, Seattle, WA 98104.
 
 **WA Contractor License:** MADHAHL790LW  
 **Phone:** (206) 274-6409  

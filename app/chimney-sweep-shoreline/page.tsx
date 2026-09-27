@@ -1,3 +1,6 @@
+import { pageMetadata } from "@/lib/seo"
+export const metadata = pageMetadata("Chimney Sweep Shoreline, WA | Mad Hatter", "Chimney cleaning, inspections and masonry repair in Shoreline, WA. Serving Greater Seattle since 1979. Call (206) 274-6409 to request service.", "/chimney-sweep-shoreline")
+
 import { Phone, Shield, Clock, Award, CheckCircle2, Home, Droplets, Calendar, Hammer } from 'lucide-react'
 import Link from 'next/link'
 

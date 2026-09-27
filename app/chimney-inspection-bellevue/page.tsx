@@ -1,3 +1,6 @@
+import { pageMetadata } from "@/lib/seo"
+export const metadata = pageMetadata("Chimney Inspection Bellevue, WA | Mad Hatter", "Level 1, 2 and 3 chimney inspections for Bellevue homeowners. Get findings and repair recommendations from Mad Hatter. Call (206) 274-6409.", "/chimney-inspection-bellevue")
+
 import { CheckCircle, Shield, Home, AlertTriangle, DollarSign, Camera, Wrench, Eye } from 'lucide-react'
 import Link from 'next/link'
 

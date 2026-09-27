@@ -1,9 +1,7 @@
+import { pageMetadata } from "@/lib/seo"
 import { Phone, CheckCircle, Shield, Droplet, Wind, Home, Calendar } from 'lucide-react'
 
-export const metadata = {
-  title: 'Chimney Sweep Kent | Professional Chimney Cleaning & Inspection',
-  description: 'Professional chimney sweep services in Kent, WA. Certified cleaning, inspection, and repair. Serving valley and East Hill properties for 45+ years. Call for same-day service.',
-}
+export const metadata = pageMetadata('Chimney Sweep Kent | Professional Chimney Cleaning & Inspection', 'Professional chimney sweep services in Kent, WA. Certified cleaning, inspection, and repair. Serving valley and East Hill properties for 45+ years. Call for same-day service.', "/chimney-sweep-kent")
 
 export default function ChimneySweepKentPage() {
   return (

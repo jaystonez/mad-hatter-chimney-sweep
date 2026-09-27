@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import {
@@ -17,14 +18,7 @@ import {
 } from "lucide-react"
 import { pricing } from "@/lib/pricing"
 
-export const metadata: Metadata = {
-  title: "Chimney Sweep Everett WA | Cleaning, Inspection & Repair",
-  description:
-    "Professional chimney sweep services in Everett, WA. Certified cleaning, 21-point inspection, and chimney repair for Everett homes. Licensed, bonded, insured. Call (206) 274-6409.",
-  alternates: {
-    canonical: "/chimney-sweep-everett",
-  },
-}
+export const metadata: Metadata = pageMetadata("Chimney Sweep Everett WA | Cleaning, Inspection & Repair", "Professional chimney sweep services in Everett, WA. Certified cleaning, 21-point inspection, and chimney repair for Everett homes. Licensed, bonded, insured. Call (206) 274-6409.", "/chimney-sweep-everett")
 
 const everettNeighborhoods = [
   {

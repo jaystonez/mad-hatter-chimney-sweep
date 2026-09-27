@@ -1,14 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import { Droplets, Shield, Snowflake, Wrench, Layers, CheckCircle2, XCircle, Clock, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 import type { Metadata } from "next"
 
-export const metadata: Metadata = {
-  title: "Chimney Waterproofing Seattle | Protect Your Masonry from Moisture",
-  description: "Professional chimney waterproofing in Seattle. Protect your chimney from water damage, freeze-thaw cycles, and mortar deterioration. 45+ years experience. Call today.",
-  keywords: "chimney waterproofing Seattle, masonry sealing, chimney protection, water damage prevention, breathable sealant",
-}
+export const metadata: Metadata = pageMetadata("Chimney Waterproofing Seattle | Protect Your Masonry from Moisture", "Professional chimney waterproofing in Seattle. Protect your chimney from water damage, freeze-thaw cycles, and mortar deterioration. 45+ years experience. Call today.", "/chimney-waterproofing")
 
 const faqSchema = {
   "@context": "https://schema.org",

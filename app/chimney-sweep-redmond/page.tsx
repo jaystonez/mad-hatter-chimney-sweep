@@ -1,10 +1,8 @@
+import { pageMetadata } from "@/lib/seo"
 import { Phone, CheckCircle2, Flame, Shield, Wind, Eye, Wrench, MapPin, Award, Users, FileCheck, Clock } from 'lucide-react'
 import Link from 'next/link'
 
-export const metadata = {
-  title: 'Chimney Sweep Redmond | Professional Cleaning & Inspection | Mad Hatter',
-  description: 'Certified chimney sweep services in Redmond. Professional cleaning, 21-point inspection, and repair. Serving Education Hill, Grass Lawn, Novelty Hill. 45+ years experience.',
-}
+export const metadata = pageMetadata('Chimney Sweep Redmond | Professional Cleaning & Inspection | Mad Hatter', 'Certified chimney sweep services in Redmond. Professional cleaning, 21-point inspection, and repair. Serving Education Hill, Grass Lawn, Novelty Hill. 45+ years experience.', "/chimney-sweep-redmond")
 
 export default function ChimneySweepRedmond() {
   return (

@@ -1,12 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import Link from "next/link"
+import { pricing } from "@/lib/pricing"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Award, Users, MapPin, Phone, Mail, CheckCircle2 } from "lucide-react"
-export const metadata = {
-  title: "About Mad Hatter Chimney Sweep in Seattle, WA | Mad Hatter Chimney Sweep",
-  description: "Mad Hatter Chimney Sweep has served Greater Seattle since 1979 as a licensed, locally owned chimney service. WA License MADHAHL790LW. Call (206) 274-6409 to schedule.",
-}
+export const metadata = pageMetadata("About Mad Hatter Chimney Sweep in Seattle, WA | Mad Hatter Chimney Sweep", "Mad Hatter Chimney Sweep has served Greater Seattle since 1979 as a licensed, locally owned chimney service. WA License MADHAHL790LW. Call (206) 274-6409 to schedule.", "/about")
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
@@ -60,12 +59,12 @@ export default function AboutPage() {
                   <MapPin className="w-12 h-12 text-blue-600 mb-4" />
                   <h3 className="text-xl font-bold mb-2 text-blue-900">Verified Local Business</h3>
                   <p className="text-blue-800 mb-4">
-                    <strong>Bothell, WA</strong><br/>
+                    <strong>{pricing.businessLocation.streetAddress}<br />{pricing.businessLocation.locality}, {pricing.businessLocation.region} {pricing.businessLocation.postalCode}</strong><br/>
                     Serving Greater Seattle since 1979.<br/>
                     Not a mailbox. A real, registered business &mdash; we come to you.
                   </p>
                   <p className="text-blue-700 text-sm bg-blue-100 rounded-md px-3 py-2">
-                    <strong>Service-area business:</strong> We operate out of the Bothell area but do not have a public walk-in location. All service is performed at your home
+                    <strong>Service-area business:</strong> Our business address is in Seattle. All chimney service is performed at your home. Please call to arrange service.
                   </p>
                 </CardContent>
               </Card>
@@ -159,7 +158,7 @@ export default function AboutPage() {
                     <CheckCircle2 className="w-8 h-8 text-green-600 mb-3" />
                     <h4 className="font-bold text-lg mb-2">Real Local Presence</h4>
                     <p className="text-muted-foreground">
-                      We are a verified, registered business based in the Bothell area. Our trucks are branded. 
+                      We are a verified, registered business based in Seattle. Our trucks are branded.
                       Our technicians are W-2 employees, not subcontractors on commission.
                     </p>
                   </CardContent>

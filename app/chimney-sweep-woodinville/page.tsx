@@ -1,11 +1,9 @@
+import { pageMetadata } from "@/lib/seo"
 import { Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
-export const metadata = {
-  title: 'Chimney Sweep Woodinville | Professional Cleaning & Inspection',
-  description: 'Professional chimney sweep services in Woodinville. 45+ years experience. Master certified. Complete cleaning, inspection & repair. Same-day service available.',
-}
+export const metadata = pageMetadata('Chimney Sweep Woodinville | Professional Cleaning & Inspection', 'Professional chimney sweep services in Woodinville. 45+ years experience. Master certified. Complete cleaning, inspection & repair. Same-day service available.', "/chimney-sweep-woodinville")
 
 export default function ChimneySweepWoodinvillePage() {
   return (

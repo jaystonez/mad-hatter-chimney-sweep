@@ -1,18 +1,8 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Water Leaking Through Chimney? Causes & Solutions | Mad Hatter Chimney Sweep",
-  description:
-    "Water leaking through your chimney can cause serious structural damage. Learn the common causes of chimney leaks and how to stop them before costly repairs.",
-  openGraph: {
-    title: "Water Leaking Through Chimney? Causes & Solutions | Mad Hatter Chimney Sweep",
-    description:
-      "Water leaking through your chimney can cause serious structural damage. Learn the common causes and how to stop them.",
-    url: "https://www.themadhatterchimneysweep.com/resources/water-leaking-through-chimney",
-    type: "article",
-  },
-};
+export const metadata: Metadata = pageMetadata("Water Leaking Through Chimney? Causes & Solutions | Mad Hatter Chimney Sweep", "Water leaking through your chimney can cause serious structural damage. Learn the common causes of chimney leaks and how to stop them before costly repairs.", "/resources/water-leaking-through-chimney");
 
 export default function WaterLeakingThroughChimneyPage() {
   return (

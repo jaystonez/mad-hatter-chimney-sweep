@@ -1,14 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { AlertTriangle, CloudRain, Phone, ShieldCheck } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Chimney Crown Repair Seattle | Crown Crack Sealing & Rebuild",
-  description:
-    "Chimney crown repair in Seattle, Bellevue, and Redmond. Stop water intrusion with professional crown sealing, resurfacing, and full crown rebuild services.",
-}
+export const metadata: Metadata = pageMetadata("Chimney Crown Repair Seattle | Crown Crack Sealing & Rebuild", "Chimney crown repair in Seattle, Bellevue, and Redmond. Stop water intrusion with professional crown sealing, resurfacing, and full crown rebuild services.", "/chimney-crown-repair")
 
 const serviceSchema = {
   "@context": "https://schema.org",

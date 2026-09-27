@@ -184,7 +184,7 @@ export default function SchemaMarkup() {
     serviceArea: { '@id': `${SITE_URL}/#service-area` },
     parentOrganization: { '@id': `${SITE_URL}/#organization` },
     areaServed,
-    openingHours: ['Mo-Fr 08:00-18:00', 'Sa 08:00-16:00'],
+    openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-16:00'],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -195,7 +195,7 @@ export default function SchemaMarkup() {
       {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: 'Saturday',
-        opens: '08:00',
+        opens: '09:00',
         closes: '16:00',
       },
     ],
@@ -242,7 +242,7 @@ export default function SchemaMarkup() {
         serviceOffer({
           name: 'Chimney Repair',
           description: 'Masonry repair, crown repair, tuckpointing, and flashing',
-          url: `${SITE_URL}/chimney-repair`,
+          url: `${SITE_URL}/chimney-repair-seattle`,
         }),
         serviceOffer({
           name: 'Chimney Liner Installation',

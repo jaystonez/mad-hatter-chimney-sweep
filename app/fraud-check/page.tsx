@@ -1,11 +1,8 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import VerifyBusinessPage from "@/app/verify-business/page"
 
-export const metadata: Metadata = {
-  title: "Verify a Chimney Sweep Business | Mad Hatter Chimney Sweep",
-  description:
-    "Check if a chimney sweep company is legitimate before you hire. Use our fraud check tool to spot common scam signals and verify contractor credibility.",
-}
+export const metadata: Metadata = pageMetadata("Verify a Chimney Sweep Business | Mad Hatter Chimney Sweep", "Check if a chimney sweep company is legitimate before you hire. Use our fraud check tool to spot common scam signals and verify contractor credibility.", "/fraud-check")
 
 const faqSchema = {
   "@context": "https://schema.org",

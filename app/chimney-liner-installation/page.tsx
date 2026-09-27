@@ -1,13 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, Shield, CheckCircle2, AlertTriangle, Wrench, Clock } from "lucide-react"
 
-export const metadata: Metadata = {
-  title: "Chimney Liner Installation & Replacement Seattle | Mad Hatter Chimney Sweep",
-  description: "Professional chimney liner installation and replacement. Stainless steel and cast-in-place liners. Restore safe flue function. 45+ years serving greater Seattle.",
-}
+export const metadata: Metadata = pageMetadata("Chimney Liner Installation & Replacement Seattle | Mad Hatter Chimney Sweep", "Professional chimney liner installation and replacement. Stainless steel and cast-in-place liners. Restore safe flue function. 45+ years serving greater Seattle.", "/chimney-liner-installation")
 
 const faqSchema = {
   "@context": "https://schema.org",

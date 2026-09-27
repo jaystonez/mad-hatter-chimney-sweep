@@ -21,7 +21,7 @@ export const pricing = {
   },
 
   promo: {
-    active: true,
+    active: false,
     type: 'summer_special_2026',
     name: 'Summer Special',
     description: 'Limited-time summer promotion',
@@ -57,13 +57,13 @@ export const pricing = {
 }
 
 export const getChimneySweepPrice = () => {
-  return pricing.promo.active
+  return isPromoActive()
     ? pricing.promo.chimneyCleaning
     : pricing.services.chimneyCleaning.standard
 }
 
 export const getDisplayPrice = () => {
-  if (!pricing.promo.active) {
+  if (!isPromoActive()) {
     return {
       primary: pricing.services.chimneyCleaning.standard,
       promo: null,
@@ -84,15 +84,19 @@ export const getSchemaPrice = () => {
   return pricing.services.chimneyCleaning.standard
 }
 
-export const isPromoActive = () => {
-  return pricing.promo.active
+export const isPromoActive = (now = new Date()) => {
+  // The offer remains valid through its final business day in Seattle.
+  const today = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit',
+  }).format(now)
+  return pricing.promo.active && today <= pricing.promo.expiresAt
 }
 
 export const getPricingContext = () => {
   return {
     standard: pricing.services.chimneyCleaning.standard,
-    promo: pricing.promo.active ? pricing.promo.chimneyCleaning : null,
-    label: pricing.promo.active ? pricing.promo.label : null,
+    promo: isPromoActive() ? pricing.promo.chimneyCleaning : null,
+    label: isPromoActive() ? pricing.promo.label : null,
     phone: pricing.phone,
     phoneE164: pricing.phoneE164,
     license: pricing.contractorLicense.number,

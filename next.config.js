@@ -26,6 +26,10 @@ const nextConfig = {
         permanent: true,
       },
 
+      // Preserve old booking links and bookmarks.
+      { source: '/schedule', destination: '/contact', permanent: true },
+      { source: '/schedule/', destination: '/contact', permanent: true },
+
       // P0 Search Console redirect errors.
       { source: '/contact/', destination: '/contact', permanent: true },
       { source: '/contact-us/', destination: '/contact', permanent: true },

@@ -1,3 +1,4 @@
+import { pageMetadata, SOCIAL_IMAGE } from "@/lib/seo"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -20,7 +21,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   }
 
   return {
-    title: post.metaTitle,
+    ...pageMetadata(post.metaTitle, post.metaDescription, `/blog/${post.slug}`),
     description: post.metaDescription,
     alternates: {
       canonical: `/blog/${post.slug}`,
@@ -30,7 +31,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       description: post.metaDescription,
       type: "article",
       url: `${SITE_URL}/blog/${post.slug}`,
-      images: post.ogImage ? [{ url: `${SITE_URL}${post.ogImage}` }] : undefined,
+      images: [{ url: `${SITE_URL}${post.ogImage || SOCIAL_IMAGE}` }],
     },
   }
 }

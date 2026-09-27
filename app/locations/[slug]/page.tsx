@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
@@ -105,7 +106,7 @@ const locations = {
       "Mill Creek", "Kenmore", "Woodinville", "Lake Forest Park"
     ],
     zipCodes: ["98011", "98012", "98021", "98036", "98072", "98077"],
-    localContent: "As Bothell's trusted chimney sweep service based right here in the community, we understand the unique needs of Snohomish County homes. From established neighborhoods in Downtown Bothell to newer developments in Canyon Park and North Creek, our technicians are experienced with all types of chimney systems found throughout Bothell and the surrounding area."
+    localContent: "As a chimney sweep service serving Bothell, we understand the unique needs of Snohomish County homes. From established neighborhoods in Downtown Bothell to newer developments in Canyon Park and North Creek, our technicians are experienced with all types of chimney systems found throughout Bothell and the surrounding area."
   },
     "everett": {
     name: "Everett",
@@ -242,6 +243,7 @@ const services = [
 
 const canonicalLocationSlugs = [
   "seattle",
+  "everett",
   "bellevue",
   "redmond",
   "kirkland",
@@ -280,15 +282,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
   }
 
-  return {
-    title: `Chimney Sweep ${location.name} WA | The Mad Hatter Chimney Sweep`,
-    description: location.description,
-    ...(canonicalPath && {
-      alternates: {
-        canonical: `https://www.themadhatterchimneysweep.com${canonicalPath}`,
-      },
-    }),
-  }
+  return pageMetadata(
+    `Chimney Sweep ${location.name} WA | The Mad Hatter Chimney Sweep`,
+    location.description,
+    canonicalPath || `/locations/${resolvedParams.slug}`,
+  )
 }
 
 export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {

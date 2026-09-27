@@ -1,11 +1,9 @@
+import { pageMetadata } from "@/lib/seo"
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Shield, Clock, Flame, Wind, CheckCircle2, AlertTriangle, Home, Eye, Droplets, ThermometerSun } from 'lucide-react'
 
-export const metadata: Metadata = {
-  title: 'Chimney Cleaning Seattle | Professional Creosote Removal & Maintenance',
-  description: 'Professional chimney cleaning in Seattle. 45+ years removing dangerous creosote, improving efficiency, and protecting Seattle homes. Master certified. $289.95 includes 21-point inspection.',
-}
+export const metadata: Metadata = pageMetadata('Chimney Cleaning Seattle | Professional Creosote Removal & Maintenance', 'Professional chimney cleaning in Seattle. 45+ years removing dangerous creosote, improving efficiency, and protecting Seattle homes. Master certified. $289.95 includes 21-point inspection.', "/chimney-cleaning-seattle")
 
 export default function ChimneyCleaningSeattle() {
   return (

@@ -1,13 +1,11 @@
+import { pageMetadata } from "@/lib/seo"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { AlertTriangle, CheckCircle2, XCircle, Shield, MapPin, FileCheck, Phone, CreditCard } from "lucide-react"
 import { pricing } from "@/lib/pricing"
 
-export const metadata = {
-  title: "How to Verify a Chimney Contractor in Seattle, WA | Mad Hatter Chimney Sweep",
-  description: `Learn how to verify a legitimate chimney contractor and avoid scams in Seattle. Mad Hatter holds WA License ${pricing.contractorLicense.number} and is fully licensed and insured. Call ${pricing.phone}.`,
-}
+export const metadata = pageMetadata("How to Verify a Chimney Contractor in Seattle, WA | Mad Hatter Chimney Sweep", `Learn how to verify a legitimate chimney contractor and avoid scams in Seattle. Mad Hatter holds WA License ${pricing.contractorLicense.number} and is fully licensed and insured. Call ${pricing.phone}.`, "/verify-contractor")
 
 export default function VerifyContractorPage() {
   return (

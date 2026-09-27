@@ -1,11 +1,9 @@
+import { pageMetadata } from "@/lib/seo"
 import { Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
-export const metadata = {
-  title: 'Chimney Sweep Newcastle | Professional Cleaning & Inspection',
-  description: 'Newcastle chimney sweep services by Mad Hatter. Certified cleaning, inspection & repair for hillside homes. 45+ years serving Newcastle. Call for same-day service.',
-}
+export const metadata = pageMetadata('Chimney Sweep Newcastle | Professional Cleaning & Inspection', 'Newcastle chimney sweep services by Mad Hatter. Certified cleaning, inspection & repair for hillside homes. 45+ years serving Newcastle. Call for same-day service.', "/chimney-sweep-newcastle")
 
 export default function NewcastleChimneySweepPage() {
   return (
