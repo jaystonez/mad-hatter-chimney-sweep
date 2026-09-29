@@ -101,7 +101,7 @@ export default function ResourcesPage() {
             Have a Chimney Question?
           </h2>
           <p className="text-xl mb-8 opacity-100">
-            Our master certified technicians are happy to help. Call us for a free consultation.
+            Our experienced chimney technicians are happy to help. Call us for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="inline-flex items-center justify-center rounded-md bg-white text-primary px-8 py-3 font-medium hover:bg-white/90 transition-colors">

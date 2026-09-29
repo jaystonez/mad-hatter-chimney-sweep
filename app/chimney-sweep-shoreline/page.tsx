@@ -340,7 +340,7 @@ export default function ChimneySweepShorelinePage() {
               </Link>
             </div>
             <p className="text-sm text-muted-foreground mt-6">
-              45 years of certified expertise. The trusted choice for Shoreline chimney care.
+              45 years of professional experience. The trusted choice for Shoreline chimney care.
             </p>
           </div>
         </div>

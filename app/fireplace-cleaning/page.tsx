@@ -1,4 +1,5 @@
 import { pageMetadata } from "@/lib/seo"
+import { pricing } from "@/lib/pricing"
 import { Phone, Shield, Flame, Wind, Home, CheckCircle, AlertTriangle, Clock, Gauge, Droplets } from 'lucide-react'
 import Link from 'next/link'
 import type { Metadata } from 'next'
@@ -497,11 +498,11 @@ export default function FireplaceCleaningPage() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Link
-              href="tel:425-409-2344"
+              href={`tel:${pricing.phoneE164}`}
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors text-lg"
             >
               <Phone className="w-5 h-5" />
-              Call (425) 409-2344
+              Call {pricing.phone}
             </Link>
             <Link
               href="/contact"
@@ -512,7 +513,7 @@ export default function FireplaceCleaningPage() {
           </div>
 
           <p className="text-muted-foreground">
-            Master certified technicians • 45+ years of experience • Same-day service available throughout the greater Seattle area
+            Experienced chimney technicians • 45+ years of experience • Same-day service available throughout the greater Seattle area
           </p>
         </div>
         </section>

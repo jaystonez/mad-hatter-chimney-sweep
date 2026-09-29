@@ -30,7 +30,7 @@ export default function ChimneySweepKirklandPage() {
               Chimney Sweep Kirkland: Certified Cleaning, Inspection & Repair
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 text-pretty">
-              Professional chimney services for Kirkland's lakeside homes. Master Chimney Sweep certified with 45+ years protecting Eastside families.
+              Professional chimney services for Kirkland's lakeside homes. licensed, bonded & insured with 45+ years protecting Eastside families.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" variant="secondary" asChild>
@@ -362,7 +362,7 @@ export default function ChimneySweepKirklandPage() {
               Why Kirkland Homeowners Choose Mad Hatter
             </h2>
             <p className="text-xl text-primary-foreground/90">
-              Quality homes deserve quality care. We deliver the certified expertise and meticulous workmanship Kirkland properties require.
+              Quality homes deserve quality care. We deliver the professional experience and meticulous workmanship Kirkland properties require.
             </p>
           </div>
 
@@ -375,7 +375,7 @@ export default function ChimneySweepKirklandPage() {
             </div>
 
             <div className="bg-primary-foreground/10 rounded-lg p-6">
-              <h3 className="font-bold mb-2">Master Chimney Sweep Certified</h3>
+              <h3 className="font-bold mb-2">Licensed, Bonded & Insured</h3>
               <p className="text-sm text-primary-foreground/80">
                 Highest industry credential. Current training and national safety standards.
               </p>
@@ -435,7 +435,7 @@ export default function ChimneySweepKirklandPage() {
                 </Button>
               </div>
               <p className="text-sm text-muted-foreground mt-6">
-                45 years of certified expertise protecting Eastside families
+                45 years of professional experience protecting Eastside families
               </p>
             </CardContent>
           </Card>

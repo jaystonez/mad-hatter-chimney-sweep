@@ -17,7 +17,7 @@ export default function ChimneyRepairSeattle() {
               Chimney Repair Seattle: Expert Restoration & Masonry Work
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 text-balance">
-              Professional repairs for Seattle's wet climate challenges. Master certified technicians. 45+ years of local expertise.
+              Professional repairs for Seattle's wet climate challenges. Experienced chimney technicians. 45+ years of local expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -147,7 +147,7 @@ export default function ChimneyRepairSeattle() {
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Chimney Repair Services</h2>
             <p className="text-lg text-muted-foreground">
-              Complete restoration solutions from Master certified technicians
+              Complete restoration solutions from Experienced chimney technicians
             </p>
           </div>
           <div className="max-w-4xl mx-auto space-y-8">
@@ -369,13 +369,13 @@ export default function ChimneyRepairSeattle() {
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Seattle Trusts Mad Hatter for Chimney Repairs</h2>
             <p className="text-xl text-white/90">
-              45+ years of certified expertise serving Seattle homes
+              45+ years of hands-on experience serving Seattle homes
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <Award className="h-12 w-12 mb-4 text-white" />
-              <h3 className="font-bold text-lg mb-2">Master Certified</h3>
+              <h3 className="font-bold text-lg mb-2">Licensed & Insured</h3>
               <p className="text-white">
                 Highest industry credential. Current training in repair techniques, materials, and safety standards.
               </p>

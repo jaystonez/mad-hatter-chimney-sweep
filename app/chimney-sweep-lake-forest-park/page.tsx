@@ -251,7 +251,7 @@ export default function ChimneySweepLakeForestParkPage() {
             </Button>
           </div>
           <p className="text-muted-foreground mt-8">
-            45 years of certified expertise protecting Lake Forest Park families.
+            45 years of professional experience protecting Lake Forest Park families.
           </p>
         </div>
       </section>

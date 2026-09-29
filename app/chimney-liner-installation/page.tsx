@@ -434,7 +434,7 @@ export default function ChimneyLinerInstallationPage() {
               <div className="flex items-start gap-4">
                 <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-bold mb-2">Master Chimney Sweep Certification</h3>
+                  <h3 className="font-bold mb-2">Licensed, Bonded & Insured</h3>
                   <p className="text-muted-foreground">Advanced knowledge of chimney systems, liner requirements, and proper installation techniques.</p>
                 </div>
               </div>
@@ -491,7 +491,7 @@ export default function ChimneyLinerInstallationPage() {
               </Button>
             </div>
             <p className="mt-8 text-slate-200">
-              45 years of certified expertise serving the greater Seattle area
+              45 years of professional experience serving the greater Seattle area
             </p>
           </div>
         </div>

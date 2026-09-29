@@ -20,7 +20,7 @@ export default function KenmoreSweepPage() {
               Chimney Sweep Kenmore: Professional Cleaning & Inspection
             </h1>
             <p className="text-xl mb-8 text-white/90 leading-relaxed text-pretty">
-              Lake Washington moisture specialists. Kenmore's lakeside location creates unique chimney challenges. 45+ years of certified expertise protecting Kenmore homes.
+              Lake Washington moisture specialists. Kenmore's lakeside location creates unique chimney challenges. 45+ years of hands-on experience protecting Kenmore homes.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
@@ -287,7 +287,7 @@ export default function KenmoreSweepPage() {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-balance">Why Kenmore Trusts Mad Hatter</h2>
             <p className="text-lg text-white/80 text-pretty">
-              Four decades of certified expertise serving Kenmore's lakeside community
+              Four decades of professional experience serving Kenmore's lakeside community
             </p>
           </div>
 
@@ -362,7 +362,7 @@ export default function KenmoreSweepPage() {
               </Link>
             </div>
             <p className="mt-8 text-sm text-muted-foreground">
-              45 years of certified expertise protecting Kenmore families
+              45 years of professional experience protecting Kenmore families
             </p>
           </div>
         </div>

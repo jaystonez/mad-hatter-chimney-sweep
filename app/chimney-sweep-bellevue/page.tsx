@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Award, Shield, CheckCircle2, Clock, Star, Flame, Droplet, AlertTriangle, Wrench, Search, Camera, Users } from 'lucide-react'
 
-export const metadata: Metadata = pageMetadata('Chimney Sweep Bellevue | Professional Cleaning & Inspection Services | Mad Hatter', 'Professional chimney sweep services in Bellevue. 45+ years of certified expertise. Comprehensive cleaning, inspection, and repair. Same-day service available. Call Mad Hatter today.', "/chimney-sweep-bellevue")
+export const metadata: Metadata = pageMetadata('Chimney Sweep Bellevue | Professional Cleaning & Inspection Services | Mad Hatter', 'Professional chimney sweep services in Bellevue. 45+ years of hands-on experience. Comprehensive cleaning, inspection, and repair. Same-day service available. Call Mad Hatter today.', "/chimney-sweep-bellevue")
 
 export default function ChimneySweepBellevuePage() {
   return (
@@ -21,7 +21,7 @@ export default function ChimneySweepBellevuePage() {
               Professional Chimney Sweep Services in Bellevue
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto text-balance">
-              45+ years of certified expertise serving Bellevue's quality homes. Comprehensive cleaning, inspection, and repair services.
+              45+ years of hands-on experience serving Bellevue's quality homes. Comprehensive cleaning, inspection, and repair services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 
@@ -91,9 +91,9 @@ export default function ChimneySweepBellevuePage() {
                     <Award className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2">Professional Certification</h3>
+                    <h3 className="font-semibold text-lg mb-2">Licensing & Insurance</h3>
                     <p className="text-muted-foreground">
-                      Master Chimney Sweep certification means industry-leading expertise, not just someone with a ladder.
+                      Washington contractor licensing, bonding, and insurance give homeowners verifiable accountability—not just a marketing claim.
                     </p>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ export default function ChimneySweepBellevuePage() {
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Complete Solutions</h3>
                     <p className="text-muted-foreground">
-                      Cleaning, inspection, repair—we handle everything. One certified professional, one trusted company.
+                      Cleaning, inspection, repair—we handle everything. One experienced professional, one trusted company.
                     </p>
                   </div>
                 </div>
@@ -493,8 +493,8 @@ export default function ChimneySweepBellevuePage() {
 
               <div className="text-center">
                 <Award className="h-12 w-12 mx-auto mb-4 text-white/90" />
-                <p className="text-3xl font-bold mb-2">Master</p>
-                <p className="text-white/80">Chimney Sweep Certified</p>
+                <p className="text-3xl font-bold mb-2">Licensed</p>
+                <p className="text-white/80">Bonded & Insured</p>
               </div>
 
               <div className="text-center">
@@ -604,7 +604,7 @@ export default function ChimneySweepBellevuePage() {
               Protecting Your Bellevue Home
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Your chimney is a critical safety system. Professional maintenance keeps it safe and functional. We've been protecting Bellevue families for decades with certified, quality service.
+              Your chimney is a critical safety system. Professional maintenance keeps it safe and functional. We've been protecting Bellevue families for decades with professional, quality service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a 

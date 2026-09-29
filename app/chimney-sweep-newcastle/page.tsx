@@ -42,7 +42,7 @@ export default function NewcastleChimneySweepPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Newcastle sits perched above Lake Washington with some of the most stunning views on the Eastside—and some of the most weather-exposed chimneys. The hillside terrain that gives Newcastle homes their dramatic sightlines also exposes chimney systems to wind, rain, and temperature swings that accelerate deterioration. Mad Hatter Chimney Sweep has provided Newcastle homeowners with certified professional chimney service for over 45 years.
+              Newcastle sits perched above Lake Washington with some of the most stunning views on the Eastside—and some of the most weather-exposed chimneys. The hillside terrain that gives Newcastle homes their dramatic sightlines also exposes chimney systems to wind, rain, and temperature swings that accelerate deterioration. Mad Hatter Chimney Sweep has provided Newcastle homeowners with professional chimney service for over 45 years.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               From the upscale developments of Newcastle Hills and Olympus to the established homes along Coal Creek Parkway, Newcastle properties feature quality construction with fireplaces built for regular use. These systems deserve the expert care that keeps them safe, efficient, and structurally sound.
@@ -237,7 +237,7 @@ export default function NewcastleChimneySweepPage() {
             </Button>
           </div>
           <p className="text-muted-foreground mt-8">
-            <strong>45 years of certified expertise protecting Newcastle families.</strong>
+            <strong>45 years of professional experience protecting Newcastle families.</strong>
           </p>
         </div>
       </section>

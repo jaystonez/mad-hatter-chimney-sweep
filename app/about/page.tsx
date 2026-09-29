@@ -17,9 +17,7 @@ export default function AboutPage() {
               A Real Local Business, Not a Lead Generation Scam
             </h1>
             <p className="text-xl text-white/90 leading-relaxed mb-8">
-              We're The Mad Hatter Chimney Sweep - an actual, verifiable, locally-owned business 
-              serving Seattle for over a decade. Not a UPS box. Not a hijacked address. Not a call center 
-              operating under 50 different fake names.
+              We're The Mad Hatter Chimney Sweep - a locally owned, licensed, bonded, and insured chimney business serving Greater Seattle since 1979. Our contractor registration, phone number, and business information are published so homeowners can verify who they are hiring.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
@@ -130,8 +128,7 @@ export default function AboutPage() {
                 loading="lazy"
               />
               <p className="text-lg leading-relaxed mb-6">
-                The Mad Hatter Chimney Sweep was founded in 1979, a Seattle native
-                who saw the need for honest, professional chimney services in the area. Unlike the
+                The Mad Hatter Chimney Sweep was founded in 1979 to provide honest, professional chimney services in the Seattle area. Unlike the
                 corporate franchises and lead-generation scams that have flooded the market, we built
                 our reputation the old-fashioned way: one satisfied customer at a time.
               </p>
@@ -198,7 +195,7 @@ export default function AboutPage() {
               <Card>
                 <CardContent className="pt-6 text-center">
                   <h3 className="font-bold text-xl mb-1">Jason Smith</h3>
-                  <p className="text-primary font-medium mb-2">Owner &amp; Master Sweep</p>
+                  <p className="text-primary font-medium mb-2">Owner &amp; Chimney Professional</p>
                   <p className="text-sm text-muted-foreground">
                     45+ years experience, family-taught craftsmanship
                   </p>

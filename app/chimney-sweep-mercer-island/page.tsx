@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Shield, Award, CheckCircle2, Home, Droplets, Trees, DollarSign } from 'lucide-react'
 
-export const metadata: Metadata = pageMetadata('Chimney Sweep Mercer Island | Premium Chimney Cleaning & Service', 'Professional chimney sweep services for Mercer Island premium homes. Master certified technicians serving lakefront estates and island properties. 45+ years expertise. Call now.', "/chimney-sweep-mercer-island")
+export const metadata: Metadata = pageMetadata('Chimney Sweep Mercer Island | Premium Chimney Cleaning & Service', 'Professional chimney sweep services for Mercer Island premium homes. Experienced chimney technicians serving lakefront estates and island properties. 45+ years of hands-on experience. Call now.', "/chimney-sweep-mercer-island")
 
 export default function MercerIslandChimneySweepPage() {
   return (
@@ -23,7 +23,7 @@ export default function MercerIslandChimneySweepPage() {
             </h1>
             
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 text-pretty">
-              Professional chimney cleaning, inspection, and restoration for Mercer Island's finest homes. Master Chimney Sweep certification, 45+ years of expertise, and meticulous service your property deserves.
+              Professional chimney cleaning, inspection, and restoration for Mercer Island's finest homes. Licensed, bonded and insured service, 45+ years of experience, and meticulous workmanship for your property.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -45,7 +45,7 @@ export default function MercerIslandChimneySweepPage() {
             <div className="mt-8 flex flex-wrap gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-accent" />
-                <span>Master Certified</span>
+                <span>Licensed &amp; Insured</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-accent" />
@@ -276,7 +276,7 @@ export default function MercerIslandChimneySweepPage() {
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <Shield className="h-5 w-5 text-accent" />
-                  Master Chimney Sweep Certification
+                  Licensed, Bonded &amp; Insured
                 </h3>
                 <p className="text-primary-foreground/90 mb-6">
                   The highest credential available. Advanced knowledge, current techniques, and adherence to national safety standards for premium chimney systems.
@@ -311,8 +311,8 @@ export default function MercerIslandChimneySweepPage() {
                   <div className="text-sm text-primary-foreground/80">Years Serving Mercer Island</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-accent mb-2">Master</div>
-                  <div className="text-sm text-primary-foreground/80">Chimney Sweep Certified</div>
+                  <div className="text-4xl font-bold text-accent mb-2">Licensed</div>
+                  <div className="text-sm text-primary-foreground/80">Bonded &amp; Insured</div>
                 </div>
                 <div>
                   <div className="text-4xl font-bold text-accent mb-2">Premium</div>
@@ -350,7 +350,7 @@ export default function MercerIslandChimneySweepPage() {
             </div>
 
             <p className="mt-8 text-muted-foreground">
-              <strong>45 years of certified expertise serving Mercer Island's finest homes.</strong>
+              <strong>45+ years of hands-on chimney experience serving Mercer Island homes.</strong>
             </p>
           </div>
         </div>

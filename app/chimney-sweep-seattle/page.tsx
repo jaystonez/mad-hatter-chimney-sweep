@@ -189,7 +189,7 @@ export default function ChimneySweepSeattlePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Professional Seattle Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Complete chimney care from certified Master Chimney Sweeps
+              Complete chimney care from experienced chimney professionals
             </p>
           </div>
 
@@ -362,7 +362,7 @@ export default function ChimneySweepSeattlePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Seattle Trusts Mad Hatter</h2>
             <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-              Over four decades serving Seattle families with certified expertise
+              Over four decades serving Seattle families with professional experience
             </p>
           </div>
 
@@ -498,7 +498,7 @@ export default function ChimneySweepSeattlePage() {
             </Link>
           </div>
           <p className="text-muted-foreground mt-6">
-            45 years of certified expertise protecting Seattle families. Your chimney deserves professional care.
+            45 years of professional experience protecting Seattle families. Your chimney deserves professional care.
           </p>
         </div>
       </section>
