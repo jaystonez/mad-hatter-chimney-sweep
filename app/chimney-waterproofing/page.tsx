@@ -403,7 +403,7 @@ export default function ChimneyWaterproofingPage() {
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="font-semibold mb-1">Master Chimney Sweep Certification</h3>
+                  <h3 className="font-semibold mb-1">Licensed, Bonded & Insured</h3>
                   <p className="text-sm text-muted-foreground">Highest industry credential ensuring expert knowledge.</p>
                 </div>
               </div>
@@ -446,7 +446,7 @@ export default function ChimneyWaterproofingPage() {
               </Button>
             </div>
             <p className="mt-8 text-sm text-primary-foreground/80">
-              45 years of certified expertise protecting chimneys from Pacific Northwest moisture.
+              45 years of professional experience protecting chimneys from Pacific Northwest moisture.
             </p>
           </div>
         </div>
