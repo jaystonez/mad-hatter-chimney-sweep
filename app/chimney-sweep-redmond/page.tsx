@@ -2,7 +2,7 @@ import { pageMetadata } from "@/lib/seo"
 import { Phone, CheckCircle2, Flame, Shield, Wind, Eye, Wrench, MapPin, Award, Users, FileCheck, Clock } from 'lucide-react'
 import Link from 'next/link'
 
-export const metadata = pageMetadata('Chimney Sweep Redmond | Professional Cleaning & Inspection | Mad Hatter', 'Certified chimney sweep services in Redmond. Professional cleaning, 21-point inspection, and repair. Serving Education Hill, Grass Lawn, Novelty Hill. 45+ years experience.', "/chimney-sweep-redmond")
+export const metadata = pageMetadata('Chimney Sweep Redmond | Professional Cleaning & Inspection | Mad Hatter', 'Professional chimney sweep services in Redmond. Professional cleaning, 21-point inspection, and repair. Serving Education Hill, Grass Lawn, Novelty Hill. 45+ years experience.', "/chimney-sweep-redmond")
 
 export default function ChimneySweepRedmond() {
   return (
@@ -21,7 +21,7 @@ export default function ChimneySweepRedmond() {
               Chimney Sweep Redmond: Professional Cleaning & Inspection
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 text-pretty">
-              Certified chimney service for Redmond homes. From Education Hill to Novelty Hill, we provide thorough cleaning, comprehensive inspection, and expert repair for every Redmond neighborhood.
+              Professional chimney service for Redmond homes. From Education Hill to Novelty Hill, we provide thorough cleaning, comprehensive inspection, and expert repair for every Redmond neighborhood.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -43,7 +43,7 @@ export default function ChimneySweepRedmond() {
             <div className="mt-8 flex flex-wrap gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-green-400" />
-                <span>Master Certified</span>
+                <span>Licensed &amp; Insured</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-green-400" />
@@ -404,7 +404,7 @@ export default function ChimneySweepRedmond() {
               Why Redmond Homeowners Trust Mad Hatter
             </h2>
             <p className="text-lg text-primary-foreground/90">
-              45+ years of certified expertise serving Redmond families with quality chimney care.
+              45+ years of hands-on experience serving Redmond families with quality chimney care.
             </p>
           </div>
 
@@ -419,9 +419,9 @@ export default function ChimneySweepRedmond() {
 
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 border border-primary-foreground/20">
               <Award className="h-8 w-8 mb-4 text-primary-foreground" />
-              <h3 className="text-xl font-semibold mb-2">Master Certified</h3>
+              <h3 className="text-xl font-semibold mb-2">Licensed, Bonded &amp; Insured</h3>
               <p className="text-primary-foreground/80">
-                Certified Master Chimney Sweep—the highest credential in the industry. Current training, proper technique, national standards.
+                Washington-licensed, bonded and insured service backed by ongoing training, proper technique, and established safety standards.
               </p>
             </div>
 
@@ -543,7 +543,7 @@ export default function ChimneySweepRedmond() {
           </div>
 
           <p className="mt-8 text-primary-foreground/80">
-            45 years of certified expertise. Thousands of satisfied Redmond customers.
+            45+ years of hands-on chimney experience serving Redmond and the Eastside.
           </p>
         </div>
       </section>
