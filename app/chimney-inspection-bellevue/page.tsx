@@ -746,9 +746,9 @@ export default function ChimneyInspectionBellevuePage() {
               </div>
 
               <div className="bg-primary-foreground/10 backdrop-blur rounded-lg p-6">
-                <h3 className="font-bold text-lg mb-3">Master Chimney Sweep Certification</h3>
+                <h3 className="font-bold text-lg mb-3">Licensed, Bonded & Insured</h3>
                 <p className="text-primary-foreground/90">
-                  The highest industry credential. Current training, advanced inspection techniques, and adherence to national standards.
+                  Licensed, bonded and insured in Washington with ongoing professional training.
                 </p>
               </div>
 
@@ -812,7 +812,7 @@ export default function ChimneyInspectionBellevuePage() {
               Same-day and next-day service available throughout Bellevue
             </p>
             <p className="text-lg font-semibold mt-4">
-              45 years of certified expertise protecting Bellevue families. Your chimney deserves professional assessment.
+              45 years of professional experience protecting Bellevue families. Your chimney deserves professional assessment.
             </p>
           </div>
         </div>
