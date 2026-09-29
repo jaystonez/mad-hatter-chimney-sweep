@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, CheckCircle2, AlertTriangle, Flame, Wind, Shield } from "lucide-react"
 
-export const metadata: Metadata = pageMetadata("Chimney Cleaning in Seattle, WA | Mad Hatter Chimney Sweep", "Professional chimney cleaning & creosote removal in Seattle by master certified technicians with 45+ years of experience. Licensed & insured. Call (206) 274-6409.", "/chimney-cleaning")
+export const metadata: Metadata = pageMetadata("Chimney Cleaning in Seattle, WA | Mad Hatter Chimney Sweep", "Professional chimney cleaning & creosote removal in Seattle by experienced chimney technicians with 45+ years of experience. Licensed & insured. Call (206) 274-6409.", "/chimney-cleaning")
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -483,8 +483,8 @@ export default function ChimneyCleaningPage() {
             <Card>
               <CardContent className="pt-6">
                 <Shield className="h-10 w-10 text-primary mb-4" />
-                <h3 className="font-bold text-lg mb-2">Master Certified</h3>
-                <p className="text-slate-700">Highest industry credential. Advanced inspection techniques and comprehensive knowledge.</p>
+                <h3 className="font-bold text-lg mb-2">Licensed & Insured</h3>
+                <p className="text-slate-700">Licensed, bonded and insured in Washington, with decades of hands-on chimney experience.</p>
               </CardContent>
             </Card>
 
@@ -524,7 +524,7 @@ export default function ChimneyCleaningPage() {
             </Button>
           </div>
           <p className="mt-6 text-primary-foreground/80">
-            Master certified technicians. Same-day service available throughout the greater Seattle area.
+            Experienced chimney technicians. Same-day service available throughout the greater Seattle area.
           </p>
         </div>
         </section>
