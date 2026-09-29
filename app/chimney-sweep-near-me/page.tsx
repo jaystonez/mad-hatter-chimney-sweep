@@ -1,9 +1,10 @@
 import { pageMetadata } from "@/lib/seo"
+import { pricing } from "@/lib/pricing"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Phone, CheckCircle, AlertTriangle, Shield, MapPin, Award, FileCheck, Users, Flame, Wind, Gauge, Search } from "lucide-react"
 
-export const metadata: Metadata = pageMetadata("Chimney Sweep Near Me | Find Certified Service in Greater Seattle | Mad Hatter", "Looking for a chimney sweep near you? Master certified service throughout Seattle & Eastside. 45+ years experience. Transparent pricing. Same-day service available.", "/chimney-sweep-near-me")
+export const metadata: Metadata = pageMetadata("Chimney Sweep Near Me | Find Certified Service in Greater Seattle | Mad Hatter", "Looking for a chimney sweep near you? Experienced chimney service throughout Seattle & Eastside. 45+ years experience. Transparent pricing. Same-day service available.", "/chimney-sweep-near-me")
 
 export default function ChimneySweepNearMePage() {
   return (
@@ -12,10 +13,10 @@ export default function ChimneySweepNearMePage() {
       <section className="bg-primary text-primary-foreground py-16 px-4">
         <div className="container mx-auto max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-            Chimney Sweep Near Me: Find Certified Professional Service in Greater Seattle
+            Chimney Sweep Near Me: Find Professional Chimney Service in Greater Seattle
           </h1>
           <p className="text-lg md:text-xl mb-6 leading-relaxed opacity-95">
-            Searching for a chimney sweep near you? If you're in Seattle, Bellevue, or anywhere on the Eastside, Mad Hatter Chimney Sweep is your local certified professional. We've been cleaning, inspecting, and repairing chimneys across the greater Seattle area for over 45 years.
+            Searching for a chimney sweep near you? If you're in Seattle, Bellevue, or anywhere on the Eastside, Mad Hatter Chimney Sweep is your local chimney professional. We've been cleaning, inspecting, and repairing chimneys across the greater Seattle area for over 45 years.
           </p>
           <p className="text-base md:text-lg leading-relaxed opacity-100">
             When you search for a chimney sweep nearby, you want someone local, certified, experienced, and trustworthy—that's us. Finding the right chimney sweep matters more than most homeowners realize. An unqualified service can miss dangerous conditions, damage your chimney, or simply not clean thoroughly enough to prevent hazards.
@@ -28,11 +29,11 @@ export default function ChimneySweepNearMePage() {
         <div className="container mx-auto max-w-4xl">
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <Link
-              href="tel:425-409-2344"
+              href={`tel:${pricing.phoneE164}`}
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors text-lg"
             >
               <Phone className="w-5 h-5" />
-              Call (425) 409-2344
+              Call {pricing.phone}
             </Link>
             <Link
               href="/contact"
@@ -75,7 +76,7 @@ export default function ChimneySweepNearMePage() {
                 Look for sweeps who hold credentials from recognized industry organizations like the Chimney Safety Institute of America (CSIA) or equivalent certification bodies.
               </p>
               <p className="font-semibold text-foreground">
-                Mad Hatter's technicians hold Master Chimney Sweep certification—the highest credential available in the industry.
+                Mad Hatter is licensed, bonded and insured in Washington and has served Greater Seattle since 1979.
               </p>
             </div>
 
@@ -528,11 +529,11 @@ export default function ChimneySweepNearMePage() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <Link
-              href="tel:425-409-2344"
+              href={`tel:${pricing.phoneE164}`}
               className="inline-flex items-center gap-2 bg-background text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-background/90 transition-colors text-lg"
             >
               <Phone className="w-5 h-5" />
-              Call (425) 409-2344
+              Call {pricing.phone}
             </Link>
             <Link
               href="/contact"
@@ -543,7 +544,7 @@ export default function ChimneySweepNearMePage() {
           </div>
 
           <p className="text-lg opacity-100">
-            Master Chimney Sweep certified • 45+ years local experience • The professional choice near you
+            licensed, bonded & insured • 45+ years local experience • The professional choice near you
           </p>
         </div>
       </section>
