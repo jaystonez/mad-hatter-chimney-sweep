@@ -293,8 +293,8 @@ export default function ChimneySweepKentPage() {
               <div className="w-16 h-16 bg-primary-foreground/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="h-8 w-8 text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Master Chimney Sweep Certification</h3>
-              <p className="text-primary-foreground/80">The highest industry credential. Expert service your chimney needs</p>
+              <h3 className="text-xl font-bold mb-2">Licensed, Bonded & Insured</h3>
+              <p className="text-primary-foreground/80">Licensed, bonded and insured service backed by decades of experience</p>
             </div>
 
             <div className="text-center">
@@ -358,7 +358,7 @@ export default function ChimneySweepKentPage() {
               </a>
             </div>
             <p className="text-sm text-muted-foreground mt-6">
-              45 years of certified expertise protecting Kent families
+              45 years of professional experience protecting Kent families
             </p>
           </div>
         </div>
