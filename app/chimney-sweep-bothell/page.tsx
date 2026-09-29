@@ -23,7 +23,7 @@ export default function ChimneySweepBothellPage() {
               Chimney Sweep Bothell: Certified Cleaning & Inspection
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 text-balance">
-              Professional chimney services for Bothell homes. From Canyon Park to North Creek, we've protected Bothell families with certified expertise for over 45 years.
+              Professional chimney services for Bothell homes. From Canyon Park to North Creek, we've protected Bothell families with professional experience for over 45 years.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="text-base">
@@ -349,8 +349,8 @@ export default function ChimneySweepBothellPage() {
               <div className="bg-primary-foreground/10 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                 <Award className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Master Certified</h3>
-              <p className="opacity-100">Highest industry credential with proven expertise</p>
+              <h3 className="text-xl font-semibold mb-2">Licensed & Insured</h3>
+              <p className="opacity-100">Licensed, bonded and insured in Washington</p>
             </div>
 
             <div className="text-center">
