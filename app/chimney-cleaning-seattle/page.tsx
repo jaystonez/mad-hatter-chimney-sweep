@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Shield, Clock, Flame, Wind, CheckCircle2, AlertTriangle, Home, Eye, Droplets, ThermometerSun } from 'lucide-react'
 
-export const metadata: Metadata = pageMetadata('Chimney Cleaning Seattle | Professional Creosote Removal & Maintenance', 'Professional chimney cleaning in Seattle. 45+ years removing dangerous creosote, improving efficiency, and protecting Seattle homes. Master certified. $289.95 includes 21-point inspection.', "/chimney-cleaning-seattle")
+export const metadata: Metadata = pageMetadata('Chimney Cleaning Seattle | Professional Creosote Removal & Maintenance', 'Professional chimney cleaning in Seattle. 45+ years removing dangerous creosote, improving efficiency, and protecting Seattle homes. Licensed & insured. $289.95 includes 21-point inspection.', "/chimney-cleaning-seattle")
 
 export default function ChimneyCleaningSeattle() {
   return (
@@ -42,7 +42,7 @@ export default function ChimneyCleaningSeattle() {
             </div>
 
             <p className="text-sm text-muted-foreground mt-6">
-              45+ years serving Seattle. Master certified. Same-day service available.
+              45+ years serving Seattle. Licensed & insured. Same-day service available.
             </p>
           </div>
         </div>
@@ -593,7 +593,7 @@ export default function ChimneyCleaningSeattle() {
                 <div className="rounded-full bg-primary/10 w-10 h-10 flex items-center justify-center">
                   <CheckCircle2 className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="font-semibold text-foreground">Master Certified</h3>
+                <h3 className="font-semibold text-foreground">Licensed & Insured</h3>
               </div>
               <p className="text-sm text-muted-foreground">
                 Highest industry credential. Current training, proven techniques, national safety standards.
