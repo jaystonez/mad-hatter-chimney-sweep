@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Phone, MapPin, Award, Shield, Clock } from 'lucide-react'
 
-export const metadata: Metadata = pageMetadata('Chimney Sweep Sammamish | Professional Cleaning & Inspection | Mad Hatter', 'Professional chimney sweep services in Sammamish. 45+ years serving the Eastside with certified cleaning, inspection, and repair. Master Chimney Sweep certified.', "/chimney-sweep-sammamish")
+export const metadata: Metadata = pageMetadata('Chimney Sweep Sammamish | Professional Cleaning & Inspection | Mad Hatter', 'Professional chimney sweep services in Sammamish. 45+ years serving the Eastside with cleaning, inspection, and repair from a licensed, bonded and insured Washington contractor.', "/chimney-sweep-sammamish")
 
 export default function ChimneySweepSammamishPage() {
   return (
@@ -22,7 +22,7 @@ export default function ChimneySweepSammamishPage() {
               Professional Chimney Sweep Services in Sammamish
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 text-pretty">
-              Certified chimney cleaning, inspection, and repair for Sammamish's quality homes. Master Chimney Sweep expertise protecting Eastside families for over 45 years.
+              Professional chimney cleaning, inspection, and repair for Sammamish homes, backed by over 45 years serving the Eastside.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -103,7 +103,7 @@ export default function ChimneySweepSammamishPage() {
           <div className="max-w-3xl mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Professional Chimney Services</h2>
             <p className="text-lg text-muted-foreground">
-              Complete chimney care from certified Master Chimney Sweep technicians.
+              Complete chimney care from experienced chimney technicians.
             </p>
           </div>
 
@@ -296,7 +296,7 @@ export default function ChimneySweepSammamishPage() {
           <div className="max-w-3xl mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Sammamish Trusts Mad Hatter</h2>
             <p className="text-lg text-primary-foreground/90">
-              Over four decades of certified expertise serving Sammamish's quality homes with service matching the community's standards.
+              Over four decades of hands-on chimney experience serving Sammamish homes.
             </p>
           </div>
 
@@ -321,7 +321,7 @@ export default function ChimneySweepSammamishPage() {
                   <Shield className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">Master Certified</h3>
+                  <h3 className="text-xl font-bold mb-2">Licensed, Bonded &amp; Insured</h3>
                   <p className="text-primary-foreground/80">
                     Highest industry credential. Current training, advanced techniques, and adherence to national safety standards.
                   </p>
@@ -379,7 +379,7 @@ export default function ChimneySweepSammamishPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Complete Solutions</h3>
                   <p className="text-primary-foreground/80">
-                    One certified company for all chimney needs. Cleaning, inspection, repair, and installation handled professionally.
+                    One accountable company for all chimney needs. Cleaning, inspection, repair, and installation handled professionally.
                   </p>
                 </div>
               </div>
