@@ -3,7 +3,7 @@ import { Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
-export const metadata = pageMetadata('Chimney Sweep Woodinville | Professional Cleaning & Inspection', 'Professional chimney sweep services in Woodinville. 45+ years experience. Master certified. Complete cleaning, inspection & repair. Same-day service available.', "/chimney-sweep-woodinville")
+export const metadata = pageMetadata('Chimney Sweep Woodinville | Professional Cleaning & Inspection', 'Professional chimney sweep services in Woodinville. 45+ years experience. Licensed & insured. Complete cleaning, inspection & repair. Same-day service available.', "/chimney-sweep-woodinville")
 
 export default function ChimneySweepWoodinvillePage() {
   return (
@@ -19,7 +19,7 @@ export default function ChimneySweepWoodinvillePage() {
               Chimney Sweep Woodinville: Professional Cleaning & Inspection
             </h1>
             <p className="mb-8 text-pretty text-lg text-muted-foreground md:text-xl">
-              Woodinville homeowners rely on their fireplaces through the long, wet winters of the Pacific Northwest. Surrounded by the Sammamish River Valley's lush landscape and the foothills of the Cascades, Woodinville properties face constant moisture exposure that takes a toll on chimney systems. Mad Hatter Chimney Sweep has provided Woodinville residents with certified professional chimney service for over 45 years.
+              Woodinville homeowners rely on their fireplaces through the long, wet winters of the Pacific Northwest. Surrounded by the Sammamish River Valley's lush landscape and the foothills of the Cascades, Woodinville properties face constant moisture exposure that takes a toll on chimney systems. Mad Hatter Chimney Sweep has provided Woodinville residents with professional chimney service for over 45 years.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" asChild>
@@ -88,7 +88,7 @@ export default function ChimneySweepWoodinvillePage() {
               Our Professional Services
             </h2>
             <p className="mx-auto max-w-2xl text-balance text-muted-foreground">
-              Complete chimney care from certified Master Chimney Sweep professionals
+              Complete chimney care from experienced chimney professionals
             </p>
           </div>
 
@@ -201,7 +201,7 @@ export default function ChimneySweepWoodinvillePage() {
                 </div>
               </div>
               <div>
-                <h3 className="mb-2 font-semibold">Master Chimney Sweep Certification</h3>
+                <h3 className="mb-2 font-semibold">Licensed, Bonded & Insured</h3>
                 <p className="text-sm text-muted-foreground">
                   The highest industry credential. Current training, advanced techniques, and adherence to national safety standards.
                 </p>
@@ -261,7 +261,7 @@ export default function ChimneySweepWoodinvillePage() {
               </Button>
             </div>
             <p className="mt-6 text-sm text-muted-foreground">
-              45 years of certified expertise protecting Woodinville families
+              45 years of professional experience protecting Woodinville families
             </p>
           </div>
         </div>
