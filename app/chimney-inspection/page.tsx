@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, CheckCircle, Camera, FileText, Shield, AlertTriangle } from "lucide-react"
 
-export const metadata: Metadata = pageMetadata("Chimney Inspection in Seattle, WA | Mad Hatter Chimney Sweep", "Professional Level 1, 2 & 3 chimney inspections in Seattle with video camera technology. Licensed & insured with 45+ years of certified expertise. Call (206) 274-6409.", "/chimney-inspection")
+export const metadata: Metadata = pageMetadata("Chimney Inspection in Seattle, WA | Mad Hatter Chimney Sweep", "Professional Level 1, 2 & 3 chimney inspections in Seattle with video camera technology. Licensed & insured with 45+ years of hands-on experience. Call (206) 274-6409.", "/chimney-inspection")
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -464,7 +464,7 @@ export default function ChimneyInspectionPage() {
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 { icon: Shield, title: "45+ Years of Inspection Experience", desc: "Since 1979, we've inspected thousands of chimneys. Our knowledge of what to look for and what findings mean is unmatched in greater Seattle." },
-                { icon: CheckCircle, title: "Master Chimney Sweep Certification", desc: "The highest industry credential. Advanced inspection techniques, current standards, and comprehensive knowledge." },
+                { icon: CheckCircle, title: "Licensed, Bonded & Insured", desc: "The highest industry credential. Advanced inspection techniques, current standards, and comprehensive knowledge." },
                 { icon: FileText, title: "21-Point Inspection Process", desc: "Systematic evaluation covering every component. Nothing overlooked." },
                 { icon: Camera, title: "Video Camera Technology", desc: "We see inside your chimney where the most important conditions hide." },
                 { icon: FileText, title: "Complete Documentation", desc: "Detailed reports with photographs, condition ratings, and prioritized recommendations." },
@@ -509,7 +509,7 @@ export default function ChimneyInspectionPage() {
               Same-day and next-day service available throughout the greater Seattle area
             </p>
             <p className="mt-4 text-lg font-semibold text-primary">
-              45 years of certified expertise. Your chimney deserves professional assessment.
+              45 years of professional experience. Your chimney deserves professional assessment.
             </p>
           </div>
         </div>
