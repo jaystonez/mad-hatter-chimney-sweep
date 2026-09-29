@@ -19,7 +19,7 @@ export default function RentonChimneySweepPage() {
               Chimney Sweep Renton: Professional Chimney Cleaning & Inspection Service
             </h1>
             <p className="text-xl text-muted-foreground mb-8 text-pretty">
-              From Kennydale's lakeside homes to the Highlands and Benson Hill—professional chimney service for Renton's diverse housing stock. 45 years of certified expertise protecting Renton families.
+              From Kennydale's lakeside homes to the Highlands and Benson Hill—professional chimney service for Renton's diverse housing stock. 45 years of professional experience protecting Renton families.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -97,7 +97,7 @@ export default function RentonChimneySweepPage() {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Professional Services</h2>
             <p className="text-lg text-muted-foreground">
-              Complete chimney care from certified Master Chimney Sweep professionals serving all Renton neighborhoods.
+              Complete chimney care from experienced chimney professionals serving all Renton neighborhoods.
             </p>
           </div>
 
@@ -244,7 +244,7 @@ export default function RentonChimneySweepPage() {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Renton Trusts Mad Hatter</h2>
             <p className="text-lg text-primary-foreground/90">
-              45 years of certified expertise serving Renton's diverse housing stock with honest, professional chimney care.
+              45 years of professional experience serving Renton's diverse housing stock with honest, professional chimney care.
             </p>
           </div>
 
@@ -257,7 +257,7 @@ export default function RentonChimneySweepPage() {
             </div>
 
             <div className="bg-primary-foreground/10 backdrop-blur rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3">Master Chimney Sweep Certification</h3>
+              <h3 className="text-xl font-bold mb-3">Licensed, Bonded & Insured</h3>
               <p className="text-primary-foreground/90">
                 The highest industry credential. Advanced expertise for all chimney types—historic masonry to modern factory-built systems.
               </p>
