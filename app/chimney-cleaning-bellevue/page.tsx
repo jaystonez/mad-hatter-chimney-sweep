@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Shield, Flame, Wind, Eye, CheckCircle, AlertTriangle, Clock, Home } from 'lucide-react'
 
-export const metadata: Metadata = pageMetadata('Chimney Cleaning Bellevue | Professional Creosote Removal - Mad Hatter', 'Professional chimney cleaning in Bellevue. 45+ years of certified expertise removing dangerous creosote buildup. Master certified sweeps. Same-day service available.', "/chimney-cleaning-bellevue")
+export const metadata: Metadata = pageMetadata('Chimney Cleaning Bellevue | Professional Creosote Removal - Mad Hatter', 'Professional chimney cleaning in Bellevue. 45+ years of hands-on experience removing dangerous creosote buildup. Experienced chimney sweeps. Same-day service available.', "/chimney-cleaning-bellevue")
 
 export default function ChimneyCleaningBellevuePage() {
   return (
@@ -48,7 +48,7 @@ export default function ChimneyCleaningBellevuePage() {
             <div className="mt-8 flex items-center gap-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-primary" />
-                <span>Master Certified</span>
+                <span>Licensed & Insured</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="h-5 w-5 text-primary" />
@@ -494,7 +494,7 @@ export default function ChimneyCleaningBellevuePage() {
               },
               {
                 icon: CheckCircle,
-                title: 'Master Certified',
+                title: 'Licensed & Insured',
                 description: 'Highest industry credential. Current training, proven techniques, national safety standards.'
               },
               {
@@ -563,7 +563,7 @@ export default function ChimneyCleaningBellevuePage() {
             <p className="text-muted-foreground">
               <strong className="text-foreground">Same-day and next-day service available throughout Bellevue.</strong>
               <br />
-              45 years of certified expertise. Meticulous service Bellevue homeowners trust.
+              45 years of professional experience. Meticulous service Bellevue homeowners trust.
             </p>
           </div>
         </div>
