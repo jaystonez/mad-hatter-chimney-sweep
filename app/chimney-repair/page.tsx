@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { AlertTriangle, Check, Phone, Wrench, Home, ShieldCheck, Award, FileText } from "lucide-react"
 import type { Metadata } from "next"
 
-export const metadata: Metadata = pageMetadata("Chimney Repair Seattle | Crown, Flashing, Mortar & Liner Repair", "Professional chimney repair services in Seattle. Crown repair, flashing replacement, repointing, liner installation. 45+ years experience. Licensed & certified.", "/chimney-repair")
+export const metadata: Metadata = pageMetadata("Chimney Repair Seattle | Crown, Flashing, Mortar & Liner Repair", "Professional chimney repair services in Seattle. Crown repair, flashing replacement, repointing, liner installation. 45+ years experience. Licensed & insured.", "/chimney-repair")
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -171,7 +171,7 @@ export default function ChimneyRepairPage() {
               Chimney Repair: Common Problems, Costs & Finding the Right Professional
             </h1>
             <p className="text-xl text-slate-200 mb-8 text-pretty">
-              Professional chimney repair stops deterioration, prevents expensive replacement, and ensures your chimney operates safely. 45+ years of certified expertise serving greater Seattle.
+              Professional chimney repair stops deterioration, prevents expensive replacement, and ensures your chimney operates safely. 45+ years of hands-on experience serving greater Seattle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-primary hover:bg-primary/90">
@@ -373,8 +373,8 @@ export default function ChimneyRepairPage() {
                 <p className="text-slate-300">Thousands of chimneys repaired since 1979. Every type of damage, every challenge.</p>
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-2">Master Chimney Sweep Certification</h3>
-                <p className="text-slate-300">The highest industry credential for inspection and repair expertise.</p>
+                <h3 className="font-bold text-lg mb-2">Licensed, Bonded & Insured</h3>
+                <p className="text-slate-300">Licensed, bonded and insured in Washington with decades of inspection and repair experience.</p>
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-2">Complete Service</h3>
@@ -404,7 +404,7 @@ export default function ChimneyRepairPage() {
               What costs hundreds to fix today costs thousands if left for next year. Professional inspection identifies exactly what your chimney needs, prioritizes urgent issues, and provides clear cost estimates.
             </p>
             <p className="text-xl font-semibold text-slate-900 mb-8">
-              45 years of certified expertise serving the greater Seattle area.
+              45 years of professional experience serving the greater Seattle area.
             </p>
             <Button size="lg" asChild>
               <Link href="/contact">
