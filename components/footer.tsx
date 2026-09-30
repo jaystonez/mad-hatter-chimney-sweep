@@ -119,8 +119,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/fireplace-cleaning" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
-                  Installation
+                <Link href="/services/stove-fireplace-installation" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                  Stove &amp; Fireplace Installation
+                </Link>
+              </li>
+              <li>
+                <Link href="/dryer-vent-cleaning" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                  Dryer Vent Cleaning
                 </Link>
               </li>
             </ul>

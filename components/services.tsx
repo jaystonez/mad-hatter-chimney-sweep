@@ -35,7 +35,7 @@ const services = [
     icon: Wind,
     title: "Dryer Vent Cleaning",
     description: "Remove lint buildup to improve efficiency and reduce fire hazards in your home.",
-    href: "/services",
+    href: "/dryer-vent-cleaning",
     color: "from-purple-500/20 to-violet-500/10",
   },
   {
