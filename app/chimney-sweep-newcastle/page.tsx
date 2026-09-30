@@ -88,7 +88,7 @@ export default function NewcastleChimneySweepPage() {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 We remove all creosote from your chimney system—full flue length, smoke chamber, firebox, and damper—using professional equipment sized for your specific chimney. Your home stays completely clean throughout thanks to professional containment.
               </p>
-              <p className="text-primary font-semibold text-lg">Starting at $189</p>
+              <p className="text-primary font-semibold text-lg">Starting at $219</p>
               <p className="text-sm text-muted-foreground">Includes 21-point inspection</p>
             </div>
             <div className="bg-card border border-border rounded-lg p-8">

@@ -6,8 +6,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Phone, CheckCircle2, AlertTriangle, Flame, Wind, Shield } from "lucide-react"
 
 export const metadata: Metadata = pageMetadata(
-  "Chimney Cleaning Seattle $189 | Mad Hatter",
-  "Professional chimney cleaning in Seattle from $189, including creosote removal and a Level 1 inspection. Licensed & insured. Call (206) 274-6409.",
+  "Chimney Cleaning Seattle $219 | Mad Hatter",
+  "Professional chimney cleaning in Seattle from $219, including creosote removal and a Level 1 inspection. Licensed & insured. Call (206) 274-6409.",
   "/chimney-cleaning",
 )
 
@@ -28,7 +28,7 @@ const faqSchema = {
       name: "How much does chimney cleaning cost in Seattle?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Typical chimney cleaning in Seattle generally starts around $189, with final pricing based on chimney height, accessibility, and creosote level.",
+        text: "Typical chimney cleaning in Seattle generally starts around $219, with final pricing based on chimney height, accessibility, and creosote level.",
       },
     },
     {
@@ -69,7 +69,7 @@ export default function ChimneyCleaningPage() {
           </p>
                         <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8">
                 <span className="text-white/80 text-lg">Standard cleaning starts at</span>
-                <span className="text-3xl font-bold text-white ml-2">$189</span>
+                <span className="text-3xl font-bold text-white ml-2">$219</span>
               </div>
           <div className="flex flex-wrap gap-4">
             <Button size="lg" className="bg-primary hover:bg-primary/90">
@@ -404,7 +404,7 @@ export default function ChimneyCleaningPage() {
 
           <div className="text-center p-8 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 rounded-xl border-2 border-primary/20 shadow-lg">
             <p className="text-lg font-medium text-slate-900">
-              Mad Hatter's standard cleaning and 21-point inspection for standard open-ended fireplaces starts at <span className="text-primary font-bold text-3xl">$189</span> in the greater Seattle area
+              Mad Hatter's standard cleaning and 21-point inspection for standard open-ended fireplaces starts at <span className="text-primary font-bold text-3xl">$219</span> in the greater Seattle area
             </p>
           </div>
         </div>

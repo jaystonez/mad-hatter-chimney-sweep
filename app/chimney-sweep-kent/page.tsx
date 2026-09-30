@@ -125,7 +125,7 @@ export default function ChimneySweepKentPage() {
               </p>
               <div className="bg-primary/10 border-2 border-primary/20 rounded-lg p-4 mb-6">
                 <div className="text-sm font-semibold text-primary mb-1">Standard Service</div>
-                <div className="text-3xl font-bold">$189</div>
+                <div className="text-3xl font-bold">$219</div>
                 <div className="text-sm text-muted-foreground mt-1">Includes 21-point inspection</div>
               </div>
               <ul className="space-y-3">
@@ -318,7 +318,7 @@ export default function ChimneySweepKentPage() {
                 <CheckCircle className="h-8 w-8 text-primary-foreground" />
               </div>
               <h3 className="text-xl font-bold mb-2">Fair Pricing</h3>
-              <p className="text-primary-foreground/80">$189 standard service. Clear estimates for any additional work. No surprises</p>
+              <p className="text-primary-foreground/80">$219 standard service. Clear estimates for any additional work. No surprises</p>
             </div>
 
             <div className="text-center">

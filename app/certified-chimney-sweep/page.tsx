@@ -375,7 +375,7 @@ export default function CertifiedChimneySweepPage() {
 
               <div className="bg-primary-foreground/10 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-2">Transparent Pricing</h3>
-                <p className="text-primary-foreground/90">Standard cleaning and inspection starts at $189. Repair estimates are detailed and obligation-free.</p>
+                <p className="text-primary-foreground/90">Standard cleaning and inspection starts at $219. Repair estimates are detailed and obligation-free.</p>
               </div>
 
               <div className="bg-primary-foreground/10 p-6 rounded-lg">

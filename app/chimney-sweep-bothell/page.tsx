@@ -154,7 +154,7 @@ export default function ChimneySweepBothellPage() {
                     <span className="text-sm">Complete home protection and cleanup</span>
                   </div>
                 </div>
-                <p className="text-lg font-semibold text-primary">Starting at $189</p>
+                <p className="text-lg font-semibold text-primary">Starting at $219</p>
               </CardContent>
             </Card>
 

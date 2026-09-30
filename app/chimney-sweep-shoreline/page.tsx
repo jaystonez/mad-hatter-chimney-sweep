@@ -112,7 +112,7 @@ export default function ChimneySweepShorelinePage() {
                     <span>Professional cleanup guaranteed</span>
                   </li>
                 </ul>
-                <div className="text-2xl font-bold text-primary">Starting at $189</div>
+                <div className="text-2xl font-bold text-primary">Starting at $219</div>
               </div>
 
               {/* Inspection */}
@@ -299,7 +299,7 @@ export default function ChimneySweepShorelinePage() {
                 <Clock className="w-12 h-12 mx-auto mb-4" />
                 <h3 className="text-xl font-bold mb-2">Transparent Pricing</h3>
                 <p className="opacity-100">
-                  $189 standard service. Detailed repair estimates before work begins.
+                  $219 standard service. Detailed repair estimates before work begins.
                 </p>
               </div>
               <div className="text-center">

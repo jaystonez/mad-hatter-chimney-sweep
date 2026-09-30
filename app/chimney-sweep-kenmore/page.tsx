@@ -115,7 +115,7 @@ export default function KenmoreSweepPage() {
               </p>
               <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-6">
                 <div className="text-sm font-medium text-primary mb-1">Standard Service</div>
-                <div className="text-2xl font-bold">$189</div>
+                <div className="text-2xl font-bold">$219</div>
                 <div className="text-sm text-muted-foreground">Includes 21-point inspection</div>
               </div>
               <ul className="space-y-3">
