@@ -41,6 +41,7 @@ const routes = [
   "/creosote-removal",
   "/firebox-repair",
   "/fireplace-cleaning",
+  "/dryer-vent-cleaning",
   "/fraud-check",
   "/locations",
   "/locations/arlington",

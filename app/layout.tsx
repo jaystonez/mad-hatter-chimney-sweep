@@ -35,7 +35,11 @@ export const metadata: Metadata = {
     images: ['https://www.themadhatterchimneysweep.com/images/hero-fireplace.jpg'],
   },
   icons: {
-    icon: '/icon.svg',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
 }
 export default function RootLayout({

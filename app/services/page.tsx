@@ -120,6 +120,7 @@ export default function ServicesPage() {
     {
       title: "Stove & Fireplace Installation",
       slug: "stove-fireplace-installation",
+      href: "/services/stove-fireplace-installation",
       icon: Flame,
       description: "Professional installation of wood stoves, gas fireplaces, and inserts.",
       subServices: [
@@ -127,6 +128,19 @@ export default function ServicesPage() {
         "Gas Fireplace Installation",
         "Fireplace Insert Installation",
         "Glass Door Installation"
+      ]
+    },
+    {
+      title: "Dryer Vent Cleaning",
+      slug: "dryer-vent-cleaning",
+      href: "/dryer-vent-cleaning",
+      icon: Wind,
+      description: "Full dryer vent run cleaning to remove lint, improve drying time, and reduce fire risk.",
+      subServices: [
+        "Full duct cleaning to exterior",
+        "Outdoor hood / damper clearing",
+        "Airflow verification",
+        "Bundle with chimney service"
       ]
     },
     {

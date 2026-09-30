@@ -76,10 +76,12 @@ const nextConfig = {
       { source: '/services/rebuilds-restorations', destination: '/masonry-repair', permanent: true },
       { source: '/services/masonry-repair/', destination: '/masonry-repair', permanent: true },
       { source: '/services/masonry-repair', destination: '/masonry-repair', permanent: true },
-      { source: '/services/stove-fireplace-installation/', destination: '/fireplace-cleaning', permanent: true },
-      { source: '/services/stove-fireplace-installation', destination: '/fireplace-cleaning', permanent: true },
-      { source: '/services/dryer-vent-cleaning/', destination: '/services', permanent: true },
-      { source: '/services/dryer-vent-cleaning', destination: '/services', permanent: true },
+      // Installation content lives at /services/stove-fireplace-installation — do not send to fireplace cleaning.
+
+      { source: '/services/dryer-vent-cleaning/', destination: '/dryer-vent-cleaning', permanent: true },
+      { source: '/services/dryer-vent-cleaning', destination: '/dryer-vent-cleaning', permanent: true },
+      { source: '/dryer-vent/', destination: '/dryer-vent-cleaning', permanent: true },
+      { source: '/dryer-vent', destination: '/dryer-vent-cleaning', permanent: true },
       { source: '/services/wood-stove-cleaning/', destination: '/services', permanent: true },
       { source: '/services/wood-stove-cleaning', destination: '/services', permanent: true },
       { source: '/services/', destination: '/services', permanent: true },
