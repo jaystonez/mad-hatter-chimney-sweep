@@ -136,7 +136,7 @@ export default function ChimneySweepNearMePage() {
                 Reputable chimney sweeps quote clear prices before work begins. Be wary of extremely low prices (they often indicate incomplete service) or vague estimates that grow after work starts.
               </p>
               <p className="font-semibold text-foreground">
-                Mad Hatter's standard cleaning and 21-point inspection starts at $289.95. Repair estimates are detailed and provided before work begins.
+                Mad Hatter's standard cleaning and 21-point inspection starts at $189. Repair estimates are detailed and provided before work begins.
               </p>
             </div>
 
@@ -489,7 +489,7 @@ export default function ChimneySweepNearMePage() {
             <div className="bg-card border border-border rounded-lg p-6">
               <h3 className="text-lg font-bold mb-2">How much does chimney cleaning cost?</h3>
               <p className="text-muted-foreground">
-                Our standard cleaning and 21-point inspection starts at $289.95.
+                Our standard cleaning and 21-point inspection starts at $189.
               </p>
             </div>
 

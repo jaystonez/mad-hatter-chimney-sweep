@@ -480,7 +480,7 @@ export default function FireplaceCleaningPage() {
 
           <div className="mt-8 text-center">
             <p className="text-lg leading-relaxed opacity-95">
-              Professional cleaning costs <span className="font-bold">$289.95</span> at Mad Hatter—including our 21-point inspection. The cost of a chimney fire, carbon monoxide incident, or major repair makes professional cleaning the obvious investment.
+              Professional cleaning costs <span className="font-bold">$189</span> at Mad Hatter—including our 21-point inspection. The cost of a chimney fire, carbon monoxide incident, or major repair makes professional cleaning the obvious investment.
             </p>
           </div>
         </div>

@@ -53,7 +53,7 @@ export default function MercerIslandChimneySweepPage() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-5 w-5 text-accent" />
-                <span>$289.95 Standard Service</span>
+                <span>$189 Standard Service</span>
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@ export default function MercerIslandChimneySweepPage() {
               </ul>
               <div className="pt-6 border-t border-border">
                 <p className="text-sm text-muted-foreground mb-2">Starting at</p>
-                <p className="text-3xl font-bold text-primary">$289.95</p>
+                <p className="text-3xl font-bold text-primary">$189</p>
               </div>
             </div>
 

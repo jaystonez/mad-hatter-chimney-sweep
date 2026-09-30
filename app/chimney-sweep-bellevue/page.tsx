@@ -188,7 +188,7 @@ export default function ChimneySweepBellevuePage() {
                 </div>
 
                 <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg">
-                  <p className="font-semibold mb-2">Standard Cleaning Service: $289.95</p>
+                  <p className="font-semibold mb-2">Standard Cleaning Service: $189</p>
                   <p className="text-sm text-muted-foreground">
                     Includes complete creosote removal, flue and smoke chamber cleaning, firebox cleaning, 21-point inspection, written report, and professional cleanup.
                   </p>
@@ -521,7 +521,7 @@ export default function ChimneySweepBellevuePage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <h3 className="font-semibold text-lg mb-2">Transparent Pricing</h3>
                 <p className="text-sm text-white/80">
-                  Cleaning starts at $289.95. Detailed estimates before repair work begins. No hidden fees.
+                  Cleaning starts at $189. Detailed estimates before repair work begins. No hidden fees.
                 </p>
               </div>
 
