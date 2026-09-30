@@ -1,0 +1,53 @@
+name: Search Console metrics
+
+on:
+  schedule:
+    # Daily at 14:00 UTC (~7am PT / 6am PT depending on DST)
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch-gsc-metrics:
+    name: Fetch GSC search analytics
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: scripts/gsc-metrics/package-lock.json
+
+      - name: Install script dependencies
+        working-directory: scripts/gsc-metrics
+        run: npm ci
+
+      - name: Fetch Search Console metrics
+        working-directory: scripts/gsc-metrics
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          # Optional repo variable; script defaults to https://themadhatterchimneysweep.com/
+          # Set to sc-domain:themadhatterchimneysweep.com for a domain property.
+          GSC_SITE_URL: ${{ vars.GSC_SITE_URL }}
+        run: |
+          if [ -z "$GSC_SERVICE_ACCOUNT_JSON" ]; then
+            echo "::error::Missing secret GSC_SERVICE_ACCOUNT_JSON. See docs/search-console-metrics.md"
+            exit 1
+          fi
+          npm run fetch
+
+      - name: Upload metrics artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: search-console-metrics
+          path: metrics/search-console/
+          if-no-files-found: error
+          retention-days: 90
