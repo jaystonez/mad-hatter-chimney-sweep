@@ -366,8 +366,8 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   <div className="grid sm:grid-cols-3 gap-6 pt-6 border-t">
                     <div className="text-center">
                       <Star className="w-8 h-8 text-primary mx-auto mb-2" />
-                      <div className="font-bold text-2xl mb-1">5.0</div>
-                      <div className="text-sm text-muted-foreground">Average Rating</div>
+                      <div className="font-bold text-2xl mb-1">4.6</div>
+                      <div className="text-sm text-muted-foreground">Google Rating</div>
                     </div>
                     <div className="text-center">
                       <Clock className="w-8 h-8 text-primary mx-auto mb-2" />

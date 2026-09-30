@@ -77,12 +77,17 @@ export default function Hero() {
               Call {pricing.phone}
             </a>
             <a
-              href="#contact"
+              href="/chimney-sweep-seattle"
               className="inline-flex h-11 items-center justify-center rounded-md border-2 border-amber-200 bg-stone-950/80 px-8 py-6 text-lg font-semibold text-amber-50 backdrop-blur-sm transition-colors hover:bg-stone-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
             >
-              Request Service
+              Seattle Chimney Sweep Services
             </a>
           </div>
+          <p className="mt-4">
+            <a href="#contact" className="text-amber-200/90 text-sm underline underline-offset-4 hover:text-amber-100">
+              Or request service online
+            </a>
+          </p>
         </div>
       </div>
     </section>

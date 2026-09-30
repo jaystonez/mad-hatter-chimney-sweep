@@ -1,7 +1,9 @@
 "use client"
 
 import React, { useState, useRef } from "react"
-import { Phone, Mail, Clock, MapPin, Send, CheckCircle, Loader2, ImagePlus, X } from "lucide-react"
+import { Phone, Mail, Clock, MapPin, Send, CheckCircle, Loader2, ImagePlus, X, Star, ExternalLink } from "lucide-react"
+import { businessProfiles } from "@/lib/business-profiles"
+import { pricing } from "@/lib/pricing"
 
 export function CTA() {
   const [submitted, setSubmitted] = useState(false)
@@ -134,8 +136,47 @@ export function CTA() {
                 <div>
                   <div className="text-xs text-stone-300 uppercase tracking-wide font-medium">Service Area</div>
                   <div className="text-white font-semibold">King & Snohomish Counties</div>
-                  <div className="text-stone-400 text-sm">and surrounding areas</div>
+                  <div className="text-stone-400 text-sm">
+                    {pricing.businessLocation.serviceAreaOnly
+                      ? "We come to your home — no public walk-in location"
+                      : "and surrounding areas"}
+                  </div>
+                  <div className="text-stone-400 text-sm mt-1">
+                    {pricing.businessLocation.streetAddress}, {pricing.businessLocation.locality},{" "}
+                    {pricing.businessLocation.region} {pricing.businessLocation.postalCode}
+                  </div>
                 </div>
+              </div>
+            </div>
+            <div className="bg-stone-800/50 border border-stone-700/50 rounded-2xl p-6">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
+                  <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
+                </div>
+                <div>
+                  <div className="text-xs text-stone-300 uppercase tracking-wide font-medium">Google Reviews</div>
+                  <div className="text-white font-semibold">4.6 average rating</div>
+                </div>
+              </div>
+              <div className="pl-14 flex flex-col sm:flex-row gap-3">
+                <a
+                  href={businessProfiles.find((p) => p.name === "Google Business Profile")?.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-amber-400 hover:text-amber-300"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Read reviews on Google
+                </a>
+                <a
+                  href={businessProfiles.find((p) => p.name === "Google Reviews")?.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-stone-300 hover:text-amber-300"
+                >
+                  <Star className="w-4 h-4" />
+                  Leave a Google review
+                </a>
               </div>
             </div>
           </div>
