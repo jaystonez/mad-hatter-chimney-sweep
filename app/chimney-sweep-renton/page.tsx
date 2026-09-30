@@ -127,7 +127,7 @@ export default function RentonChimneySweepPage() {
               </div>
               <div className="pt-4 border-t">
                 <p className="text-sm text-muted-foreground mb-2">Standard Service</p>
-                <p className="text-2xl font-bold text-primary">$289.95</p>
+                <p className="text-2xl font-bold text-primary">$189</p>
                 <p className="text-sm text-muted-foreground">Includes 21-point inspection</p>
               </div>
             </div>
@@ -273,7 +273,7 @@ export default function RentonChimneySweepPage() {
             <div className="bg-primary-foreground/10 backdrop-blur rounded-lg p-6">
               <h3 className="text-xl font-bold mb-3">Transparent Pricing</h3>
               <p className="text-primary-foreground/90">
-                $289.95 standard service. Clear repair estimates before work begins. No hidden fees or surprise charges.
+                $189 standard service. Clear repair estimates before work begins. No hidden fees or surprise charges.
               </p>
             </div>
 

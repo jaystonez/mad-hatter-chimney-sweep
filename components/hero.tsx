@@ -1,6 +1,6 @@
 import { Phone, Shield, CheckCircle } from "lucide-react"
 import Image from "next/image"
-import { pricing, isPromoActive } from "@/lib/pricing"
+import { pricing, isPromoActive, formatPrice } from "@/lib/pricing"
 
 function formatPromoDate(isoDate: string) {
   const [year, month, day] = isoDate.split("-").map(Number)
@@ -13,8 +13,8 @@ function formatPromoDate(isoDate: string) {
 
 export default function Hero() {
   const promoOn = isPromoActive()
-  const promoPrice = pricing.promo.chimneyCleaning.toFixed(2)
-  const standardPrice = pricing.services.chimneyCleaning.standard.toFixed(2)
+  const promoPrice = formatPrice(pricing.promo.chimneyCleaning)
+  const standardPrice = formatPrice(pricing.services.chimneyCleaning.standard)
 
   return (
     <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-stone-900 via-stone-800 to-amber-900 overflow-hidden">

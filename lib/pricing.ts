@@ -7,7 +7,7 @@
 export const pricing = {
   services: {
     chimneyCleaning: {
-      standard: 289.95,
+      standard: 189,
       description: 'Professional chimney cleaning with Level 1 inspection included',
     },
     inspection: {
@@ -25,11 +25,11 @@ export const pricing = {
     type: 'summer_special_2026',
     name: 'Summer Special',
     description: 'Limited-time summer promotion',
-    chimneyCleaning: 99.95,
+    chimneyCleaning: 189,
     label: 'Summer Special',
     subtitle: 'Limited-time offer | Includes Level 1 inspection',
     expiresAt: '2026-08-31',
-    calloutText: 'Book $99.95 Summer Special',
+    calloutText: 'Book $189 chimney sweep',
     disclaimer: 'Limited availability. Call to confirm eligibility.',
   },
 
@@ -54,6 +54,13 @@ export const pricing = {
 
   phone: '(206) 274-6409',
   phoneE164: '+12062746409',
+}
+
+
+/** Whole dollars stay integers so a price cannot render as 18900 or 9995. */
+export function formatPrice(amount: number): string {
+  if (!Number.isFinite(amount)) return ''
+  return Number.isInteger(amount) ? String(amount) : amount.toFixed(2)
 }
 
 export const getChimneySweepPrice = () => {

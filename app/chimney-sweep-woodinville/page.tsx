@@ -99,7 +99,7 @@ export default function ChimneySweepWoodinvillePage() {
                 Complete creosote removal from main flue, smoke chamber, firebox, damper, and all joints. Professional equipment sized for your specific flue. Your home stays completely clean throughout.
               </p>
               <div className="mt-auto">
-                <p className="text-sm font-medium text-primary">Starting at $289.95</p>
+                <p className="text-sm font-medium text-primary">Starting at $189</p>
                 <p className="text-sm text-muted-foreground">Includes 21-point inspection</p>
               </div>
             </div>

@@ -119,7 +119,7 @@ export default function ChimneySweepKirklandPage() {
               Professional Chimney Cleaning for Kirkland Homes
             </h2>
             <p className="text-lg text-muted-foreground">
-              Complete creosote removal, 21-point inspection, and professional documentation. Starting at $289.95.
+              Complete creosote removal, 21-point inspection, and professional documentation. Starting at $189.
             </p>
           </div>
 
@@ -212,7 +212,7 @@ export default function ChimneySweepKirklandPage() {
               </div>
               <div className="mt-6 pt-6 border-t">
                 <p className="text-lg font-semibold">
-                  Standard Service: <span className="text-primary">$289.95</span>
+                  Standard Service: <span className="text-primary">$189</span>
                 </p>
                 <p className="text-sm text-muted-foreground">Includes complete cleaning and full 21-point inspection</p>
               </div>
@@ -398,7 +398,7 @@ export default function ChimneySweepKirklandPage() {
             <div className="bg-primary-foreground/10 rounded-lg p-6">
               <h3 className="font-bold mb-2">Transparent Pricing</h3>
               <p className="text-sm text-primary-foreground/80">
-                $289.95 standard service. Detailed repair estimates. No surprises.
+                $189 standard service. Detailed repair estimates. No surprises.
               </p>
             </div>
 

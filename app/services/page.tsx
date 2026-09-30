@@ -73,7 +73,7 @@ export default function ServicesPage() {
       slug: "chimney-cleaning",
       href: "/chimney-cleaning",
       icon: Wind,
-      description: "Professional chimney cleaning starting at $289.95 for standard open-ended fireplaces. Bottom-up rotary brush system with HEPA-filtered vacuum.",
+      description: "Professional chimney cleaning starting at $189 for standard open-ended fireplaces. Bottom-up rotary brush system with HEPA-filtered vacuum.",
       subServices: [
         "Rotary Brush Cleaning",
         "HEPA-Filtered Vacuum System",

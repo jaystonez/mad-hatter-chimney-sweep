@@ -1,9 +1,15 @@
 import { pageMetadata } from "@/lib/seo"
 import { CheckCircle2, Flame, Shield, DollarSign, Home, Clock } from 'lucide-react'
 import Link from 'next/link'
-import { pricing, getDisplayPrice, isPromoActive } from '@/lib/pricing'
+import { pricing, getDisplayPrice, isPromoActive, formatPrice } from '@/lib/pricing'
 
-export const metadata = pageMetadata('Chimney Sweep Seattle: Professional Cleaning & Inspection Services | Mad Hatter', `45+ years serving Seattle. Certified chimney sweep services starting at $${pricing.services.chimneyCleaning.standard}. Complete cleaning, 21-point inspection, and expert repairs. Same-day service available.`, "/chimney-sweep-seattle")
+const sweepPrice = `$${formatPrice(pricing.services.chimneyCleaning.standard)}`
+
+export const metadata = pageMetadata(
+  `Chimney Sweep Seattle ${sweepPrice} | Mad Hatter`,
+  `Chimney sweep in Seattle from ${sweepPrice} with a 21-point inspection. Licensed WA #${pricing.contractorLicense.number}. 45+ years serving Seattle families. Call ${pricing.phone}.`,
+  "/chimney-sweep-seattle",
+)
 
 export default function ChimneySweepSeattlePage() {
   const displayPrice = getDisplayPrice()

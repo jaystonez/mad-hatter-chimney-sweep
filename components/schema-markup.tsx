@@ -1,4 +1,4 @@
-import { pricing, getSchemaPrice, isPromoActive } from '@/lib/pricing'
+import { pricing, getSchemaPrice, isPromoActive, formatPrice } from '@/lib/pricing'
 import { businessProfileUrls } from '@/lib/business-profiles'
 
 const SITE_URL = 'https://www.themadhatterchimneysweep.com'
@@ -72,7 +72,7 @@ function serviceOffer({
     },
     ...(typeof price === 'number'
       ? {
-          price: price.toFixed(2),
+          price: formatPrice(price),
           priceCurrency: 'USD',
         }
       : {}),
@@ -150,7 +150,7 @@ export default function SchemaMarkup() {
     telephone: pricing.phoneE164,
     email: 'services@themadhatterchimneysweep.com',
     foundingDate: '1979',
-    priceRange: '$$',
+    priceRange: `$${formatPrice(getSchemaPrice())}`,
     currenciesAccepted: 'USD',
     paymentAccepted: 'Cash, Check, Credit Card',
     image: [
@@ -218,7 +218,7 @@ export default function SchemaMarkup() {
         {
           ...serviceOffer({
             name: 'Chimney Sweep and Cleaning',
-            description: `Professional chimney cleaning and creosote removal starting at $${schemaPrice}`,
+            description: `Professional chimney cleaning and creosote removal starting at $${formatPrice(schemaPrice)}`,
             url: `${SITE_URL}/chimney-cleaning`,
             price: schemaPrice,
           }),
@@ -226,7 +226,7 @@ export default function SchemaMarkup() {
             priceValidUntil: pricing.promo.expiresAt,
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: pricing.promo.chimneyCleaning,
+              price: formatPrice(pricing.promo.chimneyCleaning),
               priceCurrency: 'USD',
               name: pricing.promo.label,
               validFrom: new Date().toISOString().split('T')[0],

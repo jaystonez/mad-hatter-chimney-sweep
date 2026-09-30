@@ -1,4 +1,5 @@
 import { pageMetadata } from "@/lib/seo"
+import { pricing, formatPrice } from "@/lib/pricing"
 import type { Metadata } from "next"
 import Hero from "@/components/hero"
 import Services from "@/components/services"
@@ -9,7 +10,13 @@ import HomeFaq, { faqItems } from "@/components/home-faq"
 import HomeEntityDepth from "@/components/home-entity-depth"
 import CTA from "@/components/cta"
 
-export const metadata: Metadata = pageMetadata("Seattle & Bellevue Chimney Sweep Since 1979 | Mad Hatter", "Seattle chimney sweep, inspection and repair since 1979. Licensed, bonded and insured. Serving Seattle, Bellevue and nearby areas. Call (206) 274-6409.", "/")
+const sweepPrice = `$${formatPrice(pricing.services.chimneyCleaning.standard)}`
+
+export const metadata: Metadata = pageMetadata(
+  `Seattle Chimney Sweep ${sweepPrice} | Mad Hatter`,
+  `Seattle chimney sweep from ${sweepPrice}, including a Level 1 inspection. Licensed, bonded and insured since 1979. WA #${pricing.contractorLicense.number}. Call ${pricing.phone}.`,
+  "/",
+)
 
 const faqSchema = {
   "@context": "https://schema.org",

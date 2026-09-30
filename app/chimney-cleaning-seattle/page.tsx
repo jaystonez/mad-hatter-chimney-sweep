@@ -3,7 +3,11 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Shield, Clock, Flame, Wind, CheckCircle2, AlertTriangle, Home, Eye, Droplets, ThermometerSun } from 'lucide-react'
 
-export const metadata: Metadata = pageMetadata('Chimney Cleaning Seattle | Professional Creosote Removal & Maintenance', 'Professional chimney cleaning in Seattle. 45+ years removing dangerous creosote, improving efficiency, and protecting Seattle homes. Licensed & insured. $289.95 includes 21-point inspection.', "/chimney-cleaning-seattle")
+export const metadata: Metadata = pageMetadata(
+  'Chimney Cleaning Seattle $189 | Mad Hatter',
+  'Chimney cleaning in Seattle from $189, including a 21-point inspection. Licensed & insured. 45+ years removing creosote. Call (206) 274-6409.',
+  "/chimney-cleaning-seattle",
+)
 
 export default function ChimneyCleaningSeattle() {
   return (
@@ -436,7 +440,7 @@ export default function ChimneyCleaningSeattle() {
               Professional vs. DIY Chimney Cleaning
             </h2>
             <p className="text-lg text-muted-foreground">
-              Why professional cleaning at $289.95 is the smart investment.
+              Why professional cleaning at $189 is the smart investment.
             </p>
           </div>
 
@@ -468,7 +472,7 @@ export default function ChimneyCleaningSeattle() {
               </ul>
 
               <div className="mt-6 pt-6 border-t border-primary/20">
-                <p className="text-2xl font-bold text-foreground mb-2">$289.95</p>
+                <p className="text-2xl font-bold text-foreground mb-2">$189</p>
                 <p className="text-sm text-muted-foreground">Includes complete cleaning + 21-point inspection</p>
               </div>
             </div>
@@ -632,7 +636,7 @@ export default function ChimneyCleaningSeattle() {
                 <h3 className="font-semibold text-foreground">Transparent Pricing</h3>
               </div>
               <p className="text-sm text-muted-foreground">
-                $289.95 standard service. No hidden fees, no surprise charges.
+                $189 standard service. No hidden fees, no surprise charges.
               </p>
             </div>
 

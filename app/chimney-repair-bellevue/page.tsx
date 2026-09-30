@@ -511,7 +511,7 @@ export default function ChimneyRepairBellevuePage() {
                 {
                   title: "Regular Cleaning",
                   description: "Professional cleaning prevents creosote damage and monitors conditions",
-                  cost: "$289.95"
+                  cost: "$189"
                 },
                 {
                   title: "Chimney Cap",
