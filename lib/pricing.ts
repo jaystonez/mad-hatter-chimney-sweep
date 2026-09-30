@@ -45,7 +45,7 @@ export const pricing = {
     locality: 'Seattle',
     region: 'WA',
     postalCode: '98104',
-    serviceAreaOnly: false,
+    serviceAreaOnly: true,
     geo: {
       latitude: 47.60454,
       longitude: -122.33069,

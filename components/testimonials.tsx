@@ -1,11 +1,15 @@
 // @ts-nocheck
-import { Star, ExternalLink } from "lucide-react"
+import { Star, ExternalLink, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { businessProfiles } from "@/lib/business-profiles"
 
 const googleProfileUrl =
   businessProfiles.find((profile) => profile.name === "Google Business Profile")?.url ??
-  "https://www.google.com/maps/place/Mad+Hatter+Chimney+Sweep"
+  "https://maps.app.goo.gl/zqzPH1Ekb3MnDJiN9"
+
+const googleReviewUrl =
+  businessProfiles.find((profile) => profile.name === "Google Reviews")?.url ??
+  googleProfileUrl
 
 export default function Testimonials() {
   return (
@@ -25,10 +29,11 @@ export default function Testimonials() {
             ))}
           </div>
           <p className="text-lg text-stone-600 mb-2">
-            <span className="font-bold text-stone-900">4.6</span> from real Google reviews
+            <span className="font-bold text-stone-900">4.6</span> average on Google
           </p>
           <p className="text-stone-500 text-sm mb-8">
-            We&apos;ve been serving Seattle &amp; Bellevue since 1979. Read what our customers say on Google.
+            We&apos;ve been serving Seattle &amp; Bellevue since 1979. We don&apos;t invent quotes on this site —
+            read verified customer reviews directly on Google.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -42,10 +47,29 @@ export default function Testimonials() {
                 rel="noopener noreferrer"
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
-                Read Our Google Reviews
+                Read Reviews on Google
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-amber-500 text-stone-900 hover:bg-amber-50 font-semibold"
+              asChild
+            >
+              <a
+                href={googleReviewUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Star className="w-4 h-4 mr-2 fill-amber-400 text-amber-400" />
+                Leave a Google Review
               </a>
             </Button>
           </div>
+          <p className="mt-6 text-xs text-stone-400 flex items-center justify-center gap-1">
+            <MapPin className="w-3 h-3" />
+            Google Business Profile for The Mad Hatter Chimney Sweep
+          </p>
         </div>
       </div>
     </section>

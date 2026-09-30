@@ -46,6 +46,9 @@ export function Footer() {
               <p>
                 {pricing.businessLocation.locality}, {pricing.businessLocation.region} {pricing.businessLocation.postalCode}
               </p>
+              {pricing.businessLocation.serviceAreaOnly && (
+                <p>Service-area business — we come to your home (no public walk-in)</p>
+              )}
               <p>
                 Phone:{' '}
                 <a href={`tel:${pricing.phoneE164}`} className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
@@ -99,7 +102,7 @@ export function Footer() {
             <h3 className="font-bold text-lg mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/chimney-inspection" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
+                <Link href="/chimney-cleaning" className="text-slate-300 underline underline-offset-4 hover:text-primary transition-colors">
                   Chimney Sweeping
                 </Link>
               </li>
