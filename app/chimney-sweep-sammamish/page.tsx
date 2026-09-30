@@ -132,7 +132,7 @@ export default function ChimneySweepSammamishPage() {
                   <span className="text-sm">21-point inspection included</span>
                 </li>
               </ul>
-              <p className="text-lg font-bold">Starting at $189</p>
+              <p className="text-lg font-bold">Starting at $219</p>
             </div>
 
             {/* Inspection */}
@@ -365,7 +365,7 @@ export default function ChimneySweepSammamishPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-2">Transparent Pricing</h3>
                   <p className="text-primary-foreground/80">
-                    $189 standard service. Detailed repair estimates before work begins. No hidden fees or surprises.
+                    $219 standard service. Detailed repair estimates before work begins. No hidden fees or surprises.
                   </p>
                 </div>
               </div>

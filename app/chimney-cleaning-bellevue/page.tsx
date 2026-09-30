@@ -236,7 +236,7 @@ export default function ChimneyCleaningBellevuePage() {
           <div className="mt-12 text-center">
             <div className="inline-block bg-primary/10 border-2 border-primary/20 rounded-lg p-6">
               <p className="text-lg font-semibold text-foreground mb-2">
-                Standard Service: $189
+                Standard Service: $219
               </p>
               <p className="text-muted-foreground">
                 Includes complete cleaning and full 21-point inspection
@@ -396,7 +396,7 @@ export default function ChimneyCleaningBellevuePage() {
               </ul>
               <div className="mt-6 pt-6 border-t">
                 <p className="text-lg font-semibold text-primary">
-                  Investment: $189
+                  Investment: $219
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
                   Complete service with 21-point inspection included
@@ -510,7 +510,7 @@ export default function ChimneyCleaningBellevuePage() {
               {
                 icon: CheckCircle,
                 title: 'Transparent Pricing',
-                description: '$189 standard service. No hidden fees, no surprise charges. You know exactly what you\'re paying.'
+                description: '$219 standard service. No hidden fees, no surprise charges. You know exactly what you\'re paying.'
               },
               {
                 icon: Shield,

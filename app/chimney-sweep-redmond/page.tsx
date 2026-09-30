@@ -170,7 +170,7 @@ export default function ChimneySweepRedmond() {
 
               <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-lg">
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-3xl font-bold text-primary">$189</span>
+                  <span className="text-3xl font-bold text-primary">$219</span>
                   <span className="text-muted-foreground">starting price</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
@@ -437,7 +437,7 @@ export default function ChimneySweepRedmond() {
               <Users className="h-8 w-8 mb-4 text-primary-foreground" />
               <h3 className="text-xl font-semibold mb-2">Transparent Pricing</h3>
               <p className="text-primary-foreground/80">
-                $189 standard service. Detailed repair estimates before work begins. No hidden fees, no surprise charges.
+                $219 standard service. Detailed repair estimates before work begins. No hidden fees, no surprise charges.
               </p>
             </div>
 

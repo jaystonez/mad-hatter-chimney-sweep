@@ -5,8 +5,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { DollarSign, CheckCircle2, AlertTriangle, ArrowLeft } from "lucide-react"
 
 export const metadata: Metadata = pageMetadata(
-  "Chimney Sweep Cost Seattle $189 | Mad Hatter",
-  "Mad Hatter chimney sweep in Seattle starts at $189 with a Level 1 inspection. See what affects Seattle chimney sweep pricing in 2026.",
+  "Chimney Sweep Cost Seattle $219 | Mad Hatter",
+  "Mad Hatter chimney sweep in Seattle starts at $219 with a Level 1 inspection. See what affects Seattle chimney sweep pricing in 2026.",
   "/resources/chimney-sweep-cost",
 )
 
@@ -42,7 +42,7 @@ export default function ChimneySweepCostPage() {
 
             <div className="bg-primary/5 border-2 border-primary/20 rounded-xl p-8 text-center my-8">
               <p className="text-lg text-slate-700 mb-2">Mad Hatter&apos;s standard cleaning &amp; 21-point inspection</p>
-              <p className="text-4xl font-bold text-primary">Starting at $189</p>
+              <p className="text-4xl font-bold text-primary">Starting at $219</p>
               <p className="text-sm text-slate-500 mt-2">For standard open-ended fireplaces in the greater Seattle area</p>
             </div>
 

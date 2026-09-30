@@ -107,7 +107,7 @@ export default function ChimneySweepLakeForestParkPage() {
                 Professional containment protects your home throughout the process.
               </p>
               <p className="font-semibold text-primary">
-                Starting at $189 including 21-point inspection
+                Starting at $219 including 21-point inspection
               </p>
             </Card>
 

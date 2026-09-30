@@ -609,7 +609,7 @@ export default function ChimneyInspectionBellevuePage() {
                 <div className="text-sm">
                   <span className="font-semibold">Solution:</span> Professional cleaning
                   <br />
-                  <span className="font-semibold">Cost:</span> $189 (includes inspection)
+                  <span className="font-semibold">Cost:</span> $219 (includes inspection)
                 </div>
               </div>
 
