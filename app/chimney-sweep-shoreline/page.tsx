@@ -26,7 +26,7 @@ export default function ChimneySweepShorelinePage() {
                 className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call (123) 456-7890
+                Call (206) 274-6409
               </a>
               <Link
                 href="/contact"
@@ -330,7 +330,7 @@ export default function ChimneySweepShorelinePage() {
                 className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call (123) 456-7890
+                Call (206) 274-6409
               </a>
               <Link
                 href="/contact"
