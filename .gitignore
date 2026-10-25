@@ -35,3 +35,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .eslintrc.json
+
+# Google Search Console metrics (local dumps / secrets — artifacts preferred in CI)
+metrics/search-console/*
+!metrics/search-console/.gitkeep
+scripts/gsc-metrics/node_modules/
+scripts/gsc-metrics/service-account*.json
+**/gsc-service-account*.json

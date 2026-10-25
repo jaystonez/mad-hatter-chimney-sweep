@@ -1,0 +1,16 @@
+{
+  "name": "gsc-metrics",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fetch Google Search Console search analytics for themadhatterchimneysweep.com",
+  "main": "fetch-metrics.js",
+  "scripts": {
+    "fetch": "node fetch-metrics.js"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
