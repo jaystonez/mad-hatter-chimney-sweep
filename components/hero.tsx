@@ -50,7 +50,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl text-stone-100 leading-relaxed mb-8 max-w-2xl">
-            Family owned and trusted since 1979. Serving Seattle, Bellevue, and the Greater Eastside with honest chimney service. Licensed WA #{pricing.contractorLicense.number}.
+            Chimney cleaning, inspections, masonry repairs and leak help for Seattle, Bellevue and the Greater Eastside. Family owned since 1979. Licensed WA #{pricing.contractorLicense.number}.
           </p>
 
           <div className="flex flex-wrap gap-6 mb-10 text-stone-200">

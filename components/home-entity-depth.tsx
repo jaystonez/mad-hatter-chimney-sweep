@@ -2,7 +2,8 @@ import Link from "next/link"
 import { businessProfiles } from "@/lib/business-profiles"
 
 const serviceLinks = [
-  { label: "Chimney Sweep and Inspection", href: "/chimney-inspection" },
+  { label: "Chimney Sweeping and Cleaning", href: "/chimney-cleaning" },
+  { label: "Chimney Inspections", href: "/chimney-inspection" },
   { label: "Chimney Repair", href: "/chimney-repair-seattle" },
   { label: "Chimney Cap Installation", href: "/chimney-cap-installation" },
   { label: "Chimney Liner Installation", href: "/chimney-liner-installation" },
@@ -11,12 +12,12 @@ const serviceLinks = [
 ]
 
 const locationLinks = [
-  { label: "Seattle", href: "/locations/seattle" },
-  { label: "Bellevue", href: "/locations/bellevue" },
-  { label: "Kirkland", href: "/locations/kirkland" },
-  { label: "Redmond", href: "/locations/redmond" },
-  { label: "Bothell", href: "/locations/bothell" },
-  { label: "Shoreline", href: "/locations/shoreline" },
+  { label: "Seattle", href: "/chimney-sweep-seattle" },
+  { label: "Bellevue", href: "/chimney-sweep-bellevue" },
+  { label: "Kirkland", href: "/chimney-sweep-kirkland" },
+  { label: "Redmond", href: "/chimney-sweep-redmond" },
+  { label: "Bothell", href: "/chimney-sweep-bothell" },
+  { label: "Shoreline", href: "/chimney-sweep-shoreline" },
 ]
 
 const inspectionChecklist = [
@@ -34,29 +35,26 @@ export default function HomeEntityDepth() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-4">
-              Seattle Chimney Service Backed by Real Job Documentation
+              Chimney Cleaning, Repairs and Leak Help in Greater Seattle
             </h2>
             <p className="text-lg text-stone-600 max-w-4xl mx-auto leading-relaxed">
-              Mad Hatter Chimney Sweep operates as a Seattle-area service business with a
-              field-first process. Every sweep, inspection, and repair call is documented so
-              homeowners can compare findings, understand risks, and make informed decisions. We
-              do not rely on vague one-line claims. We provide written notes, photos when needed,
-              and practical guidance that separates urgent safety concerns from maintenance that can
-              be planned.
+              Soot buildup, smoke entering the room, damp masonry and a damaged chimney cap
+              call for different kinds of service. Tell us what you are seeing and we will help
+              you choose a cleaning, inspection or repair appointment. You receive written
+              findings and a clear scope before deciding on additional work.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 mb-10">
             <article className="rounded-2xl border border-stone-200 bg-stone-50 p-8">
               <h3 className="text-2xl font-bold text-stone-900 mb-4">
-                Local services homeowners search for most
+                Find the Right Service for Your Chimney
               </h3>
               <p className="text-stone-600 leading-relaxed mb-5">
-                We cover chimney sweep Seattle, chimney repair Seattle, chimney inspection Seattle,
-                fireplace cleaning, and dryer vent risk reduction across King and Snohomish county
-                communities. If your home has older masonry, recurring smoke drafting issues, or
-                signs of moisture damage, we prioritize diagnosis details before recommending
-                expensive work.
+                Book a sweep for soot and creosote removal, an inspection for condition questions,
+                or a repair visit for cracked mortar, crown damage and leaks. For water entering
+                around the fireplace, we check the cap, crown, flashing and masonry to identify
+                the source before recommending a repair.
               </p>
               <ul className="space-y-3">
                 {serviceLinks.map((service) => (
@@ -74,12 +72,12 @@ export default function HomeEntityDepth() {
 
             <article className="rounded-2xl border border-stone-200 bg-white p-8">
               <h3 className="text-2xl font-bold text-stone-900 mb-4">
-                21-point inspection reporting approach
+                What We Check During an Inspection
               </h3>
               <p className="text-stone-600 leading-relaxed mb-5">
-                Our inspection workflow is designed for clarity. You get a practical report that
-                identifies safety concerns, documents condition status, and explains why each item
-                matters in plain language.
+                A standard sweep includes a Level 1 inspection. The checks below are examples,
+                rather than the complete inspection checklist. Ask about the appropriate
+                inspection level when buying a home, changing an appliance or investigating damage.
               </p>
               <ol className="space-y-3 list-decimal list-inside text-stone-700">
                 {inspectionChecklist.map((item) => (
@@ -89,23 +87,23 @@ export default function HomeEntityDepth() {
                 ))}
               </ol>
               <p className="mt-5 text-stone-600 leading-relaxed">
-                This process helps homeowners avoid pressure sales by turning each recommendation
-                into a verifiable finding with context.
+                We explain the findings, which issues need attention and what work can be planned.
+                Ask for photos and a written estimate before approving a repair.
               </p>
             </article>
           </div>
 
           <div className="rounded-2xl border border-stone-200 bg-stone-900 text-white p-8 mb-10">
-            <h3 className="text-2xl font-bold mb-4">Service area coverage and entity signals</h3>
+            <h3 className="text-2xl font-bold mb-4">Serving Seattle, Bellevue and Nearby Communities</h3>
             <p className="text-stone-300 leading-relaxed mb-6">
-              We maintain consistent business identity across our website, service pages, and
-              profile listings so homeowners can verify who they are hiring. Browse key service
-              areas and independent profiles below.
+              We travel to homes across King and Snohomish counties. Find information for your
+              city below, or call to confirm coverage and appointment availability. You can also
+              visit our business profiles to read customer reviews.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-semibold text-amber-400 mb-3">Key service area pages</h4>
+                <h4 className="font-semibold text-amber-400 mb-3">Chimney Service Near You</h4>
                 <ul className="space-y-2">
                   {locationLinks.map((location) => (
                     <li key={location.href}>
@@ -120,7 +118,7 @@ export default function HomeEntityDepth() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-amber-400 mb-3">Business profile references</h4>
+                <h4 className="font-semibold text-amber-400 mb-3">Reviews and Business Profiles</h4>
                 <ul className="space-y-2">
                   {businessProfiles.map((profile) => (
                     <li key={profile.url}>
@@ -144,7 +142,7 @@ export default function HomeEntityDepth() {
               href="/contact"
               className="inline-flex items-center justify-center rounded-lg bg-amber-500 px-8 py-4 font-semibold text-stone-900 hover:bg-amber-400 transition-colors"
             >
-              Request a documented inspection and written scope
+              Request Chimney Service or a Repair Estimate
             </Link>
           </div>
         </div>

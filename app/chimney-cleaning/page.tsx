@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Phone, CheckCircle2, AlertTriangle, Flame, Wind, Shield } from "lucide-react"
 
 export const metadata: Metadata = pageMetadata(
-  "Chimney Cleaning Seattle $219 | Mad Hatter",
+  "Chimney Cleaning & Creosote Removal $219 | Mad Hatter",
   "Professional chimney cleaning in Seattle from $219, including creosote removal and a Level 1 inspection. Licensed & insured. Call (206) 274-6409.",
   "/chimney-cleaning",
 )

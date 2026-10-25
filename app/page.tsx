@@ -13,8 +13,8 @@ import CTA from "@/components/cta"
 const sweepPrice = `$${formatPrice(pricing.services.chimneyCleaning.standard)}`
 
 export const metadata: Metadata = pageMetadata(
-  `Seattle Chimney Sweep ${sweepPrice} | Mad Hatter`,
-  `Seattle chimney sweep from ${sweepPrice}, including a Level 1 inspection. Licensed, bonded and insured since 1979. WA #${pricing.contractorLicense.number}. Call ${pricing.phone}.`,
+  `Seattle Chimney Sweep & Repair ${sweepPrice} | Mad Hatter`,
+  `Seattle and Bellevue chimney cleaning from ${sweepPrice} with a Level 1 inspection. Chimney repairs, caps and leak help. Licensed WA #${pricing.contractorLicense.number}.`,
   "/",
 )
 
