@@ -35,15 +35,22 @@ export default function ChimneySweepSeattlePage() {
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 text-pretty">
               {showPromo
                 ? `${pricing.promo.label}: $${displayPrice.primary} (Regular $${displayPrice.standard}). Includes Level 1 inspection. Limited availability.`
-                : `Certified chimney cleaning, comprehensive inspection, and expert repairs for Seattle's wet climate. Over 45 years of protecting Seattle families.`}
+                : `Seattle chimney cleaning from $${formatPrice(pricing.services.chimneyCleaning.standard)}, including a Level 1 inspection. Serving Seattle homeowners since 1979 with straightforward pricing and documented work.`}
             </p>
             
+            <p className="mb-8 text-base md:text-lg text-primary-foreground/90 max-w-3xl">
+              Before you hire a chimney sweep, check the contractor registration and ask for a written scope.{' '}
+              <Link href="/verify-contractor" className="font-semibold underline underline-offset-4 hover:text-yellow-200">
+                Verify a Washington chimney contractor
+              </Link>
+            </p>
+
             <div className="flex flex-wrap gap-4">
               <Link
                 href={`tel:+1${pricing.phone.replace(/\D/g, '')}`}
                 className="inline-flex items-center justify-center px-8 py-4 bg-yellow-400 text-primary rounded-lg font-semibold hover:bg-yellow-300 transition-colors"
               >
-                {showPromo ? `Call Now: $${displayPrice.primary} Special` : 'Schedule Service'}
+                {showPromo ? `Call Now: $${displayPrice.primary} Special` : `Call ${pricing.phone}`}
               </Link>
               <Link
                 href="#services"
@@ -152,7 +159,7 @@ export default function ChimneySweepSeattlePage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Fire Safety</h3>
               <p className="text-muted-foreground">
-                Creosote buildup ignites at 1,000°F, creating chimney fires reaching 2,000°F+. Professional cleaning eliminates this deadly risk completely.
+                Creosote buildup ignites at 1,000°F, creating chimney fires reaching 2,000°F+. Professional inspection and appropriate cleaning help reduce chimney-fire risk, although no service can eliminate all risk.
               </p>
             </div>
 
@@ -162,7 +169,7 @@ export default function ChimneySweepSeattlePage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">CO Prevention</h3>
               <p className="text-muted-foreground">
-                Blocked chimneys force carbon monoxide into your home. Professional service ensures deadly gases vent safely outside.
+                Blockages and venting problems can allow carbon monoxide into a home. Inspection and appropriate repairs help identify and address potential hazards.
               </p>
             </div>
 
@@ -209,7 +216,7 @@ export default function ChimneySweepSeattlePage() {
               <div className="space-y-3 mb-6">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">Complete creosote removal - all stages</span>
+                  <span className="text-sm">Creosote removal based on actual flue condition</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -436,7 +443,7 @@ export default function ChimneySweepSeattlePage() {
                 <div>
                   <h2 className="text-2xl font-bold mb-4">The Importance of Annual Chimney Maintenance</h2>
                   <p className="text-muted-foreground mb-4">
-                    The National Fire Protection Association (NFPA) recommends chimney inspection and cleaning at least once per year. If you use your fireplace regularly, more frequent cleaning may be necessary.
+                    Annual chimney inspections are recommended; cleaning frequency depends on use, buildup, and the findings of the inspection. If you use your fireplace regularly, more frequent cleaning may be necessary.
                   </p>
                   <p className="text-muted-foreground mb-6">
                     Think of chimney maintenance like vehicle maintenance: regular service prevents expensive problems. A yearly chimney sweep costs ${pricing.services.chimneyCleaning.standard}. A chimney fire or carbon monoxide incident can cost thousands—or worse.
@@ -487,7 +494,7 @@ export default function ChimneySweepSeattlePage() {
             </p>
           )}
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Don't wait for problems to develop. Professional chimney maintenance keeps your home safe and your fireplace working efficiently. Same-day and next-day service available throughout Seattle.
+            Don't wait for problems to develop. Professional chimney maintenance keeps your home safe and your fireplace working efficiently. Call to ask about current appointment availability throughout Seattle.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
