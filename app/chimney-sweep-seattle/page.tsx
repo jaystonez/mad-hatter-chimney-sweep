@@ -35,7 +35,7 @@ export default function ChimneySweepSeattlePage() {
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 text-pretty">
               {showPromo
                 ? `${pricing.promo.label}: $${displayPrice.primary} (Regular $${displayPrice.standard}). Includes Level 1 inspection. Limited availability.`
-                : `Seattle chimney cleaning from ${formatPrice(pricing.services.chimneyCleaning.standard)}, including a Level 1 inspection. Serving Seattle homeowners since 1979 with straightforward pricing and documented work.`}
+                : `Seattle chimney cleaning from $${formatPrice(pricing.services.chimneyCleaning.standard)}, including a Level 1 inspection. Serving Seattle homeowners since 1979 with straightforward pricing and documented work.`}
             </p>
             
             <p className="mb-8 text-base md:text-lg text-primary-foreground/90 max-w-3xl">
@@ -50,7 +50,7 @@ export default function ChimneySweepSeattlePage() {
                 href={`tel:+1${pricing.phone.replace(/\D/g, '')}`}
                 className="inline-flex items-center justify-center px-8 py-4 bg-yellow-400 text-primary rounded-lg font-semibold hover:bg-yellow-300 transition-colors"
               >
-                {showPromo ? `Call Now: ${displayPrice.primary} Special` : `Call ${pricing.phone}`}
+                {showPromo ? `Call Now: $${displayPrice.primary} Special` : `Call ${pricing.phone}`}
               </Link>
               <Link
                 href="#services"
